@@ -14,16 +14,20 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
 
-      - run: pip install -r requirements.txt
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
-      - uses: actions/cache@v4
+      - name: Restore seen-IDs cache
+        uses: actions/cache@v4
         with:
           path: seen_ids.json
           key: seen-ids-cache-${{ github.run_id }}
@@ -36,7 +40,8 @@ jobs:
           EMAIL_TO:       ${{ secrets.EMAIL_TO }}
         run: python scraper.py --once
 
-      - uses: actions/cache/save@v4
+      - name: Save seen-IDs cache
+        uses: actions/cache/save@v4
         if: always()
         with:
           path: seen_ids.json
@@ -46,7 +51,7 @@ jobs:
         run: |
           git config user.email "action@github.com"
           git config user.name "GitHub Action"
-          echo "$(date)" > last_run.txt
+          echo "$(date +%s)" > last_run.txt
           git add last_run.txt
-          git diff --staged --quiet || git commit -m "keep alive"
+          git commit -m "keep alive"
           git push
