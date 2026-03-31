@@ -3,7 +3,7 @@ name: Stock Alert Monitor
 on:
   schedule:
     # Every 10 minutes, 24/7  (GitHub minimum is 5 min)
-    - cron: "0 * * * *"
+    - cron: '*/5 * * * *'
 
 
 
