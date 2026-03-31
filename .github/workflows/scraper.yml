@@ -48,5 +48,5 @@ jobs:
           git config user.name "GitHub Action"
           echo "$(date)" > last_run.txt
           git add last_run.txt
-          git diff --staged --quiet || git commit -m "keep alive [skip ci]"
+          git diff --staged --quiet || git commit -m "keep alive"
           git push
