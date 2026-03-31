@@ -1,33 +1,25 @@
 name: Stock Alert Monitor
 
 on:
-  push:
-    branches: [main]
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/10 * * * *'
   workflow_dispatch:
 
 jobs:
   check-announcements:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
 
-      - name: Install dependencies
-        run: pip install -r requirements.txt
+      - run: pip install -r requirements.txt
 
-      - name: Restore seen-IDs cache
-        uses: actions/cache@v4
+      - uses: actions/cache@v4
         with:
           path: seen_ids.json
           key: seen-ids-cache-${{ github.run_id }}
@@ -40,18 +32,8 @@ jobs:
           EMAIL_TO:       ${{ secrets.EMAIL_TO }}
         run: python scraper.py --once
 
-      - name: Save seen-IDs cache
-        uses: actions/cache/save@v4
+      - uses: actions/cache/save@v4
         if: always()
         with:
           path: seen_ids.json
           key: seen-ids-cache-${{ github.run_id }}
-
-      - name: Keep alive
-        run: |
-          git config user.email "action@github.com"
-          git config user.name "GitHub Action"
-          echo "$(date +%s)" > last_run.txt
-          git add last_run.txt
-          git commit -m "keep alive"
-          git push
