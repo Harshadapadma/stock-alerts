@@ -1,0 +1,49 @@
+name: Stock Alert Monitor
+
+on:
+  schedule:
+    # Every 10 minutes, 24/7  (GitHub minimum is 5 min)
+    - cron: "*/10 * * * *"
+
+
+
+  workflow_dispatch:   # manual trigger from GitHub UI
+
+jobs:
+  check-announcements:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'             # caches pip packages → faster installs after first run
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Restore seen-IDs cache
+        uses: actions/cache@v4
+        with:
+          path: seen_ids.json
+          key: seen-ids-cache-${{ github.run_id }}
+          restore-keys: |
+            seen-ids-cache-
+
+      - name: Run alert check
+        env:
+          EMAIL_FROM:     ${{ secrets.EMAIL_FROM }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          EMAIL_TO:       ${{ secrets.EMAIL_TO }}
+        run: python scraper.py --once
+
+      - name: Save seen-IDs cache
+        uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: seen_ids.json
+          key: seen-ids-cache-${{ github.run_id }}
