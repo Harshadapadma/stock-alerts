@@ -2,16 +2,14 @@ name: Stock Alert Monitor
 
 on:
   schedule:
-    # Every 10 minutes, 24/7  (GitHub minimum is 5 min)
     - cron: '*/5 * * * *'
-
-
-
-  workflow_dispatch:   # manual trigger from GitHub UI
+  workflow_dispatch:
 
 jobs:
   check-announcements:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout code
@@ -21,7 +19,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'             # caches pip packages → faster installs after first run
+          cache: 'pip'
 
       - name: Install dependencies
         run: pip install -r requirements.txt
@@ -47,3 +45,13 @@ jobs:
         with:
           path: seen_ids.json
           key: seen-ids-cache-${{ github.run_id }}
+
+      - name: Keep workflow active
+        if: always()
+        run: |
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
+          echo "Last run: $(date)" > last_run.txt
+          git add last_run.txt
+          git diff --staged --quiet || git commit -m "chore: keep alive [skip ci]"
+          git push
