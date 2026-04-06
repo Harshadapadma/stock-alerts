@@ -39,9 +39,9 @@ class Config:
 
     # Telegram  (optional)
 
-    TELEGRAM_ENABLED   = False
-    TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
-    TELEGRAM_CHAT_ID   = os.getenv("TELEGRAM_CHAT_ID",   "")
+    TELEGRAM_ENABLED   = True
+    TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "8712181748:AAFJq9dPFlG42vkIgqYNesjj-tvvKNS4eV0")
+    TELEGRAM_CHAT_ID   = os.getenv("TELEGRAM_CHAT_ID",   "1325886708")
 
 
     # Filter behaviour
