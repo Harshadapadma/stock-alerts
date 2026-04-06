@@ -41,7 +41,7 @@ class Config:
 
     TELEGRAM_ENABLED   = True
     TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
-    TELEGRAM_CHAT_ID   = os.getenv("TELEGRAM_CHAT_ID",   "1325886708")
+    TELEGRAM_CHAT_ID   = os.getenv("TELEGRAM_CHAT_ID",   "")
 
 
     # Filter behaviour
