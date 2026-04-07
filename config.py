@@ -44,6 +44,30 @@ class Config:
     TELEGRAM_CHAT_ID   = os.getenv("TELEGRAM_CHAT_ID",   "")
 
 
-    # Filter behaviour
+    # ──────────────────────────────────────────
+    # WhatsApp via Twilio
+    # ──────────────────────────────────────────
+    WHATSAPP_ENABLED     = True   # ← set False to disable WhatsApp alerts
 
+    # Twilio credentials — paste your Account SID and Auth Token here
+    # or export them as env vars: TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN
+    TWILIO_ACCOUNT_SID  = os.getenv("TWILIO_ACCOUNT_SID",  "")
+    TWILIO_AUTH_TOKEN   = os.getenv("TWILIO_AUTH_TOKEN",   "")
+
+    # Twilio WhatsApp sandbox / approved sender number (with country code, no spaces)
+    # For the sandbox this is: +14155238886
+    WHATSAPP_FROM       = os.getenv("WHATSAPP_FROM", "")
+
+    # Recipient number(s) — include country code, e.g. +919876543210
+    _wa_env = os.getenv("WHATSAPP_TO", "")
+    WHATSAPP_TO = (
+        [n.strip() for n in _wa_env.split(",") if n.strip()]
+        if _wa_env else [
+            "",   # ← replace with your WhatsApp number
+        ]
+    )
+
+    # ──────────────────────────────────────────
+    # Filter behaviour
+    # ──────────────────────────────────────────
     SKIP_PROCEDURAL = True
