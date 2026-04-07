@@ -10,16 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
 
-      - run: pip install -r requirements.txt
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
-      - uses: actions/cache@v4
+      - name: Restore seen IDs cache
+        uses: actions/cache@v4
         with:
           path: seen_ids.json
           key: seen-ids-cache-${{ github.run_id }}
@@ -27,12 +31,24 @@ jobs:
 
       - name: Run alert check
         env:
+          # Email
           EMAIL_FROM:     ${{ secrets.EMAIL_FROM }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
           EMAIL_TO:       ${{ secrets.EMAIL_TO }}
+
+          # Telegram
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
+
+          # Twilio WhatsApp
+          TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
+          TWILIO_AUTH_TOKEN:  ${{ secrets.TWILIO_AUTH_TOKEN }}
+          WHATSAPP_TO:        ${{ secrets.WHATSAPP_TO }}
+
         run: python scraper.py --once
 
-      - uses: actions/cache/save@v4
+      - name: Save seen IDs cache
+        uses: actions/cache/save@v4
         if: always()
         with:
           path: seen_ids.json
