@@ -2,6 +2,7 @@
 BSE / NSE Corporate Announcement Filter
 Monitors for merger, demerger, split announcements and sends alerts.
 AI-powered summary via DeepSeek (falls back to pattern-based if no API key).
+WhatsApp alerts via Twilio.
 """
 
 import os
@@ -14,6 +15,7 @@ import smtplib
 import requests
 import schedule
 import pdfplumber
+from twilio.rest import Client as TwilioClient
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta
 from email.mime.text import MIMEText
@@ -257,21 +259,16 @@ def clean_body(text: str) -> str:
 _AI_MIN_CHARS = 60
 
 _SUMMARY_PROMPT = """\
-You are a financial analyst. Summarise this corporate announcement in 2-4 clear, informative sentences.
+Summarise this corporate announcement in 2-3 clear, factual sentences.
 Rules:
-- Sentence 1: State what is happening (merger / demerger / amalgamation / stock split etc.) and which companies are involved.
-- Sentence 2: Describe the current status (e.g. board approved, filed with NCLT, NCLT sanctioned, scheme effective).
-- Sentence 3 (if available): Include the appointed date, effective date, record date, or exchange ratio.
-- Sentence 4 (optional): Mention what happens next or any key condition / approval still pending.
-- Use plain English — no legal jargon, no "pursuant to", no "in compliance with".
-- Ignore addresses, contact details, SEBI regulation numbers, and boilerplate filing language.
-- Do NOT start with "The company" — use the actual company name.
-- Be factual and specific; do not pad with filler words.
+- State what is happening (merger / demerger / amalgamation / split) and which companies are involved
+- Include key procedural milestones already completed (e.g. shareholder approval, filing with NCLT, board approval) and the current status
+- Mention any pending steps or next actions if mentioned in the text
+- Do NOT include addresses, phone numbers, regulatory boilerplate, or courtesy phrases
+- Write in plain business English — no "pursuant to", no formal legalese
+- Output plain text only, no bullet points, no bold, no headings
 Example output:
-Reliance Industries is merging its subsidiary Jio Platforms into itself through a scheme of amalgamation.
-The Board of Directors approved the scheme on 12 March 2025, and it has been filed with the NCLT Mumbai bench.
-The appointed date for the merger is 1 April 2025, with an exchange ratio of 1:1.
-NCLT approval is awaited before the scheme becomes effective.
+"Utkarsh Small Finance Bank Limited is amalgamating with Utkarsh CoreInvest Limited. A joint petition to sanction the scheme was filed with the National Company Law Tribunal (NCLT) on 5 April 2026. This filing follows the approval of the scheme by the companies' equity shareholders and unsecured creditors. The scheme is now pending final sanction from the NCLT."
 
 COMPANY: {company}
 HEADLINE: {headline}
@@ -283,7 +280,9 @@ SUMMARY:"""
 
 
 def _ai_summarise(raw_body: str, company: str = "", headline: str = "") -> str:
-    api_key = (getattr(Config, "DEEPSEEK_API_KEY", "") or os.getenv("DEEPSEEK_API_KEY", "")).strip()
+    # Use Config key (with env-var fallback already baked in)
+    api_key = getattr(Config, "DEEPSEEK_API_KEY", "") or os.getenv("DEEPSEEK_API_KEY", "")
+    api_key = (api_key or "").strip()
     if not api_key:
         log.debug("DeepSeek: no API key")
         return ""
@@ -314,8 +313,8 @@ def _ai_summarise(raw_body: str, company: str = "", headline: str = "") -> str:
             },
             json={
                 "model":       "deepseek-chat",
-                "max_tokens":  150,
-                "temperature": 0.2,
+                "max_tokens":  400,
+                "temperature": 0.3,
                 "messages":    [{"role": "user", "content": prompt}],
             },
             timeout=20,
@@ -338,8 +337,10 @@ def _ai_summarise(raw_body: str, company: str = "", headline: str = "") -> str:
 
 def _fallback_sentences(clean: str, n: int = 1, company: str = "", headline: str = "") -> str:
     """
-    Returns a simple one-liner: "<Company> <action> with <Partner> — <status>."
-    No AI involved — pure regex/pattern matching.
+    Builds the best possible one-liner without AI:
+      "<Company> <action> with <Partner> — <status>"
+    Uses clean body + headline to extract partner name and status.
+    Falls back to the single best non-boilerplate sentence from the body.
     """
     combined = ((clean or "") + " " + (headline or "")).lower()
 
@@ -371,6 +372,7 @@ def _fallback_sentences(clean: str, n: int = 1, company: str = "", headline: str
 
     # ── Extract partner company name from clean body ───────────────────────
     partner = ""
+    # Look for "X Limited/Ltd/Private merged with / into / and Y Limited"
     for pat in [
         r'(?:amalgamation of|merger of|demerger of|between)\s+"?([A-Z][A-Za-z &()\'\-\.]{3,60}(?:Limited|Ltd\.?|Private|Pvt\.?|LLP|Inc\.?))',
         r'(?:Transferor Compan(?:y|ies)[^"]{0,20}"?)([A-Z][A-Za-z &()\'\-\.]{3,60}(?:Limited|Ltd\.?|Private|Pvt\.?|LLP|Inc\.?))',
@@ -379,11 +381,12 @@ def _fallback_sentences(clean: str, n: int = 1, company: str = "", headline: str
         m = re.search(pat, clean or "")
         if m:
             candidate = m.group(1).strip().rstrip(",(;")
+            # Skip if it's basically the same as the main company
             if company and candidate.lower()[:12] != (company or "")[:12].lower():
                 partner = candidate
                 break
 
-    # ── Build the one-liner ────────────────────────────────────────────────
+    # ── Build the line ─────────────────────────────────────────────────────
     c = (company or "").strip()
     parts = [c, action]
     if partner:
@@ -391,13 +394,19 @@ def _fallback_sentences(clean: str, n: int = 1, company: str = "", headline: str
     if status:
         parts += ["—", status]
 
-    line = " ".join(parts).strip()
-    if line:
-        line = line[0].upper() + line[1:]
-        if not line.endswith("."):
-            line += "."
-        return line
+    result = " ".join(parts).strip()
+    if result:
+        result = result[0].upper() + result[1:]
+        if not result.endswith("."):
+            result += "."
+        return result
 
+    # ── Last resort: best sentence from the body ───────────────────────────
+    flat = re.sub(r"\s+", " ", (clean or "").replace("\n", " ")).strip()
+    for s in re.split(r"(?<=[.!?])\s+(?=[A-Z\"])", flat):
+        s = s.strip()
+        if len(s) > 40 and not _NOISE_ONLY_RE.search(s):
+            return re.sub(r"\s*\.\.\.$", ".", s)
     return headline or ""
 
 
@@ -420,7 +429,11 @@ def build_summary(body: str, company: str = "", headline: str = "") -> str:
         badge_parts.append(f"📅 {date}")
     badge = " &nbsp;·&nbsp; ".join(badge_parts)
 
-    para = _fallback_sentences(clean, company=company, headline=headline)
+    # AI gets raw body (it handles noise better than our regex)
+    # Fallback gets clean body (already stripped)
+    para = _ai_summarise(body, company=company, headline=headline)
+    if not para:
+        para = _fallback_sentences(clean, company=company, headline=headline)
 
     if para:
         para = para.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
@@ -438,7 +451,9 @@ def build_telegram_summary(body: str, company: str = "", headline: str = "") -> 
     action = _get_action(raw_flat)
     date   = _get_best_date(raw_flat)
 
-    para = _fallback_sentences(clean, company=company, headline=headline)
+    para = _ai_summarise(body, company=company, headline=headline)
+    if not para:
+        para = _fallback_sentences(clean, company=company, headline=headline)
 
     parts = [f"{status}  |  *{action}*"]
     if date:
@@ -529,7 +544,7 @@ def _fetch_nse_index(session: requests.Session, index: str, lookback_days: int) 
 
 def fetch_all_nse() -> tuple[list[dict], requests.Session]:
     cache = load_cache()
-    lookback_days = 5 if not cache else 2
+    lookback_days = 1 if not cache else 2
     log.info("NSE: fetching last %d days across equities + SME segments", lookback_days)
     session  = _nse_session()
     equities = _fetch_nse_index(session, "equities", lookback_days)
@@ -673,12 +688,68 @@ def send_telegram(announcements: list[dict]):
 
 
 # ──────────────────────────────────────────────
+# WhatsApp via Twilio
+# ──────────────────────────────────────────────
+
+def send_whatsapp(announcements: list[dict]):
+    if not Config.WHATSAPP_ENABLED or not announcements:
+        return
+    try:
+        client = TwilioClient(Config.TWILIO_ACCOUNT_SID, Config.TWILIO_AUTH_TOKEN)
+    except Exception as e:
+        log.error("Twilio client init failed: %s", e)
+        return
+
+    for a in announcements:
+        summary = _ai_summarise(
+            a.get("body", "") or "",
+            company=a.get("company", ""),
+            headline=a.get("headline", ""),
+        )
+        if not summary:
+            summary = _fallback_sentences(
+                clean_body(a.get("body", "") or ""),
+                company=a.get("company", ""),
+                headline=a.get("headline", ""),
+            )
+
+        raw_flat = re.sub(r"\s+", " ", (a.get("body", "") or "").replace("\n", " ")).strip()
+        status = _get_status(raw_flat)
+        action = _get_action(raw_flat)
+        date   = _get_best_date(raw_flat)
+
+        lines = [
+            f"{status} | {action}",
+            f"{a['source']} — {a['company']} ({a.get('scrip', '')})",
+            f"{a['headline']}",
+            f"Date: {a['date']}",
+        ]
+        if date:
+            lines.append(f"Key date: {date}")
+        if summary:
+            lines.append(f"\n{summary}")
+        if a.get("url"):
+            lines.append(f"\nView: {a['url']}")
+
+        msg_body = "\n".join(lines)
+
+        for to_num in Config.WHATSAPP_TO:
+            try:
+                client.messages.create(
+                    from_=f"whatsapp:{Config.WHATSAPP_FROM}",
+                    to=f"whatsapp:{to_num}",
+                    body=msg_body,
+                )
+                log.info("WhatsApp sent to %s: %s", to_num, a["company"])
+            except Exception as e:
+                log.error("WhatsApp failed for %s → %s: %s", a["company"], to_num, e)
+
+
+# ──────────────────────────────────────────────
 # Main job
 # ──────────────────────────────────────────────
 
 def run_check():
-    _dk = (getattr(Config, "DEEPSEEK_API_KEY", "") or os.getenv("DEEPSEEK_API_KEY", "")).strip()
-    log.info("DeepSeek key present: %s (first 8 chars: %s)", bool(_dk), _dk[:8] if _dk else "none")
     t0 = time.time()
     log.info("═══ Starting announcement check ═══")
     cache = load_cache()
@@ -715,6 +786,7 @@ def run_check():
     if new_relevant:
         send_email(new_relevant)
         send_telegram(new_relevant)
+        send_whatsapp(new_relevant)
 
     save_cache(cache)
     log.info("⏱  fetch: %.1fs | enrich: %.1fs | notify: %.1fs | TOTAL: %.1fs",
