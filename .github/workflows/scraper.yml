@@ -32,9 +32,9 @@ jobs:
       - name: Run alert check
         env:
           # Email
-          EMAIL_FROM:     ${{ secrets.EMAIL_FROM }}
-          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
-          EMAIL_TO:       ${{ secrets.EMAIL_TO }}
+          EMAIL_FROM:         ${{ secrets.EMAIL_FROM }}
+          EMAIL_PASSWORD:     ${{ secrets.EMAIL_PASSWORD }}
+          EMAIL_TO:           ${{ secrets.EMAIL_TO }}
 
           # Telegram
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -43,7 +43,11 @@ jobs:
           # Twilio WhatsApp
           TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
           TWILIO_AUTH_TOKEN:  ${{ secrets.TWILIO_AUTH_TOKEN }}
+          WHATSAPP_FROM:      ${{ secrets.WHATSAPP_FROM }}
           WHATSAPP_TO:        ${{ secrets.WHATSAPP_TO }}
+
+          # DeepSeek AI
+          DEEPSEEK_API_KEY:   ${{ secrets.DEEPSEEK_API_KEY }}
 
         run: python scraper.py --once
 
