@@ -33,74 +33,154 @@ logging.getLogger("pdfminer").setLevel(logging.ERROR)
 
 import re
 
-# ══════════════════════════════════════════════════════════════════════════════
-# FILTERING LOGIC (BALANCED — TARGET 10–40/DAY)
-# ══════════════════════════════════════════════════════════════════════════════
+import re
 
-# ═══════════════════════════════════════════════
-# FINAL WORKING FILTER (BALANCED)
-# ═══════════════════════════════════════════════
+# ══════════════════════════════════════════════════════════════════════════════
+# FILTERING LOGIC (BALANCED — STABLE 15–40 RANGE)
+# ══════════════════════════════════════════════════════════════════════════════
 
 KEYWORDS = [
     "merger", "amalgamation", "demerger",
-    "scheme", "arrangement",
-    "acquisition", "takeover",
-    "stock split", "share split", "sub-division"
+    "scheme of", "scheme",
+    "arrangement", "slump sale",
+    "business transfer", "spin-off", "hive off",
+    "stock split", "share split",
+    "sub-division", "face value",
+    "acquisition", "takeover", "open offer",
 ]
 
 HEADLINE_HINTS = KEYWORDS.copy()
 
-PROCEDURAL_PHRASES = [
-    "meeting", "egm", "agm", "notice"
-]
+# ── HARD EXCLUDE (CONTROLLED — NOT AGGRESSIVE) ───────────────────────────────
+_EXCLUDE_PATTERNS = [re.compile(p, re.I) for p in [
 
+    # pure noise
+    r"\bbuyback\b",
+    r"\brights\s+issue\b",
+    r"\bbonus\s+(share|issue)\b",
+    r"^\s*dividend",
 
-def is_relevant(ann: dict) -> bool:
-    text = ((ann.get("body") or "") + " " + (ann.get("headline") or "")).lower()
+    # meetings
+    r"\bpostal\s+ballot\b",
+    r"\bscrutinizer\b",
+    r"\bnotice\s+of\s+(egm|agm)",
 
-    # HARD EXCLUDE (ONLY REAL SPAM)
-    if any(x in text for x in [
-        "sebi takeover regulations",
-        "sast",
-        "promoter",
-        "encumbrance",
-        "inter-se transfer",
-        "open market"
-    ]):
-        return False
+    # share trading noise
+    r"open\s+market\s+(purchase|sale)",
+    r"\bblock\s+deal\b",
+    r"\bbulk\s+deal\b",
 
-    # CATEGORY CHECK
+    # kmp
+    r"\bappointment\s+of\s+(director|auditor|cfo|ceo)",
+    r"\bresignation\s+of\s+(director|auditor|cfo|ceo)",
+]]
 
-    # STOCK SPLIT → always keep
-    if any(x in text for x in [
-        "stock split", "share split", "sub-division"
-    ]):
-        return True
+# ── CATEGORY ────────────────────────────────────────────────────────────────
+_CAT_SPLIT = [re.compile(p, re.I) for p in [
+    r"\bstock\s+split\b",
+    r"\bshare\s+split\b",
+    r"\bsub.?division\b",
+    r"\bface\s+value\b",
+]]
 
-    # MERGER / DEMERGER / SCHEME → keep (NO strict outcome)
-    if any(x in text for x in [
-        "merger", "amalgamation", "demerger",
-        "scheme of", "scheme", "arrangement"
-    ]):
-        return True
+_CAT_SCHEME = [re.compile(p, re.I) for p in [
+    r"\bmerger\b",
+    r"\bamalgamation\b",
+    r"\bdemerger\b",
+    r"\bscheme\s+of\b",
+    r"\bslump\s+sale\b",
+    r"\bbusiness\s+transfer\b",
+    r"\bnclt\b",
+]]
 
-    # ACQUISITION → allow unless obvious shareholding spam
-    if "acquisition" in text or "takeover" in text:
-        if any(x in text for x in [
-            "sebi takeover regulations",
-            "sast",
-            "promoter",
-            "encumbrance"
-        ]):
-            return False
-        return True
+_CAT_ACQUISITION = [re.compile(p, re.I) for p in [
+    r"\bacquisition\b",
+    r"\bacquire\b",
+    r"\btakeover\b",
+    r"\bopen\s+offer\b",
+]]
 
-    return False
+def _matches_any(text, patterns):
+    return any(p.search(text) for p in patterns)
 
+def _classify(text):
+    if _matches_any(text, _CAT_SPLIT): return "split"
+    if _matches_any(text, _CAT_SCHEME): return "scheme"
+    if _matches_any(text, _CAT_ACQUISITION): return "acquisition"
+    return None
 
+# ── OUTCOME (MID-STRICT — KEY BALANCE) ───────────────────────────────────────
+_OUTCOME_STRONG = [re.compile(p, re.I) for p in [
+    r"\bapproved\b",
+    r"\bboard.{0,30}approv",
+    r"\bsanctioned\b",
+    r"\beffective\b",
+    r"\bcompleted\b",
+    r"\brecord\s+date\b",
+]]
+
+_OUTCOME_MEDIUM = [re.compile(p, re.I) for p in [
+    r"\bfiled\b",
+    r"\bsubmitted\b",
+    r"\bapplication\b",
+    r"\bagreement\b",
+    r"\bentered\b",
+    r"\bexecution\b",
+    r"\bnclt\b",
+]]
+
+# ── MAIN ─────────────────────────────────────────────────────────────────────
 def _headline_looks_relevant(headline: str) -> bool:
     h = (headline or "").lower()
-    return any(k in h for k in HEADLINE_HINTS)
+    return any(kw in h for kw in HEADLINE_HINTS)
+
+def is_relevant(ann: dict) -> bool:
+    body = (ann.get("body", "") or "")
+    headline = (ann.get("headline", "") or "")
+    combined = (body + " " + headline).lower()
+
+    # Stage 1
+    if _matches_any(combined, _EXCLUDE_PATTERNS):
+        return False
+
+    # Stage 2
+    category = _classify(combined)
+    if category is None:
+        return False
+
+    # Splits → always include
+    if category == "split":
+        return True
+
+    # Stage 3 — CONTROLLED SCORING
+    score = 0
+
+    # category base
+    score += 1
+
+    # strong signals
+    if _matches_any(combined, _OUTCOME_STRONG):
+        score += 2
+
+    # medium signals
+    if _matches_any(combined, _OUTCOME_MEDIUM):
+        score += 1
+
+    # boosters (important)
+    if "scheme of" in combined:
+        score += 1
+    if "nclt" in combined:
+        score += 1
+    if "open offer" in combined:
+        score += 2
+
+    # acquisition stricter (avoid spam)
+    if category == "acquisition":
+        if score < 3:
+            return False
+
+    # FINAL THRESHOLD (TUNED)
+    return score >= 3
 # ══════════════════════════════════════════════════════════════════════════════
 # Cache
 # ══════════════════════════════════════════════════════════════════════════════
