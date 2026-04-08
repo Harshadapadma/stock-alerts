@@ -30,65 +30,80 @@ logging.basicConfig(
 log = logging.getLogger(__name__)
 logging.getLogger("pdfminer").setLevel(logging.ERROR)
 
+
+import re
+
+# ══════════════════════════════════════════════════════════════════════════════
+# FILTERING LOGIC (BALANCED — TARGET 10–40/DAY)
+# ══════════════════════════════════════════════════════════════════════════════
+
+# ═══════════════════════════════════════════════
+# FINAL WORKING FILTER (BALANCED)
+# ═══════════════════════════════════════════════
+
 KEYWORDS = [
-    "merger", "amalgamation",
-    "demerger", "de-merger",
-    "scheme of amalgamation", "scheme of demerger",
-    "composite scheme",
-    "slump sale", "business transfer",
-    "spin-off", "spinoff", "hive off",
-    "stock split", "share split", "sub-division",
-    "acquisition", "takeover", "open offer"   # ← add back
+    "merger", "amalgamation", "demerger",
+    "scheme", "arrangement",
+    "acquisition", "takeover",
+    "stock split", "share split", "sub-division"
 ]
 
+HEADLINE_HINTS = KEYWORDS.copy()
 
 PROCEDURAL_PHRASES = [
-    "meeting", "egm", "agm", "postal ballot",
-    "creditors", "scrutinizer",
-    "notice", "intimation",
-    "clarification", "response awaited",
-    "pending approval",
+    "meeting", "egm", "agm", "notice"
 ]
 
 
-PROCEDURAL_OVERRIDE = [
-    "approved", "sanctioned", "effective",
-    "completed", "board approved"
-]
+def is_relevant(ann: dict) -> bool:
+    text = ((ann.get("body") or "") + " " + (ann.get("headline") or "")).lower()
 
-
-def is_relevant(text: str) -> bool:
-    text = text.lower()
-
-    # 1. keyword match
-    if not any(k in text for k in KEYWORDS):
-        return False
-
-    # 2. REMOVE SAST / shareholding spam (THIS IS KEY)
+    # HARD EXCLUDE (ONLY REAL SPAM)
     if any(x in text for x in [
         "sebi takeover regulations",
-        "disclosure under regulation",
-        "shareholding",
-        "promoter holding",
-        "no encumbrance",
-        "sast"
+        "sast",
+        "promoter",
+        "encumbrance",
+        "inter-se transfer",
+        "open market"
     ]):
         return False
 
-    # 3. remove procedural junk
-    if any(p in text for p in PROCEDURAL_PHRASES):
-        if not any(o in text for o in PROCEDURAL_OVERRIDE):
+    # CATEGORY CHECK
+
+    # STOCK SPLIT → always keep
+    if any(x in text for x in [
+        "stock split", "share split", "sub-division"
+    ]):
+        return True
+
+    # MERGER / DEMERGER / SCHEME → keep (NO strict outcome)
+    if any(x in text for x in [
+        "merger", "amalgamation", "demerger",
+        "scheme of", "scheme", "arrangement"
+    ]):
+        return True
+
+    # ACQUISITION → allow unless obvious shareholding spam
+    if "acquisition" in text or "takeover" in text:
+        if any(x in text for x in [
+            "sebi takeover regulations",
+            "sast",
+            "promoter",
+            "encumbrance"
+        ]):
             return False
+        return True
 
-    # 4. must be real action
-    if not any(o in text for o in PROCEDURAL_OVERRIDE):
-        return False
+    return False
 
-    return True
 
-# ──────────────────────────────────────────────
+def _headline_looks_relevant(headline: str) -> bool:
+    h = (headline or "").lower()
+    return any(k in h for k in HEADLINE_HINTS)
+# ══════════════════════════════════════════════════════════════════════════════
 # Cache
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 
 CACHE_FILE = Path("seen_ids.json")
 
@@ -99,9 +114,9 @@ def save_cache(cache: set):
     CACHE_FILE.write_text(json.dumps(list(cache)))
 
 
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 # Letterhead stripper
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 
 _CONTENT_START_RE = re.compile(
     r"^(pursuant to|we wish to inform|we would like to inform|this is to inform|"
@@ -143,9 +158,9 @@ def strip_letterhead(text: str) -> str:
     return result if len(result) >= 80 or len(text) <= 200 else text.strip()
 
 
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 # Status / action badges
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 
 _STATUS_PATTERNS = [
     (r"\bhas become effective\b",                          "✅ Effective"),
@@ -209,9 +224,9 @@ def _get_best_date(t: str) -> str:
     return recent[-1] if recent else (dates[-1] if dates else "")
 
 
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 # Body cleaner
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 
 _NOISE_ONLY_RE = re.compile(
     r"^(tel|fax|ph|email|cin|pan|gst|isin)\s*[:\+]|"
@@ -258,9 +273,9 @@ def clean_body(text: str) -> str:
     return " ".join(kept).strip()
 
 
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 # AI summary via DeepSeek
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 
 _AI_MIN_CHARS = 60
 
@@ -329,9 +344,9 @@ def _ai_summarise(raw_body: str, company: str = "", headline: str = "") -> str:
         return ""
 
 
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 # Fallback: smart one-liner
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 
 def _fallback_sentences(clean: str, company: str = "", headline: str = "") -> str:
     combined = ((clean or "") + " " + (headline or "")).lower()
@@ -402,9 +417,9 @@ def _fallback_sentences(clean: str, company: str = "", headline: str = "") -> st
     return headline or ""
 
 
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 # Summary builders
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 
 def build_summary(body: str, company: str = "", headline: str = "") -> str:
     combined_raw = (body or "") + " " + (headline or "")
@@ -452,17 +467,14 @@ def build_telegram_summary(body: str, company: str = "", headline: str = "") -> 
     return "\n".join(parts)
 
 
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 # PDF extraction
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 
 MIN_BODY_CHARS = 300
 
 def _body_is_weak(text: str) -> bool:
     return len((text or "").strip()) < MIN_BODY_CHARS
-
-def _headline_looks_relevant(headline: str) -> bool:
-    return any(hint in headline.lower() for hint in HEADLINE_HINTS)
 
 def _extract_pdf_text(url: str, session: requests.Session) -> str:
     if not url or not url.lower().endswith(".pdf"):
@@ -482,9 +494,9 @@ def _extract_pdf_text(url: str, session: requests.Session) -> str:
         return ""
 
 
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 # NSE fetch
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 
 def _nse_session() -> requests.Session:
     session = requests.Session()
@@ -535,7 +547,7 @@ def _fetch_nse_index(session: requests.Session, index: str, lookback_days: int) 
 
 def fetch_all_nse() -> tuple[list[dict], requests.Session]:
     cache = load_cache()
-    lookback_days = 0.5 if not cache else 2
+    lookback_days = 1 if not cache else 2
     log.info("NSE: fetching last %d days across equities + SME segments", lookback_days)
     session  = _nse_session()
     equities = _fetch_nse_index(session, "equities", lookback_days)
@@ -544,30 +556,9 @@ def fetch_all_nse() -> tuple[list[dict], requests.Session]:
     return equities + sme, session
 
 
-# ──────────────────────────────────────────────
-# Relevance filter
-# ──────────────────────────────────────────────
-
-def is_relevant(ann: dict) -> bool:
-    body     = (ann.get("body", "") or "").lower()
-    headline = (ann.get("headline", "") or "").lower()
-
-    if not any(kw in body for kw in KEYWORDS) and not any(kw in headline for kw in KEYWORDS):
-        return False
-
-    if getattr(Config, "SKIP_PROCEDURAL", True):
-        combined = body + " " + headline
-        if any(p in combined for p in PROCEDURAL_PHRASES):
-            if not any(ov in combined for ov in PROCEDURAL_OVERRIDE):
-                log.debug("Skipped procedural: %s", ann.get("company"))
-                return False
-
-    return True
-
-
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 # PDF enrichment (parallel)
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 
 def enrich_with_pdf(candidates: list[dict], session: requests.Session) -> list[dict]:
     needs_pdf = [
@@ -593,9 +584,9 @@ def enrich_with_pdf(candidates: list[dict], session: requests.Session) -> list[d
     return candidates
 
 
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 # Email
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 
 def send_email(announcements: list[dict]):
     if not Config.EMAIL_ENABLED or not announcements:
@@ -659,9 +650,9 @@ def send_email(announcements: list[dict]):
         log.error("Email send failed: %s", e)
 
 
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 # Telegram
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 
 def send_telegram(announcements: list[dict]):
     if not Config.TELEGRAM_ENABLED or not announcements:
@@ -690,35 +681,31 @@ def send_telegram(announcements: list[dict]):
             log.error("Telegram failed: %s", e)
 
 
-# ──────────────────────────────────────────────
-# WhatsApp via Meta Cloud API
+# ══════════════════════════════════════════════════════════════════════════════
+# WhatsApp via Meta Cloud API — template: alerts (5 variables)
 #
-# Approved template: alerts  (5 variables)
-# ────────────────────────────────────────────
-# 🔍 Stock Market Alert
-# Alert Type: {{1}}
-# Company:    {{2}}
-# Date:       {{3}}
-# Details:    {{4}}
-# More info available at: {{5}}
-# Thank you.
+# Template body:
+#   🔍 Stock Market Alert
+#   Alert Type: {{1}}
+#   Company:    {{2}}
+#   Date:       {{3}}
+#   Details:    {{4}}
+#   More info available at: {{5}}
+#   Thank you.
 #
-# NOTE: Meta forbids \n or \t inside template variable values.
-#       All formatting must come from the template itself, not the variables.
-# ──────────────────────────────────────────────
+# NOTE: Meta rejects variables containing \n or \t.
+# ══════════════════════════════════════════════════════════════════════════════
 
-_WA_MAX_LEN = 1024   # Meta hard limit per template variable
+_WA_MAX_LEN = 1024
 
 
 def clean_wa_text(text: str) -> str:
-    """Strip all newlines, tabs, and extra spaces — Meta rejects variables containing them."""
     if not text:
         return ""
     return re.sub(r"\s+", " ", text.replace("\n", " ").replace("\t", " ")).strip()
 
 
 def _wa_var(value: str, limit: int = _WA_MAX_LEN) -> str:
-    """Clean, trim to Meta's limit, and guarantee non-empty (Meta rejects blank params)."""
     v = clean_wa_text(value)
     if len(v) > limit:
         v = v[: limit - 1] + "…"
@@ -726,15 +713,6 @@ def _wa_var(value: str, limit: int = _WA_MAX_LEN) -> str:
 
 
 def send_whatsapp(announcements: list[dict]):
-    """
-    Send WhatsApp alerts via Meta Cloud API using the approved 5-variable 'alerts' template.
-
-    Required config keys:
-        Config.WHATSAPP_ENABLED       bool
-        Config.META_PHONE_NUMBER_ID   str
-        Config.META_ACCESS_TOKEN      str
-        Config.WHATSAPP_TO            list  e.g. ["919XXXXXXXXX"]
-    """
     if not Config.WHATSAPP_ENABLED or not announcements:
         return
 
@@ -756,9 +734,6 @@ def send_whatsapp(announcements: list[dict]):
     }
 
     for a in announcements:
-
-        # ── Derive raw values ────────────────────────────────────────────
-
         combined_raw = (a.get("body", "") or "") + " " + (a.get("headline", "") or "")
         flat = re.sub(r"\s+", " ", combined_raw.replace("\n", " ")).strip()
 
@@ -770,7 +745,6 @@ def send_whatsapp(announcements: list[dict]):
         date_str = a.get("date", "") or _get_best_date(flat) or "-"
         url      = a.get("url", "-") or "-"
 
-        # AI or fallback summary
         para = _ai_summarise(a.get("body", "") or "", company=company, headline=headline)
         if not para:
             para = _fallback_sentences(
@@ -779,25 +753,11 @@ def send_whatsapp(announcements: list[dict]):
                 headline=headline,
             )
 
-        # ── Build 5 variables — NO newlines, NO tabs anywhere ────────────
-
-        # {{1}} Alert Type  e.g. "🏛️ Board Approved | Acquisition"
         var1 = _wa_var(f"{status} | {action}")
-
-        # {{2}} Company     e.g. "Global Health Limited (MEDANTA)"
         var2 = _wa_var(f"{company} ({scrip})" if scrip else company)
-
-        # {{3}} Date
         var3 = _wa_var(date_str)
-
-        # {{4}} Details     headline + " - " + summary (NO newline — use " - " separator)
-        details = f"{headline} - {para}" if para else headline
-        var4 = _wa_var(details, limit=900)
-
-        # {{5}} URL
+        var4 = _wa_var(f"{headline} - {para}" if para else headline, limit=900)
         var5 = _wa_var(url)
-
-        # ── Build payload ────────────────────────────────────────────────
 
         payload = {
             "messaging_product": "whatsapp",
@@ -819,8 +779,6 @@ def send_whatsapp(announcements: list[dict]):
                 ],
             },
         }
-
-        # ── Send to each recipient ───────────────────────────────────────
 
         for to_num in Config.WHATSAPP_TO:
             to_clean = re.sub(r"[^\d]", "", str(to_num))
@@ -848,9 +806,9 @@ def send_whatsapp(announcements: list[dict]):
                 log.error("WhatsApp unexpected error: %s → %s: %s", company, to_clean, e)
 
 
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 # Main job
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 
 def run_check():
     t0 = time.time()
@@ -866,13 +824,14 @@ def run_check():
     unseen = [a for a in anns if a["id"] not in cache]
     log.info("Unseen: %d", len(unseen))
 
+    # Permissive keyword pre-filter — is_relevant() does the real work
     candidates = [
         a for a in unseen
         if _headline_looks_relevant(a.get("headline", ""))
         or any(kw in (a.get("body", "") or "").lower() for kw in KEYWORDS)
         or any(kw in (a.get("headline", "") or "").lower() for kw in KEYWORDS)
     ]
-    log.info("Candidates: %d", len(candidates))
+    log.info("Candidates (pre-filter): %d", len(candidates))
     candidates = enrich_with_pdf(candidates, session)
     t2 = time.time()
 
@@ -882,10 +841,11 @@ def run_check():
             new_relevant.append(ann)
             cache.add(ann["id"])
 
+    # Mark all unseen as seen (avoid reprocessing tomorrow)
     for ann in unseen:
         cache.add(ann["id"])
 
-    log.info("Relevant: %d", len(new_relevant))
+    log.info("Relevant (post-filter): %d", len(new_relevant))
     t3 = time.time()
 
     if new_relevant:
@@ -901,9 +861,9 @@ def run_check():
     log.info("═══ Check complete ═══\n")
 
 
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 # Entry point
-# ──────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
 
 if __name__ == "__main__":
     import argparse
