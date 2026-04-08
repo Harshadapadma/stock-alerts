@@ -30,10 +30,6 @@ logging.basicConfig(
 log = logging.getLogger(__name__)
 logging.getLogger("pdfminer").setLevel(logging.ERROR)
 
-# ──────────────────────────────────────────────
-# Keywords  (STRICT — high signal only)
-# ──────────────────────────────────────────────
-
 KEYWORDS = [
     "merger", "amalgamation",
     "demerger", "de-merger",
@@ -41,25 +37,10 @@ KEYWORDS = [
     "composite scheme",
     "slump sale", "business transfer",
     "spin-off", "spinoff", "hive off",
-    "stock split", "share split", "sub-division"
+    "stock split", "share split", "sub-division",
+    "acquisition", "takeover", "open offer"   # ← add back
 ]
 
-
-# ──────────────────────────────────────────────
-# Headline hints
-# ──────────────────────────────────────────────
-
-HEADLINE_HINTS = [
-    "merger", "demerger", "amalgam",
-    "scheme", "composite scheme",
-    "split", "spin", "hive",
-    "slump sale", "business transfer"
-]
-
-
-# ──────────────────────────────────────────────
-# Procedural junk (filter out)
-# ──────────────────────────────────────────────
 
 PROCEDURAL_PHRASES = [
     "meeting", "egm", "agm", "postal ballot",
@@ -70,42 +51,36 @@ PROCEDURAL_PHRASES = [
 ]
 
 
-# ──────────────────────────────────────────────
-# Override (real events)
-# ──────────────────────────────────────────────
-
 PROCEDURAL_OVERRIDE = [
     "approved", "sanctioned", "effective",
-    "completed", "has become effective",
+    "completed", "board approved"
 ]
 
-
-# ──────────────────────────────────────────────
-# FINAL FILTER FUNCTION (USE THIS)
-# ──────────────────────────────────────────────
 
 def is_relevant(text: str) -> bool:
     text = text.lower()
 
-    # 1. Basic keyword match
+    # 1. keyword match
     if not any(k in text for k in KEYWORDS):
-        # Special handling for acquisition
-        if "acquisition" in text:
-            if not any(x in text for x in [
-                "shares", "equity shares", "promoter", "sast"
-            ]):
-                pass
-            else:
-                return False
-        else:
-            return False
+        return False
 
-    # 2. Remove procedural junk
+    # 2. REMOVE SAST / shareholding spam (THIS IS KEY)
+    if any(x in text for x in [
+        "sebi takeover regulations",
+        "disclosure under regulation",
+        "shareholding",
+        "promoter holding",
+        "no encumbrance",
+        "sast"
+    ]):
+        return False
+
+    # 3. remove procedural junk
     if any(p in text for p in PROCEDURAL_PHRASES):
         if not any(o in text for o in PROCEDURAL_OVERRIDE):
             return False
 
-    # 3. Ensure real action happened
+    # 4. must be real action
     if not any(o in text for o in PROCEDURAL_OVERRIDE):
         return False
 
