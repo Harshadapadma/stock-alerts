@@ -2,7 +2,7 @@
 BSE / NSE Corporate Announcement Filter
 Monitors for merger, demerger, acquisition, split announcements and sends alerts.
 AI-powered summary via DeepSeek (falls back to pattern-based if no API key).
-WhatsApp alerts via Twilio.
+WhatsApp alerts via Meta WhatsApp Cloud API — template: alerts (5 variables)
 """
 
 import os
@@ -15,7 +15,6 @@ import smtplib
 import requests
 import schedule
 import pdfplumber
-from twilio.rest import Client as TwilioClient
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta
 from email.mime.text import MIMEText
@@ -37,49 +36,36 @@ logging.getLogger("pdfminer").setLevel(logging.ERROR)
 # ──────────────────────────────────────────────
 
 KEYWORDS = [
-    # Merger / amalgamation
     "merger", "amalgamation", "amalgamate",
-    # Demerger
     "demerger", "de-merger", "demerge",
-    # Acquisition / takeover
     "acquisition", "acquire", "acqui", "takeover", "open offer",
     "slump sale", "business transfer",
-    # Stock split / bonus
     "stock split", "share split", "sub-division of equity",
     "subdivision of equity", "face value split",
-    # Spin-off / hive-off
     "spin-off", "spinoff", "hive off", "hive-off",
-    # Scheme variants
     "composite scheme of arrangement",
     "scheme of amalgamation", "scheme of demerger",
     "scheme of merger", "scheme of arrangement for",
-    "scheme of arrangement",          # broader catch
+    "scheme of arrangement",
 ]
 
-# Headline pre-filter — broad hints, any match → pass to full check
 HEADLINE_HINTS = [
     "merger", "demerger", "amalgam", "scheme", "arrangement",
     "split", "spin", "hive", "restructur",
     "acquisition", "acqui", "takeover", "open offer",
-    "slump sale", "business transfer",
-    "demerge",
+    "slump sale", "business transfer", "demerge",
 ]
 
-# Procedural filings to SKIP — only drop if NONE of the override keywords are present
-# Override keywords: if the body also contains these, keep the filing anyway
 PROCEDURAL_PHRASES = [
     "meeting of the unsecured creditors",
     "meeting of the secured creditors",
-    # Equity shareholder meetings are procedural UNLESS the body also mentions
-    # a new approval/sanction — handled below in is_relevant()
     "court convened meeting",
     "the exchange has sought clarification",
     "the response from the company is awaited",
-    "the scheme is pending approval",       # narrowed: was too broad
+    "the scheme is pending approval",
     "pursuant to the scheme already approved",
 ]
 
-# If ANY of these appear alongside a procedural phrase, keep the filing anyway
 PROCEDURAL_OVERRIDE = [
     "sanctioned", "approved by", "pronounced", "effective",
     "has become effective", "acquisition", "acquire",
@@ -176,15 +162,15 @@ _STATUS_PATTERNS = [
 ]
 
 _ACTION_PATTERNS = [
-    (r"\bcomposite scheme\b",              "Composite Scheme"),
-    (r"\bdemerger\b|de-merger",            "Demerger"),
-    (r"\bspin.?off\b|hive.?off\b",         "Spin-off"),
+    (r"\bcomposite scheme\b",                                                 "Composite Scheme"),
+    (r"\bdemerger\b|de-merger",                                               "Demerger"),
+    (r"\bspin.?off\b|hive.?off\b",                                            "Spin-off"),
     (r"\bstock split\b|share split|sub.?division of equity|face value split", "Stock Split"),
-    (r"\bslump sale\b",                    "Slump Sale"),
-    (r"\bopen offer\b",                    "Open Offer"),
-    (r"\bacquisition\b|\bacquire\b|\bacquir\b", "Acquisition"),
-    (r"\bamalgamation\b",                  "Amalgamation"),
-    (r"\bmerger\b",                        "Merger"),
+    (r"\bslump sale\b",                                                       "Slump Sale"),
+    (r"\bopen offer\b",                                                       "Open Offer"),
+    (r"\bacquisition\b|\bacquire\b|\bacquir\b",                               "Acquisition"),
+    (r"\bamalgamation\b",                                                     "Amalgamation"),
+    (r"\bmerger\b",                                                           "Merger"),
 ]
 
 _DATE_RE = re.compile(
@@ -285,7 +271,11 @@ SUMMARY:"""
 
 
 def _ai_summarise(raw_body: str, company: str = "", headline: str = "") -> str:
-    api_key = (getattr(Config, "DEEPSEEK_API_KEY", "") or os.getenv("DEEPSEEK_API_KEY", "") or "").strip()
+    api_key = (
+        getattr(Config, "DEEPSEEK_API_KEY", "")
+        or os.getenv("DEEPSEEK_API_KEY", "")
+        or ""
+    ).strip()
     if not api_key:
         return ""
 
@@ -299,15 +289,21 @@ def _ai_summarise(raw_body: str, company: str = "", headline: str = "") -> str:
     else:
         return ""
 
-    prompt = _SUMMARY_PROMPT.format(company=company or "Unknown",
-                                     headline=headline or "Corporate announcement",
-                                     text=body)
+    prompt = _SUMMARY_PROMPT.format(
+        company=company or "Unknown",
+        headline=headline or "Corporate announcement",
+        text=body,
+    )
     try:
         r = requests.post(
             "https://api.deepseek.com/chat/completions",
             headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
-            json={"model": "deepseek-chat", "max_tokens": 400, "temperature": 0.3,
-                  "messages": [{"role": "user", "content": prompt}]},
+            json={
+                "model": "deepseek-chat",
+                "max_tokens": 400,
+                "temperature": 0.3,
+                "messages": [{"role": "user", "content": prompt}],
+            },
             timeout=20,
         )
         r.raise_for_status()
@@ -327,15 +323,15 @@ def _ai_summarise(raw_body: str, company: str = "", headline: str = "") -> str:
 def _fallback_sentences(clean: str, company: str = "", headline: str = "") -> str:
     combined = ((clean or "") + " " + (headline or "")).lower()
 
-    if re.search(r"de.?merger|demerge", combined):         action = "demerger"
-    elif re.search(r"spin.?off|hive.?off", combined):      action = "spin-off"
+    if re.search(r"de.?merger|demerge", combined):          action = "demerger"
+    elif re.search(r"spin.?off|hive.?off", combined):       action = "spin-off"
     elif re.search(r"stock split|share split|sub.?divis|face value", combined): action = "stock split"
-    elif re.search(r"open offer", combined):               action = "open offer"
-    elif re.search(r"slump sale", combined):               action = "slump sale"
-    elif re.search(r"acquisition|acqui\w+", combined):     action = "acquisition"
-    elif re.search(r"amalgamation|amalgamate", combined):  action = "amalgamation"
-    elif re.search(r"\bmerger\b|\bmerge\b", combined):     action = "merger"
-    else:                                                   action = "restructuring"
+    elif re.search(r"open offer", combined):                action = "open offer"
+    elif re.search(r"slump sale", combined):                action = "slump sale"
+    elif re.search(r"acquisition|acqui\w+", combined):      action = "acquisition"
+    elif re.search(r"amalgamation|amalgamate", combined):   action = "amalgamation"
+    elif re.search(r"\bmerger\b|\bmerge\b", combined):      action = "merger"
+    else:                                                    action = "restructuring"
 
     if re.search(r"has become effective|made effective|scheme.*effective", combined):
         status = "effective"
@@ -398,7 +394,6 @@ def _fallback_sentences(clean: str, company: str = "", headline: str = "") -> st
 # ──────────────────────────────────────────────
 
 def build_summary(body: str, company: str = "", headline: str = "") -> str:
-    # Use combined body+headline for badge detection so thin-body announcements still get right badge
     combined_raw = (body or "") + " " + (headline or "")
     flat = re.sub(r"\s+", " ", combined_raw.replace("\n", " ")).strip()
 
@@ -417,8 +412,10 @@ def build_summary(body: str, company: str = "", headline: str = "") -> str:
 
     if para:
         para = para.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
-        return (f'{badge}<br>'
-                f'<span style="color:#444;font-weight:normal;line-height:1.7">{para}</span>')
+        return (
+            f'{badge}<br>'
+            f'<span style="color:#444;font-weight:normal;line-height:1.7">{para}</span>'
+        )
     return badge
 
 
@@ -500,8 +497,10 @@ def _fetch_nse_index(session: requests.Session, index: str, lookback_days: int) 
     source_label = "NSE" if index == "equities" else "NSE-SME"
     id_prefix    = "NSE" if index == "equities" else "NSESME"
     try:
-        r = session.get("https://www.nseindia.com/api/corporate-announcements",
-                        params=params, timeout=25)
+        r = session.get(
+            "https://www.nseindia.com/api/corporate-announcements",
+            params=params, timeout=25,
+        )
         r.raise_for_status()
         results = []
         for row in r.json():
@@ -523,7 +522,7 @@ def _fetch_nse_index(session: requests.Session, index: str, lookback_days: int) 
 
 def fetch_all_nse() -> tuple[list[dict], requests.Session]:
     cache = load_cache()
-    lookback_days = 1 if not cache else 2
+    lookback_days = 0.5 if not cache else 2
     log.info("NSE: fetching last %d days across equities + SME segments", lookback_days)
     session  = _nse_session()
     equities = _fetch_nse_index(session, "equities", lookback_days)
@@ -533,25 +532,19 @@ def fetch_all_nse() -> tuple[list[dict], requests.Session]:
 
 
 # ──────────────────────────────────────────────
-# Relevance filter  ← KEY FIX: also checks headline
+# Relevance filter
 # ──────────────────────────────────────────────
 
 def is_relevant(ann: dict) -> bool:
     body     = (ann.get("body", "") or "").lower()
     headline = (ann.get("headline", "") or "").lower()
 
-    # Match keywords against BOTH body and headline
-    body_match     = any(kw in body for kw in KEYWORDS)
-    headline_match = any(kw in headline for kw in KEYWORDS)
-
-    if not body_match and not headline_match:
+    if not any(kw in body for kw in KEYWORDS) and not any(kw in headline for kw in KEYWORDS):
         return False
 
-    # Procedural filter — only drop if NO override keyword is present
     if getattr(Config, "SKIP_PROCEDURAL", True):
         combined = body + " " + headline
         if any(p in combined for p in PROCEDURAL_PHRASES):
-            # Keep anyway if a substantive action word is also present
             if not any(ov in combined for ov in PROCEDURAL_OVERRIDE):
                 log.debug("Skipped procedural: %s", ann.get("company"))
                 return False
@@ -564,7 +557,10 @@ def is_relevant(ann: dict) -> bool:
 # ──────────────────────────────────────────────
 
 def enrich_with_pdf(candidates: list[dict], session: requests.Session) -> list[dict]:
-    needs_pdf = [a for a in candidates if _body_is_weak(a.get("body", "") or "") and a.get("url")]
+    needs_pdf = [
+        a for a in candidates
+        if _body_is_weak(a.get("body", "") or "") and a.get("url")
+    ]
     if not needs_pdf:
         return candidates
     log.info("Fetching PDFs for %d candidates...", len(needs_pdf))
@@ -577,8 +573,10 @@ def enrich_with_pdf(candidates: list[dict], session: requests.Session) -> list[d
 
     with ThreadPoolExecutor(max_workers=5) as pool:
         for f in as_completed({pool.submit(fetch_one, a): a for a in needs_pdf}):
-            try: f.result()
-            except Exception as e: log.debug("PDF error: %s", e)
+            try:
+                f.result()
+            except Exception as e:
+                log.debug("PDF error: %s", e)
     return candidates
 
 
@@ -593,7 +591,11 @@ def send_email(announcements: list[dict]):
     subject = f"{len(announcements)} Corporate Announcements — {datetime.today().strftime('%d %b %Y')}"
     html_rows = ""
     for a in announcements:
-        summary = build_summary(a.get("body","") or "", company=a.get("company",""), headline=a.get("headline",""))
+        summary = build_summary(
+            a.get("body", "") or "",
+            company=a.get("company", ""),
+            headline=a.get("headline", ""),
+        )
         html_rows += f"""
         <tr>
           <td style="padding:8px 10px;border-bottom:1px solid #eee;font-weight:600">{a['source']}</td>
@@ -652,11 +654,17 @@ def send_telegram(announcements: list[dict]):
     if not Config.TELEGRAM_ENABLED or not announcements:
         return
     for a in announcements:
-        summary = build_telegram_summary(a.get("body","") or "", company=a.get("company",""), headline=a.get("headline",""))
-        text = (f"*{a['source']} — {a['company']} ({a.get('scrip','')})*\n"
-                f"_{a['headline']}_ | {a['date']}\n\n"
-                f"{summary}\n\n"
-                f"[View Announcement]({a['url']})")
+        summary = build_telegram_summary(
+            a.get("body", "") or "",
+            company=a.get("company", ""),
+            headline=a.get("headline", ""),
+        )
+        text = (
+            f"*{a['source']} — {a['company']} ({a.get('scrip', '')})*\n"
+            f"_{a['headline']}_ | {a['date']}\n\n"
+            f"{summary}\n\n"
+            f"[View Announcement]({a['url']})"
+        )
         try:
             r = requests.post(
                 f"https://api.telegram.org/bot{Config.TELEGRAM_BOT_TOKEN}/sendMessage",
@@ -670,50 +678,161 @@ def send_telegram(announcements: list[dict]):
 
 
 # ──────────────────────────────────────────────
-# WhatsApp via Twilio
+# WhatsApp via Meta Cloud API
+#
+# Approved template: alerts  (5 variables)
+# ────────────────────────────────────────────
+# 🔍 Stock Market Alert
+# Alert Type: {{1}}
+# Company:    {{2}}
+# Date:       {{3}}
+# Details:    {{4}}
+# More info available at: {{5}}
+# Thank you.
+#
+# NOTE: Meta forbids \n or \t inside template variable values.
+#       All formatting must come from the template itself, not the variables.
 # ──────────────────────────────────────────────
 
+_WA_MAX_LEN = 1024   # Meta hard limit per template variable
+
+
+def clean_wa_text(text: str) -> str:
+    """Strip all newlines, tabs, and extra spaces — Meta rejects variables containing them."""
+    if not text:
+        return ""
+    return re.sub(r"\s+", " ", text.replace("\n", " ").replace("\t", " ")).strip()
+
+
+def _wa_var(value: str, limit: int = _WA_MAX_LEN) -> str:
+    """Clean, trim to Meta's limit, and guarantee non-empty (Meta rejects blank params)."""
+    v = clean_wa_text(value)
+    if len(v) > limit:
+        v = v[: limit - 1] + "…"
+    return v or "-"
+
+
 def send_whatsapp(announcements: list[dict]):
+    """
+    Send WhatsApp alerts via Meta Cloud API using the approved 5-variable 'alerts' template.
+
+    Required config keys:
+        Config.WHATSAPP_ENABLED       bool
+        Config.META_PHONE_NUMBER_ID   str
+        Config.META_ACCESS_TOKEN      str
+        Config.WHATSAPP_TO            list  e.g. ["919XXXXXXXXX"]
+    """
     if not Config.WHATSAPP_ENABLED or not announcements:
         return
-    try:
-        client = TwilioClient(Config.TWILIO_ACCOUNT_SID, Config.TWILIO_AUTH_TOKEN)
-    except Exception as e:
-        log.error("Twilio init failed: %s", e)
+
+    phone_number_id = (getattr(Config, "META_PHONE_NUMBER_ID", "") or "").strip()
+    access_token    = (getattr(Config, "META_ACCESS_TOKEN",    "") or "").strip()
+
+    if not phone_number_id or not access_token:
+        log.warning("WhatsApp: META_PHONE_NUMBER_ID or META_ACCESS_TOKEN not set — skipping")
         return
 
+    if not Config.WHATSAPP_TO:
+        log.warning("WhatsApp: WHATSAPP_TO list is empty — skipping")
+        return
+
+    api_url = f"https://graph.facebook.com/v19.0/{phone_number_id}/messages"
+    headers = {
+        "Authorization": f"Bearer {access_token}",
+        "Content-Type":  "application/json",
+    }
+
     for a in announcements:
-        para = _ai_summarise(a.get("body","") or "", company=a.get("company",""), headline=a.get("headline",""))
-        if not para:
-            para = _fallback_sentences(clean_body(a.get("body","") or ""), company=a.get("company",""), headline=a.get("headline",""))
 
-        combined_raw = (a.get("body","") or "") + " " + (a.get("headline","") or "")
+        # ── Derive raw values ────────────────────────────────────────────
+
+        combined_raw = (a.get("body", "") or "") + " " + (a.get("headline", "") or "")
         flat = re.sub(r"\s+", " ", combined_raw.replace("\n", " ")).strip()
-        status = _get_status(flat)
-        action = _get_action(flat)
-        date   = _get_best_date(flat)
 
-        lines = [
-            f"{status} | {action}",
-            f"{a['source']} — {a['company']} ({a.get('scrip','')})",
-            f"{a['headline']}",
-            f"Date: {a['date']}",
-        ]
-        if date:   lines.append(f"Key date: {date}")
-        if para:   lines.append(f"\n{para}")
-        if a.get("url"): lines.append(f"\nView: {a['url']}")
+        status   = _get_status(flat)
+        action   = _get_action(flat)
+        company  = a.get("company", "Unknown")
+        scrip    = a.get("scrip", "")
+        headline = a.get("headline", "")
+        date_str = a.get("date", "") or _get_best_date(flat) or "-"
+        url      = a.get("url", "-") or "-"
 
-        msg_body = "\n".join(lines)
+        # AI or fallback summary
+        para = _ai_summarise(a.get("body", "") or "", company=company, headline=headline)
+        if not para:
+            para = _fallback_sentences(
+                clean_body(a.get("body", "") or ""),
+                company=company,
+                headline=headline,
+            )
+
+        # ── Build 5 variables — NO newlines, NO tabs anywhere ────────────
+
+        # {{1}} Alert Type  e.g. "🏛️ Board Approved | Acquisition"
+        var1 = _wa_var(f"{status} | {action}")
+
+        # {{2}} Company     e.g. "Global Health Limited (MEDANTA)"
+        var2 = _wa_var(f"{company} ({scrip})" if scrip else company)
+
+        # {{3}} Date
+        var3 = _wa_var(date_str)
+
+        # {{4}} Details     headline + " - " + summary (NO newline — use " - " separator)
+        details = f"{headline} - {para}" if para else headline
+        var4 = _wa_var(details, limit=900)
+
+        # {{5}} URL
+        var5 = _wa_var(url)
+
+        # ── Build payload ────────────────────────────────────────────────
+
+        payload = {
+            "messaging_product": "whatsapp",
+            "type": "template",
+            "template": {
+                "name": "alerts",
+                "language": {"code": "en"},
+                "components": [
+                    {
+                        "type": "body",
+                        "parameters": [
+                            {"type": "text", "text": var1},
+                            {"type": "text", "text": var2},
+                            {"type": "text", "text": var3},
+                            {"type": "text", "text": var4},
+                            {"type": "text", "text": var5},
+                        ],
+                    }
+                ],
+            },
+        }
+
+        # ── Send to each recipient ───────────────────────────────────────
+
         for to_num in Config.WHATSAPP_TO:
+            to_clean = re.sub(r"[^\d]", "", str(to_num))
+            if not to_clean:
+                log.warning("WhatsApp: skipping invalid number '%s'", to_num)
+                continue
+
+            payload["to"] = to_clean
+
             try:
-                client.messages.create(
-                    from_=f"whatsapp:{Config.WHATSAPP_FROM}",
-                    to=f"whatsapp:{to_num}",
-                    body=msg_body,
-                )
-                log.info("WhatsApp sent to %s: %s", to_num, a["company"])
+                r = requests.post(api_url, headers=headers, json=payload, timeout=15)
+                if r.status_code == 200:
+                    msg_id = r.json().get("messages", [{}])[0].get("id", "?")
+                    log.info("WhatsApp sent to %s: %s (msg_id=%s)", to_clean, company, msg_id)
+                else:
+                    log.error(
+                        "WhatsApp FAILED %s → %s: HTTP %d — %s",
+                        company, to_clean, r.status_code, r.text,
+                    )
+            except requests.exceptions.Timeout:
+                log.error("WhatsApp timeout: %s → %s", company, to_clean)
+            except requests.exceptions.ConnectionError as e:
+                log.error("WhatsApp connection error: %s → %s: %s", company, to_clean, e)
             except Exception as e:
-                log.error("WhatsApp failed %s → %s: %s", a["company"], to_num, e)
+                log.error("WhatsApp unexpected error: %s → %s: %s", company, to_clean, e)
 
 
 # ──────────────────────────────────────────────
@@ -722,6 +841,9 @@ def send_whatsapp(announcements: list[dict]):
 
 def run_check():
     t0 = time.time()
+    log.info("DeepSeek key present: %s", bool(
+        getattr(Config, "DEEPSEEK_API_KEY", "") or os.getenv("DEEPSEEK_API_KEY", "")
+    ))
     log.info("═══ Starting announcement check ═══")
     cache = load_cache()
 
@@ -759,8 +881,10 @@ def run_check():
         send_whatsapp(new_relevant)
 
     save_cache(cache)
-    log.info("⏱  fetch: %.1fs | enrich: %.1fs | notify: %.1fs | TOTAL: %.1fs",
-             t1-t0, t2-t1, time.time()-t3, time.time()-t0)
+    log.info(
+        "⏱  fetch: %.1fs | enrich: %.1fs | notify: %.1fs | TOTAL: %.1fs",
+        t1 - t0, t2 - t1, time.time() - t3, time.time() - t0,
+    )
     log.info("═══ Check complete ═══\n")
 
 
