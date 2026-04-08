@@ -1,6 +1,6 @@
 """
 BSE / NSE Corporate Announcement Filter
-Monitors for merger, demerger, split announcements and sends alerts.
+Monitors for merger, demerger, acquisition, split announcements and sends alerts.
 AI-powered summary via DeepSeek (falls back to pattern-based if no API key).
 WhatsApp alerts via Twilio.
 """
@@ -33,34 +33,57 @@ logging.getLogger("pdfminer").setLevel(logging.ERROR)
 
 
 # ──────────────────────────────────────────────
-# Keywords
+# Keywords  (body text match)
 # ──────────────────────────────────────────────
 
 KEYWORDS = [
-    "demerger", "de-merger", "demerge",
+    # Merger / amalgamation
     "merger", "amalgamation", "amalgamate",
+    # Demerger
+    "demerger", "de-merger", "demerge",
+    # Acquisition / takeover
+    "acquisition", "acquire", "acqui", "takeover", "open offer",
+    "slump sale", "business transfer",
+    # Stock split / bonus
     "stock split", "share split", "sub-division of equity",
     "subdivision of equity", "face value split",
+    # Spin-off / hive-off
     "spin-off", "spinoff", "hive off", "hive-off",
+    # Scheme variants
     "composite scheme of arrangement",
     "scheme of amalgamation", "scheme of demerger",
     "scheme of merger", "scheme of arrangement for",
+    "scheme of arrangement",          # broader catch
 ]
 
+# Headline pre-filter — broad hints, any match → pass to full check
 HEADLINE_HINTS = [
     "merger", "demerger", "amalgam", "scheme", "arrangement",
     "split", "spin", "hive", "restructur",
+    "acquisition", "acqui", "takeover", "open offer",
+    "slump sale", "business transfer",
+    "demerge",
 ]
 
+# Procedural filings to SKIP — only drop if NONE of the override keywords are present
+# Override keywords: if the body also contains these, keep the filing anyway
 PROCEDURAL_PHRASES = [
     "meeting of the unsecured creditors",
     "meeting of the secured creditors",
-    "meeting of the equity shareholders",
-    "meeting of the preference shareholders",
-    "court convened meeting", "nclt convened meeting",
+    # Equity shareholder meetings are procedural UNLESS the body also mentions
+    # a new approval/sanction — handled below in is_relevant()
+    "court convened meeting",
     "the exchange has sought clarification",
     "the response from the company is awaited",
-    "the scheme is pending", "pursuant to the scheme already",
+    "the scheme is pending approval",       # narrowed: was too broad
+    "pursuant to the scheme already approved",
+]
+
+# If ANY of these appear alongside a procedural phrase, keep the filing anyway
+PROCEDURAL_OVERRIDE = [
+    "sanctioned", "approved by", "pronounced", "effective",
+    "has become effective", "acquisition", "acquire",
+    "open offer", "slump sale",
 ]
 
 
@@ -122,19 +145,34 @@ def strip_letterhead(text: str) -> str:
 
 
 # ──────────────────────────────────────────────
-# Status / action badges (fallback)
+# Status / action badges
 # ──────────────────────────────────────────────
 
 _STATUS_PATTERNS = [
     (r"\bhas become effective\b",                          "✅ Effective"),
     (r"\bscheme.{0,40}effective from\b",                   "✅ Effective"),
+    (r"\beffective date.{0,30}is\b",                       "✅ Effective"),
+    (r"\bstands dissolved\b",                              "✅ Effective"),
     (r"\bnclt.{0,80}(sanctioned|approved|pronounced)\b",   "⚖️ NCLT Approved"),
+    (r"\b(sanctioned|approved).{0,60}nclt\b",              "⚖️ NCLT Approved"),
     (r"\bregional director.{0,80}(sanctioned|approved)\b", "⚖️ RD Approved"),
+    (r"\b(approved|sanctioned).{0,60}regional director\b", "⚖️ RD Approved"),
     (r"\bno adverse observations\b",                       "📋 NOC Received"),
+    (r"\bno objection\b",                                  "📋 NOC Received"),
     (r"\bobservation letter\b",                            "📋 Observation Letter"),
+    (r"\bnoc from.{0,30}(rbi|sebi|reserve bank)\b",        "📋 RBI/SEBI NOC"),
+    (r"\bopen offer.{0,60}(triggered|announced|made)\b",   "📢 Open Offer"),
+    (r"\bopen offer\b",                                    "📢 Open Offer"),
+    (r"\bslump sale\b",                                    "💼 Slump Sale"),
     (r"\bfiled.{0,50}(nclt|tribunal)\b",                   "📁 Filed with NCLT"),
     (r"\bboard.{0,60}approved\b",                          "🏛️ Board Approved"),
     (r"\bin.?principle approval\b",                        "🏛️ In-Principle Approved"),
+    (r"\bplan of merger\b",                                "🏛️ Plan Approved"),
+    (r"\bacquisition.{0,60}(complet|effect|clos)\b",       "✅ Acquisition Complete"),
+    (r"\bacquir.{0,60}(approv|board)\b",                   "🏛️ Acquisition Approved"),
+    (r"\bacquisition\b",                                   "🔍 Acquisition"),
+    (r"\bextension of timeline\b",                         "⏳ Timeline Extended"),
+    (r"\bsuspended\b",                                     "⛔ Trading Suspended"),
 ]
 
 _ACTION_PATTERNS = [
@@ -142,6 +180,9 @@ _ACTION_PATTERNS = [
     (r"\bdemerger\b|de-merger",            "Demerger"),
     (r"\bspin.?off\b|hive.?off\b",         "Spin-off"),
     (r"\bstock split\b|share split|sub.?division of equity|face value split", "Stock Split"),
+    (r"\bslump sale\b",                    "Slump Sale"),
+    (r"\bopen offer\b",                    "Open Offer"),
+    (r"\bacquisition\b|\bacquire\b|\bacquir\b", "Acquisition"),
     (r"\bamalgamation\b",                  "Amalgamation"),
     (r"\bmerger\b",                        "Merger"),
 ]
@@ -166,47 +207,21 @@ def _get_action(t: str) -> str:
 def _get_best_date(t: str) -> str:
     dates = _DATE_RE.findall(t)
     recent = [d for d in dates if re.search(r"202[5-9]", d)]
-    return (recent[-1] if recent else (dates[-1] if dates else ""))
-
-def _get_body_sentences(clean: str, n: int = 3) -> str:
-    flat = re.sub(r"\s+", " ", clean.replace("\n", " ")).strip()
-    raw  = re.split(r"(?<=[.!?])\s+(?=[A-Z])", flat)
-    good = []
-    junk = re.compile(
-        r"(regulation 30|sebi master circular|listing obligations|schedule iii|"
-        r"enclosed herewith|available on the website|take the same on record|"
-        r"take the above on record|for your information|isin:|scrip code|bse scrip|"
-        r"nse symbol|annexure [a-z]|as above|sebi\s*\(lodr\)|pursuant to regulation|"
-        r"kindly take|please take|yours faithfully|company secretary|"
-        r"we wish to inform|we would like to inform|this is to inform|"
-        r"we are pleased to inform|in compliance with|with reference to)", re.IGNORECASE)
-    for s in raw:
-        s = s.strip()
-        if len(s) < 40: continue
-        if junk.search(s): continue
-        good.append(s)
-        if len(good) == n: break
-    result = " ".join(good)
-    return result[:350] + "..." if len(result) > 350 else result
+    return recent[-1] if recent else (dates[-1] if dates else "")
 
 
 # ──────────────────────────────────────────────
-# Body cleaner — strip boilerplate before AI sees it
+# Body cleaner
 # ──────────────────────────────────────────────
 
-# Patterns that mark a sentence as PURE noise — only strip if nothing valuable is also present.
-# Rule: strip only sentences where the ENTIRE content is procedural/address/footer.
 _NOISE_ONLY_RE = re.compile(
-    # Address / contact lines
     r"^(tel|fax|ph|email|cin|pan|gst|isin)\s*[:\+]|"
     r"(phiroze jeejeebhoy|bandra.kurla|exchange plaza|dalal street|"
     r"shantigram|vaishno devi|adani corporate|registered office\s*:)|"
-    # Pure footer lines
     r"(yours (faithfully|sincerely|truly)|for and on behalf|"
     r"authoris.d signatory|authoriz.d signatory|thanking you|"
     r"kindly take.*on record|please take.*on record|"
     r"dear sir|dear madam|members of the exchange)|"
-    # Pure procedural with no substance
     r"^(we wish to inform|we would like to inform|this is to inform|"
     r"we hereby inform|we are pleased to inform|"
     r"the above information will|this disclosure will|"
@@ -215,24 +230,18 @@ _NOISE_ONLY_RE = re.compile(
     re.IGNORECASE,
 )
 
-# Patterns that signal a sentence has REAL substance — never strip these
 _SUBSTANCE_RE = re.compile(
-    r"(?:limited|ltd|private|pvt|llp|inc)\b|"   # company names
-    r"(?:rs\.?|inr|₹)\s*[\d,]+|"                # rupee amounts
-    r"\b\d{1,2}[\s\-]\w+[\s\-]20\d{2}\b|"       # dates
-    r"\b(merger|amalgamation|demerger|split|spin.off|"
-    r"capital reduction|slump sale|dissolution|"
+    r"(?:limited|ltd|private|pvt|llp|inc)\b|"
+    r"(?:rs\.?|inr|₹)\s*[\d,]+|"
+    r"\b\d{1,2}[\s\-]\w+[\s\-]20\d{2}\b|"
+    r"\b(merger|amalgamation|demerger|split|spin.off|acquisition|acquire|"
+    r"open offer|slump sale|capital reduction|dissolution|"
     r"transferor|transferee|appointed date|effective date|"
     r"share swap|exchange ratio|record date)\b",
     re.IGNORECASE,
 )
 
 def clean_body(text: str) -> str:
-    """
-    Split on sentence boundaries, drop sentences that are pure noise
-    (address/footer/procedural) AND contain no substantive content.
-    Never drops a sentence that mentions company names, amounts, or key actions.
-    """
     if not text:
         return ""
     sentences = re.split(r'(?<=[.;])\s+(?=[A-Z\(\"])', text)
@@ -241,11 +250,9 @@ def clean_body(text: str) -> str:
         s = s.strip()
         if not s or len(s) < 15:
             continue
-        # Keep if it contains substance regardless of noise
         if _SUBSTANCE_RE.search(s):
             kept.append(s)
             continue
-        # Drop if it's pure noise
         if _NOISE_ONLY_RE.search(s):
             continue
         kept.append(s)
@@ -253,7 +260,7 @@ def clean_body(text: str) -> str:
 
 
 # ──────────────────────────────────────────────
-# AI summary via DeepSeek — plain human paragraph
+# AI summary via DeepSeek
 # ──────────────────────────────────────────────
 
 _AI_MIN_CHARS = 60
@@ -261,14 +268,12 @@ _AI_MIN_CHARS = 60
 _SUMMARY_PROMPT = """\
 Summarise this corporate announcement in 2-3 clear, factual sentences.
 Rules:
-- State what is happening (merger / demerger / amalgamation / split) and which companies are involved
-- Include key procedural milestones already completed (e.g. shareholder approval, filing with NCLT, board approval) and the current status
-- Mention any pending steps or next actions if mentioned in the text
-- Do NOT include addresses, phone numbers, regulatory boilerplate, or courtesy phrases
+- State what is happening (merger / demerger / amalgamation / acquisition / split) and which companies are involved
+- Include key milestones completed (e.g. board approval, NCLT sanction, filing) and the current status
+- Mention any pending steps or next actions if mentioned
+- Do NOT include addresses, regulatory boilerplate, or courtesy phrases
 - Write in plain business English — no "pursuant to", no formal legalese
 - Output plain text only, no bullet points, no bold, no headings
-Example output:
-"Utkarsh Small Finance Bank Limited is amalgamating with Utkarsh CoreInvest Limited. A joint petition to sanction the scheme was filed with the National Company Law Tribunal (NCLT) on 5 April 2026. This filing follows the approval of the scheme by the companies' equity shareholders and unsecured creditors. The scheme is now pending final sanction from the NCLT."
 
 COMPANY: {company}
 HEADLINE: {headline}
@@ -280,14 +285,10 @@ SUMMARY:"""
 
 
 def _ai_summarise(raw_body: str, company: str = "", headline: str = "") -> str:
-    # Use Config key (with env-var fallback already baked in)
-    api_key = getattr(Config, "DEEPSEEK_API_KEY", "") or os.getenv("DEEPSEEK_API_KEY", "")
-    api_key = (api_key or "").strip()
+    api_key = (getattr(Config, "DEEPSEEK_API_KEY", "") or os.getenv("DEEPSEEK_API_KEY", "") or "").strip()
     if not api_key:
-        log.debug("DeepSeek: no API key")
         return ""
 
-    # Try cleaned first; if too thin, use raw (capped) so AI still has context
     cleaned = clean_body(raw_body or "").strip()
     if len(cleaned) >= _AI_MIN_CHARS:
         body = cleaned[:3000]
@@ -298,33 +299,21 @@ def _ai_summarise(raw_body: str, company: str = "", headline: str = "") -> str:
     else:
         return ""
 
-    prompt = _SUMMARY_PROMPT.format(
-        company=company or "Unknown",
-        headline=headline or "Corporate announcement",
-        text=body,
-    )
-
+    prompt = _SUMMARY_PROMPT.format(company=company or "Unknown",
+                                     headline=headline or "Corporate announcement",
+                                     text=body)
     try:
         r = requests.post(
             "https://api.deepseek.com/chat/completions",
-            headers={
-                "Authorization": f"Bearer {api_key}",
-                "Content-Type": "application/json",
-            },
-            json={
-                "model":       "deepseek-chat",
-                "max_tokens":  400,
-                "temperature": 0.3,
-                "messages":    [{"role": "user", "content": prompt}],
-            },
+            headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+            json={"model": "deepseek-chat", "max_tokens": 400, "temperature": 0.3,
+                  "messages": [{"role": "user", "content": prompt}]},
             timeout=20,
         )
         r.raise_for_status()
         out = r.json()["choices"][0]["message"]["content"].strip()
-        out = re.sub(r"\*\*(.*?)\*\*", r"\1", out)           # strip bold
-        out = re.sub(r"^\s*[-*•]\s+", "", out, flags=re.MULTILINE)  # strip bullets
-        out = re.sub(r"\s*\.\.\.$", ".", out.strip())         # strip trailing …
-        log.debug("DeepSeek OK: %s", company)
+        out = re.sub(r"\*\*(.*?)\*\*", r"\1", out)
+        out = re.sub(r"^\s*[-*•]\s+", "", out, flags=re.MULTILINE)
         return out
     except Exception as e:
         log.warning("DeepSeek failed for %s: %s", company, e)
@@ -332,27 +321,22 @@ def _ai_summarise(raw_body: str, company: str = "", headline: str = "") -> str:
 
 
 # ──────────────────────────────────────────────
-# Fallback: smart one-liner when DeepSeek is unavailable
+# Fallback: smart one-liner
 # ──────────────────────────────────────────────
 
-def _fallback_sentences(clean: str, n: int = 1, company: str = "", headline: str = "") -> str:
-    """
-    Builds the best possible one-liner without AI:
-      "<Company> <action> with <Partner> — <status>"
-    Uses clean body + headline to extract partner name and status.
-    Falls back to the single best non-boilerplate sentence from the body.
-    """
+def _fallback_sentences(clean: str, company: str = "", headline: str = "") -> str:
     combined = ((clean or "") + " " + (headline or "")).lower()
 
-    # ── Detect action ──────────────────────────────────────────────────────
     if re.search(r"de.?merger|demerge", combined):         action = "demerger"
     elif re.search(r"spin.?off|hive.?off", combined):      action = "spin-off"
     elif re.search(r"stock split|share split|sub.?divis|face value", combined): action = "stock split"
+    elif re.search(r"open offer", combined):               action = "open offer"
+    elif re.search(r"slump sale", combined):               action = "slump sale"
+    elif re.search(r"acquisition|acqui\w+", combined):     action = "acquisition"
     elif re.search(r"amalgamation|amalgamate", combined):  action = "amalgamation"
     elif re.search(r"\bmerger\b|\bmerge\b", combined):     action = "merger"
     else:                                                   action = "restructuring"
 
-    # ── Detect status ──────────────────────────────────────────────────────
     if re.search(r"has become effective|made effective|scheme.*effective", combined):
         status = "effective"
     elif re.search(r"nclt.{0,60}(sanction|approv|order|pronounc)", combined):
@@ -361,32 +345,32 @@ def _fallback_sentences(clean: str, n: int = 1, company: str = "", headline: str
         status = "RD approved"
     elif re.search(r"board.{0,60}approv", combined):
         status = "board approved"
-    elif re.search(r"no adverse observation|observation letter", combined):
+    elif re.search(r"no adverse observation|observation letter|no objection", combined):
         status = "NOC received"
     elif re.search(r"filed.{0,30}(nclt|tribunal)", combined):
         status = "filed with NCLT"
+    elif re.search(r"open offer.{0,30}(trigger|announc|made)", combined):
+        status = "open offer triggered"
+    elif re.search(r"acquisition.{0,40}(complet|clos|effect)", combined):
+        status = "acquisition completed"
     elif re.search(r"in.?principle approval", combined):
         status = "in-principle approved"
     else:
         status = ""
 
-    # ── Extract partner company name from clean body ───────────────────────
     partner = ""
-    # Look for "X Limited/Ltd/Private merged with / into / and Y Limited"
     for pat in [
-        r'(?:amalgamation of|merger of|demerger of|between)\s+"?([A-Z][A-Za-z &()\'\-\.]{3,60}(?:Limited|Ltd\.?|Private|Pvt\.?|LLP|Inc\.?))',
+        r'(?:amalgamation of|merger of|demerger of|acquisition of|between)\s+"?([A-Z][A-Za-z &()\'\-\.]{3,60}(?:Limited|Ltd\.?|Private|Pvt\.?|LLP|Inc\.?))',
         r'(?:Transferor Compan(?:y|ies)[^"]{0,20}"?)([A-Z][A-Za-z &()\'\-\.]{3,60}(?:Limited|Ltd\.?|Private|Pvt\.?|LLP|Inc\.?))',
-        r'(?:with|into)\s+([A-Z][A-Za-z &()\'\-\.]{3,60}(?:Limited|Ltd\.?|Private|Pvt\.?|LLP|Inc\.?))',
+        r'(?:with|into|of)\s+([A-Z][A-Za-z &()\'\-\.]{3,60}(?:Limited|Ltd\.?|Private|Pvt\.?|LLP|Inc\.?))',
     ]:
         m = re.search(pat, clean or "")
         if m:
             candidate = m.group(1).strip().rstrip(",(;")
-            # Skip if it's basically the same as the main company
             if company and candidate.lower()[:12] != (company or "")[:12].lower():
                 partner = candidate
                 break
 
-    # ── Build the line ─────────────────────────────────────────────────────
     c = (company or "").strip()
     parts = [c, action]
     if partner:
@@ -401,12 +385,11 @@ def _fallback_sentences(clean: str, n: int = 1, company: str = "", headline: str
             result += "."
         return result
 
-    # ── Last resort: best sentence from the body ───────────────────────────
     flat = re.sub(r"\s+", " ", (clean or "").replace("\n", " ")).strip()
     for s in re.split(r"(?<=[.!?])\s+(?=[A-Z\"])", flat):
         s = s.strip()
         if len(s) > 40 and not _NOISE_ONLY_RE.search(s):
-            return re.sub(r"\s*\.\.\.$", ".", s)
+            return s
     return headline or ""
 
 
@@ -415,45 +398,41 @@ def _fallback_sentences(clean: str, n: int = 1, company: str = "", headline: str
 # ──────────────────────────────────────────────
 
 def build_summary(body: str, company: str = "", headline: str = "") -> str:
-    clean = clean_body(body)
-    flat  = re.sub(r"\s+", " ", clean.replace("\n", " ")).strip()
+    # Use combined body+headline for badge detection so thin-body announcements still get right badge
+    combined_raw = (body or "") + " " + (headline or "")
+    flat = re.sub(r"\s+", " ", combined_raw.replace("\n", " ")).strip()
 
-    # Use raw body for badges/dates too — raw has more signal
-    raw_flat = re.sub(r"\s+", " ", (body or "").replace("\n", " ")).strip()
-    status = _get_status(raw_flat)
-    action = _get_action(raw_flat)
-    date   = _get_best_date(raw_flat)
+    status = _get_status(flat)
+    action = _get_action(flat)
+    date   = _get_best_date(flat)
 
     badge_parts = [f"<b>{status}</b>", f"<b>{action}</b>"]
     if date:
         badge_parts.append(f"📅 {date}")
     badge = " &nbsp;·&nbsp; ".join(badge_parts)
 
-    # AI gets raw body (it handles noise better than our regex)
-    # Fallback gets clean body (already stripped)
     para = _ai_summarise(body, company=company, headline=headline)
     if not para:
-        para = _fallback_sentences(clean, company=company, headline=headline)
+        para = _fallback_sentences(clean_body(body), company=company, headline=headline)
 
     if para:
         para = para.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
-        return (
-            f'{badge}<br>'
-            f'<span style="color:#444;font-weight:normal;line-height:1.7">{para}</span>'
-        )
+        return (f'{badge}<br>'
+                f'<span style="color:#444;font-weight:normal;line-height:1.7">{para}</span>')
     return badge
 
 
 def build_telegram_summary(body: str, company: str = "", headline: str = "") -> str:
-    clean  = clean_body(body)
-    raw_flat = re.sub(r"\s+", " ", (body or "").replace("\n", " ")).strip()
-    status = _get_status(raw_flat)
-    action = _get_action(raw_flat)
-    date   = _get_best_date(raw_flat)
+    combined_raw = (body or "") + " " + (headline or "")
+    flat = re.sub(r"\s+", " ", combined_raw.replace("\n", " ")).strip()
+
+    status = _get_status(flat)
+    action = _get_action(flat)
+    date   = _get_best_date(flat)
 
     para = _ai_summarise(body, company=company, headline=headline)
     if not para:
-        para = _fallback_sentences(clean, company=company, headline=headline)
+        para = _fallback_sentences(clean_body(body), company=company, headline=headline)
 
     parts = [f"{status}  |  *{action}*"]
     if date:
@@ -554,17 +533,29 @@ def fetch_all_nse() -> tuple[list[dict], requests.Session]:
 
 
 # ──────────────────────────────────────────────
-# Relevance filter
+# Relevance filter  ← KEY FIX: also checks headline
 # ──────────────────────────────────────────────
 
 def is_relevant(ann: dict) -> bool:
-    body = (ann.get("body", "") or "").lower()
-    if not any(kw in body for kw in KEYWORDS):
+    body     = (ann.get("body", "") or "").lower()
+    headline = (ann.get("headline", "") or "").lower()
+
+    # Match keywords against BOTH body and headline
+    body_match     = any(kw in body for kw in KEYWORDS)
+    headline_match = any(kw in headline for kw in KEYWORDS)
+
+    if not body_match and not headline_match:
         return False
+
+    # Procedural filter — only drop if NO override keyword is present
     if getattr(Config, "SKIP_PROCEDURAL", True):
-        if any(p in body for p in PROCEDURAL_PHRASES):
-            log.debug("Skipped procedural: %s", ann.get("company"))
-            return False
+        combined = body + " " + headline
+        if any(p in combined for p in PROCEDURAL_PHRASES):
+            # Keep anyway if a substantive action word is also present
+            if not any(ov in combined for ov in PROCEDURAL_OVERRIDE):
+                log.debug("Skipped procedural: %s", ann.get("company"))
+                return False
+
     return True
 
 
@@ -585,15 +576,14 @@ def enrich_with_pdf(candidates: list[dict], session: requests.Session) -> list[d
         return ann
 
     with ThreadPoolExecutor(max_workers=5) as pool:
-        futures = {pool.submit(fetch_one, a): a for a in needs_pdf}
-        for f in as_completed(futures):
+        for f in as_completed({pool.submit(fetch_one, a): a for a in needs_pdf}):
             try: f.result()
             except Exception as e: log.debug("PDF error: %s", e)
     return candidates
 
 
 # ──────────────────────────────────────────────
-# Email  ← FIXED: passes company/headline to build_summary
+# Email
 # ──────────────────────────────────────────────
 
 def send_email(announcements: list[dict]):
@@ -603,11 +593,7 @@ def send_email(announcements: list[dict]):
     subject = f"{len(announcements)} Corporate Announcements — {datetime.today().strftime('%d %b %Y')}"
     html_rows = ""
     for a in announcements:
-        summary = build_summary(
-            a.get("body", "") or "",
-            company=a.get("company", ""),
-            headline=a.get("headline", ""),
-        )
+        summary = build_summary(a.get("body","") or "", company=a.get("company",""), headline=a.get("headline",""))
         html_rows += f"""
         <tr>
           <td style="padding:8px 10px;border-bottom:1px solid #eee;font-weight:600">{a['source']}</td>
@@ -659,18 +645,14 @@ def send_email(announcements: list[dict]):
 
 
 # ──────────────────────────────────────────────
-# Telegram  ← FIXED: passes company/headline
+# Telegram
 # ──────────────────────────────────────────────
 
 def send_telegram(announcements: list[dict]):
     if not Config.TELEGRAM_ENABLED or not announcements:
         return
     for a in announcements:
-        summary = build_telegram_summary(
-            a.get("body", "") or "",
-            company=a.get("company", ""),
-            headline=a.get("headline", ""),
-        )
+        summary = build_telegram_summary(a.get("body","") or "", company=a.get("company",""), headline=a.get("headline",""))
         text = (f"*{a['source']} — {a['company']} ({a.get('scrip','')})*\n"
                 f"_{a['headline']}_ | {a['date']}\n\n"
                 f"{summary}\n\n"
@@ -697,42 +679,31 @@ def send_whatsapp(announcements: list[dict]):
     try:
         client = TwilioClient(Config.TWILIO_ACCOUNT_SID, Config.TWILIO_AUTH_TOKEN)
     except Exception as e:
-        log.error("Twilio client init failed: %s", e)
+        log.error("Twilio init failed: %s", e)
         return
 
     for a in announcements:
-        summary = _ai_summarise(
-            a.get("body", "") or "",
-            company=a.get("company", ""),
-            headline=a.get("headline", ""),
-        )
-        if not summary:
-            summary = _fallback_sentences(
-                clean_body(a.get("body", "") or ""),
-                company=a.get("company", ""),
-                headline=a.get("headline", ""),
-            )
+        para = _ai_summarise(a.get("body","") or "", company=a.get("company",""), headline=a.get("headline",""))
+        if not para:
+            para = _fallback_sentences(clean_body(a.get("body","") or ""), company=a.get("company",""), headline=a.get("headline",""))
 
-        raw_flat = re.sub(r"\s+", " ", (a.get("body", "") or "").replace("\n", " ")).strip()
-        status = _get_status(raw_flat)
-        action = _get_action(raw_flat)
-        date   = _get_best_date(raw_flat)
+        combined_raw = (a.get("body","") or "") + " " + (a.get("headline","") or "")
+        flat = re.sub(r"\s+", " ", combined_raw.replace("\n", " ")).strip()
+        status = _get_status(flat)
+        action = _get_action(flat)
+        date   = _get_best_date(flat)
 
         lines = [
             f"{status} | {action}",
-            f"{a['source']} — {a['company']} ({a.get('scrip', '')})",
+            f"{a['source']} — {a['company']} ({a.get('scrip','')})",
             f"{a['headline']}",
             f"Date: {a['date']}",
         ]
-        if date:
-            lines.append(f"Key date: {date}")
-        if summary:
-            lines.append(f"\n{summary}")
-        if a.get("url"):
-            lines.append(f"\nView: {a['url']}")
+        if date:   lines.append(f"Key date: {date}")
+        if para:   lines.append(f"\n{para}")
+        if a.get("url"): lines.append(f"\nView: {a['url']}")
 
         msg_body = "\n".join(lines)
-
         for to_num in Config.WHATSAPP_TO:
             try:
                 client.messages.create(
@@ -742,7 +713,7 @@ def send_whatsapp(announcements: list[dict]):
                 )
                 log.info("WhatsApp sent to %s: %s", to_num, a["company"])
             except Exception as e:
-                log.error("WhatsApp failed for %s → %s: %s", a["company"], to_num, e)
+                log.error("WhatsApp failed %s → %s: %s", a["company"], to_num, e)
 
 
 # ──────────────────────────────────────────────
@@ -760,11 +731,11 @@ def run_check():
     unseen = [a for a in anns if a["id"] not in cache]
     log.info("Unseen: %d", len(unseen))
 
-    # Pre-filter: only pass candidates that look relevant (saves PDF fetches)
     candidates = [
         a for a in unseen
         if _headline_looks_relevant(a.get("headline", ""))
         or any(kw in (a.get("body", "") or "").lower() for kw in KEYWORDS)
+        or any(kw in (a.get("headline", "") or "").lower() for kw in KEYWORDS)
     ]
     log.info("Candidates: %d", len(candidates))
     candidates = enrich_with_pdf(candidates, session)
@@ -776,7 +747,6 @@ def run_check():
             new_relevant.append(ann)
             cache.add(ann["id"])
 
-    # Mark all unseen as seen (not just relevant ones)
     for ann in unseen:
         cache.add(ann["id"])
 
