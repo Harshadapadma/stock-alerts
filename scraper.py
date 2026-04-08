@@ -30,48 +30,86 @@ logging.basicConfig(
 log = logging.getLogger(__name__)
 logging.getLogger("pdfminer").setLevel(logging.ERROR)
 
-
 # ──────────────────────────────────────────────
-# Keywords  (body text match)
+# Keywords  (STRICT — high signal only)
 # ──────────────────────────────────────────────
 
 KEYWORDS = [
-    "merger", "amalgamation", "amalgamate",
-    "demerger", "de-merger", "demerge",
-    "acquisition", "acquire", "acqui", "takeover", "open offer",
-    "slump sale", "business transfer",
-    "stock split", "share split", "sub-division of equity",
-    "subdivision of equity", "face value split",
-    "spin-off", "spinoff", "hive off", "hive-off",
-    "composite scheme of arrangement",
+    "merger", "amalgamation",
+    "demerger", "de-merger",
     "scheme of amalgamation", "scheme of demerger",
-    "scheme of merger", "scheme of arrangement for",
-    "scheme of arrangement",
+    "composite scheme",
+    "slump sale", "business transfer",
+    "spin-off", "spinoff", "hive off",
+    "stock split", "share split", "sub-division"
 ]
+
+
+# ──────────────────────────────────────────────
+# Headline hints
+# ──────────────────────────────────────────────
 
 HEADLINE_HINTS = [
-    "merger", "demerger", "amalgam", "scheme", "arrangement",
-    "split", "spin", "hive", "restructur",
-    "acquisition", "acqui", "takeover", "open offer",
-    "slump sale", "business transfer", "demerge",
+    "merger", "demerger", "amalgam",
+    "scheme", "composite scheme",
+    "split", "spin", "hive",
+    "slump sale", "business transfer"
 ]
+
+
+# ──────────────────────────────────────────────
+# Procedural junk (filter out)
+# ──────────────────────────────────────────────
 
 PROCEDURAL_PHRASES = [
-    "meeting of the unsecured creditors",
-    "meeting of the secured creditors",
-    "court convened meeting",
-    "the exchange has sought clarification",
-    "the response from the company is awaited",
-    "the scheme is pending approval",
-    "pursuant to the scheme already approved",
+    "meeting", "egm", "agm", "postal ballot",
+    "creditors", "scrutinizer",
+    "notice", "intimation",
+    "clarification", "response awaited",
+    "pending approval",
 ]
+
+
+# ──────────────────────────────────────────────
+# Override (real events)
+# ──────────────────────────────────────────────
 
 PROCEDURAL_OVERRIDE = [
-    "sanctioned", "approved by", "pronounced", "effective",
-    "has become effective", "acquisition", "acquire",
-    "open offer", "slump sale",
+    "approved", "sanctioned", "effective",
+    "completed", "has become effective",
 ]
 
+
+# ──────────────────────────────────────────────
+# FINAL FILTER FUNCTION (USE THIS)
+# ──────────────────────────────────────────────
+
+def is_relevant(text: str) -> bool:
+    text = text.lower()
+
+    # 1. Basic keyword match
+    if not any(k in text for k in KEYWORDS):
+        # Special handling for acquisition
+        if "acquisition" in text:
+            if not any(x in text for x in [
+                "shares", "equity shares", "promoter", "sast"
+            ]):
+                pass
+            else:
+                return False
+        else:
+            return False
+
+    # 2. Remove procedural junk
+    if any(p in text for p in PROCEDURAL_PHRASES):
+        if not any(o in text for o in PROCEDURAL_OVERRIDE):
+            return False
+
+    # 3. Ensure real action happened
+    if not any(o in text for o in PROCEDURAL_OVERRIDE):
+        return False
+
+    return True
 
 # ──────────────────────────────────────────────
 # Cache
