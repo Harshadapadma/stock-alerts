@@ -32,155 +32,50 @@ logging.getLogger("pdfminer").setLevel(logging.ERROR)
 
 
 import re
-
-import re
-
-# ══════════════════════════════════════════════════════════════════════════════
-# FILTERING LOGIC (BALANCED — STABLE 15–40 RANGE)
-# ══════════════════════════════════════════════════════════════════════════════
-
 KEYWORDS = [
-    "merger", "amalgamation", "demerger",
-    "scheme of", "scheme",
-    "arrangement", "slump sale",
-    "business transfer", "spin-off", "hive off",
-    "stock split", "share split",
-    "sub-division", "face value",
-    "acquisition", "takeover", "open offer",
+    # ── Merger / Amalgamation ──
+    "merger", "amalgamation", "amalgamate",
+    # ── Demerger / Spin-off / Hive-off ──
+    "demerger", "de-merger", "demerge",
+    "spin-off", "spinoff", "hive off", "hive-off",
+    # ── Scheme phrases (specific — not bare 'scheme') ──
+    "composite scheme of arrangement",
+    "scheme of amalgamation", "scheme of demerger",
+    "scheme of merger", "scheme of arrangement for",
+    "scheme of arrangement",
+    # ── Takeover / Open Offer / Slump Sale ──
+    "takeover", "open offer", "slump sale", "business transfer",
+    # ── Acquisitions — qualified phrases only (excludes promoter SAST filings) ──
+    "acquisition of business", "acquisition of undertaking",
+    "acquisition of company", "acquisition of assets",
+    "acquisition of shareholding", "strategic acquisition",
 ]
 
-HEADLINE_HINTS = KEYWORDS.copy()
+HEADLINE_HINTS = [
+    # Keep only specific multi-word or unambiguous hints
+    "merger", "demerger", "amalgam", "demerge",
+    "scheme of",          # 'scheme of arrangement/merger/demerger' — not bare 'scheme'
+    "spin-off", "spinoff", "hive off", "hive-off",
+    "takeover", "open offer", "slump sale", "business transfer",
+]
 
-# ── HARD EXCLUDE (CONTROLLED — NOT AGGRESSIVE) ───────────────────────────────
-_EXCLUDE_PATTERNS = [re.compile(p, re.I) for p in [
+PROCEDURAL_PHRASES = [
+    "meeting of the unsecured creditors",
+    "meeting of the secured creditors",
+    "court convened meeting",
+    "the scheme is pending approval",
+    "pursuant to the scheme already approved",
+]
 
-    # pure noise
-    r"\bbuyback\b",
-    r"\brights\s+issue\b",
-    r"\bbonus\s+(share|issue)\b",
-    r"^\s*dividend",
-
-    # meetings
-    r"\bpostal\s+ballot\b",
-    r"\bscrutinizer\b",
-    r"\bnotice\s+of\s+(egm|agm)",
-
-    # share trading noise
-    r"open\s+market\s+(purchase|sale)",
-    r"\bblock\s+deal\b",
-    r"\bbulk\s+deal\b",
-
-    # kmp
-    r"\bappointment\s+of\s+(director|auditor|cfo|ceo)",
-    r"\bresignation\s+of\s+(director|auditor|cfo|ceo)",
-]]
-
-# ── CATEGORY ────────────────────────────────────────────────────────────────
-_CAT_SPLIT = [re.compile(p, re.I) for p in [
-    r"\bstock\s+split\b",
-    r"\bshare\s+split\b",
-    r"\bsub.?division\b",
-    r"\bface\s+value\b",
-]]
-
-_CAT_SCHEME = [re.compile(p, re.I) for p in [
-    r"\bmerger\b",
-    r"\bamalgamation\b",
-    r"\bdemerger\b",
-    r"\bscheme\s+of\b",
-    r"\bslump\s+sale\b",
-    r"\bbusiness\s+transfer\b",
-    r"\bnclt\b",
-]]
-
-_CAT_ACQUISITION = [re.compile(p, re.I) for p in [
-    r"\bacquisition\b",
-    r"\bacquire\b",
-    r"\btakeover\b",
-    r"\bopen\s+offer\b",
-]]
-
-def _matches_any(text, patterns):
-    return any(p.search(text) for p in patterns)
-
-def _classify(text):
-    if _matches_any(text, _CAT_SPLIT): return "split"
-    if _matches_any(text, _CAT_SCHEME): return "scheme"
-    if _matches_any(text, _CAT_ACQUISITION): return "acquisition"
-    return None
-
-# ── OUTCOME (MID-STRICT — KEY BALANCE) ───────────────────────────────────────
-_OUTCOME_STRONG = [re.compile(p, re.I) for p in [
-    r"\bapproved\b",
-    r"\bboard.{0,30}approv",
-    r"\bsanctioned\b",
-    r"\beffective\b",
-    r"\bcompleted\b",
-    r"\brecord\s+date\b",
-]]
-
-_OUTCOME_MEDIUM = [re.compile(p, re.I) for p in [
-    r"\bfiled\b",
-    r"\bsubmitted\b",
-    r"\bapplication\b",
-    r"\bagreement\b",
-    r"\bentered\b",
-    r"\bexecution\b",
-    r"\bnclt\b",
-]]
-
-# ── MAIN ─────────────────────────────────────────────────────────────────────
-def _headline_looks_relevant(headline: str) -> bool:
-    h = (headline or "").lower()
-    return any(kw in h for kw in HEADLINE_HINTS)
-
-def is_relevant(ann: dict) -> bool:
-    body = (ann.get("body", "") or "")
-    headline = (ann.get("headline", "") or "")
-    combined = (body + " " + headline).lower()
-
-    # Stage 1
-    if _matches_any(combined, _EXCLUDE_PATTERNS):
-        return False
-
-    # Stage 2
-    category = _classify(combined)
-    if category is None:
-        return False
-
-    # Splits → always include
-    if category == "split":
-        return True
-
-    # Stage 3 — CONTROLLED SCORING
-    score = 0
-
-    # category base
-    score += 1
-
-    # strong signals
-    if _matches_any(combined, _OUTCOME_STRONG):
-        score += 2
-
-    # medium signals
-    if _matches_any(combined, _OUTCOME_MEDIUM):
-        score += 1
-
-    # boosters (important)
-    if "scheme of" in combined:
-        score += 1
-    if "nclt" in combined:
-        score += 1
-    if "open offer" in combined:
-        score += 2
-
-    # acquisition stricter (avoid spam)
-    if category == "acquisition":
-        if score < 3:
-            return False
-
-    # FINAL THRESHOLD (TUNED)
-    return score >= 3
+# Only terms that are *unambiguous* indicators of a real deal outcome.
+# Removed: "acquisition", "acquire", "approved by" — too broad, caused 130-file flood.
+PROCEDURAL_OVERRIDE = [
+    "sanctioned",
+    "pronounced",
+    "has become effective",
+    "open offer",
+    "slump sale",
+]
 # ══════════════════════════════════════════════════════════════════════════════
 # Cache
 # ══════════════════════════════════════════════════════════════════════════════
@@ -557,10 +452,26 @@ def _body_is_weak(text: str) -> bool:
     return len((text or "").strip()) < MIN_BODY_CHARS
 
 def _extract_pdf_text(url: str, session: requests.Session) -> str:
-    if not url or not url.lower().endswith(".pdf"):
+    """Download and extract text from a PDF URL.
+
+    NSE sometimes serves PDFs at URLs that do *not* end in '.pdf'
+    (e.g. signed S3 URLs or redirect chains).  We therefore:
+      1. Always allow URLs that end in .pdf.
+      2. For other URLs, send a HEAD request to check Content-Type first.
+    """
+    if not url:
         return ""
+    is_pdf_ext = url.lower().split("?")[0].endswith(".pdf")
+    if not is_pdf_ext:
+        try:
+            head = session.head(url, timeout=10, allow_redirects=True)
+            ct = head.headers.get("Content-Type", "")
+            if "pdf" not in ct.lower():
+                return ""
+        except Exception:
+            return ""
     try:
-        r = session.get(url, timeout=20, stream=True)
+        r = session.get(url, timeout=25, stream=True)
         r.raise_for_status()
         pages_text = []
         with pdfplumber.open(io.BytesIO(r.content)) as pdf:
@@ -884,6 +795,123 @@ def send_whatsapp(announcements: list[dict]):
                 log.error("WhatsApp connection error: %s → %s: %s", company, to_clean, e)
             except Exception as e:
                 log.error("WhatsApp unexpected error: %s → %s: %s", company, to_clean, e)
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# Relevance filtering
+# ══════════════════════════════════════════════════════════════════════════════
+
+def _headline_looks_relevant(headline: str) -> bool:
+    """Fast pre-check: does the headline contain any HEADLINE_HINTS substring?"""
+    if not headline:
+        return False
+    hl = headline.lower()
+    return any(hint in hl for hint in HEADLINE_HINTS)
+
+
+# Substantive scheme/deal keywords — used to override procedural-phrase filter
+_SUBSTANTIVE_KEYWORDS = [
+    "scheme of arrangement", "scheme of amalgamation",
+    "scheme of demerger", "scheme of merger",
+    "composite scheme", "amalgamation", "demerger",
+    "merger", "spin-off", "hive off", "hive-off",
+    "slump sale", "open offer",
+    # acquisition kept here for procedural-override context check
+    "acquisition of business", "acquisition of undertaking",
+    "acquisition of company", "acquisition of assets",
+    "strategic acquisition",
+]
+
+# Phrases that flag a filing as pure procedural noise (no real deal info)
+_PURE_PROCEDURAL_NOISE = [
+    # Promoter / SAST creeping acquisition disclosures
+    "acquisition of equity shares by the promoter",
+    "voluntary disclosure of acquisition of equity shares",
+    "regulation 31(4) of sebi (substantial acquisition",
+    "regulation 31(4) of sebi (substential acquisition",   # real-world typo variant
+    "disclosure under regulation 29",
+    "disclosure under regulation 30 of sebi (sast",
+    "inter-se transfer",
+    "creeping acquisition",
+    # Other high-volume noise
+    "allotment of equity shares",
+    "issue of equity shares",
+    "preferential allotment",
+    "rights issue",
+    "buy back of shares",
+    "buyback of shares",
+]
+
+# Acquisition patterns that ARE genuine corporate deals (not promoter SAST)
+_CORP_ACQUISITION_RE = re.compile(
+    r"acquisition of (?:business|undertaking|compan|assets|shareholding)|strategic acquisition",
+    re.IGNORECASE,
+)
+
+
+def is_relevant(ann: dict) -> bool:
+    """
+    Return True if the announcement is a genuine corporate restructuring /
+    deal event worth alerting on.
+
+    Filter layers (in priority order):
+    1. At least one KEYWORD must appear in headline + body.
+    2. Drop pure noise: promoter SAST disclosures, allotments, buybacks, rights issues.
+    3. Procedural-override: unambiguous deal outcomes always pass (sanctioned,
+       pronounced, has become effective, open offer, slump sale).
+    4. Smart procedural-phrase filter: if a creditor-meeting / pending-approval
+       phrase is found, only pass when a substantive deal keyword is ALSO present.
+    5. Acquisition gate: bare 'acquisition' words in body are only allowed through
+       if a corporate-acquisition phrase is present (not promoter SAST filings).
+    """
+    headline = (ann.get("headline", "") or "").lower()
+    body     = (ann.get("body",     "") or "").lower()
+    combined = headline + " " + body
+
+    # ── 1. Must contain at least one keyword ──────────────────────────────────
+    if not any(kw in combined for kw in KEYWORDS):
+        log.debug("Skipped (no keyword): %s", ann.get("company"))
+        return False
+
+    # ── 2. Drop known noise patterns first ────────────────────────────────────
+    if any(noise in combined for noise in _PURE_PROCEDURAL_NOISE):
+        log.debug("Skipped (noise pattern): %s", ann.get("company"))
+        return False
+
+    # ── 3. Unambiguous deal outcomes always pass ───────────────────────────────
+    if any(term in combined for term in PROCEDURAL_OVERRIDE):
+        return True
+
+    # ── 4. Smart procedural-phrase filter ─────────────────────────────────────
+    if any(p in body for p in PROCEDURAL_PHRASES):
+        # Keep only if a substantive deal keyword is also in the body
+        if not any(s in body for s in _SUBSTANTIVE_KEYWORDS):
+            log.debug("Skipped (procedural-only): %s", ann.get("company"))
+            return False
+
+    # ── 5. Acquisition quality gate ───────────────────────────────────────────
+    # If the match was triggered only by an acquisition keyword, verify it's a
+    # corporate deal (not a routine promoter share purchase).
+    acquisition_keywords_matched = any(
+        kw in combined for kw in [
+            "acquisition of business", "acquisition of undertaking",
+            "acquisition of company", "acquisition of assets",
+            "acquisition of shareholding", "strategic acquisition",
+        ]
+    )
+    scheme_keywords_matched = any(
+        kw in combined for kw in [
+            "merger", "amalgamation", "demerger", "scheme of",
+            "spin-off", "hive off", "slump sale", "open offer", "takeover",
+        ]
+    )
+    if acquisition_keywords_matched and not scheme_keywords_matched:
+        # Pure acquisition — must have a corporate-deal phrase
+        if not _CORP_ACQUISITION_RE.search(combined):
+            log.debug("Skipped (acquisition not corp-deal): %s", ann.get("company"))
+            return False
+
+    return True
 
 
 # ══════════════════════════════════════════════════════════════════════════════
