@@ -54,7 +54,11 @@ logging.getLogger("pdfminer").setLevel(logging.ERROR)
 # ══════════════════════════════════════════════════════════════════════════════
 
 
-# ── KEYWORDS ─────────────────────────────────────────────────────────────────
+# ── KEYWORDS (pre-filter used in run_check) ───────────────────────────────────
+# Intentionally broad for the candidate pass — is_relevant() tightens further.
+# "takeover" is deliberately ABSENT — it fires on thousands of pledge filings.
+# "acquisition" / "split" / "sub-division" deliberately ABSENT.
+
 KEYWORDS = [
     # Core M&A verbs
     "merger", "amalgamation", "amalgamate",
@@ -107,33 +111,44 @@ KEYWORDS = [
     "resulting company", "transferor company", "transferee company",
     "share exchange ratio", "swap ratio",
 
-    # Open offer (specific — not bare "takeover")
-    "open offer",
+    # NOTE: "open offer" intentionally ABSENT — it is a HARD EXCLUDE.
+    # An open offer is only relevant when it is a direct result of a merger /
+    # demerger scheme — but in practice NSE filings for open offers carry
+    # standalone SEBI/takeover language with NO scheme text, so they fire thousands
+    # of false positives.  We exclude them unconditionally below.
 ]
 
 # Lighter hint list used in headline pre-scan
+# "open offer" is deliberately ABSENT — it is a hard exclude.
 HEADLINE_HINTS = [
     "merger", "demerger", "amalgam", "demerge",
     "scheme of", "composite scheme", "arrangement",
     "restructur", "reorganis", "reorganiz", "realign", "consolidat",
     "spin-off", "spinoff", "spin off", "hive off", "hive-off",
-    "slump sale", "open offer",
+    "slump sale",
     "nclt", "transferor", "transferee", "resulting company",
     "appointed date", "effective date",
     "vesting", "demerged undertaking",
 ]
 
+# Required names — kept for backward compat
+PROCEDURAL_PHRASES = []   # retired — Layer 4 removed (was too aggressive)
+PROCEDURAL_OVERRIDE = []  # retired
+
 
 # ── HARD EXCLUDE — drop immediately, before any keyword check ─────────────────
+# These patterns cover the overwhelming majority of daily noise filings.
+# Order matters only for readability; all are evaluated together.
+
 _HARD_EXCLUDE = re.compile(
     r"(?:"
     # ── SAST / pledge / takeover-regs filings ─────────────────────────────
     r"disclosure under sebi takeover|"
     r"sebi\s*\(substantial acquisition|"
-    r"sebi\s*\(substential acquisition|"
+    r"sebi\s*\(substential acquisition|"            # real-world typo
     r"substantial acquisition of shares|"
-    r"regulation 29\b|regulation 31\b|"
-    r"pledg|encumbr|"
+    r"regulation 29\b|regulation 31\b|"             # SAST-specific reg numbers
+    r"pledg|encumbr|"                               # pledge / encumbrance
     r"inter.?se transfer|creeping acquisition|"
     r"promoter(?:s)?\s+(?:and promoter group\s+)?(?:have|has)\s+(?:acquired|sold|purchased|disposed)|"
 
@@ -144,6 +159,8 @@ _HARD_EXCLUDE = re.compile(
     r"face\s+value\s+(?:split|reduct)|"
 
     # ── Acquisitions (share purchases, stake buys) ─────────────────────────
+    # "acquisition" as standalone concept — NOT "scheme of amalgamation" etc.
+    # We use a negative lookbehind so "acquisition of undertaking/business" still passes.
     r"acquisition\s+of\s+(?:shares?|equity|stake|securities)|"
     r"acquired?\s+(?:\d[\d,]+\s+)?(?:equity\s+)?shares?|"
     r"purchase\s+of\s+(?:shares?|equity|stake)|"
@@ -177,6 +194,15 @@ _HARD_EXCLUDE = re.compile(
     r"non.?convertible\s+debenture|"
     r"\bncd\b|"
 
+    # ── Open offer + related takeover-bid documents ────────────────────────
+    # Open offers are ALWAYS excluded — they are takeover mechanics, not
+    # merger / demerger events.  Even if a merger is later proposed, the
+    # open offer filing itself carries none of that scheme language.
+    r"\bopen\s+offer\b|"
+    r"letter\s+of\s+offer|"
+    r"independent\s+directors?\s+recommendation|"
+    r"\bescrow\b|"
+
     # ── Misc noise ─────────────────────────────────────────────────────────
     r"trading\s+window|"
     r"insider\s+trading|"
@@ -188,98 +214,8 @@ _HARD_EXCLUDE = re.compile(
     re.IGNORECASE,
 )
 
-# ══════════════════════════════════════════════════════════════════════════════
-# SCORING SYSTEM
-# ══════════════════════════════════════════════════════════════════════════════
-# Every announcement surviving _HARD_EXCLUDE is scored on headline + body.
-# The score drives three decisions:
-#
-#   score == 0             → skip entirely
-#   1 <= score < FETCH_PDF → skip (too weak, not worth a PDF fetch)
-#   score >= FETCH_PDF AND body weak AND has URL → fetch PDF, then re-score
-#   score >= CANDIDATE     → direct candidate, straight to is_relevant()
-#
-# PDF fetches are sorted by score descending and capped at PDF_FETCH_CAP.
-# ══════════════════════════════════════════════════════════════════════════════
-
-# Tier 1 (+10): unambiguous scheme terms — one hit = strong candidate
-_SCORE_T1 = [
-    "merger", "amalgamation", "amalgamate",
-    "demerger", "de-merger", "demerge",
-    "scheme of arrangement", "scheme of amalgamation",
-    "scheme of demerger", "scheme of merger",
-    "scheme of reconstruction", "composite scheme",
-    "nclt", "national company law tribunal",
-    "appointed date", "effective date",
-    "transferor company", "transferee company", "resulting company",
-    "share exchange ratio", "swap ratio",
-    "open offer", "slump sale",
-    "hive off", "hive-off", "spin-off", "spinoff", "spin off",
-    "vesting of undertaking", "vesting of business",
-    "transfer and vesting", "demerged undertaking",
-    "transferor", "transferee",
-]
-
-# Tier 2 (+5): scheme-adjacent — likely relevant in context
-_SCORE_T2 = [
-    "restructuring", "re-structuring",
-    "reorganisation", "reorganization",
-    "consolidation", "realignment", "re-alignment",
-    "business transfer", "transfer of business",
-    "transfer of undertaking", "undertaking transfer",
-    "arrangement between", "arrangement amongst",
-    "draft scheme", "final scheme", "proposed scheme",
-    "revised scheme", "modified scheme",
-    "scheme approved", "scheme sanctioned",
-    "approval of scheme", "sanction of scheme",
-    "filing of scheme", "pursuant to scheme",
-    "under the scheme", "as per scheme",
-    "in terms of scheme", "implementation of scheme",
-    "record date for demerger",
-    "assets and liabilities transfer",
-    "transfer of assets", "transfer of liabilities",
-    "order of nclt", "nclt order",
-    "approved by nclt", "sanctioned by nclt",
-]
-
-# Tier 3 (+2): weak hints — raise score enough to trigger a PDF fetch
-_SCORE_T3 = [
-    "scheme",           # alone may mean incentive scheme, but PDF worth checking
-    "arrangement",      # alone weak but raises score for PDF fetch
-    "restructur",       # partial — catches restructuring/restructured
-    "reorgani",         # partial
-    "consolidat",       # partial
-    "outcome of board", # NSE headline: board approved something — fetch PDF
-    "regulation 30",    # NSE Reg 30 material event — may contain scheme news
-    "reg 30",
-    "material event",
-    "material information",
-    "updates",          # NSE uses this for scheme progress updates
-    "general updates",
-    "corporate action",
-]
-
-SCORE_FETCH_PDF = 2    # minimum to attempt PDF fetch (weak body)
-SCORE_CANDIDATE = 8    # minimum to pass to is_relevant()
-PDF_FETCH_CAP   = 50   # max PDF fetches per run (highest-scored first)
-
-
-def score_ann(headline: str, body: str) -> int:
-    """Score an announcement by keyword tier matches."""
-    text = ((headline or "") + " " + (body or "")).lower()
-    s = 0
-    for kw in _SCORE_T1:
-        if kw in text:
-            s += 10
-    for kw in _SCORE_T2:
-        if kw in text:
-            s += 5
-    for kw in _SCORE_T3:
-        if kw in text:
-            s += 2
-    return s
-
 # ── Procedural meeting gate ────────────────────────────────────────────────────
+# Fires on bare creditor/shareholder meeting notices.
 _PROCEDURAL_MEETING = re.compile(
     r"meeting of the (?:unsecured|secured) creditors|"
     r"meeting of the (?:equity|preference) shareholders|"
@@ -287,13 +223,17 @@ _PROCEDURAL_MEETING = re.compile(
     re.IGNORECASE,
 )
 
+# If ANY of these appear anywhere (headline OR body), the meeting is scheme-related
+# and passes Layer 3. Intentionally broad — catches scheme names in headlines.
+# NOTE: "open offer" is intentionally ABSENT from _NAMED_SCHEME.
+# Including it was circular — it allowed any open offer to pass its own gate.
 _NAMED_SCHEME = re.compile(
     r"(?:composite\s+)?scheme\s+of\s+(?:arrangement|amalgamation|demerger|merger|reconstruction)|"
     r"amalgamation\s+of|demerger\s+of|merger\s+(?:of|between)|"
     r"transferor\s+compan|transferee\s+compan|"
     r"slump\s+sale|hive.?off|spin.?off|"
     r"restructur|reorgani[sz]|consolidat|"
-    r"open\s+offer|nclt|appointed\s+date|effective\s+date",
+    r"nclt|appointed\s+date|effective\s+date",
     re.IGNORECASE,
 )
 
@@ -761,8 +701,9 @@ def is_relevant(ann: dict) -> bool:
                              results, buybacks, dividends, routine notices.
     Layer 2 — Must match at least one scheme/merger/restructuring keyword.
     Layer 3 — Procedural meeting gate: a bare creditor/shareholder meeting
-                             notice with NO scheme language anywhere is dropped.
-                             If the headline already names a scheme, it passes.
+                             notice (with NO scheme language anywhere in
+                             headline OR body) is dropped. If the headline
+                             already names a scheme, it passes freely.
     """
     headline = (ann.get("headline", "") or "").lower()
     body     = (ann.get("body",     "") or "").lower()
@@ -777,11 +718,15 @@ def is_relevant(ann: dict) -> bool:
     if not any(kw in combined for kw in KEYWORDS):
         return False
 
-    # Layer 3: Procedural meeting gate
+    # Layer 3: Procedural meeting gate — only drop if NEITHER headline NOR
+    # body contains any scheme-naming language.
     if _PROCEDURAL_MEETING.search(combined):
         if not _NAMED_SCHEME.search(combined):
             log.debug("Skipped (bare meeting notice, no scheme context): %s", ann.get("company"))
             return False
+
+    # NOTE: No Layer 4 open-offer gate needed — open offer is now a hard
+    # exclude in _HARD_EXCLUDE (Layer 1), so it never reaches this point.
 
     return True
 
@@ -1011,59 +956,14 @@ def run_check():
     unseen = [a for a in anns if a["id"] not in cache]
     log.info("Unseen: %d", len(unseen))
 
-    # ── Stage 1: Hard-exclude everything first (fast, zero network calls) ────
-    # Kills the high-volume daily noise (results, pledges, splits, etc.)
-    # before we waste any time on PDFs.
-    not_excluded = []
-    for a in unseen:
-        combined = (
-            (a.get("headline", "") or "") + " " + (a.get("body", "") or "")
-        ).lower()
-        if not _HARD_EXCLUDE.search(combined):
-            not_excluded.append(a)
-    log.info("After hard-exclude: %d", len(not_excluded))
-
-    # ── Stage 2: Score every surviving announcement ──────────────────────────
-    # Tier 1 (+10): unambiguous scheme terms
-    # Tier 2 (+5):  scheme-adjacent terms
-    # Tier 3 (+2):  weak hints / common NSE headline patterns
-    scored = []
-    for a in not_excluded:
-        s = score_ann(a.get("headline", ""), a.get("body", ""))
-        if s > 0:
-            scored.append((s, a))
-    scored.sort(key=lambda x: x[0], reverse=True)
-    log.info("Non-zero score: %d", len(scored))
-
-    # ── Stage 3: Direct candidates (score >= CANDIDATE, body already rich) ───
-    direct = [a for s, a in scored if s >= SCORE_CANDIDATE and not _body_is_weak(a.get("body", "") or "")]
-
-    # ── Stage 4: PDF fetch queue (score >= FETCH_PDF, body weak, has URL) ────
-    # Sorted by score descending so we fetch the most promising ones first.
-    # Capped at PDF_FETCH_CAP to prevent runaway fetching.
-    direct_ids = {a["id"] for a in direct}
-    pdf_queue = [
-        a for s, a in scored
-        if a["id"] not in direct_ids
-        and s >= SCORE_FETCH_PDF
-        and _body_is_weak(a.get("body", "") or "")
-        and a.get("url")
-    ][:PDF_FETCH_CAP]
-    log.info(
-        "Direct candidates: %d | PDF fetch queue: %d",
-        len(direct), len(pdf_queue),
-    )
-
-    # Enrich PDF queue, then re-score and keep those that now reach CANDIDATE
-    pdf_queue = enrich_with_pdf(pdf_queue, session)
-    pdf_promoted = [
-        a for a in pdf_queue
-        if score_ann(a.get("headline", ""), a.get("body", "")) >= SCORE_CANDIDATE
+    candidates = [
+        a for a in unseen
+        if _headline_looks_relevant(a.get("headline", ""))
+        or any(kw in (a.get("body", "") or "").lower() for kw in KEYWORDS)
+        or any(kw in (a.get("headline", "") or "").lower() for kw in KEYWORDS)
     ]
-    log.info("PDF-promoted candidates: %d", len(pdf_promoted))
-
-    # Also enrich any direct candidates whose body is still weak after API text
-    candidates = enrich_with_pdf(direct, session) + pdf_promoted
+    log.info("Candidates (pre-filter): %d", len(candidates))
+    candidates = enrich_with_pdf(candidates, session)
     t2 = time.time()
 
     new_relevant = []
