@@ -1,6 +1,6 @@
 """
 BSE / NSE Corporate Announcement Filter
-Monitors for merger, demerger, acquisition, split announcements and sends alerts.
+Monitors for merger, demerger, scheme of arrangement announcements.
 AI-powered summary via DeepSeek (falls back to pattern-based if no API key).
 WhatsApp alerts via Meta WhatsApp Cloud API — template: alerts (5 variables)
 """
@@ -31,51 +31,273 @@ log = logging.getLogger(__name__)
 logging.getLogger("pdfminer").setLevel(logging.ERROR)
 
 
-import re
+# ══════════════════════════════════════════════════════════════════════════════
+# WHAT WE WANT (exhaustive)
+# ══════════════════════════════════════════════════════════════════════════════
+#   ✅ Mergers, demergers, amalgamations
+#   ✅ All scheme-of-arrangement variants
+#   ✅ Corporate restructuring / reorganisation / realignment / consolidation
+#   ✅ Spin-offs, hive-offs, slump sales, business/undertaking transfers
+#   ✅ NCLT orders, scheme approvals, appointed dates, effective dates
+#   ✅ Open offers (real takeover bids only)
+#
+# WHAT WE DO NOT WANT
+#   ❌ Stock splits, share splits, sub-division of equity
+#   ❌ Acquisitions (share purchases, stake buys)
+#   ❌ "takeover" bare keyword — matches SEBI Takeover Regs pledge filings daily
+#   ❌ SAST / pledge / encumbrance disclosures
+#   ❌ Promoter shareholding changes
+#   ❌ Quarterly results, buybacks, dividends, rights issues, bonus shares
+#   ❌ Scrutinizer reports, postal ballot, AGM/EGM notices
+#   ❌ Auditor / KMP / director appointments / resignations
+#   ❌ Credit ratings, NCDs, debentures
+# ══════════════════════════════════════════════════════════════════════════════
+
+
+# ── KEYWORDS ─────────────────────────────────────────────────────────────────
 KEYWORDS = [
-    # ── Merger / Amalgamation ──
+    # Core M&A verbs
     "merger", "amalgamation", "amalgamate",
-    # ── Demerger / Spin-off / Hive-off ──
     "demerger", "de-merger", "demerge",
-    "spin-off", "spinoff", "hive off", "hive-off",
-    # ── Scheme phrases (specific — not bare 'scheme') ──
-    "composite scheme of arrangement",
-    "scheme of amalgamation", "scheme of demerger",
-    "scheme of merger", "scheme of arrangement for",
-    "scheme of arrangement",
-    # ── Takeover / Open Offer / Slump Sale ──
-    "takeover", "open offer", "slump sale", "business transfer",
-    # ── Acquisitions — qualified phrases only (excludes promoter SAST filings) ──
-    "acquisition of business", "acquisition of undertaking",
-    "acquisition of company", "acquisition of assets",
-    "acquisition of shareholding", "strategic acquisition",
-]
 
-HEADLINE_HINTS = [
-    # Keep only specific multi-word or unambiguous hints
-    "merger", "demerger", "amalgam", "demerge",
-    "scheme of",          # 'scheme of arrangement/merger/demerger' — not bare 'scheme'
-    "spin-off", "spinoff", "hive off", "hive-off",
-    "takeover", "open offer", "slump sale", "business transfer",
-]
+    # Scheme phrases
+    "scheme of arrangement", "scheme of amalgamation",
+    "scheme of demerger", "scheme of merger",
+    "scheme of reconstruction",
+    "composite scheme", "composite scheme of arrangement",
+    "arrangement between", "arrangement amongst",
+    "draft scheme", "final scheme", "proposed scheme",
+    "revised scheme", "modified scheme",
+    "filing of scheme", "scheme approved", "scheme sanctioned",
+    "approval of scheme", "sanction of scheme",
+    "pursuant to scheme", "under the scheme", "as per scheme",
+    "in terms of scheme", "implementation of scheme",
+    "effective date of scheme", "effectiveness of scheme",
+    "coming into effect", "becomes effective",
 
-PROCEDURAL_PHRASES = [
-    "meeting of the unsecured creditors",
-    "meeting of the secured creditors",
-    "court convened meeting",
-    "the scheme is pending approval",
-    "pursuant to the scheme already approved",
-]
+    # Restructuring / reorganisation
+    "restructuring", "re-structuring",
+    "reorganisation", "reorganization",
+    "corporate restructuring", "group restructuring",
+    "internal restructuring", "business restructuring",
+    "consolidation", "realignment", "re-alignment",
 
-# Only terms that are *unambiguous* indicators of a real deal outcome.
-# Removed: "acquisition", "acquire", "approved by" — too broad, caused 130-file flood.
-PROCEDURAL_OVERRIDE = [
-    "sanctioned",
-    "pronounced",
-    "has become effective",
+    # Spin-off / hive-off
+    "spin-off", "spinoff", "spin off",
+    "hive off", "hive-off",
+
+    # Business / undertaking transfer
+    "slump sale", "business transfer",
+    "transfer of business", "transfer of undertaking",
+    "undertaking transfer", "transfer of division",
+    "sale of undertaking", "undertaking sale",
+    "transfer of assets", "transfer of liabilities",
+    "transfer and vesting", "vesting of undertaking",
+    "vesting of business", "assets and liabilities transfer",
+    "demerged undertaking",
+
+    # NCLT / tribunal
+    "nclt", "national company law tribunal",
+    "order of nclt", "nclt order",
+    "approved by nclt", "sanctioned by nclt",
+
+    # Key scheme milestones / roles
+    "appointed date", "effective date",
+    "record date for demerger",
+    "resulting company", "transferor company", "transferee company",
+    "share exchange ratio", "swap ratio",
+
+    # Open offer (specific — not bare "takeover")
     "open offer",
-    "slump sale",
 ]
+
+# Lighter hint list used in headline pre-scan
+HEADLINE_HINTS = [
+    "merger", "demerger", "amalgam", "demerge",
+    "scheme of", "composite scheme", "arrangement",
+    "restructur", "reorganis", "reorganiz", "realign", "consolidat",
+    "spin-off", "spinoff", "spin off", "hive off", "hive-off",
+    "slump sale", "open offer",
+    "nclt", "transferor", "transferee", "resulting company",
+    "appointed date", "effective date",
+    "vesting", "demerged undertaking",
+]
+
+
+# ── HARD EXCLUDE — drop immediately, before any keyword check ─────────────────
+_HARD_EXCLUDE = re.compile(
+    r"(?:"
+    # ── SAST / pledge / takeover-regs filings ─────────────────────────────
+    r"disclosure under sebi takeover|"
+    r"sebi\s*\(substantial acquisition|"
+    r"sebi\s*\(substential acquisition|"
+    r"substantial acquisition of shares|"
+    r"regulation 29\b|regulation 31\b|"
+    r"pledg|encumbr|"
+    r"inter.?se transfer|creeping acquisition|"
+    r"promoter(?:s)?\s+(?:and promoter group\s+)?(?:have|has)\s+(?:acquired|sold|purchased|disposed)|"
+
+    # ── Stock splits / sub-division ────────────────────────────────────────
+    r"stock\s+split|share\s+split|"
+    r"sub.?division\s+of\s+(?:equity|shares?)|"
+    r"sub.?divided\s+(?:equity|shares?)|"
+    r"face\s+value\s+(?:split|reduct)|"
+
+    # ── Acquisitions (share purchases, stake buys) ─────────────────────────
+    r"acquisition\s+of\s+(?:shares?|equity|stake|securities)|"
+    r"acquired?\s+(?:\d[\d,]+\s+)?(?:equity\s+)?shares?|"
+    r"purchase\s+of\s+(?:shares?|equity|stake)|"
+    r"open\s+market\s+(?:purchase|sale|acquisition)|"
+    r"block\s+deal|bulk\s+deal|"
+    r"creeping\s+acquisition|"
+
+    # ── Quarterly / financial results ──────────────────────────────────────
+    r"(?:quarterly|q[1-4]|half.?year|annual)\s+(?:results?|financial\s+results?)|"
+    r"standalone\s+(?:and\s+consolidated\s+)?financial\s+results?|"
+    r"unaudited\s+financial\s+results?|"
+
+    # ── Dividends / buybacks / rights / bonus ─────────────────────────────
+    r"\bdividend\b|"
+    r"buy.?back|"
+    r"rights\s+issue|"
+    r"bonus\s+(?:shares?|issue)|"
+
+    # ── Meetings that are purely notices (no scheme content) ───────────────
+    r"postal\s+ballot\b|"
+    r"scrutinizer.{0,30}report|"
+    r"notice\s+of\s+(?:agm|egm|annual\s+general|extraordinary\s+general)|"
+    r"\bappointment\s+of\s+scrutinizer\b|"
+
+    # ── Auditor / KMP / director changes ──────────────────────────────────
+    r"appointment\s+of\s+(?:independent\s+)?(?:director|auditor|cfo|ceo|md|kmp)|"
+    r"resignation\s+of\s+(?:director|auditor|cfo|ceo|md|kmp)|"
+
+    # ── Debt / credit instruments ──────────────────────────────────────────
+    r"credit\s+rating|"
+    r"non.?convertible\s+debenture|"
+    r"\bncd\b|"
+
+    # ── Misc noise ─────────────────────────────────────────────────────────
+    r"trading\s+window|"
+    r"insider\s+trading|"
+    r"price\s+sensitive\b|"
+    r"analyst\s+(?:meet|call|conference)|"
+    r"investor\s+(?:meet|call|conference|presentation|day)|"
+    r"earnings\s+call"
+    r")",
+    re.IGNORECASE,
+)
+
+# ══════════════════════════════════════════════════════════════════════════════
+# SCORING SYSTEM
+# ══════════════════════════════════════════════════════════════════════════════
+# Every announcement surviving _HARD_EXCLUDE is scored on headline + body.
+# The score drives three decisions:
+#
+#   score == 0             → skip entirely
+#   1 <= score < FETCH_PDF → skip (too weak, not worth a PDF fetch)
+#   score >= FETCH_PDF AND body weak AND has URL → fetch PDF, then re-score
+#   score >= CANDIDATE     → direct candidate, straight to is_relevant()
+#
+# PDF fetches are sorted by score descending and capped at PDF_FETCH_CAP.
+# ══════════════════════════════════════════════════════════════════════════════
+
+# Tier 1 (+10): unambiguous scheme terms — one hit = strong candidate
+_SCORE_T1 = [
+    "merger", "amalgamation", "amalgamate",
+    "demerger", "de-merger", "demerge",
+    "scheme of arrangement", "scheme of amalgamation",
+    "scheme of demerger", "scheme of merger",
+    "scheme of reconstruction", "composite scheme",
+    "nclt", "national company law tribunal",
+    "appointed date", "effective date",
+    "transferor company", "transferee company", "resulting company",
+    "share exchange ratio", "swap ratio",
+    "open offer", "slump sale",
+    "hive off", "hive-off", "spin-off", "spinoff", "spin off",
+    "vesting of undertaking", "vesting of business",
+    "transfer and vesting", "demerged undertaking",
+    "transferor", "transferee",
+]
+
+# Tier 2 (+5): scheme-adjacent — likely relevant in context
+_SCORE_T2 = [
+    "restructuring", "re-structuring",
+    "reorganisation", "reorganization",
+    "consolidation", "realignment", "re-alignment",
+    "business transfer", "transfer of business",
+    "transfer of undertaking", "undertaking transfer",
+    "arrangement between", "arrangement amongst",
+    "draft scheme", "final scheme", "proposed scheme",
+    "revised scheme", "modified scheme",
+    "scheme approved", "scheme sanctioned",
+    "approval of scheme", "sanction of scheme",
+    "filing of scheme", "pursuant to scheme",
+    "under the scheme", "as per scheme",
+    "in terms of scheme", "implementation of scheme",
+    "record date for demerger",
+    "assets and liabilities transfer",
+    "transfer of assets", "transfer of liabilities",
+    "order of nclt", "nclt order",
+    "approved by nclt", "sanctioned by nclt",
+]
+
+# Tier 3 (+2): weak hints — raise score enough to trigger a PDF fetch
+_SCORE_T3 = [
+    "scheme",           # alone may mean incentive scheme, but PDF worth checking
+    "arrangement",      # alone weak but raises score for PDF fetch
+    "restructur",       # partial — catches restructuring/restructured
+    "reorgani",         # partial
+    "consolidat",       # partial
+    "outcome of board", # NSE headline: board approved something — fetch PDF
+    "regulation 30",    # NSE Reg 30 material event — may contain scheme news
+    "reg 30",
+    "material event",
+    "material information",
+    "updates",          # NSE uses this for scheme progress updates
+    "general updates",
+    "corporate action",
+]
+
+SCORE_FETCH_PDF = 2    # minimum to attempt PDF fetch (weak body)
+SCORE_CANDIDATE = 8    # minimum to pass to is_relevant()
+PDF_FETCH_CAP   = 50   # max PDF fetches per run (highest-scored first)
+
+
+def score_ann(headline: str, body: str) -> int:
+    """Score an announcement by keyword tier matches."""
+    text = ((headline or "") + " " + (body or "")).lower()
+    s = 0
+    for kw in _SCORE_T1:
+        if kw in text:
+            s += 10
+    for kw in _SCORE_T2:
+        if kw in text:
+            s += 5
+    for kw in _SCORE_T3:
+        if kw in text:
+            s += 2
+    return s
+
+# ── Procedural meeting gate ────────────────────────────────────────────────────
+_PROCEDURAL_MEETING = re.compile(
+    r"meeting of the (?:unsecured|secured) creditors|"
+    r"meeting of the (?:equity|preference) shareholders|"
+    r"court convened meeting|nclt convened meeting",
+    re.IGNORECASE,
+)
+
+_NAMED_SCHEME = re.compile(
+    r"(?:composite\s+)?scheme\s+of\s+(?:arrangement|amalgamation|demerger|merger|reconstruction)|"
+    r"amalgamation\s+of|demerger\s+of|merger\s+(?:of|between)|"
+    r"transferor\s+compan|transferee\s+compan|"
+    r"slump\s+sale|hive.?off|spin.?off|"
+    r"restructur|reorgani[sz]|consolidat|"
+    r"open\s+offer|nclt|appointed\s+date|effective\s+date",
+    re.IGNORECASE,
+)
+
+
 # ══════════════════════════════════════════════════════════════════════════════
 # Cache
 # ══════════════════════════════════════════════════════════════════════════════
@@ -150,6 +372,7 @@ _STATUS_PATTERNS = [
     (r"\bno objection\b",                                  "📋 NOC Received"),
     (r"\bobservation letter\b",                            "📋 Observation Letter"),
     (r"\bnoc from.{0,30}(rbi|sebi|reserve bank)\b",        "📋 RBI/SEBI NOC"),
+    (r"\bcci.{0,60}approv\b",                              "📋 CCI Approved"),
     (r"\bopen offer.{0,60}(triggered|announced|made)\b",   "📢 Open Offer"),
     (r"\bopen offer\b",                                    "📢 Open Offer"),
     (r"\bslump sale\b",                                    "💼 Slump Sale"),
@@ -157,23 +380,22 @@ _STATUS_PATTERNS = [
     (r"\bboard.{0,60}approved\b",                          "🏛️ Board Approved"),
     (r"\bin.?principle approval\b",                        "🏛️ In-Principle Approved"),
     (r"\bplan of merger\b",                                "🏛️ Plan Approved"),
-    (r"\bacquisition.{0,60}(complet|effect|clos)\b",       "✅ Acquisition Complete"),
-    (r"\bacquir.{0,60}(approv|board)\b",                   "🏛️ Acquisition Approved"),
-    (r"\bacquisition\b",                                   "🔍 Acquisition"),
     (r"\bextension of timeline\b",                         "⏳ Timeline Extended"),
     (r"\bsuspended\b",                                     "⛔ Trading Suspended"),
 ]
 
 _ACTION_PATTERNS = [
-    (r"\bcomposite scheme\b",                                                 "Composite Scheme"),
-    (r"\bdemerger\b|de-merger",                                               "Demerger"),
-    (r"\bspin.?off\b|hive.?off\b",                                            "Spin-off"),
-    (r"\bstock split\b|share split|sub.?division of equity|face value split", "Stock Split"),
-    (r"\bslump sale\b",                                                       "Slump Sale"),
-    (r"\bopen offer\b",                                                       "Open Offer"),
-    (r"\bacquisition\b|\bacquire\b|\bacquir\b",                               "Acquisition"),
-    (r"\bamalgamation\b",                                                     "Amalgamation"),
-    (r"\bmerger\b",                                                           "Merger"),
+    (r"\bcomposite scheme\b",                         "Composite Scheme"),
+    (r"\bdemerger\b|de-merger",                       "Demerger"),
+    (r"\bspin.?off\b|hive.?off\b",                    "Spin-off / Hive-off"),
+    (r"\bslump sale\b",                               "Slump Sale"),
+    (r"\btransfer of (?:business|undertaking)\b",     "Business Transfer"),
+    (r"\bopen offer\b",                               "Open Offer"),
+    (r"\bamalgamation\b",                             "Amalgamation"),
+    (r"\bmerger\b",                                   "Merger"),
+    (r"\brestructur",                                 "Restructuring"),
+    (r"\breorgani[sz]",                               "Reorganisation"),
+    (r"\bconsolidat",                                 "Consolidation"),
 ]
 
 _DATE_RE = re.compile(
@@ -223,10 +445,11 @@ _SUBSTANCE_RE = re.compile(
     r"(?:limited|ltd|private|pvt|llp|inc)\b|"
     r"(?:rs\.?|inr|₹)\s*[\d,]+|"
     r"\b\d{1,2}[\s\-]\w+[\s\-]20\d{2}\b|"
-    r"\b(merger|amalgamation|demerger|split|spin.off|acquisition|acquire|"
+    r"\b(merger|amalgamation|demerger|spin.off|"
     r"open offer|slump sale|capital reduction|dissolution|"
     r"transferor|transferee|appointed date|effective date|"
-    r"share swap|exchange ratio|record date)\b",
+    r"share swap|exchange ratio|record date|resulting company|"
+    r"vesting|restructur|reorganis|reorganiz|consolidat)\b",
     re.IGNORECASE,
 )
 
@@ -257,8 +480,8 @@ _AI_MIN_CHARS = 60
 _SUMMARY_PROMPT = """\
 Summarise this corporate announcement in 2-3 clear, factual sentences.
 Rules:
-- State what is happening (merger / demerger / amalgamation / acquisition / split) and which companies are involved
-- Include key milestones completed (e.g. board approval, NCLT sanction, filing) and the current status
+- State what is happening (merger / demerger / amalgamation / scheme / restructuring) and which companies are involved
+- Include key milestones completed (e.g. board approval, NCLT sanction, filing, effective date) and the current status
 - Mention any pending steps or next actions if mentioned
 - Do NOT include addresses, regulatory boilerplate, or courtesy phrases
 - Write in plain business English — no "pursuant to", no formal legalese
@@ -326,18 +549,22 @@ def _ai_summarise(raw_body: str, company: str = "", headline: str = "") -> str:
 def _fallback_sentences(clean: str, company: str = "", headline: str = "") -> str:
     combined = ((clean or "") + " " + (headline or "")).lower()
 
-    if re.search(r"de.?merger|demerge", combined):          action = "demerger"
-    elif re.search(r"spin.?off|hive.?off", combined):       action = "spin-off"
-    elif re.search(r"stock split|share split|sub.?divis|face value", combined): action = "stock split"
-    elif re.search(r"open offer", combined):                action = "open offer"
-    elif re.search(r"slump sale", combined):                action = "slump sale"
-    elif re.search(r"acquisition|acqui\w+", combined):      action = "acquisition"
-    elif re.search(r"amalgamation|amalgamate", combined):   action = "amalgamation"
-    elif re.search(r"\bmerger\b|\bmerge\b", combined):      action = "merger"
-    else:                                                    action = "restructuring"
+    if re.search(r"de.?merger|demerge", combined):         action = "demerger"
+    elif re.search(r"spin.?off|hive.?off", combined):      action = "spin-off"
+    elif re.search(r"open offer", combined):               action = "open offer"
+    elif re.search(r"slump sale", combined):               action = "slump sale"
+    elif re.search(r"transfer\s+of\s+(business|undertaking)", combined): action = "business transfer"
+    elif re.search(r"amalgamation|amalgamate", combined):  action = "amalgamation"
+    elif re.search(r"\bmerger\b|\bmerge\b", combined):     action = "merger"
+    elif re.search(r"restructur", combined):               action = "restructuring"
+    elif re.search(r"reorgani[sz]", combined):             action = "reorganisation"
+    elif re.search(r"consolidat", combined):               action = "consolidation"
+    else:                                                   action = "scheme"
 
     if re.search(r"has become effective|made effective|scheme.*effective", combined):
         status = "effective"
+    elif re.search(r"cci.{0,60}approv", combined):
+        status = "CCI approved"
     elif re.search(r"nclt.{0,60}(sanction|approv|order|pronounc)", combined):
         status = "NCLT approved"
     elif re.search(r"regional director.{0,60}(sanction|approv)", combined):
@@ -350,8 +577,6 @@ def _fallback_sentences(clean: str, company: str = "", headline: str = "") -> st
         status = "filed with NCLT"
     elif re.search(r"open offer.{0,30}(trigger|announc|made)", combined):
         status = "open offer triggered"
-    elif re.search(r"acquisition.{0,40}(complet|clos|effect)", combined):
-        status = "acquisition completed"
     elif re.search(r"in.?principle approval", combined):
         status = "in-principle approved"
     else:
@@ -359,7 +584,7 @@ def _fallback_sentences(clean: str, company: str = "", headline: str = "") -> st
 
     partner = ""
     for pat in [
-        r'(?:amalgamation of|merger of|demerger of|acquisition of|between)\s+"?([A-Z][A-Za-z &()\'\-\.]{3,60}(?:Limited|Ltd\.?|Private|Pvt\.?|LLP|Inc\.?))',
+        r'(?:amalgamation of|merger of|demerger of|between)\s+"?([A-Z][A-Za-z &()\'\-\.]{3,60}(?:Limited|Ltd\.?|Private|Pvt\.?|LLP|Inc\.?))',
         r'(?:Transferor Compan(?:y|ies)[^"]{0,20}"?)([A-Z][A-Za-z &()\'\-\.]{3,60}(?:Limited|Ltd\.?|Private|Pvt\.?|LLP|Inc\.?))',
         r'(?:with|into|of)\s+([A-Z][A-Za-z &()\'\-\.]{3,60}(?:Limited|Ltd\.?|Private|Pvt\.?|LLP|Inc\.?))',
     ]:
@@ -422,26 +647,6 @@ def build_summary(body: str, company: str = "", headline: str = "") -> str:
     return badge
 
 
-def build_telegram_summary(body: str, company: str = "", headline: str = "") -> str:
-    combined_raw = (body or "") + " " + (headline or "")
-    flat = re.sub(r"\s+", " ", combined_raw.replace("\n", " ")).strip()
-
-    status = _get_status(flat)
-    action = _get_action(flat)
-    date   = _get_best_date(flat)
-
-    para = _ai_summarise(body, company=company, headline=headline)
-    if not para:
-        para = _fallback_sentences(clean_body(body), company=company, headline=headline)
-
-    parts = [f"{status}  |  *{action}*"]
-    if date:
-        parts.append(f"📅 {date}")
-    if para:
-        parts.append(para)
-    return "\n".join(parts)
-
-
 # ══════════════════════════════════════════════════════════════════════════════
 # PDF extraction
 # ══════════════════════════════════════════════════════════════════════════════
@@ -451,14 +656,13 @@ MIN_BODY_CHARS = 300
 def _body_is_weak(text: str) -> bool:
     return len((text or "").strip()) < MIN_BODY_CHARS
 
-def _extract_pdf_text(url: str, session: requests.Session) -> str:
-    """Download and extract text from a PDF URL.
+def _headline_looks_relevant(headline: str) -> bool:
+    if not headline:
+        return False
+    hl = headline.lower()
+    return any(hint in hl for hint in HEADLINE_HINTS)
 
-    NSE sometimes serves PDFs at URLs that do *not* end in '.pdf'
-    (e.g. signed S3 URLs or redirect chains).  We therefore:
-      1. Always allow URLs that end in .pdf.
-      2. For other URLs, send a HEAD request to check Content-Type first.
-    """
+def _extract_pdf_text(url: str, session: requests.Session) -> str:
     if not url:
         return ""
     is_pdf_ext = url.lower().split("?")[0].endswith(".pdf")
@@ -545,6 +749,41 @@ def fetch_all_nse() -> tuple[list[dict], requests.Session]:
     time.sleep(0.5)
     sme      = _fetch_nse_index(session, "sme", lookback_days)
     return equities + sme, session
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# Relevance filter
+# ══════════════════════════════════════════════════════════════════════════════
+
+def is_relevant(ann: dict) -> bool:
+    """
+    Layer 1 — Hard exclude: pledge/SAST filings, splits, acquisitions,
+                             results, buybacks, dividends, routine notices.
+    Layer 2 — Must match at least one scheme/merger/restructuring keyword.
+    Layer 3 — Procedural meeting gate: a bare creditor/shareholder meeting
+                             notice with NO scheme language anywhere is dropped.
+                             If the headline already names a scheme, it passes.
+    """
+    headline = (ann.get("headline", "") or "").lower()
+    body     = (ann.get("body",     "") or "").lower()
+    combined = headline + " " + body
+
+    # Layer 1: Hard exclude
+    if _HARD_EXCLUDE.search(combined):
+        log.debug("Skipped (hard-exclude): %s | %s", ann.get("company"), ann.get("headline"))
+        return False
+
+    # Layer 2: Must match at least one keyword
+    if not any(kw in combined for kw in KEYWORDS):
+        return False
+
+    # Layer 3: Procedural meeting gate
+    if _PROCEDURAL_MEETING.search(combined):
+        if not _NAMED_SCHEME.search(combined):
+            log.debug("Skipped (bare meeting notice, no scheme context): %s", ann.get("company"))
+            return False
+
+    return True
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -642,66 +881,29 @@ def send_email(announcements: list[dict]):
 
 
 # ══════════════════════════════════════════════════════════════════════════════
-# Telegram
-# ══════════════════════════════════════════════════════════════════════════════
-
-def send_telegram(announcements: list[dict]):
-    if not Config.TELEGRAM_ENABLED or not announcements:
-        return
-    for a in announcements:
-        summary = build_telegram_summary(
-            a.get("body", "") or "",
-            company=a.get("company", ""),
-            headline=a.get("headline", ""),
-        )
-        text = (
-            f"*{a['source']} — {a['company']} ({a.get('scrip', '')})*\n"
-            f"_{a['headline']}_ | {a['date']}\n\n"
-            f"{summary}\n\n"
-            f"[View Announcement]({a['url']})"
-        )
-        try:
-            r = requests.post(
-                f"https://api.telegram.org/bot{Config.TELEGRAM_BOT_TOKEN}/sendMessage",
-                json={"chat_id": Config.TELEGRAM_CHAT_ID, "text": text, "parse_mode": "Markdown"},
-                timeout=10,
-            )
-            r.raise_for_status()
-            log.info("Telegram sent: %s", a["company"])
-        except Exception as e:
-            log.error("Telegram failed: %s", e)
-
-
-# ══════════════════════════════════════════════════════════════════════════════
 # WhatsApp via Meta Cloud API — template: alerts (5 variables)
 #
-# Template body:
+# Template body registered in Meta Business Manager:
 #   🔍 Stock Market Alert
 #   Alert Type: {{1}}
 #   Company:    {{2}}
 #   Date:       {{3}}
 #   Details:    {{4}}
-#   More info available at: {{5}}
-#   Thank you.
-#
-# NOTE: Meta rejects variables containing \n or \t.
+#   More info:  {{5}}
 # ══════════════════════════════════════════════════════════════════════════════
 
 _WA_MAX_LEN = 1024
-
 
 def clean_wa_text(text: str) -> str:
     if not text:
         return ""
     return re.sub(r"\s+", " ", text.replace("\n", " ").replace("\t", " ")).strip()
 
-
 def _wa_var(value: str, limit: int = _WA_MAX_LEN) -> str:
     v = clean_wa_text(value)
     if len(v) > limit:
-        v = v[: limit - 1] + "…"
+        v = v[:limit - 1] + "…"
     return v or "-"
-
 
 def send_whatsapp(announcements: list[dict]):
     if not Config.WHATSAPP_ENABLED or not announcements:
@@ -776,142 +978,19 @@ def send_whatsapp(announcements: list[dict]):
             if not to_clean:
                 log.warning("WhatsApp: skipping invalid number '%s'", to_num)
                 continue
-
             payload["to"] = to_clean
-
             try:
                 r = requests.post(api_url, headers=headers, json=payload, timeout=15)
                 if r.status_code == 200:
                     msg_id = r.json().get("messages", [{}])[0].get("id", "?")
                     log.info("WhatsApp sent to %s: %s (msg_id=%s)", to_clean, company, msg_id)
                 else:
-                    log.error(
-                        "WhatsApp FAILED %s → %s: HTTP %d — %s",
-                        company, to_clean, r.status_code, r.text,
-                    )
+                    log.error("WhatsApp FAILED %s → %s: HTTP %d — %s",
+                              company, to_clean, r.status_code, r.text)
             except requests.exceptions.Timeout:
                 log.error("WhatsApp timeout: %s → %s", company, to_clean)
-            except requests.exceptions.ConnectionError as e:
-                log.error("WhatsApp connection error: %s → %s: %s", company, to_clean, e)
             except Exception as e:
-                log.error("WhatsApp unexpected error: %s → %s: %s", company, to_clean, e)
-
-
-# ══════════════════════════════════════════════════════════════════════════════
-# Relevance filtering
-# ══════════════════════════════════════════════════════════════════════════════
-
-def _headline_looks_relevant(headline: str) -> bool:
-    """Fast pre-check: does the headline contain any HEADLINE_HINTS substring?"""
-    if not headline:
-        return False
-    hl = headline.lower()
-    return any(hint in hl for hint in HEADLINE_HINTS)
-
-
-# Substantive scheme/deal keywords — used to override procedural-phrase filter
-_SUBSTANTIVE_KEYWORDS = [
-    "scheme of arrangement", "scheme of amalgamation",
-    "scheme of demerger", "scheme of merger",
-    "composite scheme", "amalgamation", "demerger",
-    "merger", "spin-off", "hive off", "hive-off",
-    "slump sale", "open offer",
-    # acquisition kept here for procedural-override context check
-    "acquisition of business", "acquisition of undertaking",
-    "acquisition of company", "acquisition of assets",
-    "strategic acquisition",
-]
-
-# Phrases that flag a filing as pure procedural noise (no real deal info)
-_PURE_PROCEDURAL_NOISE = [
-    # Promoter / SAST creeping acquisition disclosures
-    "acquisition of equity shares by the promoter",
-    "voluntary disclosure of acquisition of equity shares",
-    "regulation 31(4) of sebi (substantial acquisition",
-    "regulation 31(4) of sebi (substential acquisition",   # real-world typo variant
-    "disclosure under regulation 29",
-    "disclosure under regulation 30 of sebi (sast",
-    "inter-se transfer",
-    "creeping acquisition",
-    # Other high-volume noise
-    "allotment of equity shares",
-    "issue of equity shares",
-    "preferential allotment",
-    "rights issue",
-    "buy back of shares",
-    "buyback of shares",
-]
-
-# Acquisition patterns that ARE genuine corporate deals (not promoter SAST)
-_CORP_ACQUISITION_RE = re.compile(
-    r"acquisition of (?:business|undertaking|compan|assets|shareholding)|strategic acquisition",
-    re.IGNORECASE,
-)
-
-
-def is_relevant(ann: dict) -> bool:
-    """
-    Return True if the announcement is a genuine corporate restructuring /
-    deal event worth alerting on.
-
-    Filter layers (in priority order):
-    1. At least one KEYWORD must appear in headline + body.
-    2. Drop pure noise: promoter SAST disclosures, allotments, buybacks, rights issues.
-    3. Procedural-override: unambiguous deal outcomes always pass (sanctioned,
-       pronounced, has become effective, open offer, slump sale).
-    4. Smart procedural-phrase filter: if a creditor-meeting / pending-approval
-       phrase is found, only pass when a substantive deal keyword is ALSO present.
-    5. Acquisition gate: bare 'acquisition' words in body are only allowed through
-       if a corporate-acquisition phrase is present (not promoter SAST filings).
-    """
-    headline = (ann.get("headline", "") or "").lower()
-    body     = (ann.get("body",     "") or "").lower()
-    combined = headline + " " + body
-
-    # ── 1. Must contain at least one keyword ──────────────────────────────────
-    if not any(kw in combined for kw in KEYWORDS):
-        log.debug("Skipped (no keyword): %s", ann.get("company"))
-        return False
-
-    # ── 2. Drop known noise patterns first ────────────────────────────────────
-    if any(noise in combined for noise in _PURE_PROCEDURAL_NOISE):
-        log.debug("Skipped (noise pattern): %s", ann.get("company"))
-        return False
-
-    # ── 3. Unambiguous deal outcomes always pass ───────────────────────────────
-    if any(term in combined for term in PROCEDURAL_OVERRIDE):
-        return True
-
-    # ── 4. Smart procedural-phrase filter ─────────────────────────────────────
-    if any(p in body for p in PROCEDURAL_PHRASES):
-        # Keep only if a substantive deal keyword is also in the body
-        if not any(s in body for s in _SUBSTANTIVE_KEYWORDS):
-            log.debug("Skipped (procedural-only): %s", ann.get("company"))
-            return False
-
-    # ── 5. Acquisition quality gate ───────────────────────────────────────────
-    # If the match was triggered only by an acquisition keyword, verify it's a
-    # corporate deal (not a routine promoter share purchase).
-    acquisition_keywords_matched = any(
-        kw in combined for kw in [
-            "acquisition of business", "acquisition of undertaking",
-            "acquisition of company", "acquisition of assets",
-            "acquisition of shareholding", "strategic acquisition",
-        ]
-    )
-    scheme_keywords_matched = any(
-        kw in combined for kw in [
-            "merger", "amalgamation", "demerger", "scheme of",
-            "spin-off", "hive off", "slump sale", "open offer", "takeover",
-        ]
-    )
-    if acquisition_keywords_matched and not scheme_keywords_matched:
-        # Pure acquisition — must have a corporate-deal phrase
-        if not _CORP_ACQUISITION_RE.search(combined):
-            log.debug("Skipped (acquisition not corp-deal): %s", ann.get("company"))
-            return False
-
-    return True
+                log.error("WhatsApp error: %s → %s: %s", company, to_clean, e)
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -932,15 +1011,59 @@ def run_check():
     unseen = [a for a in anns if a["id"] not in cache]
     log.info("Unseen: %d", len(unseen))
 
-    # Permissive keyword pre-filter — is_relevant() does the real work
-    candidates = [
-        a for a in unseen
-        if _headline_looks_relevant(a.get("headline", ""))
-        or any(kw in (a.get("body", "") or "").lower() for kw in KEYWORDS)
-        or any(kw in (a.get("headline", "") or "").lower() for kw in KEYWORDS)
+    # ── Stage 1: Hard-exclude everything first (fast, zero network calls) ────
+    # Kills the high-volume daily noise (results, pledges, splits, etc.)
+    # before we waste any time on PDFs.
+    not_excluded = []
+    for a in unseen:
+        combined = (
+            (a.get("headline", "") or "") + " " + (a.get("body", "") or "")
+        ).lower()
+        if not _HARD_EXCLUDE.search(combined):
+            not_excluded.append(a)
+    log.info("After hard-exclude: %d", len(not_excluded))
+
+    # ── Stage 2: Score every surviving announcement ──────────────────────────
+    # Tier 1 (+10): unambiguous scheme terms
+    # Tier 2 (+5):  scheme-adjacent terms
+    # Tier 3 (+2):  weak hints / common NSE headline patterns
+    scored = []
+    for a in not_excluded:
+        s = score_ann(a.get("headline", ""), a.get("body", ""))
+        if s > 0:
+            scored.append((s, a))
+    scored.sort(key=lambda x: x[0], reverse=True)
+    log.info("Non-zero score: %d", len(scored))
+
+    # ── Stage 3: Direct candidates (score >= CANDIDATE, body already rich) ───
+    direct = [a for s, a in scored if s >= SCORE_CANDIDATE and not _body_is_weak(a.get("body", "") or "")]
+
+    # ── Stage 4: PDF fetch queue (score >= FETCH_PDF, body weak, has URL) ────
+    # Sorted by score descending so we fetch the most promising ones first.
+    # Capped at PDF_FETCH_CAP to prevent runaway fetching.
+    direct_ids = {a["id"] for a in direct}
+    pdf_queue = [
+        a for s, a in scored
+        if a["id"] not in direct_ids
+        and s >= SCORE_FETCH_PDF
+        and _body_is_weak(a.get("body", "") or "")
+        and a.get("url")
+    ][:PDF_FETCH_CAP]
+    log.info(
+        "Direct candidates: %d | PDF fetch queue: %d",
+        len(direct), len(pdf_queue),
+    )
+
+    # Enrich PDF queue, then re-score and keep those that now reach CANDIDATE
+    pdf_queue = enrich_with_pdf(pdf_queue, session)
+    pdf_promoted = [
+        a for a in pdf_queue
+        if score_ann(a.get("headline", ""), a.get("body", "")) >= SCORE_CANDIDATE
     ]
-    log.info("Candidates (pre-filter): %d", len(candidates))
-    candidates = enrich_with_pdf(candidates, session)
+    log.info("PDF-promoted candidates: %d", len(pdf_promoted))
+
+    # Also enrich any direct candidates whose body is still weak after API text
+    candidates = enrich_with_pdf(direct, session) + pdf_promoted
     t2 = time.time()
 
     new_relevant = []
@@ -949,7 +1072,6 @@ def run_check():
             new_relevant.append(ann)
             cache.add(ann["id"])
 
-    # Mark all unseen as seen (avoid reprocessing tomorrow)
     for ann in unseen:
         cache.add(ann["id"])
 
@@ -958,7 +1080,6 @@ def run_check():
 
     if new_relevant:
         send_email(new_relevant)
-        send_telegram(new_relevant)
         send_whatsapp(new_relevant)
 
     save_cache(cache)
