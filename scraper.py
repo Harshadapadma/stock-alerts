@@ -32,190 +32,131 @@ logging.getLogger("pdfminer").setLevel(logging.ERROR)
 
 
 # ══════════════════════════════════════════════════════════════════════════════
-# WHAT WE WANT (exhaustive)
-# ══════════════════════════════════════════════════════════════════════════════
+# WHAT WE WANT
 #   ✅ Mergers, demergers, amalgamations
 #   ✅ All scheme-of-arrangement variants
-#   ✅ Corporate restructuring / reorganisation / realignment / consolidation
 #   ✅ Spin-offs, hive-offs, slump sales, business/undertaking transfers
-#   ✅ NCLT orders, scheme approvals, appointed dates, effective dates
-#   ✅ Open offers (real takeover bids only)
+#   ✅ Restructuring / reorganisation (with scheme context)
+#   ✅ Open offers ONLY when body also mentions merger/demerger/scheme
 #
 # WHAT WE DO NOT WANT
-#   ❌ Stock splits, share splits, sub-division of equity
+#   ❌ Standalone open offer updates (daily "no shares tendered" updates)
+#   ❌ Stock splits, share splits, sub-division
 #   ❌ Acquisitions (share purchases, stake buys)
-#   ❌ "takeover" bare keyword — matches SEBI Takeover Regs pledge filings daily
-#   ❌ SAST / pledge / encumbrance disclosures
-#   ❌ Promoter shareholding changes
-#   ❌ Quarterly results, buybacks, dividends, rights issues, bonus shares
-#   ❌ Scrutinizer reports, postal ballot, AGM/EGM notices
-#   ❌ Auditor / KMP / director appointments / resignations
-#   ❌ Credit ratings, NCDs, debentures
+#   ❌ SEBI Takeover Regulations disclosures (pledge/encumbrance)
+#   ❌ Promoter shareholding changes / SAST filings
+#   ❌ Quarterly results, buybacks, dividends, rights issues, bonus
+#   ❌ Scrutinizer reports, postal ballot, AGM/EGM notices (unless scheme)
+#   ❌ Auditor/KMP/director appointments/resignations
+#   ❌ Insolvency petitions, legal disputes (unless scheme is central)
+#   ❌ Name change, trading window, analyst calls
 # ══════════════════════════════════════════════════════════════════════════════
 
-
-# ── KEYWORDS (pre-filter used in run_check) ───────────────────────────────────
-# Intentionally broad for the candidate pass — is_relevant() tightens further.
-# "takeover" is deliberately ABSENT — it fires on thousands of pledge filings.
-# "acquisition" / "split" / "sub-division" deliberately ABSENT.
-
+# ── KEYWORDS (must appear in headline or body) ────────────────────────────────
 KEYWORDS = [
-    # Core M&A verbs
     "merger", "amalgamation", "amalgamate",
     "demerger", "de-merger", "demerge",
-
-    # Scheme phrases
     "scheme of arrangement", "scheme of amalgamation",
     "scheme of demerger", "scheme of merger",
-    "scheme of reconstruction",
-    "composite scheme", "composite scheme of arrangement",
+    "scheme of reconstruction", "composite scheme",
     "arrangement between", "arrangement amongst",
-    "draft scheme", "final scheme", "proposed scheme",
-    "revised scheme", "modified scheme",
-    "filing of scheme", "scheme approved", "scheme sanctioned",
+    "draft scheme", "proposed scheme", "revised scheme",
+    "scheme approved", "scheme sanctioned",
     "approval of scheme", "sanction of scheme",
-    "pursuant to scheme", "under the scheme", "as per scheme",
-    "in terms of scheme", "implementation of scheme",
-    "effective date of scheme", "effectiveness of scheme",
-    "coming into effect", "becomes effective",
-
-    # Restructuring / reorganisation
-    "restructuring", "re-structuring",
-    "reorganisation", "reorganization",
-    "corporate restructuring", "group restructuring",
-    "internal restructuring", "business restructuring",
-    "consolidation", "realignment", "re-alignment",
-
-    # Spin-off / hive-off
     "spin-off", "spinoff", "spin off",
     "hive off", "hive-off",
-
-    # Business / undertaking transfer
     "slump sale", "business transfer",
     "transfer of business", "transfer of undertaking",
-    "undertaking transfer", "transfer of division",
-    "sale of undertaking", "undertaking sale",
-    "transfer of assets", "transfer of liabilities",
-    "transfer and vesting", "vesting of undertaking",
-    "vesting of business", "assets and liabilities transfer",
-    "demerged undertaking",
-
-    # NCLT / tribunal
+    "demerged undertaking", "vesting of undertaking",
+    "transfer and vesting",
     "nclt", "national company law tribunal",
-    "order of nclt", "nclt order",
-    "approved by nclt", "sanctioned by nclt",
-
-    # Key scheme milestones / roles
-    "appointed date", "effective date",
-    "record date for demerger",
+    "appointed date", "effective date of scheme",
     "resulting company", "transferor company", "transferee company",
     "share exchange ratio", "swap ratio",
-
-    # NOTE: "open offer" intentionally ABSENT — it is a HARD EXCLUDE.
-    # An open offer is only relevant when it is a direct result of a merger /
-    # demerger scheme — but in practice NSE filings for open offers carry
-    # standalone SEBI/takeover language with NO scheme text, so they fire thousands
-    # of false positives.  We exclude them unconditionally below.
+    "restructuring", "reorganisation", "reorganization",
+    "consolidation of business",
+    # Open offer ONLY kept as a keyword — but gated separately in is_relevant
+    "open offer",
 ]
 
-# Lighter hint list used in headline pre-scan
-# "open offer" is deliberately ABSENT — it is a hard exclude.
 HEADLINE_HINTS = [
     "merger", "demerger", "amalgam", "demerge",
     "scheme of", "composite scheme", "arrangement",
-    "restructur", "reorganis", "reorganiz", "realign", "consolidat",
+    "restructur", "reorganis", "reorganiz",
     "spin-off", "spinoff", "spin off", "hive off", "hive-off",
-    "slump sale",
+    "slump sale", "open offer",
     "nclt", "transferor", "transferee", "resulting company",
     "appointed date", "effective date",
     "vesting", "demerged undertaking",
 ]
 
-# Required names — kept for backward compat
-PROCEDURAL_PHRASES = []   # retired — Layer 4 removed (was too aggressive)
-PROCEDURAL_OVERRIDE = []  # retired
-
-
-# ── HARD EXCLUDE — drop immediately, before any keyword check ─────────────────
-# These patterns cover the overwhelming majority of daily noise filings.
-# Order matters only for readability; all are evaluated together.
-
+# ── HARD EXCLUDE — drop immediately ───────────────────────────────────────────
 _HARD_EXCLUDE = re.compile(
     r"(?:"
-    # ── SAST / pledge / takeover-regs filings ─────────────────────────────
+    # SEBI Takeover Regulations pledge/encumbrance — match the HEADLINE directly
     r"disclosure under sebi takeover|"
+    r"disclosure under\s+reg(?:ulation)?\s+3[01]\b|"
     r"sebi\s*\(substantial acquisition|"
-    r"sebi\s*\(substential acquisition|"            # real-world typo
+    r"sebi\s*\(substential acquisition|"
     r"substantial acquisition of shares|"
-    r"regulation 29\b|regulation 31\b|"             # SAST-specific reg numbers
-    r"pledg|encumbr|"                               # pledge / encumbrance
+    r"regulation 29\b|regulation 31\b|"
+    r"pledg|encumbr|"
     r"inter.?se transfer|creeping acquisition|"
-    r"promoter(?:s)?\s+(?:and promoter group\s+)?(?:have|has)\s+(?:acquired|sold|purchased|disposed)|"
 
-    # ── Stock splits / sub-division ────────────────────────────────────────
+    # Stock splits / sub-division
     r"stock\s+split|share\s+split|"
     r"sub.?division\s+of\s+(?:equity|shares?)|"
-    r"sub.?divided\s+(?:equity|shares?)|"
     r"face\s+value\s+(?:split|reduct)|"
 
-    # ── Acquisitions (share purchases, stake buys) ─────────────────────────
-    # "acquisition" as standalone concept — NOT "scheme of amalgamation" etc.
-    # We use a negative lookbehind so "acquisition of undertaking/business" still passes.
+    # Acquisitions (share purchases, not corporate deals)
     r"acquisition\s+of\s+(?:shares?|equity|stake|securities)|"
-    r"acquired?\s+(?:\d[\d,]+\s+)?(?:equity\s+)?shares?|"
+    r"acquired?\s+\d[\d,]+\s+(?:equity\s+)?shares?|"
     r"purchase\s+of\s+(?:shares?|equity|stake)|"
-    r"open\s+market\s+(?:purchase|sale|acquisition)|"
+    r"open\s+market\s+(?:purchase|sale)|"
     r"block\s+deal|bulk\s+deal|"
-    r"creeping\s+acquisition|"
 
-    # ── Quarterly / financial results ──────────────────────────────────────
+    # Financial results
     r"(?:quarterly|q[1-4]|half.?year|annual)\s+(?:results?|financial\s+results?)|"
     r"standalone\s+(?:and\s+consolidated\s+)?financial\s+results?|"
     r"unaudited\s+financial\s+results?|"
 
-    # ── Dividends / buybacks / rights / bonus ─────────────────────────────
-    r"\bdividend\b|"
-    r"buy.?back|"
-    r"rights\s+issue|"
-    r"bonus\s+(?:shares?|issue)|"
+    # Dividends / buybacks / rights / bonus
+    r"\bdividend\b|buy.?back|rights\s+issue|bonus\s+(?:shares?|issue)|"
 
-    # ── Meetings that are purely notices (no scheme content) ───────────────
-    r"postal\s+ballot\b|"
-    r"scrutinizer.{0,30}report|"
-    r"notice\s+of\s+(?:agm|egm|annual\s+general|extraordinary\s+general)|"
-    r"\bappointment\s+of\s+scrutinizer\b|"
+    # Purely procedural — no scheme context
+    r"postal\s+ballot\b|scrutinizer.{0,30}report|"
+    r"notice\s+of\s+(?:agm|annual\s+general)|"
 
-    # ── Auditor / KMP / director changes ──────────────────────────────────
-    r"appointment\s+of\s+(?:independent\s+)?(?:director|auditor|cfo|ceo|md|kmp)|"
-    r"resignation\s+of\s+(?:director|auditor|cfo|ceo|md|kmp)|"
+    # Director / auditor / KMP changes
+    r"appointment\s+of\s+(?:independent\s+)?(?:director|auditor|cfo|ceo|md\b|kmp)|"
+    r"resignation\s+of\s+(?:director|auditor|cfo|ceo|md\b|kmp)|"
 
-    # ── Debt / credit instruments ──────────────────────────────────────────
-    r"credit\s+rating|"
-    r"non.?convertible\s+debenture|"
-    r"\bncd\b|"
+    # Debt instruments
+    r"credit\s+rating|non.?convertible\s+debenture|\bncd\b|"
 
-    # ── Open offer + related takeover-bid documents ────────────────────────
-    # Open offers are ALWAYS excluded — they are takeover mechanics, not
-    # merger / demerger events.  Even if a merger is later proposed, the
-    # open offer filing itself carries none of that scheme language.
-    r"\bopen\s+offer\b|"
-    r"letter\s+of\s+offer|"
-    r"independent\s+directors?\s+recommendation|"
-    r"\bescrow\b|"
+    # Pure legal/insolvency with no scheme link
+    r"insolvency\s+(?:petition|resolution|proceeding)|"
+    r"corporate\s+insolvency\s+resolution|"
 
-    # ── Misc noise ─────────────────────────────────────────────────────────
-    r"trading\s+window|"
-    r"insider\s+trading|"
-    r"price\s+sensitive\b|"
+    # Misc noise
+    r"trading\s+window|insider\s+trading|"
     r"analyst\s+(?:meet|call|conference)|"
-    r"investor\s+(?:meet|call|conference|presentation|day)|"
-    r"earnings\s+call"
+    r"investor\s+(?:meet|call|conference|presentation)|"
+    r"earnings\s+call|"
+    r"change\s+(?:in\s+)?(?:name\s+of\s+(?:company|director)|company\s+name)|"
+    r"name\s+change\b"
     r")",
     re.IGNORECASE,
 )
 
+# ── Open offer gate: only allow if body ALSO mentions merger/demerger/scheme ──
+_OPEN_OFFER_SCHEME_RE = re.compile(
+    r"merger|amalgamation|demerger|scheme\s+of\s+(?:arrangement|amalgamation|demerger)|"
+    r"composite\s+scheme|restructuring|reorgani[sz]|hive.?off|slump\s+sale",
+    re.IGNORECASE,
+)
+
 # ── Procedural meeting gate ────────────────────────────────────────────────────
-# Fires on bare creditor/shareholder meeting notices.
 _PROCEDURAL_MEETING = re.compile(
     r"meeting of the (?:unsecured|secured) creditors|"
     r"meeting of the (?:equity|preference) shareholders|"
@@ -223,19 +164,18 @@ _PROCEDURAL_MEETING = re.compile(
     re.IGNORECASE,
 )
 
-# If ANY of these appear anywhere (headline OR body), the meeting is scheme-related
-# and passes Layer 3. Intentionally broad — catches scheme names in headlines.
-# NOTE: "open offer" is intentionally ABSENT from _NAMED_SCHEME.
-# Including it was circular — it allowed any open offer to pass its own gate.
 _NAMED_SCHEME = re.compile(
     r"(?:composite\s+)?scheme\s+of\s+(?:arrangement|amalgamation|demerger|merger|reconstruction)|"
     r"amalgamation\s+of|demerger\s+of|merger\s+(?:of|between)|"
-    r"transferor\s+compan|transferee\s+compan|"
+    r"transferor\s+compan|transferee\s+compan|resulting\s+compan|"
     r"slump\s+sale|hive.?off|spin.?off|"
-    r"restructur|reorgani[sz]|consolidat|"
     r"nclt|appointed\s+date|effective\s+date",
     re.IGNORECASE,
 )
+
+# ── Deduplicate open offer updates: one alert per company per run ──────────────
+# Tracks (company, "open_offer") pairs within a single run_check() call
+_SEEN_OPEN_OFFER_THIS_RUN: set = set()
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -325,17 +265,15 @@ _STATUS_PATTERNS = [
 ]
 
 _ACTION_PATTERNS = [
-    (r"\bcomposite scheme\b",                         "Composite Scheme"),
-    (r"\bdemerger\b|de-merger",                       "Demerger"),
-    (r"\bspin.?off\b|hive.?off\b",                    "Spin-off / Hive-off"),
-    (r"\bslump sale\b",                               "Slump Sale"),
-    (r"\btransfer of (?:business|undertaking)\b",     "Business Transfer"),
-    (r"\bopen offer\b",                               "Open Offer"),
-    (r"\bamalgamation\b",                             "Amalgamation"),
-    (r"\bmerger\b",                                   "Merger"),
-    (r"\brestructur",                                 "Restructuring"),
-    (r"\breorgani[sz]",                               "Reorganisation"),
-    (r"\bconsolidat",                                 "Consolidation"),
+    (r"\bcomposite scheme\b",      "Composite Scheme"),
+    (r"\bdemerger\b|de-merger",    "Demerger"),
+    (r"\bspin.?off\b|hive.?off\b", "Spin-off / Hive-off"),
+    (r"\bslump sale\b",            "Slump Sale"),
+    (r"\bopen offer\b",            "Open Offer"),
+    (r"\bamalgamation\b",          "Amalgamation"),
+    (r"\bmerger\b",                "Merger"),
+    (r"\brestructur",              "Restructuring"),
+    (r"\breorgani[sz]",            "Reorganisation"),
 ]
 
 _DATE_RE = re.compile(
@@ -389,7 +327,7 @@ _SUBSTANCE_RE = re.compile(
     r"open offer|slump sale|capital reduction|dissolution|"
     r"transferor|transferee|appointed date|effective date|"
     r"share swap|exchange ratio|record date|resulting company|"
-    r"vesting|restructur|reorganis|reorganiz|consolidat)\b",
+    r"vesting|restructur|reorganis|reorganiz)\b",
     re.IGNORECASE,
 )
 
@@ -498,7 +436,6 @@ def _fallback_sentences(clean: str, company: str = "", headline: str = "") -> st
     elif re.search(r"\bmerger\b|\bmerge\b", combined):     action = "merger"
     elif re.search(r"restructur", combined):               action = "restructuring"
     elif re.search(r"reorgani[sz]", combined):             action = "reorganisation"
-    elif re.search(r"consolidat", combined):               action = "consolidation"
     else:                                                   action = "scheme"
 
     if re.search(r"has become effective|made effective|scheme.*effective", combined):
@@ -515,8 +452,6 @@ def _fallback_sentences(clean: str, company: str = "", headline: str = "") -> st
         status = "NOC received"
     elif re.search(r"filed.{0,30}(nclt|tribunal)", combined):
         status = "filed with NCLT"
-    elif re.search(r"open offer.{0,30}(trigger|announc|made)", combined):
-        status = "open offer triggered"
     elif re.search(r"in.?principle approval", combined):
         status = "in-principle approved"
     else:
@@ -682,7 +617,7 @@ def _fetch_nse_index(session: requests.Session, index: str, lookback_days: int) 
 
 def fetch_all_nse() -> tuple[list[dict], requests.Session]:
     cache = load_cache()
-    lookback_days = 1 if not cache else 2
+    lookback_days = 10 if not cache else 2
     log.info("NSE: fetching last %d days across equities + SME segments", lookback_days)
     session  = _nse_session()
     equities = _fetch_nse_index(session, "equities", lookback_days)
@@ -697,13 +632,15 @@ def fetch_all_nse() -> tuple[list[dict], requests.Session]:
 
 def is_relevant(ann: dict) -> bool:
     """
-    Layer 1 — Hard exclude: pledge/SAST filings, splits, acquisitions,
-                             results, buybacks, dividends, routine notices.
-    Layer 2 — Must match at least one scheme/merger/restructuring keyword.
-    Layer 3 — Procedural meeting gate: a bare creditor/shareholder meeting
-                             notice (with NO scheme language anywhere in
-                             headline OR body) is dropped. If the headline
-                             already names a scheme, it passes freely.
+    Layer 1 — Hard exclude: SEBI Takeover pledge filings (matched by headline
+                             pattern), splits, results, buybacks, noise.
+    Layer 2 — Must match at least one scheme/merger/demerger keyword.
+    Layer 3 — Open offer gate: open offer is only relevant if the body ALSO
+                             contains merger/demerger/scheme language. Daily
+                             "no shares tendered" status updates are dropped.
+                             One open-offer alert per company per run.
+    Layer 4 — Procedural meeting gate: bare creditor/shareholder meeting
+                             notices dropped unless a named scheme is present.
     """
     headline = (ann.get("headline", "") or "").lower()
     body     = (ann.get("body",     "") or "").lower()
@@ -718,15 +655,24 @@ def is_relevant(ann: dict) -> bool:
     if not any(kw in combined for kw in KEYWORDS):
         return False
 
-    # Layer 3: Procedural meeting gate — only drop if NEITHER headline NOR
-    # body contains any scheme-naming language.
+    # Layer 3: Open offer gate
+    if "open offer" in combined:
+        # Must also have scheme/merger/demerger context
+        if not _OPEN_OFFER_SCHEME_RE.search(combined):
+            log.debug("Skipped (open offer without scheme context): %s", ann.get("company"))
+            return False
+        # Deduplicate: one alert per company per run
+        company_key = (ann.get("company", "") or "").lower()
+        if company_key in _SEEN_OPEN_OFFER_THIS_RUN:
+            log.debug("Skipped (duplicate open offer this run): %s", ann.get("company"))
+            return False
+        _SEEN_OPEN_OFFER_THIS_RUN.add(company_key)
+
+    # Layer 4: Procedural meeting gate
     if _PROCEDURAL_MEETING.search(combined):
         if not _NAMED_SCHEME.search(combined):
             log.debug("Skipped (bare meeting notice, no scheme context): %s", ann.get("company"))
             return False
-
-    # NOTE: No Layer 4 open-offer gate needed — open offer is now a hard
-    # exclude in _HARD_EXCLUDE (Layer 1), so it never reaches this point.
 
     return True
 
@@ -826,15 +772,7 @@ def send_email(announcements: list[dict]):
 
 
 # ══════════════════════════════════════════════════════════════════════════════
-# WhatsApp via Meta Cloud API — template: alerts (5 variables)
-#
-# Template body registered in Meta Business Manager:
-#   🔍 Stock Market Alert
-#   Alert Type: {{1}}
-#   Company:    {{2}}
-#   Date:       {{3}}
-#   Details:    {{4}}
-#   More info:  {{5}}
+# WhatsApp via Meta Cloud API
 # ══════════════════════════════════════════════════════════════════════════════
 
 _WA_MAX_LEN = 1024
@@ -939,10 +877,92 @@ def send_whatsapp(announcements: list[dict]):
 
 
 # ══════════════════════════════════════════════════════════════════════════════
+# Market Cap filter  (Layer 5 — applied after keyword + relevance filters)
+# ══════════════════════════════════════════════════════════════════════════════
+
+MARKET_CAP_MIN_CR: float = getattr(Config, "MARKET_CAP_MIN_CR", 1000)
+
+
+def get_market_cap_cr(scrip: str, session: requests.Session) -> float | None:
+    """
+    Returns Total Market Cap (₹ Cr.) for an NSE symbol, or None on failure.
+
+    NSE's quote-equity API does NOT expose a totalMarketCap field directly.
+    We derive it the same way NSE computes it:
+        Market Cap (₹ Cr.) = issuedSize × lastPrice ÷ 1,00,00,000
+
+    securityInfo.issuedSize  — total shares issued
+    priceInfo.lastPrice      — current last traded price (₹)
+    """
+    if not scrip:
+        return None
+    symbol = scrip.strip().upper()
+    try:
+        old_referer = session.headers.get("Referer", "")
+        session.headers["Referer"] = (
+            f"https://www.nseindia.com/get-quotes/equity?symbol={symbol}"
+        )
+        try:
+            r = session.get(
+                "https://www.nseindia.com/api/quote-equity",
+                params={"symbol": symbol},
+                timeout=15,
+            )
+            r.raise_for_status()
+            data = r.json()
+        finally:
+            session.headers["Referer"] = old_referer
+
+        issued = (data.get("securityInfo") or {}).get("issuedSize")
+        price  = (data.get("priceInfo")    or {}).get("lastPrice")
+
+        if issued and price:
+            mcap = (float(issued) * float(price)) / 1e7   # → ₹ Crore
+            log.debug("Market cap %s: %d shares × ₹%.2f = ₹%.2f Cr", symbol, issued, price, mcap)
+            return mcap
+
+        log.warning("Market cap: issuedSize=%s lastPrice=%s for %s — cannot compute", issued, price, symbol)
+        return None
+
+    except Exception as e:
+        log.debug("Market cap fetch failed for %s: %s", symbol, e)
+        return None
+
+
+def passes_market_cap_filter(ann: dict, session: requests.Session) -> bool:
+    """
+    Returns True  → market cap ≥ MARKET_CAP_MIN_CR  (alert allowed)
+    Returns True  → market cap data unavailable      (fail-open, don't miss alerts)
+    Returns False → market cap < MARKET_CAP_MIN_CR   (alert suppressed)
+    """
+    if MARKET_CAP_MIN_CR <= 0:
+        return True  # filter disabled
+
+    scrip = (ann.get("scrip") or "").strip()
+    company = ann.get("company", "?")
+
+    mcap = get_market_cap_cr(scrip, session)
+
+    if mcap is None:
+        log.info("Market cap unavailable for %s (%s) — excluding by default", company, scrip)
+        return False  # fail-open: exclude rather than risk missing a real alert
+
+    if mcap >= MARKET_CAP_MIN_CR:
+        log.info("✅ Market cap OK  : %-12s  ₹%.2f Cr", scrip, mcap)
+        return True
+
+    log.info("❌ Market cap LOW : %-12s  ₹%.2f Cr  (min ₹%g Cr — skipped)", scrip, mcap, MARKET_CAP_MIN_CR)
+    return False
+
+
+# ══════════════════════════════════════════════════════════════════════════════
 # Main job
 # ══════════════════════════════════════════════════════════════════════════════
 
 def run_check():
+    # Reset open offer deduplication for this run
+    _SEEN_OPEN_OFFER_THIS_RUN.clear()
+
     t0 = time.time()
     log.info("DeepSeek key present: %s", bool(
         getattr(Config, "DEEPSEEK_API_KEY", "") or os.getenv("DEEPSEEK_API_KEY", "")
@@ -956,6 +976,7 @@ def run_check():
     unseen = [a for a in anns if a["id"] not in cache]
     log.info("Unseen: %d", len(unseen))
 
+    # Pre-filter: headline or body must contain a keyword
     candidates = [
         a for a in unseen
         if _headline_looks_relevant(a.get("headline", ""))
@@ -969,8 +990,9 @@ def run_check():
     new_relevant = []
     for ann in candidates:
         if is_relevant(ann):
-            new_relevant.append(ann)
-            cache.add(ann["id"])
+            cache.add(ann["id"])  # mark seen regardless of market cap check
+            if passes_market_cap_filter(ann, session):
+                new_relevant.append(ann)
 
     for ann in unseen:
         cache.add(ann["id"])
