@@ -884,50 +884,46 @@ MARKET_CAP_MIN_CR: float = getattr(Config, "MARKET_CAP_MIN_CR", 1000)
 
 
 def get_market_cap_cr(scrip: str, session: requests.Session) -> float | None:
-    """
-    Returns Total Market Cap (₹ Cr.) for an NSE symbol, or None on failure.
-
-    NSE's quote-equity API does NOT expose a totalMarketCap field directly.
-    We derive it the same way NSE computes it:
-        Market Cap (₹ Cr.) = issuedSize × lastPrice ÷ 1,00,00,000
-
-    securityInfo.issuedSize  — total shares issued
-    priceInfo.lastPrice      — current last traded price (₹)
-    """
     if not scrip:
         return None
     symbol = scrip.strip().upper()
+
+    # ── Try NSE API first ─────────────────────────────────────────────────
     try:
-        old_referer = session.headers.get("Referer", "")
-        session.headers["Referer"] = (
-            f"https://www.nseindia.com/get-quotes/equity?symbol={symbol}"
-        )
+        old_ref = session.headers.get("Referer", "")
+        session.headers["Referer"] = f"https://www.nseindia.com/get-quotes/equity?symbol={symbol}"
         try:
             r = session.get(
                 "https://www.nseindia.com/api/quote-equity",
-                params={"symbol": symbol},
-                timeout=15,
+                params={"symbol": symbol}, timeout=15,
             )
             r.raise_for_status()
-            data = r.json()
+            data   = r.json()
+            issued = (data.get("securityInfo") or {}).get("issuedSize")
+            price  = (data.get("priceInfo")    or {}).get("lastPrice")
+            if issued and price:
+                mcap = (float(issued) * float(price)) / 1e7
+                log.debug("MCap NSE %s: ₹%.2f Cr", symbol, mcap)
+                return mcap
         finally:
-            session.headers["Referer"] = old_referer
-
-        issued = (data.get("securityInfo") or {}).get("issuedSize")
-        price  = (data.get("priceInfo")    or {}).get("lastPrice")
-
-        if issued and price:
-            mcap = (float(issued) * float(price)) / 1e7   # → ₹ Crore
-            log.debug("Market cap %s: %d shares × ₹%.2f = ₹%.2f Cr", symbol, issued, price, mcap)
-            return mcap
-
-        log.warning("Market cap: issuedSize=%s lastPrice=%s for %s — cannot compute", issued, price, symbol)
-        return None
-
+            session.headers["Referer"] = old_ref
     except Exception as e:
-        log.debug("Market cap fetch failed for %s: %s", symbol, e)
-        return None
+        log.debug("NSE mcap failed for %s: %s — trying Yahoo", symbol, e)
 
+    # ── Fallback: Yahoo Finance ───────────────────────────────────────────
+    try:
+        import yfinance as yf
+        ticker = yf.Ticker(f"{symbol}.NS")
+        info   = ticker.fast_info          # faster than .info
+        mcap   = getattr(info, "market_cap", None)
+        if mcap:
+            mcap_cr = mcap / 1e7           # ₹ → Crore
+            log.debug("MCap Yahoo %s: ₹%.2f Cr", symbol, mcap_cr)
+            return mcap_cr
+    except Exception as e:
+        log.debug("Yahoo mcap failed for %s: %s", symbol, e)
+
+    return None
 
 def passes_market_cap_filter(ann: dict, session: requests.Session) -> bool:
     """
