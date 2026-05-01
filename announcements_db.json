@@ -1,0 +1,78 @@
+{
+  "Reliance Industries Ltd": [
+    {
+      "id": "sample_1",
+      "date": "12-Mar-2020",
+      "year": 2020,
+      "headline": "Board approves scheme of demerger of O2C business",
+      "summary": "Reliance Industries Ltd board approved a scheme to demerge its Oil-to-Chemicals business into a separate entity, Reliance O2C Ltd, pending shareholder and NCLT approval.",
+      "source": "NSE",
+      "url": "",
+      "scrip": "RELIANCE"
+    },
+    {
+      "id": "sample_2",
+      "date": "05-Aug-2021",
+      "year": 2021,
+      "headline": "Scheme of arrangement withdrawn \u2014 O2C demerger dropped",
+      "summary": "Reliance Industries Ltd announced the withdrawal of its proposed O2C demerger scheme, citing changed business priorities and evolving regulatory environment.",
+      "source": "NSE",
+      "url": "",
+      "scrip": "RELIANCE"
+    },
+    {
+      "id": "sample_3",
+      "date": "18-Jan-2023",
+      "year": 2023,
+      "headline": "Board approves amalgamation of subsidiary companies into RIL",
+      "summary": "The board approved a composite scheme for the merger of three wholly-owned subsidiaries into Reliance Industries Ltd effective from the appointed date of 1 April 2022.",
+      "source": "NSE",
+      "url": "",
+      "scrip": "RELIANCE"
+    }
+  ],
+  "HDFC Bank Ltd": [
+    {
+      "id": "sample_4",
+      "date": "04-Apr-2022",
+      "year": 2022,
+      "headline": "HDFC Ltd and HDFC Bank announce merger scheme",
+      "summary": "HDFC Ltd and HDFC Bank Ltd announced a landmark reverse merger where HDFC Ltd will merge into HDFC Bank, creating India's largest private sector bank by assets.",
+      "source": "NSE",
+      "url": "",
+      "scrip": "HDFCBANK"
+    },
+    {
+      "id": "sample_5",
+      "date": "07-Jul-2023",
+      "year": 2023,
+      "headline": "NCLT sanctioned scheme of merger \u2014 effective date 1 Jul 2023",
+      "summary": "The National Company Law Tribunal sanctioned the amalgamation of HDFC Ltd into HDFC Bank. The scheme became effective from 1 July 2023, making HDFC Bank a fully integrated financial services giant.",
+      "source": "NSE",
+      "url": "",
+      "scrip": "HDFCBANK"
+    }
+  ],
+  "Tata Motors Ltd": [
+    {
+      "id": "sample_6",
+      "date": "22-Jun-2021",
+      "year": 2021,
+      "headline": "Board approves demerger of commercial vehicle business",
+      "summary": "Tata Motors board approved a scheme to demerge its commercial vehicle division into a separate listed entity, subject to regulatory and shareholder approvals.",
+      "source": "NSE",
+      "url": "",
+      "scrip": "TATAMOTORS"
+    },
+    {
+      "id": "sample_7",
+      "date": "15-Feb-2024",
+      "year": 2024,
+      "headline": "NCLT approved demerger \u2014 commercial vehicle entity effective",
+      "summary": "The NCLT sanctioned the demerger of Tata Motors commercial vehicle business. The resulting company stands effective from the appointed date of 1 January 2024.",
+      "source": "NSE",
+      "url": "",
+      "scrip": "TATAMOTORS"
+    }
+  ]
+}
