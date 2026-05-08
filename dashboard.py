@@ -369,7 +369,19 @@ header {
 .drop-msg  { padding: 12px 16px; color: #aaa; font-size: .82rem; text-align: center; }
 
 /* Main */
-main { max-width: 920px; margin: 0 auto; padding: 28px 20px 60px; }
+main { max-width: 1400px; margin: 0 auto; padding: 28px 20px 60px; }
+
+/* 3-column card grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 14px;
+  align-items: start;
+}
+.cards-grid .ann-card { margin-bottom: 0; }
+@media (max-width: 1000px) { .cards-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px)  { .cards-grid { grid-template-columns: 1fr; } }
 .page-title { font-size: 1.35rem; font-weight: 800; color: #0f3460; margin-bottom: 3px; }
 .page-sub   { color: #999; font-size: .82rem; margin-bottom: 22px; }
 
@@ -439,6 +451,54 @@ main { max-width: 920px; margin: 0 auto; padding: 28px 20px 60px; }
               border-radius: 20px; font-size: .95rem; font-weight: 800; letter-spacing: 1px; }
 .yr-line    { flex: 1; height: 1px; background: #e5e7eb; }
 
+/* Filter bar */
+.filter-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; align-items: center; }
+.filter-label { font-size: .72rem; font-weight: 700; color: #aaa;
+                text-transform: uppercase; letter-spacing: .8px; margin-right: 2px; }
+.fc {
+  padding: 5px 14px; border-radius: 20px; font-size: .75rem; font-weight: 600;
+  cursor: pointer; border: 1.5px solid transparent; transition: all .15s; white-space: nowrap;
+  user-select: none;
+}
+.fc.all   { background: #0f3460; color: white; border-color: #0f3460; }
+.fc.type-action { background: #eef1ff; color: #4361ee; border-color: #c7d2fe; }
+.fc.type-status { background: #e8f5e9; color: #2e7d32; border-color: #a5d6a7; }
+.fc.active { box-shadow: 0 0 0 2px #4361ee; }
+.fc.type-action.active { background: #4361ee; color: white; border-color: #4361ee; }
+.fc.type-status.active { background: #2e7d32; color: white; border-color: #2e7d32; }
+.fc-count { font-size: .68rem; margin-left: 4px; opacity: .75; }
+
+/* Date range row */
+.date-range-bar {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  margin-bottom: 20px; background: white; border-radius: 10px;
+  padding: 10px 16px; box-shadow: 0 1px 4px rgba(0,0,0,.07);
+}
+.dr-label { font-size: .72rem; font-weight: 700; color: #aaa;
+            text-transform: uppercase; letter-spacing: .8px; }
+.dr-input {
+  padding: 5px 10px; border: 1.5px solid #dde; border-radius: 7px;
+  font-size: .82rem; color: #1a1a2e; outline: none; background: #fafafa;
+  cursor: pointer;
+}
+.dr-input:focus { border-color: #4361ee; background: white; }
+.dr-sep { color: #bbb; font-size: .8rem; }
+.dr-apply {
+  padding: 5px 16px; background: #4361ee; color: white; border: none;
+  border-radius: 7px; font-size: .78rem; font-weight: 600; cursor: pointer;
+  transition: background .15s;
+}
+.dr-apply:hover { background: #3451d1; }
+.dr-clear {
+  padding: 5px 12px; background: #f5f5f5; color: #888; border: none;
+  border-radius: 7px; font-size: .78rem; cursor: pointer;
+}
+.dr-clear:hover { background: #ececec; }
+.dr-hint { font-size: .72rem; color: #bbb; margin-left: 4px; }
+
+.no-match { text-align: center; color: #bbb; padding: 32px; font-size: .88rem;
+            background: white; border-radius: 10px; }
+
 /* Loading + empty */
 .loader {
   display: flex; flex-direction: column; align-items: center;
@@ -453,6 +513,183 @@ main { max-width: 920px; margin: 0 auto; padding: 28px 20px 60px; }
 .empty { text-align: center; color: #ccc; padding: 60px 20px;
          background: white; border-radius: 12px; font-size: .9rem; }
 </style>
+"""
+
+FILTER_JS = """
+<script>
+/* ── Filter state ── */
+const ACTION_FILTERS = [
+  'Merger','Demerger','Amalgamation','Composite Scheme',
+  'Spin-off','Hive-off','Slump Sale','Open Offer','Restructuring','Scheme'
+];
+const STATUS_FILTERS = [
+  '✅ Effective','⚖️ NCLT Approved','⚖️ RD Approved',
+  '🏛️ Board Approved','📋 NOC Received','📁 Filed NCLT',
+  '📋 CCI Approved','🏛️ In-Principle','📄 Update'
+];
+
+let _activeFilters = new Set();
+let _dateFrom = null;   // Date object or null
+let _dateTo   = null;
+
+/* ── Parse the date string stored in data-date attr ── */
+function _parseCardDate(str) {
+  if (!str) return null;
+  // formats: "15-Jan-2025 00:00:00", "15-Jan-2025", "2025-01-15"
+  const m = str.match(/(\d{2})-([A-Za-z]{3})-(\d{4})/);
+  if (m) return new Date(`${m[2]} ${m[1]} ${m[3]}`);
+  const d = new Date(str);
+  return isNaN(d) ? null : d;
+}
+
+/* ── Build filter chips + date range row ── */
+function buildFilterBar(containerId, cards) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  // derive min/max dates from cards
+  let minDate = null, maxDate = null;
+  cards.forEach(c => {
+    const d = _parseCardDate(c.dataset.date);
+    if (!d) return;
+    if (!minDate || d < minDate) minDate = d;
+    if (!maxDate || d > maxDate) maxDate = d;
+  });
+
+  const fmt = d => d ? d.toISOString().slice(0,10) : '';
+
+  // Count per filter
+  const counts = {};
+  cards.forEach(c => {
+    const ab = c.querySelector('.b-action');
+    const sb = c.querySelector('.b-status');
+    if (ab) counts[ab.textContent.trim()] = (counts[ab.textContent.trim()]||0)+1;
+    if (sb) counts[sb.textContent.trim()] = (counts[sb.textContent.trim()]||0)+1;
+  });
+
+  // Chips row
+  let chips = '<span class="filter-label">Filter:</span>';
+  chips += `<span class="fc all active" onclick="clearFilters()">All <span class="fc-count">${cards.length}</span></span>`;
+  ACTION_FILTERS.forEach(f => {
+    if (!counts[f]) return;
+    chips += `<span class="fc type-action" data-f="${f}" onclick="toggleFilter(this,'${f}')">${f} <span class="fc-count">${counts[f]}</span></span>`;
+  });
+  STATUS_FILTERS.forEach(f => {
+    if (!counts[f]) return;
+    chips += `<span class="fc type-status" data-f="${f}" onclick="toggleFilter(this,'${f}')">${f} <span class="fc-count">${counts[f]}</span></span>`;
+  });
+  container.innerHTML = chips;
+
+  // Date range row  (inject after filter-bar)
+  let drBar = document.getElementById('dateRangeBar');
+  if (!drBar) {
+    drBar = document.createElement('div');
+    drBar.id = 'dateRangeBar';
+    drBar.className = 'date-range-bar';
+    container.insertAdjacentElement('afterend', drBar);
+  }
+  drBar.innerHTML = `
+    <span class="dr-label">Date Range:</span>
+    <input class="dr-input" type="date" id="drFrom"
+           value="${fmt(minDate)}" min="${fmt(minDate)}" max="${fmt(maxDate)}">
+    <span class="dr-sep">→</span>
+    <input class="dr-input" type="date" id="drTo"
+           value="${fmt(maxDate)}" min="${fmt(minDate)}" max="${fmt(maxDate)}">
+    <button class="dr-apply" onclick="applyDateRange()">Apply</button>
+    <button class="dr-clear" onclick="clearDateRange()">Clear</button>
+    <span class="dr-hint" id="drHint"></span>`;
+}
+
+/* ── Date range actions ── */
+function applyDateRange() {
+  const f = document.getElementById('drFrom')?.value;
+  const t = document.getElementById('drTo')?.value;
+  _dateFrom = f ? new Date(f) : null;
+  _dateTo   = t ? new Date(t + 'T23:59:59') : null;
+  applyFilters();
+}
+
+function clearDateRange() {
+  _dateFrom = _dateTo = null;
+  // reset inputs to original min/max
+  const fi = document.getElementById('drFrom');
+  const ti = document.getElementById('drTo');
+  if (fi) fi.value = fi.min;
+  if (ti) ti.value = ti.max;
+  document.getElementById('drHint').textContent = '';
+  applyFilters();
+}
+
+/* ── Chip actions ── */
+function toggleFilter(el, value) {
+  if (_activeFilters.has(value)) {
+    _activeFilters.delete(value);
+    el.classList.remove('active');
+  } else {
+    _activeFilters.add(value);
+    el.classList.add('active');
+  }
+  document.querySelector('.fc.all')?.classList.toggle('active', _activeFilters.size === 0);
+  applyFilters();
+}
+
+function clearFilters() {
+  _activeFilters.clear();
+  document.querySelectorAll('.fc').forEach(el => el.classList.remove('active'));
+  document.querySelector('.fc.all')?.classList.add('active');
+  applyFilters();
+}
+
+/* ── Master apply (chips + date range combined) ── */
+function applyFilters() {
+  const cards = document.querySelectorAll('.ann-card');
+  let visible = 0;
+
+  cards.forEach(c => {
+    // chip check
+    let chipOk = true;
+    if (_activeFilters.size > 0) {
+      const ab = c.querySelector('.b-action')?.textContent.trim() || '';
+      const sb = c.querySelector('.b-status')?.textContent.trim() || '';
+      chipOk = _activeFilters.has(ab) || _activeFilters.has(sb);
+    }
+
+    // date check
+    let dateOk = true;
+    if (_dateFrom || _dateTo) {
+      const d = _parseCardDate(c.dataset.date);
+      if (d) {
+        if (_dateFrom && d < _dateFrom) dateOk = false;
+        if (_dateTo   && d > _dateTo)   dateOk = false;
+      }
+    }
+
+    const show = chipOk && dateOk;
+    c.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+
+  // Hide empty year sections (company page)
+  document.querySelectorAll('.year-section').forEach(sec => {
+    const hasVisible = [...sec.querySelectorAll('.ann-card')].some(c => c.style.display !== 'none');
+    sec.style.display = hasVisible ? '' : 'none';
+  });
+
+  // Update hint count
+  const hint = document.getElementById('drHint');
+  if (hint) hint.textContent = (_dateFrom || _dateTo) ? `${visible} result${visible!==1?'s':''}` : '';
+
+  // No-match message
+  let nm = document.getElementById('no-match');
+  if (!nm) {
+    nm = document.createElement('div');
+    nm.id = 'no-match'; nm.className = 'no-match';
+    nm.textContent = 'No announcements match the selected filters.';
+    document.querySelector('main')?.appendChild(nm);
+  }
+  nm.style.display = visible === 0 ? '' : 'none';
+}
+</script>
 """
 
 SEARCH_JS = """
@@ -518,47 +755,86 @@ HOME_TMPL = """<!DOCTYPE html><html lang="en"><head>
 """ + _header() + """
 <main>
   <div class="page-title">Recent Announcements</div>
-  <div class="page-sub">Last 30 days &nbsp;·&nbsp; Mergers, Demergers &amp; Schemes &nbsp;·&nbsp;
-    {{ anns|length }} result{{ 's' if anns|length != 1 else '' }} &nbsp;·&nbsp;
+  <div class="page-sub" id="homeSub">Last 30 days &nbsp;·&nbsp; Mergers, Demergers &amp; Schemes &nbsp;·&nbsp;
     <span style="color:#4361ee">Click a company name to see its full history</span>
   </div>
-
-  {% if anns %}
-    {% for a in anns %}
-    <div class="ann-card" style="border-left-color:{{ a.color }}">
-      <div class="card-top">
-        <a class="company-link"
-           href="/company?scrip={{ a.scrip|urlencode }}&name={{ a.company|urlencode }}">
-          {{ a.company }}
-          {% if a.scrip %}<span style="color:#aaa;font-weight:400;font-size:.78rem">&nbsp;({{ a.scrip }})</span>{% endif %}
-        </a>
-        <span class="ann-date">{{ a.date }}</span>
-      </div>
-      <div class="badges">
-        <span class="badge b-action">{{ a.action }}</span>
-        <span class="badge b-status">{{ a.status }}</span>
-        <span class="badge b-source">{{ a.source }}</span>
-      </div>
-      <div class="ann-headline">{{ a.headline }}</div>
-      {% if a.url %}
-      <a class="doc-btn" href="{{ a.url }}" target="_blank">Open Document →</a>
-      {% endif %}
+  <div id="content">
+    <div class="loader">
+      <div class="spinner"></div>
+      <div>Fetching latest announcements from NSE…</div>
     </div>
-    {% endfor %}
-  {% else %}
-  <div class="empty">
-    No filtered announcements found in the last 30 days from NSE.<br>
-    <span style="font-size:.8rem;color:#bbb">NSE may be slow — try refreshing in a moment.</span>
   </div>
-  {% endif %}
 </main>
-""" + SEARCH_JS + "</body></html>"
+
+<script>
+fetch('/api/recent')
+  .then(r => r.json())
+  .then(data => renderHome(data))
+  .catch(() => {
+    document.getElementById('content').innerHTML =
+      '<div class="empty">Could not fetch data from NSE. Please try again in a moment.</div>';
+  });
+
+function cardColorHome(text) {
+  const t = text.toLowerCase();
+  if (/effective|stands dissolved/.test(t)) return '#2dc653';
+  if (/demerger|de-merger/.test(t))         return '#e040fb';
+  if (/amalgamation/.test(t))               return '#06d6a0';
+  if (/spin.?off|hive.?off/.test(t))        return '#ff6b6b';
+  if (/slump sale/.test(t))                 return '#f9a825';
+  if (/merger/.test(t))                     return '#00b4d8';
+  return '#4361ee';
+}
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function renderHome(anns) {
+  const sub = document.getElementById('homeSub');
+  if (!anns.length) {
+    sub.innerHTML = 'Last 30 days &nbsp;·&nbsp; No filtered announcements found.';
+    document.getElementById('content').innerHTML =
+      '<div class="empty">No merger, demerger or scheme announcements in the last 30 days.<br><span style="font-size:.8rem;color:#bbb">NSE may be slow — try refreshing in a moment.</span></div>';
+    return;
+  }
+
+  sub.innerHTML = `Last 30 days &nbsp;·&nbsp; Mergers, Demergers &amp; Schemes &nbsp;·&nbsp;
+    ${anns.length} result${anns.length!==1?'s':''} &nbsp;·&nbsp;
+    <span style="color:#4361ee">Click a company name to see its full history</span>`;
+
+  let html = '<div class="filter-bar" id="filterBar"></div><div id="cardWrap" class="cards-grid">';
+  anns.forEach(a => {
+    const combined = (a.headline||'') + ' ' + (a.body||'');
+    const color = cardColorHome(combined);
+    const docBtn = a.url ? `<a class="doc-btn" href="${esc(a.url)}" target="_blank">Open Document →</a>` : '';
+    const scrip  = a.scrip ? `<span style="color:#aaa;font-weight:400;font-size:.78rem">&nbsp;(${esc(a.scrip)})</span>` : '';
+    html += `
+      <div class="ann-card" style="border-left-color:${color}" data-date="${esc(a.date||'')}">
+        <div class="card-top">
+          <a class="company-link" href="/company?scrip=${encodeURIComponent(a.scrip||'')}&name=${encodeURIComponent(a.company||'')}">
+            ${esc(a.company||'')}${scrip}
+          </a>
+          <span class="ann-date">${esc(a.date||'')}</span>
+        </div>
+        <div class="badges">
+          <span class="badge b-action">${esc(a.action||'')}</span>
+          <span class="badge b-status">${esc(a.status||'')}</span>
+          <span class="badge b-source">${esc(a.source||'NSE')}</span>
+        </div>
+        <div class="ann-headline">${esc(a.headline||'')}</div>
+        ${docBtn}
+      </div>`;
+  });
+  html += '</div>';
+  document.getElementById('content').innerHTML = html;
+  buildFilterBar('filterBar', [...document.querySelectorAll('.ann-card')]);
+}
+</script>
+""" + FILTER_JS + SEARCH_JS + """
+</body></html>"""
 
 
 @app.route("/")
 def home():
-    anns = fetch_recent_filtered(days=30)
-    return render_template_string(HOME_TMPL, anns=anns)
+    return render_template_string(HOME_TMPL)
 
 
 # ── Company page — skeleton served immediately, data loaded via JS ────────────
@@ -624,6 +900,7 @@ function renderTimeline(anns) {
   sub.textContent = `${anns.length} announcement${anns.length!==1?'s':''} · ${span}`;
 
   let html = `
+    <div class="filter-bar" id="filterBar"></div>
     <div class="stats-bar">
       <div class="stat"><div class="stat-val">${anns.length}</div><div class="stat-lbl">Total</div></div>
       <div class="stat"><div class="stat-val">${years.length}</div><div class="stat-lbl">Year${years.length!==1?'s':''}</div></div>
@@ -636,7 +913,8 @@ function renderTimeline(anns) {
       <div class="year-marker">
         <div class="year-badge">${esc(year)}</div>
         <div class="yr-line"></div>
-      </div>`;
+      </div>
+      <div class="cards-grid">`;
 
     byYear[year].forEach(a => {
       const combined = (a.headline||'') + ' ' + (a.body||'');
@@ -648,7 +926,7 @@ function renderTimeline(anns) {
         ? `<a class="doc-btn" href="${esc(a.url)}" target="_blank">Open Document →</a>` : '';
 
       html += `
-        <div class="ann-card" style="border-left-color:${color}">
+        <div class="ann-card" style="border-left-color:${color}" data-date="${esc(a.date||'')}">
           <div class="card-top">
             <div class="badges" style="margin:0">
               <span class="badge b-action">${esc(a.action)}</span>
@@ -662,14 +940,16 @@ function renderTimeline(anns) {
           ${docBtn}
         </div>`;
     });
-    html += `</div>`;
+    html += `</div></div>`;
   });
 
   html += `</div>`;
   document.getElementById('content').innerHTML = html;
+  // Build filter chips after cards are in the DOM
+  buildFilterBar('filterBar', [...document.querySelectorAll('.ann-card')]);
 }
 </script>
-""" + SEARCH_JS + "</body></html>"
+""" + FILTER_JS + SEARCH_JS + "</body></html>"
 
 
 @app.route("/company")
