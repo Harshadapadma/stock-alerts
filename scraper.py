@@ -179,6 +179,166 @@ _SEEN_OPEN_OFFER_THIS_RUN: set = set()
 
 
 # ══════════════════════════════════════════════════════════════════════════════
+# Helper utilities
+# ══════════════════════════════════════════════════════════════════════════════
+
+def _headline_looks_relevant(headline: str) -> bool:
+    h = (headline or "").lower()
+    return any(hint in h for hint in HEADLINE_HINTS)
+
+def _body_is_weak(body: str) -> bool:
+    return len((body or "").strip()) < 200
+
+def _extract_pdf_text(url: str, session: requests.Session) -> str:
+    try:
+        r = session.get(url, timeout=30)
+        r.raise_for_status()
+        with pdfplumber.open(io.BytesIO(r.content)) as pdf:
+            return "\n".join(
+                page.extract_text() or "" for page in pdf.pages[:10]
+            ).strip()
+    except Exception as e:
+        log.debug("PDF extract failed for %s: %s", url, e)
+        return ""
+
+def _get_status(text: str) -> str:
+    t = text.lower()
+    if any(w in t for w in ["approved", "sanctioned", "effective"]):
+        return "Approved"
+    if any(w in t for w in ["filed", "application"]):
+        return "Filed"
+    if any(w in t for w in ["proposed", "draft"]):
+        return "Proposed"
+    if any(w in t for w in ["pending", "hearing"]):
+        return "Pending"
+    return "Update"
+
+def _get_action(text: str) -> str:
+    t = text.lower()
+    if "demerger" in t or "de-merger" in t:
+        return "Demerger"
+    if "amalgamat" in t:
+        return "Amalgamation"
+    if "merger" in t:
+        return "Merger"
+    if "slump sale" in t:
+        return "Slump Sale"
+    if "hive" in t:
+        return "Hive-Off"
+    if "spin" in t:
+        return "Spin-Off"
+    if "open offer" in t:
+        return "Open Offer"
+    return "Scheme"
+
+_DATE_RE = re.compile(
+    r"\b(\d{1,2}[\s\-/](?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*[\s\-/]\d{2,4})"
+    r"|\b(\d{4}[\-/]\d{2}[\-/]\d{2})\b",
+    re.IGNORECASE,
+)
+
+def _get_best_date(text: str) -> str:
+    m = _DATE_RE.search(text)
+    return m.group(0) if m else ""
+
+def clean_body(body: str) -> str:
+    return re.sub(r"\s+", " ", (body or "").replace("\n", " ").replace("\t", " ")).strip()
+
+def _ai_summarise(body: str, company: str = "", headline: str = "") -> str:
+    api_key = getattr(Config, "DEEPSEEK_API_KEY", "") or os.getenv("DEEPSEEK_API_KEY", "")
+    if not api_key or not body:
+        return ""
+    try:
+        prompt = (
+            f"Summarise this corporate announcement in 2-3 concise sentences. "
+            f"Company: {company}. Headline: {headline}.\n\nAnnouncement:\n{body[:4000]}"
+        )
+        r = requests.post(
+            "https://api.deepseek.com/v1/chat/completions",
+            headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+            json={
+                "model": "deepseek-chat",
+                "messages": [{"role": "user", "content": prompt}],
+                "max_tokens": 200,
+                "temperature": 0.3,
+            },
+            timeout=20,
+        )
+        r.raise_for_status()
+        return r.json()["choices"][0]["message"]["content"].strip()
+    except Exception as e:
+        log.debug("AI summarise failed: %s", e)
+        return ""
+
+def _fallback_sentences(body: str, company: str = "", headline: str = "") -> str:
+    if not body:
+        return headline or ""
+    sentences = re.split(r"(?<=[.!?])\s+", body.strip())
+    relevant = [s for s in sentences if any(kw in s.lower() for kw in KEYWORDS)]
+    chosen = relevant[:3] if relevant else sentences[:3]
+    return " ".join(chosen)[:500]
+
+def build_summary(body: str, company: str = "", headline: str = "") -> str:
+    plain = _ai_summarise(body, company=company, headline=headline)
+    if not plain:
+        plain = _fallback_sentences(clean_body(body), company=company, headline=headline)
+    return plain or headline or ""
+
+_MCAP_CACHE: dict = {}
+
+def passes_market_cap_filter(ann: dict, session: requests.Session) -> bool:
+    min_cr = getattr(Config, "MARKET_CAP_MIN_CR", 0)
+    if not min_cr:
+        return True
+    scrip = ann.get("scrip", "") or ""
+    if not scrip:
+        return True
+    if scrip in _MCAP_CACHE:
+        mcap = _MCAP_CACHE[scrip]
+    else:
+        try:
+            r = session.get(
+                f"https://www.nseindia.com/api/quote-equity?symbol={scrip}",
+                timeout=15,
+            )
+            r.raise_for_status()
+            data = r.json()
+            mcap = (
+                data.get("marketDeptOrderBook", {})
+                    .get("tradeInfo", {})
+                    .get("totalMarketCap", 0)
+            )
+            _MCAP_CACHE[scrip] = mcap
+        except Exception as e:
+            log.debug("Market cap fetch failed for %s: %s", scrip, e)
+            return True
+    if mcap and mcap < min_cr:
+        log.info("Skipped (market cap ₹%.0f Cr < ₹%d Cr): %s", mcap, min_cr, ann.get("company"))
+        return False
+    return True
+
+_DB_FILE = Path("announcements.json")
+
+def save_to_announcements_db(ann: dict, summary: str):
+    try:
+        db = json.loads(_DB_FILE.read_text()) if _DB_FILE.exists() else []
+        db.append({
+            "id":       ann.get("id"),
+            "source":   ann.get("source"),
+            "company":  ann.get("company"),
+            "scrip":    ann.get("scrip"),
+            "headline": ann.get("headline"),
+            "date":     ann.get("date"),
+            "url":      ann.get("url"),
+            "summary":  summary,
+            "saved_at": datetime.now().isoformat(),
+        })
+        _DB_FILE.write_text(json.dumps(db, indent=2))
+    except Exception as e:
+        log.debug("DB save failed: %s", e)
+
+
+# ══════════════════════════════════════════════════════════════════════════════
 # Cache
 # ══════════════════════════════════════════════════════════════════════════════
 
@@ -461,17 +621,61 @@ def send_whatsapp(announcements: list[dict]):
         var4 = _wa_var(f"{headline} - {para}" if para else headline, limit=900)
         var5 = _wa_var(url)
 
-        payload = {
-            "chat_id":    Config.TELEGRAM_CHAT_ID,
-            "text":       text,
-            "parse_mode": "Markdown",
-        }
+        for recipient in Config.WHATSAPP_TO:
+            payload = {
+                "messaging_product": "whatsapp",
+                "to":   recipient,
+                "type": "template",
+                "template": {
+                    "name":     "alerts",
+                    "language": {"code": "en"},
+                    "components": [{
+                        "type": "body",
+                        "parameters": [
+                            {"type": "text", "text": var1},
+                            {"type": "text", "text": var2},
+                            {"type": "text", "text": var3},
+                            {"type": "text", "text": var4},
+                            {"type": "text", "text": var5},
+                        ],
+                    }],
+                },
+            }
+            try:
+                r = requests.post(api_url, headers=headers, json=payload, timeout=10)
+                r.raise_for_status()
+                log.info("WhatsApp alert sent to %s for: %s", recipient, a["company"])
+            except Exception as e:
+                log.error("WhatsApp send failed for %s: %s", recipient, e)
+
+
+def send_telegram(announcements: list[dict]):
+    if not Config.TELEGRAM_ENABLED or not announcements:
+        return
+    bot_token = (getattr(Config, "TELEGRAM_BOT_TOKEN", "") or "").strip()
+    chat_id   = (getattr(Config, "TELEGRAM_CHAT_ID",   "") or "").strip()
+    if not bot_token or not chat_id:
+        log.warning("Telegram: BOT_TOKEN or CHAT_ID not set — skipping")
+        return
+    api_url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+    for a in announcements:
+        plain = _ai_summarise(a.get("body", "") or "", company=a.get("company", ""), headline=a.get("headline", ""))
+        if not plain:
+            plain = _fallback_sentences(clean_body(a.get("body", "") or ""), company=a.get("company", ""), headline=a.get("headline", ""))
+        text = (
+            f"*{a.get('source', '')} | {a.get('company', '')}*\n"
+            f"{a.get('headline', '')}\n"
+            f"Date: {a.get('date', '')}\n"
+            f"{plain}\n"
+            f"[View]({a.get('url', '')})"
+        )
         try:
-            r = requests.post(url, json=payload, timeout=10)
+            r = requests.post(api_url, json={"chat_id": chat_id, "text": text, "parse_mode": "Markdown"}, timeout=10)
             r.raise_for_status()
             log.info("Telegram alert sent for: %s", a["company"])
         except Exception as e:
             log.error("Telegram send failed: %s", e)
+
 
 # Main job
 # ══════════════════════════════════════════════════════════════════════════════
@@ -525,6 +729,7 @@ def run_check():
             save_to_announcements_db(ann, plain)
         send_email(new_relevant)
         send_whatsapp(new_relevant)
+        send_telegram(new_relevant)
 
     save_cache(cache)
     log.info(
