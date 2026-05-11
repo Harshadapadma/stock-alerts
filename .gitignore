@@ -113,3 +113,4 @@ announcements.json
 announcements_db.json
 last_run.txt
 *.bak
+config.py
