@@ -29,6 +29,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
           git add -f data/
           git diff --staged --quiet || git commit -m "data: ${{ github.event.inputs.symbol }} [skip ci]"
           git push
