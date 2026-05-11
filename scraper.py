@@ -403,7 +403,7 @@ def _fetch_nse_index(session: requests.Session, index: str, lookback_days: int) 
 
 def fetch_all_nse() -> tuple[list[dict], requests.Session]:
     cache = load_cache()
-    lookback_days = 7 if not cache else 2
+    lookback_days = 3 if not cache else 2
     log.info("NSE: fetching last %d days across equities + SME segments", lookback_days)
     session  = _nse_session()
     equities = _fetch_nse_index(session, "equities", lookback_days)
