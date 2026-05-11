@@ -7,6 +7,7 @@ Corporate Announcements Dashboard
 Run: python dashboard.py 8090
 """
 import json
+import os
 import re
 import sys
 import time
@@ -913,13 +914,27 @@ CO_SHELL = """<!DOCTYPE html><html lang="en"><head>
 </main>
 
 <script>
-fetch('/api/company-history?scrip={{ scrip|urlencode }}&name={{ name|urlencode }}')
-  .then(r => r.json())
-  .then(data => renderTimeline(data))
-  .catch(() => {
-    document.getElementById('content').innerHTML =
-      '<div class="empty">Could not fetch data from NSE. Please try again.</div>';
-  });
+function pollCompany(scrip, name, attempt) {
+  fetch(`/api/company-history?scrip=${encodeURIComponent(scrip)}&name=${encodeURIComponent(name)}`)
+    .then(r => r.json())
+    .then(res => {
+      if (res.status === 'ready') {
+        renderTimeline(res.data);
+      } else if (res.status === 'pending' && attempt < 20) {
+        document.querySelector('.loader div:last-child').textContent =
+          'NSE data is being fetched via GitHub… checking in 10 seconds (attempt ' + attempt + '/20)';
+        setTimeout(() => pollCompany(scrip, name, attempt + 1), 10000);
+      } else {
+        document.getElementById('content').innerHTML =
+          '<div class="empty">Could not fetch data. Please try again in a minute.</div>';
+      }
+    })
+    .catch(() => {
+      document.getElementById('content').innerHTML =
+        '<div class="empty">Could not fetch data from NSE. Please try again.</div>';
+    });
+}
+pollCompany('{{ scrip }}', '{{ name }}', 1);
 
 function cardColor(text) {
   const t = text.toLowerCase();
@@ -1014,14 +1029,88 @@ def company_page():
     return render_template_string(CO_SHELL, scrip=scrip, name=name)
 
 
+_GITHUB_REPO    = "Harshadapadma/stock-alerts"
+_GITHUB_TOKEN   = os.getenv("GITHUB_TOKEN", "")
+_COMPANIES_FILE = Path("companies.json")
+_COMPANIES_RAW  = "https://raw.githubusercontent.com/Harshadapadma/stock-alerts/main/companies.json"
+_DATA_RAW       = "https://raw.githubusercontent.com/Harshadapadma/stock-alerts/main/data/{symbol}.json"
+
+
+def _load_companies() -> dict:
+    cached = _get("companies")
+    if cached is not None:
+        return cached
+    data = {}
+    if _COMPANIES_FILE.exists():
+        try:
+            data = json.loads(_COMPANIES_FILE.read_text())
+        except Exception:
+            pass
+    if not data:
+        try:
+            r = requests.get(_COMPANIES_RAW, timeout=10)
+            data = r.json()
+        except Exception:
+            pass
+    _set("companies", data, ttl=86400)
+    return data
+
+
+def _trigger_fetch(symbol: str):
+    if not _GITHUB_TOKEN:
+        return
+    try:
+        requests.post(
+            f"https://api.github.com/repos/{_GITHUB_REPO}/actions/workflows/fetch_company.yml/dispatches",
+            headers={"Authorization": f"token {_GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"},
+            json={"ref": "main", "inputs": {"symbol": symbol}},
+            timeout=10,
+        )
+    except Exception:
+        pass
+
+
+def _fetch_company_from_github(symbol: str) -> list[dict] | None:
+    url = _DATA_RAW.format(symbol=symbol)
+    try:
+        r = requests.get(url, timeout=10)
+        if r.status_code == 404:
+            return None
+        data = r.json()
+        today = datetime.now()
+        result = []
+        for ann in data.get("announcements", []):
+            combined = ann["headline"] + " " + ann.get("body", "")
+            ann["action"] = action_badge(combined)
+            ann["status"] = status_badge(combined)
+            ann["color"]  = card_color(combined)
+            d = _parse_date(ann["date"])
+            ann["year"]   = d.year if d else today.year
+            result.append(ann)
+        return result
+    except Exception:
+        return None
+
+
 @app.route("/api/company-history")
 def api_company_history():
     scrip = request.args.get("scrip", "").strip().upper()
-    name  = request.args.get("name", "").strip()
     if not scrip:
-        return jsonify([])
+        return jsonify({"status": "error", "data": []})
+
+    # 1. Try GitHub cached data first
+    cached = _fetch_company_from_github(scrip)
+    if cached is not None:
+        return jsonify({"status": "ready", "data": cached})
+
+    # 2. Not cached — trigger GitHub Actions to fetch it, try NSE directly while waiting
+    _trigger_fetch(scrip)
     anns = fetch_company_history(scrip)
-    return jsonify(anns)
+    if anns:
+        return jsonify({"status": "ready", "data": anns})
+
+    # 3. NSE also blocked — tell frontend to poll
+    return jsonify({"status": "pending", "data": []})
 
 
 @app.route("/api/recent")
@@ -1031,26 +1120,19 @@ def api_recent():
 
 @app.route("/api/search")
 def api_search():
-    q = request.args.get("q", "").strip()
+    q = request.args.get("q", "").strip().lower()
     if len(q) < 2:
         return jsonify([])
-    try:
-        s = nse_session()
-        r = s.get(
-            "https://www.nseindia.com/api/search/autocomplete",
-            params={"q": q}, timeout=8,
-        )
-        r.raise_for_status()
-        items = r.json().get("symbols", [])
-        out = []
-        for it in items[:15]:
-            sym  = it.get("symbol", "")
-            raw  = it.get("symbol_info", sym)
-            name = re.sub(r"\s*-\s*(EQ|BE|BL|SM|ST|GB|N[1-4])\s*$", "", raw, flags=re.I).strip()
+    companies = _load_companies()
+    out = []
+    # symbol prefix matches first, then name matches
+    for sym, name in companies.items():
+        if sym.lower().startswith(q):
             out.append({"symbol": sym, "name": name})
-        return jsonify(out)
-    except Exception:
-        return jsonify([])
+    for sym, name in companies.items():
+        if q in name.lower() and not sym.lower().startswith(q):
+            out.append({"symbol": sym, "name": name})
+    return jsonify(out[:15])
 
 
 # ══════════════════════════════════════════════════════════════════════════════
