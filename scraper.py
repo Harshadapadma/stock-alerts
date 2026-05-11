@@ -403,7 +403,7 @@ def _fetch_nse_index(session: requests.Session, index: str, lookback_days: int) 
 
 def fetch_all_nse() -> tuple[list[dict], requests.Session]:
     cache = load_cache()
-    lookback_days = 10 if not cache else 2
+    lookback_days = 7 if not cache else 2
     log.info("NSE: fetching last %d days across equities + SME segments", lookback_days)
     session  = _nse_session()
     equities = _fetch_nse_index(session, "equities", lookback_days)
@@ -432,8 +432,12 @@ def is_relevant(ann: dict) -> bool:
     body     = (ann.get("body",     "") or "").lower()
     combined = headline + " " + body
 
-    # Layer 1: Hard exclude
-    if _HARD_EXCLUDE.search(combined):
+    # Layer 1: Hard exclude — applied to headline only.
+    # The body is PDF text after enrichment; scheme documents routinely contain
+    # words like "dividend", "acquisition of equity shares", "rights issue" etc.
+    # as part of their legal description, which would falsely exclude them if we
+    # searched the full body.
+    if _HARD_EXCLUDE.search(headline):
         log.debug("Skipped (hard-exclude): %s | %s", ann.get("company"), ann.get("headline"))
         return False
 
