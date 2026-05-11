@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: corporate-announcements
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn dashboard:app --bind 0.0.0.0:$PORT --workers 2 --timeout 120
+    plan: free

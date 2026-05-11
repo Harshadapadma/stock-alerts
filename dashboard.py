@@ -218,6 +218,44 @@ def _fetch_range(index: str, from_date: str, to_date: str,
     return []
 
 
+# ── JSON DB fallback (populated by scraper.py) ────────────────────────────────
+
+_JSON_DB = Path("announcements.json")
+
+def _load_from_json_db(days: int = 30) -> list[dict]:
+    if not _JSON_DB.exists():
+        return []
+    try:
+        records = json.loads(_JSON_DB.read_text())
+    except Exception:
+        return []
+    cutoff = datetime.now() - timedelta(days=days)
+    today  = datetime.now()
+    result = []
+    for rec in records:
+        ann = {
+            "id":       rec.get("id", ""),
+            "company":  rec.get("company", "Unknown"),
+            "scrip":    rec.get("scrip", ""),
+            "headline": rec.get("headline", ""),
+            "body":     rec.get("summary", ""),
+            "date":     rec.get("date", ""),
+            "url":      rec.get("url", ""),
+            "source":   rec.get("source", "NSE"),
+        }
+        d = _parse_date(ann["date"])
+        if d and d < cutoff:
+            continue
+        combined    = ann["headline"] + " " + ann["body"]
+        ann["action"] = action_badge(combined)
+        ann["status"] = status_badge(combined)
+        ann["color"]  = card_color(combined)
+        ann["year"]   = d.year if d else today.year
+        result.append(ann)
+    result.sort(key=lambda x: _parse_date(x["date"]) or datetime.min, reverse=True)
+    return result
+
+
 # ── Recent (home page) ────────────────────────────────────────────────────────
 
 def fetch_recent_filtered(days: int = 30) -> list[dict]:
@@ -234,6 +272,12 @@ def fetch_recent_filtered(days: int = 30) -> list[dict]:
     for index in ("equities", "sme"):
         raw.extend(_fetch_range(index, from_dt, to_dt, "", session))
         time.sleep(0.3)
+
+    if not raw:
+        # NSE blocked (common on cloud IPs) — serve from scraper's saved JSON
+        result = _load_from_json_db(days)
+        _set("recent", result, ttl=300)
+        return result
 
     seen: set = set()
     result: list[dict] = []
@@ -1002,4 +1046,4 @@ def api_search():
 if __name__ == "__main__":
     port = int(sys.argv[1]) if len(sys.argv) > 1 else 8090
     print(f"\n  Dashboard → http://localhost:{port}\n")
-    app.run(debug=False, port=port, host="127.0.0.1")
+    app.run(debug=False, port=port, host="0.0.0.0")

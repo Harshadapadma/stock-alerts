@@ -1,4 +1,6 @@
+flask>=3.0
+gunicorn>=21.2
 requests>=2.31
 beautifulsoup4>=4.12
 schedule>=1.2
-pdfplumber
+pdfplumber>=0.11

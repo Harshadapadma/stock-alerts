@@ -52,3 +52,12 @@ jobs:
         with:
           path: seen_ids.json
           key: seen-ids-cache-${{ github.run_id }}
+
+      - name: Commit updated announcements to repo
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add announcements.json seen_ids.json
+          git diff --staged --quiet || git commit -m "chore: update announcements [skip ci]"
+          git push
