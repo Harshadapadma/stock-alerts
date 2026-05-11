@@ -284,12 +284,6 @@ def fetch_recent_filtered(days: int = 30) -> list[dict]:
         raw.extend(_fetch_range(index, from_dt, to_dt, "", session))
         time.sleep(0.3)
 
-    if not raw:
-        # NSE blocked (common on cloud IPs) — serve from scraper's saved JSON
-        result = _load_from_json_db(days)
-        _set("recent", result, ttl=300)
-        return result
-
     seen: set = set()
     result: list[dict] = []
     for row in raw:
@@ -306,6 +300,12 @@ def fetch_recent_filtered(days: int = 30) -> list[dict]:
             d = _parse_date(ann["date"])
             ann["year"]   = d.year if d else today.year
             result.append(ann)
+
+    if not result:
+        # NSE returned data but nothing passed the filter — use scraper's saved JSON
+        result = _load_from_json_db(days)
+        _set("recent", result, ttl=300)
+        return result
 
     result.sort(
         key=lambda x: _parse_date(x["date"]) or datetime.min,
