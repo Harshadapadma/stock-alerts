@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.pyc
+.git/
+.github/
+*.log
+seen_ids.json
+config.py
+scraper.py
+test_mcap.py
+debug_pdf_text.py
