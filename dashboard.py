@@ -227,20 +227,21 @@ _GITHUB_RAW = (
 )
 
 def _load_from_json_db(days: int = 30) -> list[dict]:
-    # Try local file first (works locally), then fetch from GitHub (works on cloud)
+    # Always try GitHub first (always fresh), fall back to local file
     records = None
-    if _JSON_DB.exists():
+    try:
+        r = requests.get(_GITHUB_RAW, timeout=10)
+        r.raise_for_status()
+        records = r.json()
+    except Exception:
+        pass
+    if records is None and _JSON_DB.exists():
         try:
             records = json.loads(_JSON_DB.read_text())
         except Exception:
             pass
     if records is None:
-        try:
-            r = requests.get(_GITHUB_RAW, timeout=10)
-            r.raise_for_status()
-            records = r.json()
-        except Exception:
-            return []
+        return []
     cutoff = datetime.now() - timedelta(days=days)
     today  = datetime.now()
     result = []
