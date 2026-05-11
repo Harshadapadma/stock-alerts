@@ -221,14 +221,25 @@ def _fetch_range(index: str, from_date: str, to_date: str,
 # ── JSON DB fallback (populated by scraper.py) ────────────────────────────────
 
 _JSON_DB = Path("announcements.json")
+_GITHUB_RAW = (
+    "https://raw.githubusercontent.com/Harshadapadma/stock-alerts/main/announcements.json"
+)
 
 def _load_from_json_db(days: int = 30) -> list[dict]:
-    if not _JSON_DB.exists():
-        return []
-    try:
-        records = json.loads(_JSON_DB.read_text())
-    except Exception:
-        return []
+    # Try local file first (works locally), then fetch from GitHub (works on cloud)
+    records = None
+    if _JSON_DB.exists():
+        try:
+            records = json.loads(_JSON_DB.read_text())
+        except Exception:
+            pass
+    if records is None:
+        try:
+            r = requests.get(_GITHUB_RAW, timeout=10)
+            r.raise_for_status()
+            records = r.json()
+        except Exception:
+            return []
     cutoff = datetime.now() - timedelta(days=days)
     today  = datetime.now()
     result = []
