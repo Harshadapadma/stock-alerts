@@ -322,6 +322,8 @@ _DB_FILE = Path("announcements.json")
 def save_to_announcements_db(ann: dict, summary: str):
     try:
         db = json.loads(_DB_FILE.read_text()) if _DB_FILE.exists() else []
+        if any(r.get("id") == ann.get("id") for r in db):
+            return  # already saved
         db.append({
             "id":       ann.get("id"),
             "source":   ann.get("source"),
@@ -336,6 +338,26 @@ def save_to_announcements_db(ann: dict, summary: str):
         _DB_FILE.write_text(json.dumps(db, indent=2))
     except Exception as e:
         log.debug("DB save failed: %s", e)
+
+
+def _heal_missing_from_json(anns: list, cache: set, session):
+    """Re-save any announcement that was notified (in cache) but missing from the JSON.
+    This heals the case where the scraper ran, sent notifications, but the git commit failed."""
+    try:
+        db_ids = {r.get("id") for r in (json.loads(_DB_FILE.read_text()) if _DB_FILE.exists() else [])}
+    except Exception:
+        return
+    missing = [a for a in anns if a["id"] in cache and a["id"] not in db_ids]
+    if not missing:
+        return
+    log.info("Self-heal: %d notified announcements missing from JSON — re-saving", len(missing))
+    missing = enrich_with_pdf(missing, session)
+    for ann in missing:
+        if is_relevant(ann) and passes_market_cap_filter(ann, session):
+            plain = _ai_summarise(ann.get("body", "") or "", company=ann.get("company", ""), headline=ann.get("headline", ""))
+            if not plain:
+                plain = _fallback_sentences(clean_body(ann.get("body", "") or ""), company=ann.get("company", ""), headline=ann.get("headline", ""))
+            save_to_announcements_db(ann, plain)
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -736,6 +758,7 @@ def run_check():
         send_telegram(new_relevant)
 
     save_cache(cache)
+    _heal_missing_from_json(anns, cache, session)
     log.info(
         "⏱  fetch: %.1fs | enrich: %.1fs | notify: %.1fs | TOTAL: %.1fs",
         t1 - t0, t2 - t1, time.time() - t3, time.time() - t0,
