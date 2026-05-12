@@ -743,17 +743,21 @@ def run_check():
 
     save_cache(cache)
 
-    # Heal: re-save any announcement that was notified (in cache) but
-    # missing from the JSON — no PDF fetch, no AI, headline check only.
-    # Catches cases where the git commit lost a push race.
+    # Heal: re-save announcements that were notified (in cache) but missing
+    # from the JSON — happens when a git push lost a race. Capped at 10 so
+    # PDF enrichment stays fast (a few seconds per item, not thousands).
     try:
         db_ids = {r.get("id") for r in (json.loads(_DB_FILE.read_text()) if _DB_FILE.exists() else [])}
-        missing = [a for a in anns if a["id"] in cache and a["id"] not in db_ids
-                   and _headline_looks_relevant(a.get("headline", ""))][:10]
+        missing = [a for a in anns if a["id"] in cache and a["id"] not in db_ids][:10]
         if missing:
-            log.info("Heal: re-saving %d announcements missing from JSON", len(missing))
+            log.info("Heal: %d announcements in cache but missing from JSON — re-enriching", len(missing))
+            missing = enrich_with_pdf(missing, session)
             for ann in missing:
-                save_to_announcements_db(ann, ann.get("headline", ""))
+                if is_relevant(ann) and passes_market_cap_filter(ann, session):
+                    plain = _ai_summarise(ann.get("body", "") or "", company=ann.get("company", ""), headline=ann.get("headline", ""))
+                    if not plain:
+                        plain = _fallback_sentences(clean_body(ann.get("body", "") or ""), headline=ann.get("headline", ""))
+                    save_to_announcements_db(ann, plain)
     except Exception:
         pass
 
