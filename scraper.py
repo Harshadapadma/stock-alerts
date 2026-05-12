@@ -742,6 +742,21 @@ def run_check():
         send_telegram(new_relevant)
 
     save_cache(cache)
+
+    # Heal: re-save any announcement that was notified (in cache) but
+    # missing from the JSON — no PDF fetch, no AI, headline check only.
+    # Catches cases where the git commit lost a push race.
+    try:
+        db_ids = {r.get("id") for r in (json.loads(_DB_FILE.read_text()) if _DB_FILE.exists() else [])}
+        missing = [a for a in anns if a["id"] in cache and a["id"] not in db_ids
+                   and _headline_looks_relevant(a.get("headline", ""))][:10]
+        if missing:
+            log.info("Heal: re-saving %d announcements missing from JSON", len(missing))
+            for ann in missing:
+                save_to_announcements_db(ann, ann.get("headline", ""))
+    except Exception:
+        pass
+
     log.info(
         "⏱  fetch: %.1fs | enrich: %.1fs | notify: %.1fs | TOTAL: %.1fs",
         t1 - t0, t2 - t1, time.time() - t3, time.time() - t0,
