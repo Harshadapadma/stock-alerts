@@ -278,12 +278,14 @@ def fetch_recent_filtered(days: int = 30) -> list[dict]:
 
     # Always use the scraper's curated JSON (GitHub → local file) as primary source
     result = _load_from_json_db(days)
+    existing_ids: set = {a["id"] for a in result}
 
-    if not result:
-        # JSON unavailable — fall back to live NSE fetch
+    # Supplement with live NSE for today + yesterday to catch any JSON gaps
+    # (e.g. scraper ran & notified but its commit lost a push race)
+    try:
         session = nse_session()
         today   = datetime.now()
-        from_dt = (today - timedelta(days=days)).strftime("%d-%m-%Y")
+        from_dt = (today - timedelta(days=2)).strftime("%d-%m-%Y")
         to_dt   = today.strftime("%d-%m-%Y")
 
         raw: list[dict] = []
@@ -293,8 +295,9 @@ def fetch_recent_filtered(days: int = 30) -> list[dict]:
 
         seen: set = set()
         for row in raw:
-            sid = str(row.get("seq_id", ""))
-            if sid in seen:
+            sid    = str(row.get("seq_id", ""))
+            ann_id = f"NSE_{sid}"
+            if sid in seen or ann_id in existing_ids:
                 continue
             seen.add(sid)
             ann = _nse_row_to_ann(row)
@@ -306,12 +309,14 @@ def fetch_recent_filtered(days: int = 30) -> list[dict]:
                 d = _parse_date(ann["date"])
                 ann["year"]   = d.year if d else today.year
                 result.append(ann)
+    except Exception:
+        pass
 
-        result.sort(
-            key=lambda x: _parse_date(x["date"]) or datetime.min,
-            reverse=True,
-        )
+    if not result:
+        # NSE also unreachable — widen to full date range from JSON
+        result = _load_from_json_db(days)
 
+    result.sort(key=lambda x: _parse_date(x["date"]) or datetime.min, reverse=True)
     _set("recent", result, ttl=300)
     return result
 
