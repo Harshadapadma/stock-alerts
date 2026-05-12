@@ -745,27 +745,6 @@ def run_check():
 
     save_cache(cache)
 
-    # Heal: re-save announcements that were notified (in cache) but missing
-    # from the JSON — happens when a git push lost a race. Capped at 10 so
-    # PDF enrichment stays fast (a few seconds per item, not thousands).
-    try:
-        db_ids = {r.get("id") for r in (json.loads(_DB_FILE.read_text()) if _DB_FILE.exists() else [])}
-        missing = sorted(
-            [a for a in anns if a["id"] in cache and a["id"] not in db_ids],
-            key=lambda a: a.get("date", ""), reverse=True
-        )[:10]
-        if missing:
-            log.info("Heal: %d announcements in cache but missing from JSON — re-enriching", len(missing))
-            missing = enrich_with_pdf(missing, session)
-            for ann in missing:
-                if is_relevant(ann) and passes_market_cap_filter(ann, session):
-                    plain = _ai_summarise(ann.get("body", "") or "", company=ann.get("company", ""), headline=ann.get("headline", ""))
-                    if not plain:
-                        plain = _fallback_sentences(clean_body(ann.get("body", "") or ""), headline=ann.get("headline", ""))
-                    save_to_announcements_db(ann, plain)
-    except Exception:
-        pass
-
     log.info(
         "⏱  fetch: %.1fs | enrich: %.1fs | notify: %.1fs | TOTAL: %.1fs",
         t1 - t0, t2 - t1, time.time() - t3, time.time() - t0,
