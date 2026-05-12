@@ -319,7 +319,7 @@ def passes_market_cap_filter(ann: dict, session: requests.Session) -> bool:
 
 _DB_FILE = Path("announcements.json")
 
-_DB_MAX = 10
+_DB_DAYS = 30  # keep entries from the last N days
 
 def save_to_announcements_db(ann: dict, summary: str):
     try:
@@ -337,7 +337,9 @@ def save_to_announcements_db(ann: dict, summary: str):
             "summary":  summary,
             "saved_at": datetime.now().isoformat(),
         })
-        db = db[-_DB_MAX:]  # keep only the most recent entries
+        # Drop entries older than _DB_DAYS so the file stays lean
+        cutoff = (datetime.now() - timedelta(days=_DB_DAYS)).isoformat()
+        db = [r for r in db if r.get("saved_at", "9999") >= cutoff]
         _DB_FILE.write_text(json.dumps(db, indent=2))
     except Exception as e:
         log.debug("DB save failed: %s", e)
@@ -748,7 +750,10 @@ def run_check():
     # PDF enrichment stays fast (a few seconds per item, not thousands).
     try:
         db_ids = {r.get("id") for r in (json.loads(_DB_FILE.read_text()) if _DB_FILE.exists() else [])}
-        missing = [a for a in anns if a["id"] in cache and a["id"] not in db_ids][:10]
+        missing = sorted(
+            [a for a in anns if a["id"] in cache and a["id"] not in db_ids],
+            key=lambda a: a.get("date", ""), reverse=True
+        )[:10]
         if missing:
             log.info("Heal: %d announcements in cache but missing from JSON — re-enriching", len(missing))
             missing = enrich_with_pdf(missing, session)
