@@ -276,44 +276,43 @@ def fetch_recent_filtered(days: int = 30) -> list[dict]:
     if cached is not None:
         return cached
 
-    session = nse_session()
-    today   = datetime.now()
-    from_dt = (today - timedelta(days=days)).strftime("%d-%m-%Y")
-    to_dt   = today.strftime("%d-%m-%Y")
+    # Always use the scraper's curated JSON (GitHub → local file) as primary source
+    result = _load_from_json_db(days)
 
-    raw: list[dict] = []
-    for index in ("equities", "sme"):
-        raw.extend(_fetch_range(index, from_dt, to_dt, "", session))
-        time.sleep(0.3)
+    if not result:
+        # JSON unavailable — fall back to live NSE fetch
+        session = nse_session()
+        today   = datetime.now()
+        from_dt = (today - timedelta(days=days)).strftime("%d-%m-%Y")
+        to_dt   = today.strftime("%d-%m-%Y")
 
-    if not raw:
-        # NSE blocked (common on cloud IPs) — serve from scraper's saved JSON
-        result = _load_from_json_db(days)
-        _set("recent", result, ttl=300)
-        return result
+        raw: list[dict] = []
+        for index in ("equities", "sme"):
+            raw.extend(_fetch_range(index, from_dt, to_dt, "", session))
+            time.sleep(0.3)
 
-    seen: set = set()
-    result: list[dict] = []
-    for row in raw:
-        sid = str(row.get("seq_id", ""))
-        if sid in seen:
-            continue
-        seen.add(sid)
-        ann = _nse_row_to_ann(row)
-        if is_relevant(ann["headline"], ann["body"]):
-            combined = ann["headline"] + " " + ann["body"]
-            ann["action"] = action_badge(combined)
-            ann["status"] = status_badge(combined)
-            ann["color"]  = card_color(combined)
-            d = _parse_date(ann["date"])
-            ann["year"]   = d.year if d else today.year
-            result.append(ann)
+        seen: set = set()
+        for row in raw:
+            sid = str(row.get("seq_id", ""))
+            if sid in seen:
+                continue
+            seen.add(sid)
+            ann = _nse_row_to_ann(row)
+            if is_relevant(ann["headline"], ann["body"]):
+                combined = ann["headline"] + " " + ann["body"]
+                ann["action"] = action_badge(combined)
+                ann["status"] = status_badge(combined)
+                ann["color"]  = card_color(combined)
+                d = _parse_date(ann["date"])
+                ann["year"]   = d.year if d else today.year
+                result.append(ann)
 
-    result.sort(
-        key=lambda x: _parse_date(x["date"]) or datetime.min,
-        reverse=True,
-    )
-    _set("recent", result, ttl=1800)
+        result.sort(
+            key=lambda x: _parse_date(x["date"]) or datetime.min,
+            reverse=True,
+        )
+
+    _set("recent", result, ttl=300)
     return result
 
 
