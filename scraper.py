@@ -270,7 +270,7 @@ def _ai_summarise(body: str, company: str = "", headline: str = "") -> str:
         log.debug("AI summarise failed: %s", e)
         return ""
 
-def _fallback_sentences(body: str, company: str = "", headline: str = "") -> str:
+def _fallback_sentences(body: str, headline: str = "") -> str:
     if not body:
         return headline or ""
     sentences = re.split(r"(?<=[.!?])\s+", body.strip())
@@ -281,7 +281,7 @@ def _fallback_sentences(body: str, company: str = "", headline: str = "") -> str
 def build_summary(body: str, company: str = "", headline: str = "") -> str:
     plain = _ai_summarise(body, company=company, headline=headline)
     if not plain:
-        plain = _fallback_sentences(clean_body(body), company=company, headline=headline)
+        plain = _fallback_sentences(clean_body(body), headline=headline)
     return plain or headline or ""
 
 _MCAP_CACHE: dict = {}
@@ -319,6 +319,8 @@ def passes_market_cap_filter(ann: dict, session: requests.Session) -> bool:
 
 _DB_FILE = Path("announcements.json")
 
+_DB_MAX = 10
+
 def save_to_announcements_db(ann: dict, summary: str):
     try:
         db = json.loads(_DB_FILE.read_text()) if _DB_FILE.exists() else []
@@ -335,29 +337,12 @@ def save_to_announcements_db(ann: dict, summary: str):
             "summary":  summary,
             "saved_at": datetime.now().isoformat(),
         })
+        db = db[-_DB_MAX:]  # keep only the most recent entries
         _DB_FILE.write_text(json.dumps(db, indent=2))
     except Exception as e:
         log.debug("DB save failed: %s", e)
 
 
-def _heal_missing_from_json(anns: list, cache: set, session):
-    """Re-save any announcement that was notified (in cache) but missing from the JSON.
-    This heals the case where the scraper ran, sent notifications, but the git commit failed."""
-    try:
-        db_ids = {r.get("id") for r in (json.loads(_DB_FILE.read_text()) if _DB_FILE.exists() else [])}
-    except Exception:
-        return
-    missing = [a for a in anns if a["id"] in cache and a["id"] not in db_ids]
-    if not missing:
-        return
-    log.info("Self-heal: %d notified announcements missing from JSON — re-saving", len(missing))
-    missing = enrich_with_pdf(missing, session)
-    for ann in missing:
-        if is_relevant(ann) and passes_market_cap_filter(ann, session):
-            plain = _ai_summarise(ann.get("body", "") or "", company=ann.get("company", ""), headline=ann.get("headline", ""))
-            if not plain:
-                plain = _fallback_sentences(clean_body(ann.get("body", "") or ""), company=ann.get("company", ""), headline=ann.get("headline", ""))
-            save_to_announcements_db(ann, plain)
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -637,7 +622,6 @@ def send_whatsapp(announcements: list[dict]):
         if not para:
             para = _fallback_sentences(
                 clean_body(a.get("body", "") or ""),
-                company=company,
                 headline=headline,
             )
 
@@ -687,7 +671,7 @@ def send_telegram(announcements: list[dict]):
     for a in announcements:
         plain = _ai_summarise(a.get("body", "") or "", company=a.get("company", ""), headline=a.get("headline", ""))
         if not plain:
-            plain = _fallback_sentences(clean_body(a.get("body", "") or ""), company=a.get("company", ""), headline=a.get("headline", ""))
+            plain = _fallback_sentences(clean_body(a.get("body", "") or ""), headline=a.get("headline", ""))
         text = (
             f"*{a.get('source', '')} | {a.get('company', '')}*\n"
             f"{a.get('headline', '')}\n"
@@ -751,14 +735,13 @@ def run_check():
         for ann in new_relevant:
             plain = _ai_summarise(ann.get("body", "") or "", company=ann.get("company", ""), headline=ann.get("headline", ""))
             if not plain:
-                plain = _fallback_sentences(clean_body(ann.get("body", "") or ""), company=ann.get("company", ""), headline=ann.get("headline", ""))
+                plain = _fallback_sentences(clean_body(ann.get("body", "") or ""), headline=ann.get("headline", ""))
             save_to_announcements_db(ann, plain)
         send_email(new_relevant)
         send_whatsapp(new_relevant)
         send_telegram(new_relevant)
 
     save_cache(cache)
-    _heal_missing_from_json(anns, cache, session)
     log.info(
         "⏱  fetch: %.1fs | enrich: %.1fs | notify: %.1fs | TOTAL: %.1fs",
         t1 - t0, t2 - t1, time.time() - t3, time.time() - t0,
