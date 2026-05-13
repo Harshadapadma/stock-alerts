@@ -1123,7 +1123,7 @@ async function fetchAISummaries(anns) {
         anns: (toFetch.length > 0 ? toFetch : anns).slice(0, 30).map(a => ({
           id:       a.id       || '',
           headline: a.headline || '',
-          body:    (a.body     || '').slice(0, 600),
+          body:    (a.body     || '').slice(0, 3000),
           date:     a.date     || '',
           action:   a.action   || '',
         }))
@@ -1133,10 +1133,12 @@ async function fetchAISummaries(anns) {
 
     // ── 4. Store + show overview ────────────────────────────────────────────
     if (data.overview && banner) {
-      if (!cachedOv) {
+      // Only persist in localStorage if it's a real AI summary, not a regex fallback
+      if (!cachedOv && data.ai) {
         try { localStorage.setItem(ovKey, data.overview); } catch(_) {}
       }
-      banner.innerHTML = `<span class="ov-label">Summary</span><p>${esc(data.overview)}</p>`;
+      const label = data.ai ? 'AI Summary' : 'Summary';
+      banner.innerHTML = `<span class="ov-label">${label}</span><p>${esc(data.overview)}</p>`;
     } else if (!cachedOv && banner) {
       banner.innerHTML = '<span class="ov-label">Summary</span><p style="color:#999">Summary unavailable — see documents below.</p>';
     }
@@ -1147,8 +1149,11 @@ async function fetchAISummaries(anns) {
       data.summaries.forEach((summary, j) => {
         const orig = srcList[j];
         if (!orig || !summary) return;
-        const lsKey = 'summ_v2_' + (orig.id || orig._origIdx);
-        try { localStorage.setItem(lsKey, summary); } catch(_) {}
+        // Only persist AI summaries — fallback ones retry DeepSeek next visit
+        if (data.ai) {
+          const lsKey = 'summ_v2_' + (orig.id || orig._origIdx);
+          try { localStorage.setItem(lsKey, summary); } catch(_) {}
+        }
         const el = document.getElementById('story-' + orig._origIdx);
         if (el) el.textContent = summary;
       });
@@ -1321,12 +1326,13 @@ def api_company_overview():
             cleaned = re.sub(r"```(?:json)?\s*|\s*```", "", raw).strip()
             result  = json.loads(cleaned)
             return jsonify({
+                "ai":        True,
                 "overview":  result.get("overview", ""),
                 "summaries": result.get("summaries", []),
             })
         except Exception:
             if raw.strip():
-                return jsonify({"overview": raw[:300], "summaries": []})
+                return jsonify({"ai": True, "overview": raw[:300], "summaries": []})
 
     # Fallback: regex-based summaries when AI unavailable (mirrors scraper _fallback_sentences)
     from collections import Counter
@@ -1352,9 +1358,9 @@ def api_company_overview():
     overview = (f"{company} has {n} scheme-related filing{'s' if n != 1 else ''}{yr_range}"
                 + (f" — {parts}." if parts else "."))
 
-    # Don't cache regex fallback — it's free to recompute and DeepSeek
-    # may become available on the next load, so we shouldn't lock in stale text.
-    return jsonify({"overview": overview, "summaries": summaries})
+    # ai:False tells the frontend not to persist these — DeepSeek may be
+    # available on the next load and should get a chance to summarise properly.
+    return jsonify({"ai": False, "overview": overview, "summaries": summaries})
 
 
 # ══════════════════════════════════════════════════════════════════════════════
