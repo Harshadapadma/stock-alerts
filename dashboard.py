@@ -1246,6 +1246,12 @@ def api_company_overview():
     if not anns:
         return jsonify({"overview": "", "summaries": []})
 
+    # Cache keyed by company + sorted announcement headlines (stable across reloads)
+    _cache_key = "overview_" + company + "_" + str(sorted(a.get("headline", "") for a in anns))
+    cached = _get(_cache_key)
+    if cached is not None:
+        return jsonify(cached)
+
     lines = []
     for i, a in enumerate(anns):
         snippet = _clean_for_ai(a.get("body", ""))[:350]
@@ -1268,13 +1274,17 @@ def api_company_overview():
         try:
             cleaned = re.sub(r"```(?:json)?\s*|\s*```", "", raw).strip()
             result  = json.loads(cleaned)
-            return jsonify({
+            out = {
                 "overview":  result.get("overview", ""),
                 "summaries": result.get("summaries", []),
-            })
+            }
+            _set(_cache_key, out, ttl=3600)
+            return jsonify(out)
         except Exception:
             if raw.strip():
-                return jsonify({"overview": raw[:300], "summaries": []})
+                out = {"overview": raw[:300], "summaries": []}
+                _set(_cache_key, out, ttl=3600)
+                return jsonify(out)
 
     # Fallback: regex-based summaries when AI unavailable
     from collections import Counter
@@ -1282,7 +1292,6 @@ def api_company_overview():
     for a in anns:
         body = _clean_for_ai(a.get("body", ""))
         if body and len(body) > 20:
-            # grab first complete sentence up to ~180 chars
             m = re.search(r'[.!?]', body[20:180])
             end = (20 + m.end()) if m else min(180, len(body))
             summaries.append(body[:end].strip())
@@ -1299,7 +1308,9 @@ def api_company_overview():
     overview = (f"{company} has {n} scheme-related filing{'s' if n != 1 else ''}{yr_range}"
                 + (f" — {parts}." if parts else "."))
 
-    return jsonify({"overview": overview, "summaries": summaries})
+    out = {"overview": overview, "summaries": summaries}
+    _set(_cache_key, out, ttl=3600)
+    return jsonify(out)
 
 
 # ══════════════════════════════════════════════════════════════════════════════
