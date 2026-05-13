@@ -29,17 +29,22 @@ except Exception:
 
 _PREAMBLE_RE = re.compile(
     r"(?:we\s+(?:wish\s+to|hereby|would\s+like\s+to)\s+inform|"
-    r"this\s+is\s+to\s+inform|pursuant\s+to|"
-    r"with\s+reference\s+to\s+the\s+(?:captioned|above)|"
-    r"in\s+continuation\s+of|further\s+to|"
-    r"kindly\s+note\s+that|please\s+note\s+that)",
+    r"this\s+is\s+to\s+inform|"
+    r"pursuant\s+to\s+(?:the\s+)?(?:regulation|sebi|provision)|"
+    r"with\s+reference\s+to\s+the\s+(?:captioned|above|subject)|"
+    r"in\s+continuation\s+of|further\s+to\s+our|"
+    r"as\s+required\s+under|in\s+terms\s+of\s+(?:the\s+)?(?:sebi|regulation)|"
+    r"in\s+compliance\s+with|in\s+accordance\s+with\s+(?:the\s+)?(?:sebi|regulation)|"
+    r"kindly\s+note\s+that|please\s+note\s+that|"
+    r"we\s+(?:are\s+pleased\s+to|regret\s+to)\s+inform)",
     re.IGNORECASE,
 )
 
 def _clean_for_ai(body: str) -> str:
+    """Strip exchange-address preamble — mirrors scraper.py _strip_preamble."""
     m = _PREAMBLE_RE.search(body or "")
     text = body[m.start():] if m else (body or "")
-    return re.sub(r"\s+", " ", text.replace("\n", " ")).strip()[:500]
+    return re.sub(r"\s+", " ", text.replace("\n", " ")).strip()
 
 def _ai_call(prompt: str, max_tokens: int = 500) -> str:
     if not _DEEPSEEK_KEY:
@@ -1084,11 +1089,11 @@ function renderTimeline(anns) {
 async function fetchAISummaries(anns) {
   const banner = document.getElementById('overviewBanner');
   const symbol = '{{ scrip }}';
-  const ovKey  = 'overview_v1_' + symbol;
+  const ovKey  = 'overview_v2_' + symbol;
 
   // ── 1. Apply whatever is already in localStorage immediately ──────────────
   anns.forEach((a, i) => {
-    const cached = localStorage.getItem('summ_v1_' + (a.id || i));
+    const cached = localStorage.getItem('summ_v2_' + (a.id || i));
     if (cached) {
       const el = document.getElementById('story-' + i);
       if (el) el.textContent = cached;
@@ -1102,7 +1107,7 @@ async function fetchAISummaries(anns) {
   // ── 2. Find only the announcements not yet summarised ─────────────────────
   const toFetch = anns
     .map((a, i) => ({...a, _origIdx: i}))
-    .filter(a => !localStorage.getItem('summ_v1_' + (a.id || a._origIdx)));
+    .filter(a => !localStorage.getItem('summ_v2_' + (a.id || a._origIdx)));
 
   if (toFetch.length === 0 && cachedOv) return;  // everything already cached
 
@@ -1142,7 +1147,7 @@ async function fetchAISummaries(anns) {
       data.summaries.forEach((summary, j) => {
         const orig = srcList[j];
         if (!orig || !summary) return;
-        const lsKey = 'summ_v1_' + (orig.id || orig._origIdx);
+        const lsKey = 'summ_v2_' + (orig.id || orig._origIdx);
         try { localStorage.setItem(lsKey, summary); } catch(_) {}
         const el = document.getElementById('story-' + orig._origIdx);
         if (el) el.textContent = summary;
@@ -1281,30 +1286,36 @@ def api_company_overview():
     if not anns:
         return jsonify({"overview": "", "summaries": []})
 
-    lines = []
+    blocks = []
     for i, a in enumerate(anns):
-        snippet = _clean_for_ai(a.get("body", ""))[:600]
-        line = f"{i}. [{(a.get('date') or '')[:11]}] {a.get('action','')} — {a.get('headline','')}"
-        if snippet:
-            line += f"\n   {snippet}"
-        lines.append(line)
+        content = _clean_for_ai(a.get("body", ""))[:3000]
+        block = (
+            f"--- Announcement {i} ---\n"
+            f"Company: {company}  |  Action: {a.get('action','')}  |  Date: {(a.get('date') or '')[:11]}\n"
+            f"Headline: {a.get('headline','')}"
+        )
+        if content:
+            block += f"\nBody: {content}"
+        blocks.append(block)
 
     ov_instruction = (
-        f"2. Write a 2-sentence overview of {company}'s full M&A/restructuring history.\n"
+        f"Also write a 2-sentence overview of {company}'s full M&A/restructuring history.\n"
         if need_overview else
-        "2. Set \"overview\" to empty string \"\".\n"
+        "Set \"overview\" to empty string \"\".\n"
     )
     prompt = (
-        f"Analyse these corporate announcements for {company}.\n\n"
-        f"1. For each announcement write 2-3 sentences (~50 words) covering: what happened, "
-        f"key parties involved, and its significance.\n"
+        f"You are analysing corporate announcements for {company}.\n\n"
+        f"For each numbered announcement below, write 2-3 concise sentences summarising: "
+        f"what happened, the key parties involved, and its significance. "
+        f"If body text is absent, use the action type and headline to infer what this stage "
+        f"of an Indian M&A/scheme process typically means.\n\n"
         + ov_instruction +
         f"\nReturn ONLY valid JSON — no markdown, no code fences:\n"
-        f'{{\"overview\":\"<2 sentences or empty>\",\"summaries\":[\"<2-3 sent 0>\",\"<2-3 sent 1>\",...]}}\n\n'
-        f"Announcements:\n" + "\n".join(lines)
+        f'{{\"overview\":\"<2 sentences or empty string>\",\"summaries\":[\"<summary 0>\",\"<summary 1>\",...]}}\n\n'
+        + "\n\n".join(blocks)
     )
 
-    raw = _ai_call(prompt, max_tokens=max(800, len(anns) * 80 + 200))
+    raw = _ai_call(prompt, max_tokens=max(1000, len(anns) * 100 + 200))
     if raw:
         try:
             cleaned = re.sub(r"```(?:json)?\s*|\s*```", "", raw).strip()
@@ -1317,17 +1328,19 @@ def api_company_overview():
             if raw.strip():
                 return jsonify({"overview": raw[:300], "summaries": []})
 
-    # Fallback: regex-based summaries when AI unavailable
+    # Fallback: regex-based summaries when AI unavailable (mirrors scraper _fallback_sentences)
     from collections import Counter
     summaries = []
     for a in anns:
         body = _clean_for_ai(a.get("body", ""))
-        if body and len(body) > 20:
-            m = re.search(r'[.!?]', body[20:180])
-            end = (20 + m.end()) if m else min(180, len(body))
-            summaries.append(body[:end].strip())
+        headline = a.get("headline", "")
+        if body and len(body) > 40:
+            sentences = re.split(r"(?<=[.!?])\s+", body.strip())
+            relevant = [s for s in sentences if len(s) > 40]
+            chosen = " ".join(relevant[:3]) if relevant else " ".join(sentences[:3])
+            summaries.append(chosen[:500] or headline)
         else:
-            summaries.append(a.get("headline", ""))
+            summaries.append(headline)
 
     action_counts = Counter(a.get("action", "") for a in anns if a.get("action"))
     parts = ", ".join(f"{v} {k.lower()}" for k, v in action_counts.most_common(3))
