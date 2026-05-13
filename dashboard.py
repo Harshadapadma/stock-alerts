@@ -922,15 +922,16 @@ function renderHome(anns) {
     <span style="color:#4361ee">Click a company name to see its full history</span>`;
 
   let html = '<div class="filter-bar" id="filterBar"></div><div id="cardWrap" class="cards-grid">';
-  anns.forEach(a => {
+  anns.forEach((a, i) => {
     const combined = (a.headline||'') + ' ' + (a.body||'');
     const color = cardColorHome(combined);
     const docBtn = a.url ? `<a class="doc-btn" href="${esc(a.url)}" target="_blank">Open Document →</a>` : '';
     const scrip  = a.scrip ? `<span style="color:#aaa;font-weight:400;font-size:.78rem">&nbsp;(${esc(a.scrip)})</span>` : '';
-    const summary = (a.body || '').trim();
-    const summaryHtml = summary
-      ? `<div class="ann-story">${esc(summary.slice(0, 300))}${summary.length > 300 ? '…' : ''}</div>`
-      : '';
+    // Show body only if it's substantively different from the headline
+    const body = (a.body || '').trim();
+    const fallback = body && body.toLowerCase() !== (a.headline||'').toLowerCase()
+      ? `<div class="ann-story" id="hstory-${i}">${esc(body.slice(0,300))}${body.length>300?'…':''}</div>`
+      : `<div class="ann-story" id="hstory-${i}" style="color:#bbb;font-style:italic">Summarising…</div>`;
     html += `
       <div class="ann-card" style="border-left-color:${color}" data-date="${esc(a.date||'')}">
         <div class="card-top">
@@ -945,13 +946,70 @@ function renderHome(anns) {
           <span class="badge b-source">${esc(a.source||'NSE')}</span>
         </div>
         <div class="ann-headline">${esc(a.headline||'')}</div>
-        ${summaryHtml}
+        ${fallback}
         ${docBtn}
       </div>`;
   });
   html += '</div>';
   document.getElementById('content').innerHTML = html;
   buildFilterBar('filterBar', [...document.querySelectorAll('.ann-card')]);
+  fetchHomeSummaries(anns);
+}
+
+async function fetchHomeSummaries(anns) {
+  // Apply any already-cached summaries instantly
+  anns.forEach((a, i) => {
+    const cached = localStorage.getItem('summ_v2_' + (a.id || i));
+    if (cached) {
+      const el = document.getElementById('hstory-' + i);
+      if (el) { el.textContent = cached; el.style.cssText = ''; }
+    }
+  });
+
+  // Only send uncached announcements to the API
+  const toFetch = anns
+    .map((a, i) => ({...a, _origIdx: i}))
+    .filter(a => !localStorage.getItem('summ_v2_' + (a.id || a._origIdx)));
+
+  if (!toFetch.length) return;
+
+  // Send in batches of 15 so the prompt stays manageable
+  for (let start = 0; start < toFetch.length; start += 15) {
+    const batch = toFetch.slice(start, start + 15);
+    try {
+      const resp = await fetch('/api/company-overview', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          company: 'Recent NSE Announcements',
+          need_overview: false,
+          anns: batch.map(a => ({
+            id:       a.id       || '',
+            headline: a.headline || '',
+            body:    (a.body     || '').slice(0, 3000),
+            date:     a.date     || '',
+            action:   a.action   || '',
+            company:  a.company  || '',
+          }))
+        })
+      });
+      const data = await resp.json();
+      if (data.summaries) {
+        data.summaries.forEach((summary, j) => {
+          const orig = batch[j];
+          if (!orig || !summary) return;
+          if (data.ai) {
+            // AI summary: cache permanently, show full text
+            try { localStorage.setItem('summ_v2_' + (orig.id || orig._origIdx), summary); } catch(_) {}
+          }
+          // Regex fallback: cap at 150 chars (1 sentence) — AI gets another chance next visit
+          const display = data.ai ? summary : summary.slice(0, 150) + (summary.length > 150 ? '…' : '');
+          const el = document.getElementById('hstory-' + orig._origIdx);
+          if (el) { el.textContent = display; el.style.cssText = ''; }
+        });
+      }
+    } catch(_) {}
+  }
 }
 </script>
 """ + FILTER_JS + SEARCH_JS + """
@@ -1299,9 +1357,10 @@ def api_company_overview():
     blocks = []
     for i, a in enumerate(anns):
         content = _clean_for_ai(a.get("body", ""))[:3000]
+        ann_company = a.get("company") or company
         block = (
             f"--- Announcement {i} ---\n"
-            f"Company: {company}  |  Action: {a.get('action','')}  |  Date: {(a.get('date') or '')[:11]}\n"
+            f"Company: {ann_company}  |  Action: {a.get('action','')}  |  Date: {(a.get('date') or '')[:11]}\n"
             f"Headline: {a.get('headline','')}"
         )
         if content:
