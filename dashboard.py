@@ -1083,41 +1083,75 @@ function renderTimeline(anns) {
 
 async function fetchAISummaries(anns) {
   const banner = document.getElementById('overviewBanner');
+  const symbol = '{{ scrip }}';
+  const ovKey  = 'overview_v1_' + symbol;
+
+  // ── 1. Apply whatever is already in localStorage immediately ──────────────
+  anns.forEach((a, i) => {
+    const cached = localStorage.getItem('summ_v1_' + (a.id || i));
+    if (cached) {
+      const el = document.getElementById('story-' + i);
+      if (el) el.textContent = cached;
+    }
+  });
+  const cachedOv = localStorage.getItem(ovKey);
+  if (cachedOv && banner) {
+    banner.innerHTML = `<span class="ov-label">Summary</span><p>${esc(cachedOv)}</p>`;
+  }
+
+  // ── 2. Find only the announcements not yet summarised ─────────────────────
+  const toFetch = anns
+    .map((a, i) => ({...a, _origIdx: i}))
+    .filter(a => !localStorage.getItem('summ_v1_' + (a.id || a._origIdx)));
+
+  if (toFetch.length === 0 && cachedOv) return;  // everything already cached
+
+  // ── 3. Call backend with only uncached items ──────────────────────────────
   try {
     const companyName = document.querySelector('.co-title')?.textContent.trim() || '';
     const resp = await fetch('/api/company-overview', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
-        company: companyName,
-        anns: anns.slice(0, 30).map(a => ({
+        company:      companyName,
+        need_overview: !cachedOv,
+        anns: (toFetch.length > 0 ? toFetch : anns).slice(0, 30).map(a => ({
+          id:       a.id       || '',
           headline: a.headline || '',
-          body:     (a.body || '').slice(0, 500),
-          date:     a.date   || '',
-          action:   a.action || '',
+          body:    (a.body     || '').slice(0, 600),
+          date:     a.date     || '',
+          action:   a.action   || '',
         }))
       })
     });
     const data = await resp.json();
 
-    // Overview banner
-    if (banner) {
-      if (data.overview) {
-          banner.innerHTML = `<span class="ov-label">Summary</span><p>${esc(data.overview)}</p>`;
-      } else {
-        banner.style.display = 'none';
+    // ── 4. Store + show overview ────────────────────────────────────────────
+    if (data.overview && banner) {
+      if (!cachedOv) {
+        try { localStorage.setItem(ovKey, data.overview); } catch(_) {}
       }
+      banner.innerHTML = `<span class="ov-label">Summary</span><p>${esc(data.overview)}</p>`;
+    } else if (!cachedOv && banner) {
+      banner.innerHTML = '<span class="ov-label">Summary</span><p style="color:#999">Summary unavailable — see documents below.</p>';
     }
 
-    // Per-announcement summaries
+    // ── 5. Store + show per-announcement summaries ──────────────────────────
     if (data.summaries) {
-      data.summaries.forEach((summary, i) => {
-        const el = document.getElementById('story-' + i);
-        if (el && summary) el.textContent = summary;
+      const srcList = toFetch.length > 0 ? toFetch : anns.map((a,i) => ({...a, _origIdx: i}));
+      data.summaries.forEach((summary, j) => {
+        const orig = srcList[j];
+        if (!orig || !summary) return;
+        const lsKey = 'summ_v1_' + (orig.id || orig._origIdx);
+        try { localStorage.setItem(lsKey, summary); } catch(_) {}
+        const el = document.getElementById('story-' + orig._origIdx);
+        if (el) el.textContent = summary;
       });
     }
   } catch(e) {
-    if (banner) banner.innerHTML = '<span class="ov-label">Summary</span><p style="color:#999">Summary unavailable — see documents below.</p>';
+    if (banner && !cachedOv) {
+      banner.innerHTML = '<span class="ov-label">Summary</span><p style="color:#999">Summary unavailable — see documents below.</p>';
+    }
   }
 }
 </script>
@@ -1240,51 +1274,48 @@ def api_search():
 @app.route("/api/company-overview", methods=["POST"])
 def api_company_overview():
     data = request.get_json(force=True) or {}
-    company = data.get("company", "this company")
-    anns = data.get("anns", [])[:30]  # cap at 30 to keep prompt manageable
+    company      = data.get("company", "this company")
+    anns         = data.get("anns", [])[:30]
+    need_overview = data.get("need_overview", True)
 
     if not anns:
         return jsonify({"overview": "", "summaries": []})
 
-    # Cache keyed by company + sorted announcement headlines (stable across reloads)
-    _cache_key = "overview_" + company + "_" + str(sorted(a.get("headline", "") for a in anns))
-    cached = _get(_cache_key)
-    if cached is not None:
-        return jsonify(cached)
-
     lines = []
     for i, a in enumerate(anns):
-        snippet = _clean_for_ai(a.get("body", ""))[:350]
+        snippet = _clean_for_ai(a.get("body", ""))[:600]
         line = f"{i}. [{(a.get('date') or '')[:11]}] {a.get('action','')} — {a.get('headline','')}"
         if snippet:
             line += f"\n   {snippet}"
         lines.append(line)
 
+    ov_instruction = (
+        f"2. Write a 2-sentence overview of {company}'s full M&A/restructuring history.\n"
+        if need_overview else
+        "2. Set \"overview\" to empty string \"\".\n"
+    )
     prompt = (
         f"Analyse these corporate announcements for {company}.\n\n"
-        f"1. For each announcement write ONE sentence (≤18 words) stating the key fact.\n"
-        f"2. Write a 2-sentence overview of {company}'s M&A/restructuring history.\n\n"
-        f"Return ONLY valid JSON — no markdown, no code fences:\n"
-        f'{{\"overview\":\"<2 sentences>\",\"summaries\":[\"<sent 0>\",\"<sent 1>\",...]}}\n\n'
+        f"1. For each announcement write 2-3 sentences (~50 words) covering: what happened, "
+        f"key parties involved, and its significance.\n"
+        + ov_instruction +
+        f"\nReturn ONLY valid JSON — no markdown, no code fences:\n"
+        f'{{\"overview\":\"<2 sentences or empty>\",\"summaries\":[\"<2-3 sent 0>\",\"<2-3 sent 1>\",...]}}\n\n'
         f"Announcements:\n" + "\n".join(lines)
     )
 
-    raw = _ai_call(prompt, max_tokens=max(400, len(anns) * 30 + 150))
+    raw = _ai_call(prompt, max_tokens=max(800, len(anns) * 80 + 200))
     if raw:
         try:
             cleaned = re.sub(r"```(?:json)?\s*|\s*```", "", raw).strip()
             result  = json.loads(cleaned)
-            out = {
+            return jsonify({
                 "overview":  result.get("overview", ""),
                 "summaries": result.get("summaries", []),
-            }
-            _set(_cache_key, out, ttl=3600)
-            return jsonify(out)
+            })
         except Exception:
             if raw.strip():
-                out = {"overview": raw[:300], "summaries": []}
-                _set(_cache_key, out, ttl=3600)
-                return jsonify(out)
+                return jsonify({"overview": raw[:300], "summaries": []})
 
     # Fallback: regex-based summaries when AI unavailable
     from collections import Counter
