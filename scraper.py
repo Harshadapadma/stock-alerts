@@ -144,7 +144,11 @@ _HARD_EXCLUDE = re.compile(
     r"investor\s+(?:meet|call|conference|presentation)|"
     r"earnings\s+call|"
     r"change\s+(?:in\s+)?(?:name\s+of\s+(?:company|director)|company\s+name)|"
-    r"name\s+change\b"
+    r"name\s+change\b|"
+
+    # Strategic/technical/marketing tie-up (NSE category for JV/alliances, not schemes)
+    r"arrangements?\s+for\s+strategic,?\s+technical|"
+    r"strategic,?\s+technical,?\s+manufacturing"
     r")",
     re.IGNORECASE,
 )
@@ -170,6 +174,55 @@ _NAMED_SCHEME = re.compile(
     r"transferor\s+compan|transferee\s+compan|resulting\s+compan|"
     r"slump\s+sale|hive.?off|spin.?off|"
     r"nclt|appointed\s+date|effective\s+date",
+    re.IGNORECASE,
+)
+
+# Patterns in the BODY that indicate the announcement is NOT about the company's
+# own corporate scheme — applied with a strong-scheme safety override below.
+# RTA (Registrar & Transfer Agent) service-change noise patterns.
+# RTA mergers are small-company fast-track deals approved by the Regional Director
+# under Section 233 — they use the same M&A terminology (transferor/transferee
+# company, scheme of amalgamation, appointed date) as real corporate schemes,
+# so _SCHEME_STRONG can’t serve as a safe override. Use NCLT presence instead.
+_RTA_NOISE = re.compile(
+    r"(?:"
+    # "merger/amalgamation of ... registrar / RTA" (any words up to 80 chars between)
+    r"(?:merger|amalgamation)\s+of\s+(?:.{0,80}\s)?(?:registrar\s+and\s+(?:share\s+)?transfer\s+agent|\brta\b)|"
+    # "registrar and share transfer agent ... merg..." (merged / merger / amalgamated within 200 chars)
+    r"registrar\s+and\s+(?:share\s+)?transfer\s+agent.{0,200}(?:merg\w*|amalgamat\w*)|"
+    # RTA labeled as transferor/transferee company
+    r"\brta\b.{0,200}(?:transferor|transferee)\s+compan|"
+    # "intimation for/regarding merger/amalgamation of registrar/RTA"
+    r"intimation\s+(?:for|regarding)\s+(?:the\s+)?(?:merger|amalgamation)\s+of\s+(?:registrar|\brta\b)|"
+    # Known RTA companies in the current wave (CB Management Services → MUFG Intime)
+    r"cb\s+management\s+services.{0,300}(?:registrar|transfer\s+agent|\brta\b)|"
+    r"(?:registrar|transfer\s+agent|\brta\b).{0,300}cb\s+management\s+services|"
+    r"cb\s+management\s+services.{0,300}mufg\s+intime|"
+    r"mufg\s+intime.{0,300}cb\s+management\s+services"
+    r")",
+    re.IGNORECASE,
+)
+
+# Real listed-company schemes always go through NCLT (not Regional Director).
+# Presence of NCLT in the announcement overrides _RTA_NOISE.
+_NCLT_RE = re.compile(
+    r"\bnclt\b|national\s+company\s+law\s+tribunal",
+    re.IGNORECASE,
+)
+
+# WOS/subsidiary formation — purely administrative, not a scheme.
+_WOS_NOISE = re.compile(
+    r"incorporation\s+of\s+(?:a\s+)?(?:new\s+)?(?:wholly\s+owned\s+subsidiary|\bwos\b)",
+    re.IGNORECASE,
+)
+
+# Broad scheme indicator — used only as override for WOS gate.
+_SCHEME_STRONG = re.compile(
+    r"scheme\s+of\s+(?:arrangement|amalgamation|demerger|merger|reconstruction)|"
+    r"composite\s+scheme|"
+    r"\bnclt\b|national\s+company\s+law\s+tribunal|"
+    r"appointed\s+date|"
+    r"transferor\s+compan|transferee\s+compan|resulting\s+compan",
     re.IGNORECASE,
 )
 
@@ -244,14 +297,35 @@ def _get_best_date(text: str) -> str:
 def clean_body(body: str) -> str:
     return re.sub(r"\s+", " ", (body or "").replace("\n", " ").replace("\t", " ")).strip()
 
+# Marks where actual announcement content begins — everything before this is
+# letter-header boilerplate (exchange addresses, scrip codes, "Dear Sir/Madam", "Sub:").
+_CONTENT_START_RE = re.compile(
+    r"(?:we\s+(?:wish\s+to|hereby|would\s+like\s+to)\s+inform|"
+    r"this\s+is\s+to\s+inform|"
+    r"pursuant\s+to\s+(?:the\s+)?(?:regulation|sebi|provision)|"
+    r"with\s+reference\s+to\s+the\s+(?:captioned|above|subject)|"
+    r"in\s+continuation\s+of|further\s+to\s+our|"
+    r"as\s+required\s+under|in\s+terms\s+of\s+(?:the\s+)?(?:sebi|regulation)|"
+    r"in\s+compliance\s+with|in\s+accordance\s+with\s+(?:the\s+)?(?:sebi|regulation)|"
+    r"kindly\s+note\s+that|please\s+note\s+that|"
+    r"we\s+(?:are\s+pleased\s+to|regret\s+to)\s+inform)",
+    re.IGNORECASE,
+)
+
+def _strip_preamble(body: str) -> str:
+    """Remove exchange addresses, scrip codes, Dear Sir/Madam, Sub: header."""
+    m = _CONTENT_START_RE.search(body)
+    return body[m.start():] if m else body
+
 def _ai_summarise(body: str, company: str = "", headline: str = "") -> str:
     api_key = getattr(Config, "DEEPSEEK_API_KEY", "") or os.getenv("DEEPSEEK_API_KEY", "")
     if not api_key or not body:
         return ""
     try:
+        content = _strip_preamble(body)
         prompt = (
             f"Summarise this corporate announcement in 2-3 concise sentences. "
-            f"Company: {company}. Headline: {headline}.\n\nAnnouncement:\n{body[:4000]}"
+            f"Company: {company}. Headline: {headline}.\n\nAnnouncement:\n{content[:4000]}"
         )
         r = requests.post(
             "https://api.deepseek.com/v1/chat/completions",
@@ -273,8 +347,16 @@ def _ai_summarise(body: str, company: str = "", headline: str = "") -> str:
 def _fallback_sentences(body: str, headline: str = "") -> str:
     if not body:
         return headline or ""
-    sentences = re.split(r"(?<=[.!?])\s+", body.strip())
-    relevant = [s for s in sentences if any(kw in s.lower() for kw in KEYWORDS)]
+    content = _strip_preamble(body)
+    sentences = re.split(r"(?<=[.!?])\s+", content.strip())
+    # Skip fragments under 40 chars — these are typically address lines or headers
+    relevant = [
+        s for s in sentences
+        if len(s) > 40 and any(kw in s.lower() for kw in KEYWORDS)
+    ]
+    if not relevant:
+        # No keyword match in content — take the first substantive sentences
+        relevant = [s for s in sentences if len(s) > 60]
     chosen = relevant[:3] if relevant else sentences[:3]
     return " ".join(chosen)[:500]
 
@@ -452,6 +534,19 @@ def is_relevant(ann: dict) -> bool:
 
     # Layer 2: Must match at least one keyword
     if not any(kw in combined for kw in KEYWORDS):
+        return False
+
+    # Layer 2b: RTA noise gate
+    # RTA mergers use scheme terminology (transferor/transferee, appointed date,
+    # scheme of amalgamation) but are approved by Regional Director, not NCLT.
+    # Genuine listed-company schemes always mention NCLT — use that as the override.
+    if _RTA_NOISE.search(body) and not _NCLT_RE.search(combined):
+        log.debug("Skipped (RTA merger notification, no NCLT): %s | %s", ann.get("company"), ann.get("headline"))
+        return False
+
+    # Layer 2c: WOS incorporation gate
+    if _WOS_NOISE.search(body) and not _SCHEME_STRONG.search(combined):
+        log.debug("Skipped (WOS incorporation, no scheme context): %s | %s", ann.get("company"), ann.get("headline"))
         return False
 
     # Layer 3: Open offer gate

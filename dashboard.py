@@ -20,6 +20,47 @@ from flask import Flask, jsonify, render_template_string, request
 
 app = Flask(__name__)
 
+# ── DeepSeek AI ───────────────────────────────────────────────────────────────
+try:
+    from config import Config as _Cfg
+    _DEEPSEEK_KEY = os.getenv("DEEPSEEK_API_KEY", "") or getattr(_Cfg, "DEEPSEEK_API_KEY", "")
+except Exception:
+    _DEEPSEEK_KEY = os.getenv("DEEPSEEK_API_KEY", "")
+
+_PREAMBLE_RE = re.compile(
+    r"(?:we\s+(?:wish\s+to|hereby|would\s+like\s+to)\s+inform|"
+    r"this\s+is\s+to\s+inform|pursuant\s+to|"
+    r"with\s+reference\s+to\s+the\s+(?:captioned|above)|"
+    r"in\s+continuation\s+of|further\s+to|"
+    r"kindly\s+note\s+that|please\s+note\s+that)",
+    re.IGNORECASE,
+)
+
+def _clean_for_ai(body: str) -> str:
+    m = _PREAMBLE_RE.search(body or "")
+    text = body[m.start():] if m else (body or "")
+    return re.sub(r"\s+", " ", text.replace("\n", " ")).strip()[:500]
+
+def _ai_call(prompt: str, max_tokens: int = 500) -> str:
+    if not _DEEPSEEK_KEY:
+        return ""
+    try:
+        r = requests.post(
+            "https://api.deepseek.com/v1/chat/completions",
+            headers={"Authorization": f"Bearer {_DEEPSEEK_KEY}", "Content-Type": "application/json"},
+            json={
+                "model": "deepseek-chat",
+                "messages": [{"role": "user", "content": prompt}],
+                "max_tokens": max_tokens,
+                "temperature": 0.3,
+            },
+            timeout=30,
+        )
+        r.raise_for_status()
+        return r.json()["choices"][0]["message"]["content"].strip()
+    except Exception:
+        return ""
+
 # ── In-memory cache ───────────────────────────────────────────────────────────
 _cache: dict = {}
 
@@ -560,6 +601,20 @@ main { max-width: 1400px; margin: 0 auto; padding: 28px 20px 60px; }
 .no-match { text-align: center; color: #bbb; padding: 32px; font-size: .88rem;
             background: white; border-radius: 10px; }
 
+/* AI overview banner */
+.overview-banner {
+  background: linear-gradient(135deg, #f0f4ff, #fafbff);
+  border: 1px solid #c7d2fe; border-radius: 12px;
+  padding: 16px 20px; margin-bottom: 22px;
+  font-size: .88rem; color: #1a1a2e; line-height: 1.7;
+}
+.ov-label {
+  display: inline-block; background: #4361ee; color: white;
+  padding: 2px 10px; border-radius: 20px; font-size: .7rem;
+  font-weight: 700; margin-bottom: 8px;
+}
+.ov-loading { color: #aaa; font-size: .8rem; font-style: italic; }
+
 /* Loading + empty */
 .loader {
   display: flex; flex-direction: column; align-items: center;
@@ -981,8 +1036,10 @@ function renderTimeline(anns) {
       <div class="stat"><div class="stat-val">${years.length}</div><div class="stat-lbl">Year${years.length!==1?'s':''}</div></div>
       <div class="stat"><div class="stat-val">${esc(latest||'—')}</div><div class="stat-lbl">Latest Year</div></div>
     </div>
+    <div id="overviewBanner" class="overview-banner"><span class="ov-loading">Generating AI summary…</span></div>
     <div class="timeline">`;
 
+  let _flatIdx = 0;
   years.slice().reverse().forEach(year => {
     html += `<div class="year-section">
       <div class="year-marker">
@@ -994,9 +1051,8 @@ function renderTimeline(anns) {
     byYear[year].forEach(a => {
       const combined = (a.headline||'') + ' ' + (a.body||'');
       const color = cardColor(combined);
-      const story = a.body
-        ? `<div class="ann-story"><span class="story-yr">In ${esc(year)}</span>, ${esc(a.body.slice(0,280))}${a.body.length>280?'…':''}</div>`
-        : '';
+      const fallbackText = a.body ? esc(a.body.slice(0,280)) + (a.body.length>280?'…':'') : '';
+      const story = `<div class="ann-story" id="story-${_flatIdx}">${fallbackText}</div>`;
       const docBtn = a.url
         ? `<a class="doc-btn" href="${esc(a.url)}" target="_blank">Open Document →</a>` : '';
 
@@ -1014,14 +1070,55 @@ function renderTimeline(anns) {
           ${story}
           ${docBtn}
         </div>`;
+      _flatIdx++;
     });
     html += `</div></div>`;
   });
 
   html += `</div>`;
   document.getElementById('content').innerHTML = html;
-  // Build filter chips after cards are in the DOM
   buildFilterBar('filterBar', [...document.querySelectorAll('.ann-card')]);
+  fetchAISummaries(anns);
+}
+
+async function fetchAISummaries(anns) {
+  const banner = document.getElementById('overviewBanner');
+  try {
+    const companyName = document.querySelector('.co-title')?.textContent.trim() || '';
+    const resp = await fetch('/api/company-overview', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        company: companyName,
+        anns: anns.slice(0, 30).map(a => ({
+          headline: a.headline || '',
+          body:     (a.body || '').slice(0, 500),
+          date:     a.date   || '',
+          action:   a.action || '',
+        }))
+      })
+    });
+    const data = await resp.json();
+
+    // Overview banner
+    if (banner) {
+      if (data.overview) {
+        banner.innerHTML = `<span class="ov-label">AI Summary</span><p>${esc(data.overview)}</p>`;
+      } else {
+        banner.style.display = 'none';
+      }
+    }
+
+    // Per-announcement summaries
+    if (data.summaries) {
+      data.summaries.forEach((summary, i) => {
+        const el = document.getElementById('story-' + i);
+        if (el && summary) el.textContent = summary;
+      });
+    }
+  } catch(e) {
+    if (banner) banner.style.display = 'none';
+  }
 }
 </script>
 """ + FILTER_JS + SEARCH_JS + "</body></html>"
@@ -1138,6 +1235,47 @@ def api_search():
         if q in name.lower() and not sym.lower().startswith(q):
             out.append({"symbol": sym, "name": name})
     return jsonify(out[:15])
+
+
+@app.route("/api/company-overview", methods=["POST"])
+def api_company_overview():
+    data = request.get_json(force=True) or {}
+    company = data.get("company", "this company")
+    anns = data.get("anns", [])[:30]  # cap at 30 to keep prompt manageable
+
+    if not anns:
+        return jsonify({"overview": "", "summaries": []})
+
+    lines = []
+    for i, a in enumerate(anns):
+        snippet = _clean_for_ai(a.get("body", ""))[:350]
+        line = f"{i}. [{(a.get('date') or '')[:11]}] {a.get('action','')} — {a.get('headline','')}"
+        if snippet:
+            line += f"\n   {snippet}"
+        lines.append(line)
+
+    prompt = (
+        f"Analyse these corporate announcements for {company}.\n\n"
+        f"1. For each announcement write ONE sentence (≤18 words) stating the key fact.\n"
+        f"2. Write a 2-sentence overview of {company}'s M&A/restructuring history.\n\n"
+        f"Return ONLY valid JSON — no markdown, no code fences:\n"
+        f'{{\"overview\":\"<2 sentences>\",\"summaries\":[\"<sent 0>\",\"<sent 1>\",...]}}\n\n'
+        f"Announcements:\n" + "\n".join(lines)
+    )
+
+    raw = _ai_call(prompt, max_tokens=max(400, len(anns) * 30 + 150))
+    if not raw:
+        return jsonify({"overview": "", "summaries": [""] * len(anns)})
+
+    try:
+        cleaned = re.sub(r"```(?:json)?\s*|\s*```", "", raw).strip()
+        result  = json.loads(cleaned)
+        return jsonify({
+            "overview":  result.get("overview", ""),
+            "summaries": result.get("summaries", []),
+        })
+    except Exception:
+        return jsonify({"overview": raw[:300], "summaries": []})
 
 
 # ══════════════════════════════════════════════════════════════════════════════
