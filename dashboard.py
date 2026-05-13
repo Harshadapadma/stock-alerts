@@ -23,9 +23,9 @@ app = Flask(__name__)
 # ── DeepSeek AI ───────────────────────────────────────────────────────────────
 try:
     from config import Config as _Cfg
-    _DEEPSEEK_KEY = os.getenv("DEEPSEEK_API_KEY", "") or getattr(_Cfg, "DEEPSEEK_API_KEY", "")
+    _DEEPSEEK_KEY = (os.getenv("DEEPSEEK_API_KEY", "") or getattr(_Cfg, "DEEPSEEK_API_KEY", "")).strip()
 except Exception:
-    _DEEPSEEK_KEY = os.getenv("DEEPSEEK_API_KEY", "")
+    _DEEPSEEK_KEY = os.getenv("DEEPSEEK_API_KEY", "").strip()
 
 _PREAMBLE_RE = re.compile(
     r"(?:we\s+(?:wish\s+to|hereby|would\s+like\s+to)\s+inform|"
@@ -1103,7 +1103,7 @@ async function fetchAISummaries(anns) {
     // Overview banner
     if (banner) {
       if (data.overview) {
-        banner.innerHTML = `<span class="ov-label">AI Summary</span><p>${esc(data.overview)}</p>`;
+          banner.innerHTML = `<span class="ov-label">Summary</span><p>${esc(data.overview)}</p>`;
       } else {
         banner.style.display = 'none';
       }
@@ -1117,7 +1117,7 @@ async function fetchAISummaries(anns) {
       });
     }
   } catch(e) {
-    if (banner) banner.style.display = 'none';
+    if (banner) banner.innerHTML = '<span class="ov-label">Summary</span><p style="color:#999">Summary unavailable — see documents below.</p>';
   }
 }
 </script>
@@ -1264,18 +1264,42 @@ def api_company_overview():
     )
 
     raw = _ai_call(prompt, max_tokens=max(400, len(anns) * 30 + 150))
-    if not raw:
-        return jsonify({"overview": "", "summaries": [""] * len(anns)})
+    if raw:
+        try:
+            cleaned = re.sub(r"```(?:json)?\s*|\s*```", "", raw).strip()
+            result  = json.loads(cleaned)
+            return jsonify({
+                "overview":  result.get("overview", ""),
+                "summaries": result.get("summaries", []),
+            })
+        except Exception:
+            if raw.strip():
+                return jsonify({"overview": raw[:300], "summaries": []})
 
-    try:
-        cleaned = re.sub(r"```(?:json)?\s*|\s*```", "", raw).strip()
-        result  = json.loads(cleaned)
-        return jsonify({
-            "overview":  result.get("overview", ""),
-            "summaries": result.get("summaries", []),
-        })
-    except Exception:
-        return jsonify({"overview": raw[:300], "summaries": []})
+    # Fallback: regex-based summaries when AI unavailable
+    from collections import Counter
+    summaries = []
+    for a in anns:
+        body = _clean_for_ai(a.get("body", ""))
+        if body and len(body) > 20:
+            # grab first complete sentence up to ~180 chars
+            m = re.search(r'[.!?]', body[20:180])
+            end = (20 + m.end()) if m else min(180, len(body))
+            summaries.append(body[:end].strip())
+        else:
+            summaries.append(a.get("headline", ""))
+
+    action_counts = Counter(a.get("action", "") for a in anns if a.get("action"))
+    parts = ", ".join(f"{v} {k.lower()}" for k, v in action_counts.most_common(3))
+    years = sorted({a.get("date", "")[:4] for a in anns
+                    if len(a.get("date", "")) >= 4 and a.get("date", "")[:4].isdigit()})
+    yr_range = (f" between {years[0]} and {years[-1]}" if len(years) > 1
+                else (f" in {years[0]}" if years else ""))
+    n = len(anns)
+    overview = (f"{company} has {n} scheme-related filing{'s' if n != 1 else ''}{yr_range}"
+                + (f" — {parts}." if parts else "."))
+
+    return jsonify({"overview": overview, "summaries": summaries})
 
 
 # ══════════════════════════════════════════════════════════════════════════════
