@@ -154,12 +154,47 @@ _OPEN_OFFER_SCHEME = re.compile(
     re.IGNORECASE,
 )
 
+# Mirrors scraper.py — RTA mergers use scheme language but go via Regional Director, not NCLT
+_RTA_NOISE = re.compile(
+    r"(?:"
+    r"(?:merger|amalgamation)\s+of\s+(?:.{0,80}\s)?(?:registrar\s+and\s+(?:share\s+)?transfer\s+agent|\brta\b)|"
+    r"registrar\s+and\s+(?:share\s+)?transfer\s+agent.{0,200}(?:merg\w*|amalgamat\w*)|"
+    r"\brta\b.{0,200}(?:transferor|transferee)\s+compan|"
+    r"intimation\s+(?:for|regarding)\s+(?:the\s+)?(?:merger|amalgamation)\s+of\s+(?:registrar|\brta\b)|"
+    r"cb\s+management\s+services.{0,300}(?:registrar|transfer\s+agent|\brta\b)|"
+    r"(?:registrar|transfer\s+agent|\brta\b).{0,300}cb\s+management\s+services|"
+    r"cb\s+management\s+services.{0,300}mufg\s+intime|"
+    r"mufg\s+intime.{0,300}cb\s+management\s+services"
+    r")",
+    re.IGNORECASE,
+)
+_NCLT_RE = re.compile(r"\bnclt\b|national\s+company\s+law\s+tribunal", re.IGNORECASE)
+_WOS_NOISE = re.compile(
+    r"incorporation\s+of\s+(?:a\s+)?(?:new\s+)?(?:wholly\s+owned\s+subsidiary|\bwos\b)",
+    re.IGNORECASE,
+)
+_SCHEME_STRONG = re.compile(
+    r"scheme\s+of\s+(?:arrangement|amalgamation|demerger|merger|reconstruction)|"
+    r"composite\s+scheme|\bnclt\b|national\s+company\s+law\s+tribunal|"
+    r"appointed\s+date|transferor\s+compan|transferee\s+compan|resulting\s+compan",
+    re.IGNORECASE,
+)
+
 
 def is_relevant(headline: str, body: str = "") -> bool:
-    combined = (headline + " " + body).lower()
-    if _HARD_EXCLUDE.search(combined):
+    hl   = headline.lower()
+    body = (body or "").lower()
+    combined = hl + " " + body
+    # Hard-exclude applied to headline only (body PDF text contains dividend/acquisition boilerplate)
+    if _HARD_EXCLUDE.search(hl):
         return False
     if not any(kw in combined for kw in KEYWORDS):
+        return False
+    # RTA merger gate — mirrors scraper.py
+    if _RTA_NOISE.search(body) and not _NCLT_RE.search(combined):
+        return False
+    # WOS incorporation gate
+    if _WOS_NOISE.search(body) and not _SCHEME_STRONG.search(combined):
         return False
     if "open offer" in combined and not _OPEN_OFFER_SCHEME.search(combined):
         return False
