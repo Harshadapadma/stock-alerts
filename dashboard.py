@@ -1308,9 +1308,9 @@ def api_company_overview():
     overview = (f"{company} has {n} scheme-related filing{'s' if n != 1 else ''}{yr_range}"
                 + (f" — {parts}." if parts else "."))
 
-    out = {"overview": overview, "summaries": summaries}
-    _set(_cache_key, out, ttl=3600)
-    return jsonify(out)
+    # Don't cache regex fallback — it's free to recompute and DeepSeek
+    # may become available on the next load, so we shouldn't lock in stale text.
+    return jsonify({"overview": overview, "summaries": summaries})
 
 
 # ══════════════════════════════════════════════════════════════════════════════
