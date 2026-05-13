@@ -962,11 +962,12 @@ function renderHome(anns) {
     const color = cardColorHome(combined);
     const docBtn = a.url ? `<a class="doc-btn" href="${esc(a.url)}" target="_blank">Open Document →</a>` : '';
     const scrip  = a.scrip ? `<span style="color:#aaa;font-weight:400;font-size:.78rem">&nbsp;(${esc(a.scrip)})</span>` : '';
-    // Show body only if it's substantively different from the headline
-    const body = (a.body || '').trim();
-    const fallback = body && body.toLowerCase() !== (a.headline||'').toLowerCase()
-      ? `<div class="ann-story" id="hstory-${i}">${esc(body.slice(0,300))}${body.length>300?'…':''}</div>`
-      : `<div class="ann-story" id="hstory-${i}" style="color:#bbb;font-style:italic">Summarising…</div>`;
+    // Always show placeholder — fetchHomeSummaries fills from cache or API immediately after
+    const lsCached = localStorage.getItem('summ_v2_' + (a.id || i));
+    const initText  = lsCached || '';
+    const initStyle = lsCached ? '' : 'color:#bbb;font-style:italic';
+    const initContent = lsCached ? esc(lsCached) : 'Summarising…';
+    const fallback = `<div class="ann-story" id="hstory-${i}" style="${initStyle}">${initContent}</div>`;
     html += `
       <div class="ann-card" style="border-left-color:${color}" data-date="${esc(a.date||'')}">
         <div class="card-top">
@@ -992,16 +993,7 @@ function renderHome(anns) {
 }
 
 async function fetchHomeSummaries(anns) {
-  // Apply any already-cached summaries instantly
-  anns.forEach((a, i) => {
-    const cached = localStorage.getItem('summ_v2_' + (a.id || i));
-    if (cached) {
-      const el = document.getElementById('hstory-' + i);
-      if (el) { el.textContent = cached; el.style.cssText = ''; }
-    }
-  });
-
-  // Only send uncached announcements to the API
+  // Cached items are already rendered inline — only fetch what's missing
   const toFetch = anns
     .map((a, i) => ({...a, _origIdx: i}))
     .filter(a => !localStorage.getItem('summ_v2_' + (a.id || a._origIdx)));
@@ -1433,19 +1425,35 @@ def api_company_overview():
             if raw.strip():
                 return jsonify({"ai": True, "overview": raw[:300], "summaries": []})
 
-    # Fallback: regex-based summaries when AI unavailable (mirrors scraper _fallback_sentences)
+    # Fallback: regex-based summaries — keyword-rich sentences first (mirrors scraper _fallback_sentences)
     from collections import Counter
+    _SUMMARY_KW = {
+        "merger", "amalgam", "demerger", "scheme", "nclt", "appointed date",
+        "transferor", "transferee", "resulting compan", "slump sale", "hive",
+        "spin off", "restructur", "effective", "sanctioned", "approved", "vesting",
+    }
     summaries = []
     for a in anns:
         body = _clean_for_ai(a.get("body", ""))
         headline = a.get("headline", "")
+        ann_co = a.get("company", "") or ""
         if body and len(body) > 40:
             sentences = re.split(r"(?<=[.!?])\s+", body.strip())
-            relevant = [s for s in sentences if len(s) > 40]
-            chosen = " ".join(relevant[:3]) if relevant else " ".join(sentences[:3])
-            summaries.append(chosen[:500] or headline)
+            # Prefer sentences containing M&A keywords
+            kw_sents = [s for s in sentences
+                        if len(s) > 40 and any(kw in s.lower() for kw in _SUMMARY_KW)]
+            fallback_sents = [s for s in sentences if len(s) > 60]
+            chosen = kw_sents[:3] if kw_sents else fallback_sents[:3]
+            text = " ".join(chosen)[:500] if chosen else headline
+            summaries.append(text)
         else:
-            summaries.append(headline)
+            # No body — build a minimal descriptive sentence from metadata
+            action = a.get("action", "")
+            date   = (a.get("date") or "")[:11]
+            if action and ann_co:
+                summaries.append(f"{ann_co} filed a {action.lower()} update on {date}.")
+            else:
+                summaries.append(headline)
 
     action_counts = Counter(a.get("action", "") for a in anns if a.get("action"))
     parts = ", ".join(f"{v} {k.lower()}" for k, v in action_counts.most_common(3))
