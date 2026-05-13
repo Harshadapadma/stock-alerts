@@ -927,6 +927,10 @@ function renderHome(anns) {
     const color = cardColorHome(combined);
     const docBtn = a.url ? `<a class="doc-btn" href="${esc(a.url)}" target="_blank">Open Document →</a>` : '';
     const scrip  = a.scrip ? `<span style="color:#aaa;font-weight:400;font-size:.78rem">&nbsp;(${esc(a.scrip)})</span>` : '';
+    const summary = (a.body || '').trim();
+    const summaryHtml = summary
+      ? `<div class="ann-story">${esc(summary.slice(0, 300))}${summary.length > 300 ? '…' : ''}</div>`
+      : '';
     html += `
       <div class="ann-card" style="border-left-color:${color}" data-date="${esc(a.date||'')}">
         <div class="card-top">
@@ -941,6 +945,7 @@ function renderHome(anns) {
           <span class="badge b-source">${esc(a.source||'NSE')}</span>
         </div>
         <div class="ann-headline">${esc(a.headline||'')}</div>
+        ${summaryHtml}
         ${docBtn}
       </div>`;
   });
