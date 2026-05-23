@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -36,36 +38,48 @@ jobs:
         run: |
           cat > config.py << 'EOF'
           import os
+
           class Config:
               EMAIL_ENABLED = True
+
               DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY", "")
+
               EMAIL_FROM = os.getenv("EMAIL_FROM", "")
               EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD", "")
+
               _to_env = os.getenv("EMAIL_TO", "")
               EMAIL_TO = [e.strip() for e in _to_env.split(",") if e.strip()]
+
               TELEGRAM_ENABLED = bool(os.getenv("TELEGRAM_BOT_TOKEN"))
               TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
               TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
+
               WHATSAPP_ENABLED = bool(os.getenv("META_ACCESS_TOKEN"))
               META_PHONE_NUMBER_ID = os.getenv("META_PHONE_NUMBER_ID", "")
               META_ACCESS_TOKEN = os.getenv("META_ACCESS_TOKEN", "")
+
               _wa_env = os.getenv("WHATSAPP_TO", "")
               WHATSAPP_TO = [n.strip() for n in _wa_env.split(",") if n.strip()]
+
               SKIP_PROCEDURAL = True
               MARKET_CAP_MIN_CR = 1000
           EOF
 
       - name: Run alert check
         env:
-          EMAIL_FROM:           ${{ secrets.EMAIL_FROM }}
-          EMAIL_PASSWORD:       ${{ secrets.EMAIL_PASSWORD }}
-          EMAIL_TO:             ${{ secrets.EMAIL_TO }}
-          TELEGRAM_BOT_TOKEN:   ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID:     ${{ secrets.TELEGRAM_CHAT_ID }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
           META_PHONE_NUMBER_ID: ${{ secrets.META_PHONE_NUMBER_ID }}
-          META_ACCESS_TOKEN:    ${{ secrets.META_ACCESS_TOKEN }}
-          WHATSAPP_TO:          ${{ secrets.WHATSAPP_TO }}
-          DEEPSEEK_API_KEY:     ${{ secrets.DEEPSEEK_API_KEY }}
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+          WHATSAPP_TO: ${{ secrets.WHATSAPP_TO }}
+
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+
         run: python scraper.py --once
 
       - name: Save seen IDs cache
@@ -80,13 +94,19 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
           git add -f announcements.json 2>/dev/null || true
+
           git diff --staged --quiet && echo "No changes to commit" && exit 0
+
           git commit -m "chore: update announcements [skip ci]"
+
           for attempt in 1 2 3 4 5; do
-            git pull --rebase origin main
+            git pull --rebase --autostash origin main
+
             git push && break
+
             echo "Push failed (attempt $attempt), retrying..."
-            git reset HEAD~1
+
             sleep $((attempt * 3))
           done
