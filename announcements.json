@@ -1252,5 +1252,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/DRAGARWALS_01062026184627_AHCL_Newspaper_Advt_sd.pdf",
     "summary": "Dr. Agarwal's Health Care Limited has informed the stock exchange about a newspaper publication regarding the NCLT-convened meetings. The joint advertisement covers meetings for the company's equity shareholders, secured creditors, and unsecured creditors.",
     "saved_at": "2026-06-01T19:01:21.146065"
+  },
+  {
+    "id": "NSE_106652456",
+    "source": "NSE",
+    "company": "United Foodbrands Limited",
+    "scrip": "UFBL",
+    "headline": "General Updates",
+    "date": "02-Jun-2026 15:52:01",
+    "url": "https://nsearchives.nseindia.com/corporate/BARBEQUE_02062026155043_SEIntimationUpdateOnAmalgamationRABP.pdf",
+    "summary": "United Foodbrands Limited has provided an update to the Exchange regarding the Scheme of Amalgamation involving its subsidiaries, Blue Planet Foods Private Limited and Red Apple Kitchen Consultancy Private Limited. The announcement pertains to the ongoing merger process between these two subsidiary entities.",
+    "saved_at": "2026-06-02T11:23:40.312959"
+  },
+  {
+    "id": "NSESME_106652346",
+    "source": "NSE-SME",
+    "company": "CMM Infraprojects Limited",
+    "scrip": "CMMIPL",
+    "headline": "General Updates",
+    "date": "02-Jun-2026 13:19:31",
+    "url": "https://nsearchives.nseindia.com/corporate/CMMIPL_02062026131826_CMM_Intimation_of_outcome_of_IA_filed_with_the_NCLT_02062026.pdf",
+    "summary": "CMM Infraprojects Limited has informed the stock exchange of an update regarding an Interim Application filed with the Hon'ble NCLT, Indore Bench. The announcement pertains to general updates in the ongoing legal proceedings. No further details on the nature or outcome of the application were provided.",
+    "saved_at": "2026-06-02T11:23:41.510772"
   }
 ]
