@@ -1329,5 +1329,71 @@
     "url": "https://nsearchives.nseindia.com/corporate/COFORGE_04062026001858_Allotment_Intimation.pdf",
     "summary": "Coforge Limited has allotted 1,26,71,602 equity shares to eligible shareholders of Cigniti Technologies Limited as part of their amalgamation scheme, using a 1:1 share exchange ratio. This allotment increases Coforge\u2019s total paid-up share capital to over 44.26 crore shares, amounting to \u20b988.53 crore. The company is now completing formalities to list these new shares on stock exchanges.",
     "saved_at": "2026-06-04T04:59:50.914658"
+  },
+  {
+    "id": "NSE_106655228",
+    "source": "NSE",
+    "company": "ACC Limited",
+    "scrip": "ACC",
+    "headline": "Amalgamation/Merger",
+    "date": "04-Jun-2026 19:46:41",
+    "url": "https://nsearchives.nseindia.com/corporate/ACC_1_04062026194620_ACC_NOC_-_Covering.pdf",
+    "summary": "ACC Limited has received observation letters with \"no adverse observations\" from BSE and a \"No Objection\" from NSE regarding its proposed merger with Ambuja Cements Limited. This regulatory clearance marks a key step forward in the amalgamation process.",
+    "saved_at": "2026-06-04T15:49:46.240276"
+  },
+  {
+    "id": "NSE_106655224",
+    "source": "NSE",
+    "company": "Orient Cement Limited",
+    "scrip": "ORIENTCEM",
+    "headline": "Amalgamation/Merger",
+    "date": "04-Jun-2026 19:42:45",
+    "url": "https://nsearchives.nseindia.com/corporate/ORIENTCEM_04062026193509_OCL_NOC_Intimation.pdf",
+    "summary": "Orient Cement Limited has received observation letters with \"no adverse objection\" from BSE and \"no objection\" from NSE regarding its merger with Ambuja Cements Limited. The approvals pertain to the Scheme of Amalgamation where Orient Cement is the transferor company and Ambuja Cements is the transferee company. This marks a key regulatory step toward completing the amalgamation.",
+    "saved_at": "2026-06-04T15:49:47.772452"
+  },
+  {
+    "id": "NSE_106655223",
+    "source": "NSE",
+    "company": "Ambuja Cements Limited",
+    "scrip": "AMBUJACEM",
+    "headline": "Amalgamation/Merger",
+    "date": "04-Jun-2026 19:42:44",
+    "url": "https://nsearchives.nseindia.com/corporate/AMBUJACEM_04062026194218_ACL_NOC_Intimation.pdf",
+    "summary": "Ambuja Cements Limited has received \"no adverse objection\" from BSE and \"no objection\" from NSE regarding the proposed merger of Orient Cement Limited into Ambuja Cements. This clears a key regulatory step for the amalgamation scheme.",
+    "saved_at": "2026-06-04T15:49:49.257586"
+  },
+  {
+    "id": "NSE_106655218",
+    "source": "NSE",
+    "company": "Ambuja Cements Limited",
+    "scrip": "AMBUJACEM",
+    "headline": "Amalgamation/Merger",
+    "date": "04-Jun-2026 19:36:03",
+    "url": "https://nsearchives.nseindia.com/corporate/AMBUJACEM_04062026193536_ACL_NOC-covering.pdf",
+    "summary": "Ambuja Cements Limited has received observation letters with \"no adverse observations\" from BSE and a \"no objection\" from NSE regarding its merger scheme with ACC Limited. The scheme involves the amalgamation of ACC Limited into Ambuja Cements Limited. This marks a key regulatory step toward the consolidation of the two companies.",
+    "saved_at": "2026-06-04T15:49:50.804836"
+  },
+  {
+    "id": "NSE_106655172",
+    "source": "NSE",
+    "company": "Triveni Engineering & Industries Limited",
+    "scrip": "TRIVENI",
+    "headline": "General Updates",
+    "date": "04-Jun-2026 18:55:58",
+    "url": "https://nsearchives.nseindia.com/corporate/TRIVENI_04062026185550_TPTL_Material_Update.pdf",
+    "summary": "Triveni Engineering & Industries Ltd. has provided a material update regarding its Composite Scheme of Arrangement involving itself, Sir Shadi Lal Enterprises Ltd., and Triveni Power Transmission Ltd. The update pertains to the scheme filed under Sections 230-232 of the Companies Act, 2013. No further details on the specific update were disclosed in the announcement.",
+    "saved_at": "2026-06-04T15:49:52.167060"
+  },
+  {
+    "id": "NSE_106655153",
+    "source": "NSE",
+    "company": "Sanco Industries Limited",
+    "scrip": "SANCO",
+    "headline": "Suspension of Trading",
+    "date": "04-Jun-2026 18:45:47",
+    "url": "-",
+    "summary": "Trading in equity shares of Sanco Industries Limited will be suspended from the close of trading on June 4, 2026, due to a Scheme of Amalgamation. The suspension takes effect from June 5, 2026.",
+    "saved_at": "2026-06-04T15:49:53.326694"
   }
 ]
