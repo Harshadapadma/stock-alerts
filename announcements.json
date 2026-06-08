@@ -1549,5 +1549,38 @@
     "url": "https://nsearchives.nseindia.com/corporate/FCEL1_08062026172439_20260608-StockExchange_NCLT_Case_updatesigned.pdf",
     "summary": "Future Consumer Limited has issued a general update in compliance with Regulation 30 of the SEBI Listing Regulations. The announcement was signed by Managing Director Samson Samuel. No specific details regarding the update were provided in the filing.",
     "saved_at": "2026-06-08T12:05:00.218832"
+  },
+  {
+    "id": "NSE_106657882",
+    "source": "NSE",
+    "company": "Persistent Systems Limited",
+    "scrip": "PERSISTENT",
+    "headline": "Amalgamation/Merger",
+    "date": "08-Jun-2026 20:45:05",
+    "url": "https://nsearchives.nseindia.com/corporate/PERSISTENTUSER1_08062026204457_PSLIntimationofProposedMergerofMAIPLwithPSLsigned.pdf",
+    "summary": "Persistent Systems Limited's Board has approved the merger of its wholly owned subsidiary, MediaAgility India Private Limited, into itself as part of an internal restructuring to achieve entity rationalization and operational efficiency. The merger is subject to necessary statutory approvals under the Companies Act, 2013. As MediaAgility is a wholly owned subsidiary, the transaction does not fall under related party provisions.",
+    "saved_at": "2026-06-08T16:17:56.926038"
+  },
+  {
+    "id": "NSE_106657874",
+    "source": "NSE",
+    "company": "Persistent Systems Limited",
+    "scrip": "PERSISTENT",
+    "headline": "Other Restructuring",
+    "date": "08-Jun-2026 20:28:36",
+    "url": "https://nsearchives.nseindia.com/corporate/PERSISTENTUSER1_08062026202826_PSLIntimationofRestructuringofUKEntitysigned.pdf",
+    "summary": "Persistent Systems Limited has approved an internal restructuring to transfer its entire 100% shareholding in Persistent Systems UK Limited to its Irish subsidiary, Aepona Group Limited. The move aims to achieve entity rationalization and operational efficiency within the group, with no direct benefit to promoters or group companies. Following the transfer, Persistent Systems UK Limited will become a wholly owned subsidiary of Aepona Group Limited.",
+    "saved_at": "2026-06-08T16:17:58.752000"
+  },
+  {
+    "id": "NSE_106657787",
+    "source": "NSE",
+    "company": "Amber Enterprises India Limited",
+    "scrip": "AMBER",
+    "headline": "Scheme of Arrangement",
+    "date": "08-Jun-2026 19:06:18",
+    "url": "https://nsearchives.nseindia.com/corporate/AMBER_08062026190432_SE_Intimation_Scheme_of_Arrangement_Amber_08062026.pdf",
+    "summary": "Amber Enterprises India Limited has received approval from the NCLT Chandigarh Bench for its Scheme of Arrangement, which includes dispensation of shareholder and creditor meetings. The Tribunal has allowed the First Motion Application, disposing of the matter accordingly.",
+    "saved_at": "2026-06-08T16:18:00.237639"
   }
 ]
