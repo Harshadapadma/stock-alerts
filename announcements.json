@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106616714",
-    "source": "NSE",
-    "company": "Ndr Auto Components Limited",
-    "scrip": "NDRAUTO",
-    "headline": "General Updates",
-    "date": "11-May-2026 13:55:23",
-    "url": "https://nsearchives.nseindia.com/corporate/NDRAUTO_11052026135516_SE_Intimation.pdf",
-    "summary": "The Board has approved the transfer of the company\u2019s Seat Trim business related to certain models by way of slump sale as a going concern to its wholly owned subsidiary, NDR Auto Component South Private Limited. The Board has approved the transfer of the company\u2019s Sunshade business by way of slump sale as a going concern to its Joint Venture, NDR Hayashi Automotive India Private Limited.",
-    "saved_at": "2026-05-11T16:17:23.789107"
-  },
-  {
     "id": "NSE_manual_GREENPOWER_20260511",
     "source": "NSE",
     "company": "Orient Green Power Company Limited",
@@ -1615,5 +1604,38 @@
     "url": "https://nsearchives.nseindia.com/corporate/ASTRAMICRO_10062026123059_Letter.pdf",
     "summary": "Astra Microwave Products Limited's Board has approved a Scheme of Arrangement for a demerger. The move will restructure the company's operations, with the announcement made in compliance with SEBI listing regulations.",
     "saved_at": "2026-06-10T08:55:27.334903"
+  },
+  {
+    "id": "NSE_106660163",
+    "source": "NSE",
+    "company": "Power Finance Corporation Limited",
+    "scrip": "PFC",
+    "headline": "General Updates",
+    "date": "10-Jun-2026 19:13:14",
+    "url": "https://nsearchives.nseindia.com/corporate/PFC2023_10062026191224_Intimation_10062026signed.pdf",
+    "summary": "Power Finance Corporation Limited (PFC) has received approval from the President of India for the proposed merger of REC Limited into PFC. This approval was conveyed by the Ministry of Power on June 10, 2026, following the Board's earlier decision to reserve the proposal for presidential consent. The update is provided in compliance with SEBI regulations.",
+    "saved_at": "2026-06-10T16:25:19.416691"
+  },
+  {
+    "id": "NSE_106660151",
+    "source": "NSE",
+    "company": "REC Limited",
+    "scrip": "RECLTD",
+    "headline": "General Updates",
+    "date": "10-Jun-2026 19:05:47",
+    "url": "https://nsearchives.nseindia.com/corporate/RECLTD_10062026190415_Signed_Intimation_PresidentialConsent100626.pdf",
+    "summary": "REC Limited announced that the Ministry of Power has conveyed the Competent Authority\u2019s approval for the proposed merger of REC into PFC. This follows the earlier Board decision to reserve the proposal for the President of India\u2019s approval. The update was made in compliance with SEBI listing regulations.",
+    "saved_at": "2026-06-10T16:25:21.017162"
+  },
+  {
+    "id": "NSE_106660129",
+    "source": "NSE",
+    "company": "Health X Platform Limited",
+    "scrip": "HEALTHX",
+    "headline": "Scheme of Arrangement",
+    "date": "10-Jun-2026 18:43:08",
+    "url": "https://nsearchives.nseindia.com/corporate/SASTASUNDR_10062026184227_OutcomeBM10062026PDF_1sign.pdf",
+    "summary": "Health X Platform Limited\u2019s board has approved a composite scheme of arrangement and amalgamation involving itself, Microsec Resources Private Limited, Innogrow Technologies Limited, and Sastasundar Healthbuddy Limited. Under the scheme, shareholders of Health X will receive one share in the resulting company for every three shares held, while specific share exchange ratios have been set for the transferor company. The scheme is subject to approvals from stock exchanges, SEBI, NCLT, RBI, and relevant shareholders and creditors.",
+    "saved_at": "2026-06-10T16:25:23.217005"
   }
 ]
