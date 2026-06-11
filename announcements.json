@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106619484",
-    "source": "NSE",
-    "company": "Thomas Cook  (India)  Limited",
-    "scrip": "THOMASCOOK",
-    "headline": "Outcome of Board Meeting",
-    "date": "12-May-2026 22:00:29",
-    "url": "https://nsearchives.nseindia.com/corporate/THOMASCOOK_12052026215637_RM.pdf",
-    "summary": "The shares of QCL and its demerged entities held by the trust are subjected to fair valuation. The Company had completed the acquisition of Resorts Business from Nature Trails Resort Private Limited (NTRPL), (Wholly owned step-down subsidiary of the Company) on 19 March 2025 through slump sale for consideration of Rs. 522.5 Mn (gross) as per the terms mentioned in the Business Transfer Agreement as per appointed date 01 March 2025.",
-    "saved_at": "2026-05-12T16:37:31.764851"
-  },
-  {
     "id": "NSE_106621091",
     "source": "NSE",
     "company": "Rossell India Limited",
@@ -1648,5 +1637,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/CENTUME_11062026171735_Intimation.pdf",
     "summary": "Centum Electronics Limited has provided an update on the court-supervised restructuring proceedings (Redressement Judiciaire) for its French subsidiaries, Centum T&S Group S.A. and Centum T&S (Centum Technologies et Solutions). The announcement, filed under \"Other Restructuring,\" confirms the ongoing legal process for these entities in France.",
     "saved_at": "2026-06-11T14:59:24.005496"
+  },
+  {
+    "id": "NSE_106661431",
+    "source": "NSE",
+    "company": "Sonata Software Limited",
+    "scrip": "SONATSOFTW",
+    "headline": "Action(s) taken or orders passed",
+    "date": "11-Jun-2026 22:48:29",
+    "url": "https://nsearchives.nseindia.com/corporate/SONATSOFTW_11062026224403_schemeofamalgamationintimation.pdf",
+    "summary": "Sonata Software Limited announced that the National Company Law Tribunal (NCLT), Chennai Bench, has sanctioned the Scheme of Arrangement and Amalgamation between Encore I.T. Services Solutions Private Limited (Transferor Company) and Sonata Software Limited (Transferee Company) on June 5, 2026. The order was made available on the NCLT website on June 11, 2026, and the scheme will become effective once the certified copy is filed with the Registrar of Companies.",
+    "saved_at": "2026-06-11T18:25:33.350717"
   }
 ]
