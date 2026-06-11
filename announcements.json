@@ -1,49 +1,5 @@
 [
   {
-    "id": "NSE_manual_GREENPOWER_20260511",
-    "source": "NSE",
-    "company": "Orient Green Power Company Limited",
-    "scrip": "GREENPOWER",
-    "headline": "Outcome of Board Meeting - Approval of the Merger of M/s.",
-    "date": "11-May-2026 16:37:29",
-    "url": "",
-    "summary": "Outcome of Board Meeting - Approval of the Merger of M/s. SEBI/HO/CFD/PoD2/CIR/P/0155 dated November 11, 2024 Circular.",
-    "saved_at": "2026-05-11T16:37:29"
-  },
-  {
-    "id": "NSE_manual_SOMANYCERA_20260511",
-    "source": "NSE",
-    "company": "Somany Ceramics Limited",
-    "scrip": "SOMANYCERA",
-    "headline": "General Updates - Meeting of the unsecured creditors scheduled on 13th June 2026",
-    "date": "11-May-2026 20:55:36",
-    "url": "",
-    "summary": "Somany Ceramics Limited has informed the Exchange about meeting of the unsecured creditors of the Company scheduled to be held on Saturday, 13th June, 2026.",
-    "saved_at": "2026-05-11T20:55:36"
-  },
-  {
-    "id": "NSE_manual_ASIANENE_20260511",
-    "source": "NSE",
-    "company": "Asian Energy Services Limited",
-    "scrip": "ASIANENE",
-    "headline": "Copy of Newspaper Publication - NCLT convened Meeting of equity shareholders",
-    "date": "11-May-2026 19:20:51",
-    "url": "",
-    "summary": "Asian Energy Services Limited has informed the Exchange about Copy of Newspaper Advertisement of NCLT convened Meeting of equity shareholders.",
-    "saved_at": "2026-05-11T19:20:51"
-  },
-  {
-    "id": "NSE_manual_PARADEEP_20260511",
-    "source": "NSE",
-    "company": "Paradeep Phosphates Limited",
-    "scrip": "PARADEEP",
-    "headline": "Updates - Report from the Audit Committee and Independent Directors certifying distribution",
-    "date": "11-May-2026 18:58:38",
-    "url": "",
-    "summary": "Paradeep Phosphates Limited has informed the Exchange regarding Report from the Audit Committee and Independent Directors of the Company certifying distribution.",
-    "saved_at": "2026-05-11T18:58:38"
-  },
-  {
     "id": "NSE_106619484",
     "source": "NSE",
     "company": "Thomas Cook  (India)  Limited",
@@ -1637,5 +1593,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/SASTASUNDR_10062026184227_OutcomeBM10062026PDF_1sign.pdf",
     "summary": "Health X Platform Limited\u2019s board has approved a composite scheme of arrangement and amalgamation involving itself, Microsec Resources Private Limited, Innogrow Technologies Limited, and Sastasundar Healthbuddy Limited. Under the scheme, shareholders of Health X will receive one share in the resulting company for every three shares held, while specific share exchange ratios have been set for the transferor company. The scheme is subject to approvals from stock exchanges, SEBI, NCLT, RBI, and relevant shareholders and creditors.",
     "saved_at": "2026-06-10T16:25:23.217005"
+  },
+  {
+    "id": "NSE_106660729",
+    "source": "NSE",
+    "company": "Spandana Sphoorty Financial Limited",
+    "scrip": "SPANDANA",
+    "headline": "Amalgamation/Merger",
+    "date": "11-Jun-2026 11:55:29",
+    "url": "https://nsearchives.nseindia.com/corporate/SPANDANA_11062026115437_SchemeMerger11062026.pdf",
+    "summary": "Spandana Sphoorty Financial Limited\u2019s board has approved the merger of its subsidiary, Criss Financial Limited, into itself via absorption under a scheme of arrangement. The merger is subject to approvals from the Regional Director/NCLT, shareholders, creditors, and regulators including the RBI and SEBI. The share exchange ratio will be determined on an arm\u2019s length basis based on an independent valuation and fairness opinion.",
+    "saved_at": "2026-06-11T06:29:10.802736"
   }
 ]
