@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106626717",
-    "source": "NSE",
-    "company": "Gujarat Gas Limited",
-    "scrip": "GUJGASLTD",
-    "headline": "Allotment of Securities",
-    "date": "16-May-2026 21:12:44",
-    "url": "https://nsearchives.nseindia.com/corporate/GUJGASLTD_16052026211041_1569SECAllotment16052026.pdf",
-    "summary": "Gujarat Gas Limited (now Gujarat Energy Limited) announced that its Board approved the allotment of 62,27,14,719 equity shares to eligible shareholders of GSPC and GSPL as per the approved Scheme. The shares, valued at INR 2 each, were allotted based on the Record Date of May 12, 2026, and will rank equally with existing shares. Fractional entitlements will be consolidated, sold via IDBI Trusteeship Services, and the proceeds distributed pro-rata to entitled shareholders.",
-    "saved_at": "2026-05-16T16:35:33.245326"
-  },
-  {
-    "id": "NSE_106626766",
-    "source": "NSE",
-    "company": "KEC International Limited",
-    "scrip": "KEC",
-    "headline": "Amalgamation/Merger",
-    "date": "16-May-2026 22:31:11",
-    "url": "https://nsearchives.nseindia.com/corporate/KEC_16052026222932_SEIntimationSchemeofMerger.pdf",
-    "summary": "KEC International Limited's Board has approved a scheme to merge its wholly owned subsidiary, KEC Spur Infrastructure Private Limited, into the parent company. The merger by absorption is subject to obtaining all necessary regulatory and other approvals.",
-    "saved_at": "2026-05-16T17:39:14.022119"
-  },
-  {
     "id": "NSE_106627248",
     "source": "NSE",
     "company": "Lumax Auto Technologies Limited",
@@ -1362,5 +1340,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/MCL2023_15062026183823_MCL_Reporting_of_NCLT_order.pdf",
     "summary": "Master Components Limited announced that the National Company Law Tribunal (NCLT), Mumbai Bench, has dispensed with the meetings of equity shareholders and unsecured creditors of Master Moulds Private Limited, as well as secured creditors of Master Components, as part of the Scheme of Amalgamation between the two companies. The NCLT has directed that notices be served to regulatory authorities and published in newspapers, with the scheme still subject to other regulatory approvals. The company has uploaded the NCLT order and scheme details on its website for reference.",
     "saved_at": "2026-06-15T13:41:33.832550"
+  },
+  {
+    "id": "NSE_106663736",
+    "source": "NSE",
+    "company": "Sapphire Foods India Limited",
+    "scrip": "SAPPHIRE",
+    "headline": "Scheme of Arrangement",
+    "date": "15-Jun-2026 20:18:44",
+    "url": "https://nsearchives.nseindia.com/corporate/SAPPHIRE_15062026201824_NSE.pdf",
+    "summary": "Sapphire Foods India Limited has received 'no objection' letters from NSE and BSE regarding its proposed Scheme of Arrangement with Devyani International Limited. The stock exchanges have outlined specific compliance conditions, including obtaining Competition Commission of India (CCI) approval and disclosing any ongoing enforcement actions. The scheme remains subject to final statutory, regulatory, and shareholder approvals.",
+    "saved_at": "2026-06-15T18:18:17.258503"
+  },
+  {
+    "id": "NSE_106663674",
+    "source": "NSE",
+    "company": "Asian Energy Services Limited",
+    "scrip": "ASIANENE",
+    "headline": "Shareholders meeting",
+    "date": "15-Jun-2026 19:14:26",
+    "url": "https://nsearchives.nseindia.com/corporate/ASIANENE_15062026190701_AESL_VotingResults_15062026_PDF.pdf",
+    "summary": "Asian Energy Services Limited held a shareholder meeting on June 12, 2026, via video conferencing as directed by the National Company Law Tribunal, to vote on a proposed merger with Oilmax Energy Private Limited. The voting results, scrutinized by a Company Secretary, showed unanimous approval from all shareholder categories, with 100% of votes cast in favor and none against. The detailed voting results and the Scrutinizer\u2019s report have been submitted to the stock exchange and posted on the company\u2019s website.",
+    "saved_at": "2026-06-15T18:18:19.471213"
   }
 ]
