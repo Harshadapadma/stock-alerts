@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106626471",
-    "source": "NSE",
-    "company": "Valiant Laboratories Limited",
-    "scrip": "VALIANTLAB",
-    "headline": "Press Release",
-    "date": "16-May-2026 18:06:02",
-    "url": "https://nsearchives.nseindia.com/corporate/VALIANT_16052026180525_Press_Release_Final.pdf",
-    "summary": "Valiant Laboratories Limited's Board has approved exploring restructuring options among the company, its holding, subsidiaries, and associates to achieve operational and strategic synergies. The potential restructuring may involve mergers, demergers, or other arrangements aimed at simplifying the corporate structure, unlocking shareholder value, and enhancing strategic focus. Further evaluations and public disclosures will follow as the Board determines the future course of action.",
-    "saved_at": "2026-05-16T12:46:20.406686"
-  },
-  {
-    "id": "NSE_106626447",
-    "source": "NSE",
-    "company": "Valiant Organics Limited",
-    "scrip": "VALIANTORG",
-    "headline": "Press Release",
-    "date": "16-May-2026 17:51:18",
-    "url": "https://nsearchives.nseindia.com/corporate/VALIANTORG_16052026175108_Press_Release.pdf",
-    "summary": "Valiant Organics Limited's Board has approved exploring restructuring options among the company, its subsidiaries, and associates to achieve operational and strategic synergies. The potential restructuring may involve mergers, demergers, or reorganizations aimed at simplifying the holding structure and unlocking long-term shareholder value. Further evaluations will be conducted before any final decisions are made.",
-    "saved_at": "2026-05-16T12:46:22.213800"
-  },
-  {
     "id": "NSE_106626717",
     "source": "NSE",
     "company": "Gujarat Gas Limited",
@@ -1329,5 +1307,60 @@
     "url": "https://nsearchives.nseindia.com/corporate/GRINFRA_15062026125927_GRIL_Appointed_date15062026.pdf",
     "summary": "G R Infraprojects Limited has received a letter from West Central Railway declaring the appointed date of June 15, 2026, for a new railway line project between Bahari and Gondawali stations in Madhya Pradesh. The Engineering, Procurement, and Construction (EPC) project, valued at \u20b91,897.51 crore (including GST), has a completion period of 900 days. The scope includes earthwork, bridges, viaducts, tunnels, station buildings, and track work as part of the Sidhi-Singrauli rail link.",
     "saved_at": "2026-06-15T07:39:20.452744"
+  },
+  {
+    "id": "NSE_106663533",
+    "source": "NSE",
+    "company": "Devyani International Limited",
+    "scrip": "DEVYANI",
+    "headline": "Scheme of Arrangement",
+    "date": "15-Jun-2026 17:44:11",
+    "url": "https://nsearchives.nseindia.com/corporate/DEVYANI_15062026174347_SE_Intimation_-_ObserationLetter_merged_DSC.pdf",
+    "summary": "Devyani International Limited has received \"no objection\" letters from NSE and BSE regarding its proposed Scheme of Arrangement with Sapphire Foods India Limited. The stock exchanges have outlined several compliance conditions, including obtaining CCI approval, disclosing ongoing legal proceedings, and ensuring shares are issued in demat form. The scheme remains subject to final statutory, regulatory, and shareholder approvals.",
+    "saved_at": "2026-06-15T13:41:26.582506"
+  },
+  {
+    "id": "NSE_106663325",
+    "source": "NSE",
+    "company": "Apollo Hospitals Enterprise Limited",
+    "scrip": "APOLLOHOSP",
+    "headline": "Scheme of Arrangement",
+    "date": "15-Jun-2026 14:45:48",
+    "url": "https://nsearchives.nseindia.com/corporate/APOLLOHOSP_15062026144530_SE_let_addl_info_scheme.pdf",
+    "summary": "Apollo Hospitals Enterprise Limited has issued additional information to shareholders and creditors regarding its proposed Scheme of Arrangement, which involves the separation and independent listing of Apollo Healthtech Limited. The document clarifies the governance framework for Apollo Healthtech, including board composition and nomination rights, the proposed appointment of Ms. Shobana Kamineni as Executive Chairperson, and the rationale behind the Upside Agreement. This information is intended to help stakeholders better understand the Scheme before voting on it in NCLT-convened meetings.",
+    "saved_at": "2026-06-15T13:41:28.623969"
+  },
+  {
+    "id": "NSE_106663307",
+    "source": "NSE",
+    "company": "Supreme Infrastructure India Limited",
+    "scrip": "SUPREMEINF",
+    "headline": "Scheme of Arrangement",
+    "date": "15-Jun-2026 14:15:48",
+    "url": "https://nsearchives.nseindia.com/corporate/SUPREMEINF_15062026141510_Disclosure_Under_Regulation_30.pdf",
+    "summary": "Supreme Infrastructure India Limited announced that, following a court-appointed commissioner\u2019s recommendation, its remaining three lenders have agreed in principle to a 60-day extension to complete the remaining obligations under its NCLT-approved Scheme of Arrangement. The company has already made substantial payments and demonstrated the availability of funds for the settlement. It remains committed to fully implementing the scheme and will update stock exchanges on further developments.",
+    "saved_at": "2026-06-15T13:41:30.496512"
+  },
+  {
+    "id": "NSE_106663306",
+    "source": "NSE",
+    "company": "Mcnally Bharat Engineering Company Limited",
+    "scrip": "MBECL",
+    "headline": "Updates",
+    "date": "15-Jun-2026 14:13:59",
+    "url": "https://nsearchives.nseindia.com/corporate/MBECL_SEC_15062026141332_Disclosure15062026.pdf",
+    "summary": "McNally Bharat Engineering Company announced that the NCLT has dismissed its application under the Insolvency and Bankruptcy Code, directing the company to immediately comply with Clause 5.5.2.2 of its Resolution Plan. The tribunal also ordered the respondent banks to remove the company\u2019s NPA status and provide a No Objection Certificate within one week. The company has applied for a certified copy of the order.",
+    "saved_at": "2026-06-15T13:41:31.993238"
+  },
+  {
+    "id": "NSESME_106663625",
+    "source": "NSE-SME",
+    "company": "Master Components Limited",
+    "scrip": "MASTER",
+    "headline": "Updates",
+    "date": "15-Jun-2026 18:38:59",
+    "url": "https://nsearchives.nseindia.com/corporate/MCL2023_15062026183823_MCL_Reporting_of_NCLT_order.pdf",
+    "summary": "Master Components Limited announced that the National Company Law Tribunal (NCLT), Mumbai Bench, has dispensed with the meetings of equity shareholders and unsecured creditors of Master Moulds Private Limited, as well as secured creditors of Master Components, as part of the Scheme of Amalgamation between the two companies. The NCLT has directed that notices be served to regulatory authorities and published in newspapers, with the scheme still subject to other regulatory approvals. The company has uploaded the NCLT order and scheme details on its website for reference.",
+    "saved_at": "2026-06-15T13:41:33.832550"
   }
 ]
