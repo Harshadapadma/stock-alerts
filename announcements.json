@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106627248",
-    "source": "NSE",
-    "company": "Lumax Auto Technologies Limited",
-    "scrip": "LUMAXTECH",
-    "headline": "General Updates",
-    "date": "18-May-2026 12:24:12",
-    "url": "https://nsearchives.nseindia.com/corporate/LUMAXTECH_18052026122257_LATLstockexchangeintimation18052026.pdf",
-    "summary": "Lumax Auto Technologies Limited has announced the effectiveness of the Scheme of Amalgamation with IAC International Automotive India Private Limited. The transferor company, IAC International, will merge into Lumax Auto Technologies, impacting their respective shareholders and creditors.",
-    "saved_at": "2026-05-18T10:46:50.180166"
-  },
-  {
-    "id": "NSE_106628443",
-    "source": "NSE",
-    "company": "Timken India Limited",
-    "scrip": "TIMKEN",
-    "headline": "Amalgamation/Merger",
-    "date": "18-May-2026 22:04:16",
-    "url": "https://nsearchives.nseindia.com/corporate/TIMKEN_18052026220351_SE_OutcomeofBoardMeeting.pdf",
-    "summary": "Timken India Limited's Board approved a Scheme of Amalgamation to merge its wholly owned subsidiary, Timken GGB Technology Private Limited, into the company, subject to shareholder, creditor, and regulatory approvals. The Board also approved audited financial results for the year ended March 31, 2026, recommended a dividend of Rs. 2.50 per share, and appointed two new Senior Management Personnel.",
-    "saved_at": "2026-05-18T17:17:57.080368"
-  },
-  {
     "id": "NSE_106629170",
     "source": "NSE",
     "company": "Triveni Engineering & Industries Limited",
@@ -1373,5 +1351,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/NIITLTD_17062026125828_SESchemeNCLTOrderCTC.pdf",
     "summary": "NIIT Limited announced that it has received the certified order from the NCLT approving the scheme of amalgamation, with an appointed date of April 1, 2026. The scheme involves the merger of NIIT Institute of Finance Banking & Insurance Training Limited and RPS Consulting Private Limited into NIIT Limited. The amalgamation will become effective once the order is filed with the Registrar of Companies, Haryana.",
     "saved_at": "2026-06-17T10:16:18.139095"
+  },
+  {
+    "id": "NSE_106665965",
+    "source": "NSE",
+    "company": "Gujarat Gas Limited",
+    "scrip": "GUJGASLTD",
+    "headline": "General Updates",
+    "date": "17-Jun-2026 19:49:50",
+    "url": "https://nsearchives.nseindia.com/corporate/GUJGASLTD_17062026194939_1582Tradingapprovalinti17062026.pdf",
+    "summary": "Gujarat Gas Limited has received final listing and trading approval for 6,22,71,47,19 equity shares. These shares were issued and allotted under a Scheme of Arrangement. The approval was confirmed in a filing with the stock exchange.",
+    "saved_at": "2026-06-17T17:21:49.413851"
   }
 ]
