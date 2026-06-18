@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106629170",
-    "source": "NSE",
-    "company": "Triveni Engineering & Industries Limited",
-    "scrip": "TRIVENI",
-    "headline": "Scheme of Arrangement",
-    "date": "19-May-2026 13:02:10",
-    "url": "https://nsearchives.nseindia.com/corporate/TRIVENI_19052026130144_TEIL_NCLT_ORDER_18_5_2026.pdf",
-    "summary": "Triveni Engineering & Industries Limited has submitted a certified copy of a Rectification Order from the NCLT, Allahabad Bench, regarding the previously sanctioned Composite Scheme of Arrangement. This filing updates the exchange on the tribunal's order to correct or modify the original scheme approval.",
-    "saved_at": "2026-05-19T08:51:00.626395"
-  },
-  {
     "id": "NSE_106629798",
     "source": "NSE",
     "company": "Lloyds Enterprises Limited",
@@ -1362,5 +1351,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/GUJGASLTD_17062026194939_1582Tradingapprovalinti17062026.pdf",
     "summary": "Gujarat Gas Limited has received final listing and trading approval for 6,22,71,47,19 equity shares. These shares were issued and allotted under a Scheme of Arrangement. The approval was confirmed in a filing with the stock exchange.",
     "saved_at": "2026-06-17T17:21:49.413851"
+  },
+  {
+    "id": "NSE_106666747",
+    "source": "NSE",
+    "company": "Dhampur Bio Organics Limited",
+    "scrip": "DBOL",
+    "headline": "General Updates",
+    "date": "18-Jun-2026 15:32:53",
+    "url": "https://nsearchives.nseindia.com/corporate/DBOLTD_18062026152128_Intimation_Completion_of_SlumpSale.pdf",
+    "summary": "Dhampur Bio Organics Limited has issued a general update confirming compliance with SEBI regulations. The company stated that the required disclosure under Regulation 30 was already provided in its earlier intimation dated April 20, 2026. No new information was shared in this announcement.",
+    "saved_at": "2026-06-18T11:01:07.974449"
   }
 ]
