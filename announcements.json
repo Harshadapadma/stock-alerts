@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106630687",
-    "source": "NSE",
-    "company": "Triveni Engineering & Industries Limited",
-    "scrip": "TRIVENI",
-    "headline": "Scheme of Arrangement",
-    "date": "20-May-2026 00:16:33",
-    "url": "https://nsearchives.nseindia.com/corporate/TRIVENI_20052026001610_TEIL_Effectiveness.pdf",
-    "summary": "Triveni Engineering & Industries Limited announced that its Composite Scheme of Arrangement involving Sir Shadi Lal Enterprises Limited and Triveni Power Transmission Limited has become effective as of May 19, 2026. The scheme was sanctioned by the NCLT Allahabad Bench and took effect after the certified orders were filed with the Registrar of Companies. This disclosure was made in compliance with SEBI regulations following prior updates on May 14 and May 19, 2026.",
-    "saved_at": "2026-05-20T00:13:31.682718"
-  },
-  {
     "id": "NSE_106631225",
     "source": "NSE",
     "company": "Strides Pharma Science Limited",
@@ -1351,5 +1340,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/GEPILDEEP_19062026003618_STX_After_sending_Notice_V1.pdf",
     "summary": "GE Power India Limited has informed the exchange about a NCLT-convened meeting for its equity shareholders and unsecured creditors, as directed by the Mumbai Bench. The meeting is being held pursuant to the Tribunal's orders. No further details on the agenda were provided in the announcement.",
     "saved_at": "2026-06-19T00:11:28.016316"
+  },
+  {
+    "id": "NSE_106667597",
+    "source": "NSE",
+    "company": "Apollo Hospitals Enterprise Limited",
+    "scrip": "APOLLOHOSP",
+    "headline": "Scheme of Arrangement",
+    "date": "19-Jun-2026 10:21:29",
+    "url": "https://nsearchives.nseindia.com/corporate/APOLLOHOSP_19062026102054_SE_Communc_19062026.pdf",
+    "summary": "Apollo Hospitals Enterprise Limited has provided additional clarifications regarding its proposed Scheme of Arrangement to separate and independently list Apollo Healthtech Limited. The promoter group has committed to waiving director nomination rights when their aggregate shareholding falls below 10%, with specific caps on nominee directors based on shareholding levels. These governance commitments will be incorporated into Apollo Healthtech\u2019s articles of association after the scheme becomes effective.",
+    "saved_at": "2026-06-19T05:29:19.211855"
   }
 ]
