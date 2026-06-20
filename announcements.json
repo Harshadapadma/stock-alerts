@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106633106",
-    "source": "NSE",
-    "company": "Somany Ceramics Limited",
-    "scrip": "SOMANYCERA",
-    "headline": "Amalgamation/Merger",
-    "date": "21-May-2026 11:46:29",
-    "url": "https://nsearchives.nseindia.com/corporate/SOMANYCERAMICS_21052026114517_Firstmotionpronouncementorder_Final_21052026_sd.pdf",
-    "summary": "Somany Ceramics Limited has received a corrigendum order from the NCLT Kolkata Bench, dated April 24, 2026, correcting typographical errors in its previous order regarding the amalgamation of Somany Bathware Limited, Somany Excel Vitrified Private Limited, and SR Continental Limited into Somany Ceramics. The correction replaces the term \"Scheme of Arrangement\" with \"Scheme of Amalgamation\" in several sections of the original order, while all other terms remain unchanged.",
-    "saved_at": "2026-05-21T09:56:09.202906"
-  },
-  {
     "id": "NSE_106634074",
     "source": "NSE",
     "company": "Kirloskar Electric Company Limited",
@@ -1340,5 +1329,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/RAMCOCEM_20062026122739_secmotpet.pdf",
     "summary": "The Ramco Cements Limited has updated that the Transferor Company filed a second motion petition with the National Company Law Tribunal, Chennai Bench, which was numbered on June 17, 2026. This follows the Tribunal's earlier approval of the first motion application on May 27, 2026, as previously communicated on June 1, 2026.",
     "saved_at": "2026-06-20T09:54:08.199806"
+  },
+  {
+    "id": "NSE_106668870",
+    "source": "NSE",
+    "company": "Balkrishna Paper Mills Limited",
+    "scrip": "BALKRISHNA",
+    "headline": "Shareholders meeting",
+    "date": "20-Jun-2026 17:30:42",
+    "url": "https://nsearchives.nseindia.com/corporate/BALKRISHNA_20062026173028_OutcomeofEGMofPreferenceShareholders19062026.pdf",
+    "summary": "Balkrishna Paper Mills Limited announced that its Preference Shareholders approved a Scheme of Reduction of Share Capital via a Special Resolution during an Extra-Ordinary General Meeting held on June 19, 2026, subject to NCLT approval. The resolution was passed unanimously with a special majority, and the company has submitted the meeting proceedings, voting results, and the scrutinizer\u2019s report as required by SEBI regulations.",
+    "saved_at": "2026-06-20T12:02:42.096269"
   }
 ]
