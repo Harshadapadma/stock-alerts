@@ -1,71 +1,5 @@
 [
   {
-    "id": "NSE_106632230",
-    "source": "NSE",
-    "company": "Utkarsh Small Finance Bank Limited",
-    "scrip": "UTKARSHBNK",
-    "headline": "General Updates",
-    "date": "20-May-2026 19:12:03",
-    "url": "https://nsearchives.nseindia.com/corporate/UTKARSHBANK_20052026191138_Intimation2ndmotionhearingdate.pdf",
-    "summary": "Utkarsh Small Finance Bank has announced that an NCLT order dated May 18, 2026, was uploaded to the tribunal\u2019s website on May 20, 2026, scheduling a joint petition hearing for July 23, 2026. The bank will comply with all directions in the order within the stipulated timelines and noted that a certified copy is still awaited.",
-    "saved_at": "2026-05-20T14:07:14.607368"
-  },
-  {
-    "id": "NSE_106632202",
-    "source": "NSE",
-    "company": "GOCL Corporation Limited",
-    "scrip": "GOCLCORP",
-    "headline": "General Updates",
-    "date": "20-May-2026 19:02:00",
-    "url": "https://nsearchives.nseindia.com/corporate/GULFCORP_20052026184024_IntimationObservationLetterfromBSESigned.pdf",
-    "summary": "GOCL Corporation Limited has received a \"no adverse observations\" letter from BSE Limited regarding its proposed scheme of merger by absorption of Hinduja National Power Corporation Limited. The scheme remains subject to approval from the NCLT, shareholders, and other regulatory authorities. BSE's letter includes several compliance conditions, such as disclosing ongoing legal proceedings and ensuring financials used in the scheme are not more than six months old.",
-    "saved_at": "2026-05-20T14:07:16.580379"
-  },
-  {
-    "id": "NSE_106632018",
-    "source": "NSE",
-    "company": "Apollo Hospitals Enterprise Limited",
-    "scrip": "APOLLOHOSP",
-    "headline": "Amalgamation/Merger",
-    "date": "20-May-2026 18:17:12",
-    "url": "https://nsearchives.nseindia.com/corporate/APOLLOHOSP_20052026181700_SE_outcome_Board_Meeting.pdf",
-    "summary": "Apollo Hospitals Enterprise Limited announced its audited financial results for the quarter and year ended March 31, 2026, with an unmodified audit opinion. The Board recommended a final dividend of \u20b910 per share and approved the re-appointment of Dr. Prathap C Reddy as Executive Chairman and Ms. Rama Bijapurkar as an Independent Director, both subject to shareholder approval at the upcoming Annual General Meeting on August 25, 2026.",
-    "saved_at": "2026-05-20T14:07:18.217870"
-  },
-  {
-    "id": "NSE_106631884",
-    "source": "NSE",
-    "company": "Bosch Limited",
-    "scrip": "BOSCHLTD",
-    "headline": "Other Restructuring",
-    "date": "20-May-2026 17:51:32",
-    "url": "https://nsearchives.nseindia.com/corporate/BOSCHLTD2025_20052026175049_L2SE20May2026.pdf",
-    "summary": "Bosch Limited's Board approved audited financial results for FY2026 with an unmodified audit opinion and recommended a final dividend of \u20b9270 per share. The Board also approved a joint venture agreement with Wheels India and Brakes India to form a new company focused on commercial vehicle air systems, with Bosch holding a 50% stake. Additionally, Dr. Pawan Kumar Goenka concluded his tenure as Independent Director, while Mr. Ramesh Ramadurai was appointed as his successor, subject to shareholder approval.",
-    "saved_at": "2026-05-20T14:07:20.300278"
-  },
-  {
-    "id": "NSE_106631791",
-    "source": "NSE",
-    "company": "Triveni Engineering & Industries Limited",
-    "scrip": "TRIVENI",
-    "headline": "General Updates",
-    "date": "20-May-2026 17:30:30",
-    "url": "https://nsearchives.nseindia.com/corporate/TRIVENI_20052026173021_RECORD_DATE_SSEL_3_JUNE_2026.pdf",
-    "summary": "Triveni Engineering & Industries Limited has issued a general update regarding compliance with Sections 230 to 232 of the Companies Act, 2013, pertaining to a scheme of arrangement. The announcement confirms the company's adherence to legal procedures under the Act for the proposed scheme. No further details on the scheme's specifics were provided.",
-    "saved_at": "2026-05-20T14:07:22.278716"
-  },
-  {
-    "id": "NSE_106631779",
-    "source": "NSE",
-    "company": "Triveni Engineering & Industries Limited",
-    "scrip": "TRIVENI",
-    "headline": "Scheme of Arrangement",
-    "date": "20-May-2026 17:27:21",
-    "url": "https://nsearchives.nseindia.com/corporate/TRIVENI_20052026172713_RECORD_DATE_SSEL_3_JUNE_2026.pdf",
-    "summary": "Triveni Engineering & Industries Limited has announced a Scheme of Arrangement under Sections 230-232 of the Companies Act, 2013. The scheme involves a corporate restructuring process as per legal provisions. Further details are expected to follow regulatory approvals and filings.",
-    "saved_at": "2026-05-20T14:07:24.173284"
-  },
-  {
     "id": "NSE_106633106",
     "source": "NSE",
     "company": "Somany Ceramics Limited",
@@ -1351,5 +1285,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/KRUTIKAJSWEL_19062026153401_LettertoBSENSEnewspaperpublicationClean.pdf",
     "summary": "JSW Energy has issued a newspaper notice regarding NCLT-convened meetings of its equity shareholders and unsecured creditors. These meetings will seek approval for a proposed scheme of arrangement involving the demerger of GE Power India Limited into JSW Energy. The process is being conducted under Sections 230-232 of the Companies Act, 2013.",
     "saved_at": "2026-06-19T13:49:02.404937"
+  },
+  {
+    "id": "NSE_106668659",
+    "source": "NSE",
+    "company": "Dollar Industries Limited",
+    "scrip": "DOLLAR",
+    "headline": "Copy of Newspaper Publication",
+    "date": "20-Jun-2026 12:10:11",
+    "url": "https://nsearchives.nseindia.com/corporate/DOLLAR_20062026120952_Newspaper_Publication.pdf",
+    "summary": "Dollar Industries Limited has informed the stock exchange about a newspaper publication regarding meetings of equity shareholders and unsecured creditors. These meetings are being held to consider a Composite Scheme of Arrangement. The notice serves as formal communication of the scheduled meetings.",
+    "saved_at": "2026-06-20T06:41:32.095925"
   }
 ]
