@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106639234",
-    "source": "NSE",
-    "company": "Apollo Hospitals Enterprise Limited",
-    "scrip": "APOLLOHOSP",
-    "headline": "Scheme of Arrangement",
-    "date": "25-May-2026 16:25:43",
-    "url": "https://nsearchives.nseindia.com/corporate/APOLLOHOSP_25052026162532_Se_let_advt_intimation.pdf",
-    "summary": "Apollo Hospitals Enterprise Limited has announced that notices for NCLT-convened meetings of its secured creditors, unsecured creditors, and equity shareholders, scheduled for June 24, 2026, were published in newspapers on May 23, 2026. These meetings are part of a composite scheme of arrangement involving Apollo Hospitals and related entities. The company provided copies of the newspaper publications for reference.",
-    "saved_at": "2026-05-25T10:59:54.133065"
-  },
-  {
     "id": "NSE_106640178",
     "source": "NSE",
     "company": "AYM Syntex Limited",
@@ -1208,5 +1197,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/KITEX_23062026185752_KGL_Newspaper_publications.pdf",
     "summary": "Kitex Garments Limited has informed the exchange of a newspaper publication regarding notices for meetings of equity shareholders and unsecured creditors. These meetings are being convened to consider a Scheme of Arrangement between Kitex Childrenswear Ltd and Kitex Garments Ltd, along with their respective shareholders and creditors.",
     "saved_at": "2026-06-23T15:41:27.251971"
+  },
+  {
+    "id": "NSE_106672742",
+    "source": "NSE",
+    "company": "Aster DM Healthcare Limited",
+    "scrip": "ASTERDM",
+    "headline": "General Updates",
+    "date": "24-Jun-2026 16:38:53",
+    "url": "https://nsearchives.nseindia.com/corporate/ASTERDM2_24062026163557_Intimation_CTC.pdf",
+    "summary": "Aster DM Healthcare Limited has received the certified copy of the NCLT order approving the amalgamation of Quality Care India Limited into Aster DM. The scheme will become effective once filed with the Registrar of Companies, after which QCIL will be dissolved. The company will announce the effective date to stock exchanges in due course.",
+    "saved_at": "2026-06-24T12:11:29.423005"
+  },
+  {
+    "id": "NSE_106672731",
+    "source": "NSE",
+    "company": "Kansai Nerolac Paints Limited",
+    "scrip": "KANSAINER",
+    "headline": "Copy of Newspaper Publication",
+    "date": "24-Jun-2026 16:34:43",
+    "url": "https://nsearchives.nseindia.com/corporate/KANSAINER_24062026163400_FinalSEIntimation_-_Newspaper_Publication_-_GTSigned.pdf",
+    "summary": "Kansai Nerolac Paints Limited has published a notice in newspapers regarding a hearing for the scheme of amalgamation with Nerofix Private Limited, scheduled before the NCLT Mumbai Bench on July 29, 2026. The announcement was made in compliance with SEBI regulations and appeared in the Free Press Journal (English) and Navshakti (Marathi) on June 24, 2026.",
+    "saved_at": "2026-06-24T12:11:31.367962"
   }
 ]
