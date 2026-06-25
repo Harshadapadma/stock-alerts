@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106642218",
-    "source": "NSE",
-    "company": "Landmark Cars Limited",
-    "scrip": "LANDMARK",
-    "headline": "Amalgamation/Merger",
-    "date": "26-May-2026 20:23:16",
-    "url": "https://nsearchives.nseindia.com/corporate/LANDMARK_26052026202309_OutcomeOFBoardMeeting26052026.pdf",
-    "summary": "Landmark Cars Limited has announced the approval of a scheme to amalgamate its wholly owned subsidiary, Landmark Cars (East) Private Limited, into itself. The merger, involving shareholders and creditors, has been filed under Sections 230 and 233 of the Companies Act, 2013.",
-    "saved_at": "2026-05-26T16:56:45.110406"
-  },
-  {
-    "id": "NSE_106642063",
-    "source": "NSE",
-    "company": "Piramal Finance Limited",
-    "scrip": "PIRAMALFIN",
-    "headline": "Amalgamation/Merger",
-    "date": "26-May-2026 19:23:57",
-    "url": "https://nsearchives.nseindia.com/corporate/Piramalcapital_26052026191730_PFL_Intimation_26052026_sd_2.pdf",
-    "summary": "Piramal Finance Limited has received an NCLAT order allowing it to skip convening an equity shareholders' meeting for its proposed amalgamation with Piramal Corporate Tower Private Limited, Piramal Agastya Offices Private Limited, and DHFL Investments Limited. The order grants dispensation from this procedural requirement for the merger scheme.",
-    "saved_at": "2026-05-26T16:56:46.805018"
-  },
-  {
     "id": "NSE_106644552",
     "source": "NSE",
     "company": "Cello World Limited",
@@ -1252,5 +1230,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/RPSGVENT_25062026184250_Outcome_RVL_25062026.pdf",
     "summary": "RPSG Ventures Limited's Board approved the acquisition of 100% equity in Clarionix Healthcare Private Limited, making it a wholly-owned subsidiary effective June 25, 2026. The Board also approved a composite scheme of arrangement involving the amalgamation of Woodlands Multispeciality Hospital Limited with RPSG Ventures and the transfer of its hospital business to Clarionix via a slump sale. The scheme is subject to approvals from the NCLT, stock exchanges, SEBI, and shareholders.",
     "saved_at": "2026-06-25T15:30:22.923797"
+  },
+  {
+    "id": "NSE_106676183",
+    "source": "NSE",
+    "company": "Gujarat Gas Limited",
+    "scrip": "GUJGASLTD",
+    "headline": "General Updates",
+    "date": "25-Jun-2026 23:44:34",
+    "url": "https://nsearchives.nseindia.com/corporate/GUJGASLTD_25062026234408_1586SECRECORDDATE3EMAIL.pdf",
+    "summary": "Gujarat Gas Limited has informed the stock exchange about an email sent to shareholders regarding Record Date 3 under its Scheme of Arrangement. The communication provides updates on the record date for the arrangement. This announcement serves as a general update to keep shareholders informed.",
+    "saved_at": "2026-06-25T19:30:42.738086"
   }
 ]
