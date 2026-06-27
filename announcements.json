@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106644552",
-    "source": "NSE",
-    "company": "Cello World Limited",
-    "scrip": "CELLO",
-    "headline": "Amalgamation/Merger",
-    "date": "27-May-2026 22:53:03",
-    "url": "https://nsearchives.nseindia.com/corporate/CELLO2023_27052026225115_BMOutcome.pdf",
-    "summary": "Based on the announcement, Cello World Limited confirmed that it has no outstanding qualified borrowings for the fiscal year ending March 31, 2026, making the related SEBI disclosure requirements inapplicable. The company also reported no deviation in the utilization of the \u20b9738 Crores raised via a Qualified Institutional Placement in July 2024, with funds used as originally intended for subsidiary investments, debt repayment, and working capital.",
-    "saved_at": "2026-05-27T18:33:08.799212"
-  },
-  {
     "id": "NSE_106645931",
     "source": "NSE",
     "company": "Ruchi Infrastructure Limited",
@@ -1296,5 +1285,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/APOLLOPIPE_26062026141731_merger.pdf",
     "summary": "Apollo Pipes Limited has approved a two-step Scheme of Arrangement to amalgamate its wholly-owned subsidiary, KML Tradelinks Private Limited, into Kisan Mouldings Limited (KML), followed by the amalgamation of KML into Apollo Pipes. The scheme, effective from April 1, 2026, involves the cancellation of intercompany shareholdings and the issuance of Apollo Pipes shares to KML\u2019s shareholders based on a prescribed exchange ratio. The merger is subject to approvals from shareholders, creditors, stock exchanges, SEBI, and the National Company Law Tribunal.",
     "saved_at": "2026-06-26T11:25:55.379912"
+  },
+  {
+    "id": "NSE_106678244",
+    "source": "NSE",
+    "company": "Digjam Limited",
+    "scrip": "DIGJAMLMTD",
+    "headline": "Amalgamation/Merger",
+    "date": "27-Jun-2026 12:24:33",
+    "url": "https://nsearchives.nseindia.com/corporate/DIGJAMLMTD_27062026122423_Intimation_of_NCLT_order.pdf",
+    "summary": "Digjam Limited announced that the National Company Law Tribunal, Chennai Bench, has issued an order regarding the proposed Scheme of Arrangement between Reid & Taylor International Private Limited (demerged company) and Digjam Limited (resulting company). The scheme involves the amalgamation or merger of the two entities.",
+    "saved_at": "2026-06-27T07:37:35.867361"
+  },
+  {
+    "id": "NSE_106678240",
+    "source": "NSE",
+    "company": "Digjam Limited",
+    "scrip": "DIGJAMLMTD",
+    "headline": "General Updates",
+    "date": "27-Jun-2026 12:23:05",
+    "url": "https://nsearchives.nseindia.com/corporate/DIGJAMLMTD_27062026122245_Intimation_of_NCLT_order.pdf",
+    "summary": "Digjam Limited has informed the Exchange of an order from the National Company Law Tribunal, Chennai Bench, regarding the proposed Scheme of Arrangement between Reid & Taylor International Private Limited (Demerged Company) and Digjam Limited (Resulting Company) and its shareholders. The announcement provides a general update on the tribunal's proceedings related to this scheme.",
+    "saved_at": "2026-06-27T07:37:37.271249"
   }
 ]
