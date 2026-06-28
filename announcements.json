@@ -1,49 +1,5 @@
 [
   {
-    "id": "NSE_106645931",
-    "source": "NSE",
-    "company": "Ruchi Infrastructure Limited",
-    "scrip": "RUCHINFRA",
-    "headline": "Amalgamation/Merger",
-    "date": "28-May-2026 19:33:49",
-    "url": "https://nsearchives.nseindia.com/corporate/RUCHINFRA_28052026193324_Schemeapproval28052026.pdf",
-    "summary": "Ruchi Infrastructure Limited's Board has approved a composite scheme to amalgamate Lennox Investment Pvt. Ltd. and Multiacre Investment Services Pvt. Ltd. into the company. The two investment companies being merged have no turnover and combined paid-up capital of \u20b97.74 crore, while Ruchi Infrastructure has a turnover of \u20b961.18 crore. The company will now seek necessary approvals from stock exchanges and regulatory authorities to proceed with the merger.",
-    "saved_at": "2026-05-28T16:16:41.381283"
-  },
-  {
-    "id": "NSE_106645809",
-    "source": "NSE",
-    "company": "Elgi Rubber Company Limited",
-    "scrip": "ELGIRUBCO",
-    "headline": "Other Restructuring",
-    "date": "28-May-2026 19:01:56",
-    "url": "https://nsearchives.nseindia.com/corporate/ELGIRUBCO_28052026190143_NSE_BM_OUTCOME_28052026.pdf",
-    "summary": "Elgi Rubber Company Limited's Board approved reversing Rs. 16.43 million in interest receivable from its overseas subsidiaries for the March 2026 quarter. The Board also approved the audited financial results for the quarter and year ended March 31, 2026, and reappointed the company's cost auditor, internal auditors, and Chairman & Managing Director.",
-    "saved_at": "2026-05-28T16:16:43.895498"
-  },
-  {
-    "id": "NSE_106648216",
-    "source": "NSE",
-    "company": "Tilaknagar Industries Limited",
-    "scrip": "TI",
-    "headline": "Amalgamation/Merger",
-    "date": "29-May-2026 20:49:22",
-    "url": "https://nsearchives.nseindia.com/corporate/gthakur_29052026204900_TIMergerintimationMay2026.pdf",
-    "summary": "Tilaknagar Industries Limited's Board has approved a Scheme of Amalgamation to merge its two wholly owned subsidiaries, Punjabexpo Breweries Private Limited and Vahni Distilleries Private Limited, into the parent company. The merger is subject to obtaining necessary approvals and consents as per the Companies Act, 2013.",
-    "saved_at": "2026-05-29T15:59:26.696536"
-  },
-  {
-    "id": "NSE_106648079",
-    "source": "NSE",
-    "company": "Balkrishna Paper Mills Limited",
-    "scrip": "BALKRISHNA",
-    "headline": "Shareholders meeting",
-    "date": "29-May-2026 20:13:19",
-    "url": "https://nsearchives.nseindia.com/corporate/BALKRISHNA_29052026201303_PostalBallotNotice.pdf",
-    "summary": "Balkrishna Paper Mills Limited has announced that its Board approved a Postal Ballot Notice on April 10, 2026, seeking shareholder approval for resolutions via remote e-voting. The cut-off date for eligibility is May 22, 2026, with e-voting open from June 3 to July 2, 2026, and results to be declared by July 4, 2026. The notice and related documents are available on the company\u2019s website and NSDL\u2019s e-voting platform.",
-    "saved_at": "2026-05-29T15:59:28.527550"
-  },
-  {
     "id": "NSE_106649825",
     "source": "NSE",
     "company": "Rama Steel Tubes Limited",
@@ -1340,5 +1296,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/VMSTMTLTD_27062026195423_Press_Release.pdf",
     "summary": "VMS TMT Limited issued a press release to comply with applicable legal requirements. For additional details, stakeholders can contact Corporate Communication Advisor Ms. Pooja Gandhi at EquiBridgex Advisors Private Limited via email or website.",
     "saved_at": "2026-06-27T14:52:12.853757"
+  },
+  {
+    "id": "NSE_106678772",
+    "source": "NSE",
+    "company": "Power Finance Corporation Limited",
+    "scrip": "PFC",
+    "headline": "Amalgamation/Merger",
+    "date": "28-Jun-2026 23:17:24",
+    "url": "https://nsearchives.nseindia.com/corporate/PFC2023_28062026231625_INTIMATION28062026SIGNEDPFC.pdf",
+    "summary": "Power Finance Corporation Limited (PFC) has approved a scheme to merge REC Limited into itself, with REC shareholders receiving 88 PFC shares for every 100 REC shares. The merger will dissolve REC without winding up, subject to necessary regulatory approvals.",
+    "saved_at": "2026-06-28T18:55:44.664371"
   }
 ]
