@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106649825",
-    "source": "NSE",
-    "company": "Rama Steel Tubes Limited",
-    "scrip": "RAMASTEEL",
-    "headline": "Other Restructuring",
-    "date": "30-May-2026 19:21:23",
-    "url": "https://nsearchives.nseindia.com/corporate/RAMASTEEL_30052026191850_SignedOutcomeofBoardMeeting30052026.pdf",
-    "summary": "Rama Steel Tubes Limited announced that its Board approved audited financial results for the quarter and year ended March 31, 2026, with an unmodified audit opinion. The Board also approved the appointment of Mr. Sumit Sharma as Internal Auditor for FY 2026-27, the strike-off of its inactive wholly owned subsidiary Rama Defence Private Limited, and a change in the company\u2019s registered and corporate office addresses.",
-    "saved_at": "2026-05-30T14:10:12.613963"
-  },
-  {
-    "id": "NSE_106650139",
-    "source": "NSE",
-    "company": "Bajaj Auto Limited",
-    "scrip": "BAJAJ-AUTO",
-    "headline": "Change in Management",
-    "date": "30-May-2026 22:43:59",
-    "url": "https://nsearchives.nseindia.com/corporate/lkwalimbe_bajajauto_co_in_30052026224334_SE_Intimation_SMP.pdf",
-    "summary": "Bajaj Auto Limited announced that Ms. Baminee Viswanat (now Chief Legal Officer) and Mr. Vijay Jerome (Chief Digital & Information Officer) will no longer be part of senior management due to an organisational restructuring. The change, effective from 1 June 2026, follows a shift in their reporting structure as defined under Listing Regulations.",
-    "saved_at": "2026-05-30T17:52:05.676468"
-  },
-  {
     "id": "NSE_106650806",
     "source": "NSE",
     "company": "Dr. Agarwal's Health Care Limited",
@@ -1340,5 +1318,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/MCL2023_29062026183409_Intimation_of_UC_meeting_Sd.pdf",
     "summary": "Following the NCLT's June 12, 2026 order, Master Components Limited has scheduled a meeting of its Unsecured Creditors for August 3, 2026, at 4:00 PM via video conferencing to consider and vote on a proposed Scheme. The company has issued a formal notice for the meeting, with remote e-voting available from July 31 to August 3, 2026, and has made the relevant documents accessible on its website and through NSDL.",
     "saved_at": "2026-06-29T13:49:20.480591"
+  },
+  {
+    "id": "NSE_106681288",
+    "source": "NSE",
+    "company": "Autoline Industries Limited",
+    "scrip": "AUTOIND",
+    "headline": "Amalgamation/Merger",
+    "date": "30-Jun-2026 15:10:24",
+    "url": "https://nsearchives.nseindia.com/corporate/AUTOIND_30062026151001_AIL_ADSL_Merger.pdf",
+    "summary": "Autoline Industries Limited has approved a scheme to amalgamate its subsidiary, Autoline Design Software Limited, into itself. Following feedback from statutory auditors, the company amended Clause 7 of the scheme to align accounting treatment with Ind AS 103 for common control business combinations. The amendments are purely accounting-related and do not alter the commercial terms, valuation, or structure of the merger.",
+    "saved_at": "2026-06-30T09:55:40.315706"
+  },
+  {
+    "id": "NSE_106681079",
+    "source": "NSE",
+    "company": "MM Forgings Limited",
+    "scrip": "MMFL",
+    "headline": "Amalgamation/Merger",
+    "date": "30-Jun-2026 13:12:16",
+    "url": "https://nsearchives.nseindia.com/corporate/MMFL_30062026131156_MMFL_Order_Pronouncement.pdf",
+    "summary": "MM Forgings Limited announced that the National Company Law Tribunal (NCLT), Chennai Bench, has approved the scheme of amalgamation of its wholly owned subsidiary, DVS Industries Private Limited, with the company. The order was pronounced on June 19, 2026, and uploaded on the NCLT website on June 29, 2026. The scheme will take effect once certified copies are filed with the Registrar of Companies, after which the subsidiary will be dissolved.",
+    "saved_at": "2026-06-30T09:55:42.302473"
   }
 ]
