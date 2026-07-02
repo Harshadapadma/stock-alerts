@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106652456",
-    "source": "NSE",
-    "company": "United Foodbrands Limited",
-    "scrip": "UFBL",
-    "headline": "General Updates",
-    "date": "02-Jun-2026 15:52:01",
-    "url": "https://nsearchives.nseindia.com/corporate/BARBEQUE_02062026155043_SEIntimationUpdateOnAmalgamationRABP.pdf",
-    "summary": "United Foodbrands Limited has provided an update to the Exchange regarding the Scheme of Amalgamation involving its subsidiaries, Blue Planet Foods Private Limited and Red Apple Kitchen Consultancy Private Limited. The announcement pertains to the ongoing merger process between these two subsidiary entities.",
-    "saved_at": "2026-06-02T11:23:40.312959"
-  },
-  {
-    "id": "NSESME_106652346",
-    "source": "NSE-SME",
-    "company": "CMM Infraprojects Limited",
-    "scrip": "CMMIPL",
-    "headline": "General Updates",
-    "date": "02-Jun-2026 13:19:31",
-    "url": "https://nsearchives.nseindia.com/corporate/CMMIPL_02062026131826_CMM_Intimation_of_outcome_of_IA_filed_with_the_NCLT_02062026.pdf",
-    "summary": "CMM Infraprojects Limited has informed the stock exchange of an update regarding an Interim Application filed with the Hon'ble NCLT, Indore Bench. The announcement pertains to general updates in the ongoing legal proceedings. No further details on the nature or outcome of the application were provided.",
-    "saved_at": "2026-06-02T11:23:41.510772"
-  },
-  {
     "id": "NSE_106652865",
     "source": "NSE",
     "company": "Kalpataru Limited",
@@ -1373,5 +1351,38 @@
     "url": "https://nsearchives.nseindia.com/corporate/ASTERDM2_02072026133737_SE.pdf",
     "summary": "Aster DM Healthcare Limited announced the successful completion of its merger with Quality Care India Limited. The update was communicated to the exchange via a press release dated July 2, 2026.",
     "saved_at": "2026-07-02T09:30:23.289134"
+  },
+  {
+    "id": "NSE_106684597",
+    "source": "NSE",
+    "company": "Lenskart Solutions Limited",
+    "scrip": "LENSKART",
+    "headline": "Amalgamation/Merger",
+    "date": "02-Jul-2026 16:34:14",
+    "url": "https://nsearchives.nseindia.com/corporate/LENSKART_02072026163151_Outcome_Intimation_-_BM_dated_02072026_signed.pdf",
+    "summary": "Lenskart Solutions Limited announced the approval of a scheme to amalgamate its two wholly-owned subsidiaries, Dealskart Online Services Private Limited and Lenskart Eyetech Private Limited, into itself. The merger involves the consolidation of the subsidiaries' shareholders and creditors into the parent company.",
+    "saved_at": "2026-07-02T11:55:25.174431"
+  },
+  {
+    "id": "NSE_106684488",
+    "source": "NSE",
+    "company": "HEG Limited",
+    "scrip": "HEG",
+    "headline": "General Updates",
+    "date": "02-Jul-2026 15:28:34",
+    "url": "https://nsearchives.nseindia.com/corporate/HEG_02072026152733_Stxintimation_02072026S.pdf",
+    "summary": "HEG Limited announced that the Hon'ble NCLT, Indore Bench, has reserved its order on the company's scheme petition during a hearing on July 2, 2026. The company will inform the stock exchanges once the order is pronounced and uploaded on the NCLT website.",
+    "saved_at": "2026-07-02T11:55:26.471947"
+  },
+  {
+    "id": "NSE_106684465",
+    "source": "NSE",
+    "company": "BASF India Limited",
+    "scrip": "BASF",
+    "headline": "Shareholders meeting",
+    "date": "02-Jul-2026 15:06:34",
+    "url": "https://nsearchives.nseindia.com/corporate/BASFIL_02072026150459_TranscriptSEletter.pdf",
+    "summary": "BASF India Limited held a shareholders meeting to discuss a demerger scheme, where Managing Director Alexander Gerding highlighted the company's commitment to sustainable agriculture and farmer safety. The company reported strong business performance with agricultural solutions sales of INR 1,944 crores and a profit before tax of INR 254 crores in 2025-2026, driven by 12 new product launches since 2022. Shareholders were informed that inspection documents are available electronically upon request to the Company Secretary.",
+    "saved_at": "2026-07-02T11:55:28.187978"
   }
 ]
