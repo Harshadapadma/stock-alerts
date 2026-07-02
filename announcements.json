@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106651467",
-    "source": "NSE",
-    "company": "Dr. Agarwal's Health Care Limited",
-    "scrip": "AGARWALEYE",
-    "headline": "Copy of Newspaper Publication",
-    "date": "01-Jun-2026 18:46:40",
-    "url": "https://nsearchives.nseindia.com/corporate/DRAGARWALS_01062026184627_AHCL_Newspaper_Advt_sd.pdf",
-    "summary": "Dr. Agarwal's Health Care Limited has informed the stock exchange about a newspaper publication regarding the NCLT-convened meetings. The joint advertisement covers meetings for the company's equity shareholders, secured creditors, and unsecured creditors.",
-    "saved_at": "2026-06-01T19:01:21.146065"
-  },
-  {
     "id": "NSE_106652456",
     "source": "NSE",
     "company": "United Foodbrands Limited",
@@ -1373,5 +1362,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/UTKARSHBANK_01072026220043_NewspaperIntimationwithpaper__1_.pdf",
     "summary": "Utkarsh Small Finance Bank Limited has published a newspaper notice regarding the hearing of a petition related to its proposed merger with Utkarsh CoreInvest Limited. The announcement informs the exchange of this regulatory update.",
     "saved_at": "2026-07-01T16:33:54.362108"
+  },
+  {
+    "id": "NSE_106684404",
+    "source": "NSE",
+    "company": "Aster DM Healthcare Limited",
+    "scrip": "ASTERDM",
+    "headline": "Press Release",
+    "date": "02-Jul-2026 13:37:53",
+    "url": "https://nsearchives.nseindia.com/corporate/ASTERDM2_02072026133737_SE.pdf",
+    "summary": "Aster DM Healthcare Limited announced the successful completion of its merger with Quality Care India Limited. The update was communicated to the exchange via a press release dated July 2, 2026.",
+    "saved_at": "2026-07-02T09:30:23.289134"
   }
 ]
