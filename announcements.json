@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106652865",
-    "source": "NSE",
-    "company": "Kalpataru Limited",
-    "scrip": "KALPATARU",
-    "headline": "General Updates",
-    "date": "02-Jun-2026 20:27:06",
-    "url": "https://nsearchives.nseindia.com/corporate/IMREVATINAIR_02062026202645_KL_Withdrawal_of_Scheme_of_Arrangement_Magnus__003_.pdf",
-    "summary": "Kalpataru Limited has withdrawn the proposed Scheme of Arrangement to demerge its wholly owned subsidiary, Kalpataru Properties Limited, into the parent company. The decision effectively cancels the previously announced restructuring plan involving the transfer of the demerged undertaking.",
-    "saved_at": "2026-06-02T15:43:41.717903"
-  },
-  {
     "id": "NSE_106653398",
     "source": "NSE",
     "company": "Thermax Limited",
@@ -1417,5 +1406,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/GSP123_02072026175958_OutcomeBM02072026.pdf",
     "summary": "GSP Crop Science Limited's board has approved a scheme of arrangement to merge its wholly-owned subsidiaries, Rajdhani Petrochemicals Private Limited and GSP Intermediates Private Limited, into itself, effective April 1, 2026. Under the scheme, all assets and liabilities of the subsidiaries will be transferred at carrying value, with no new shares issued since GSP already holds their entire share capital. The transaction is a related-party deal but is exempt from certain compliance requirements under SEBI and company law regulations.",
     "saved_at": "2026-07-02T14:20:57.843077"
+  },
+  {
+    "id": "NSE_106684958",
+    "source": "NSE",
+    "company": "Dr. Agarwal's Health Care Limited",
+    "scrip": "AGARWALEYE",
+    "headline": "Shareholders meeting",
+    "date": "02-Jul-2026 21:06:14",
+    "url": "https://nsearchives.nseindia.com/corporate/DRAGARWALS_02072026210602_C__AHCL_PROCEEDINGS_EQUITY_Final_sd.pdf",
+    "summary": "Dr. Agarwal's Health Care Limited held a shareholder meeting on July 2, 2026, convened by the NCLT to approve a Scheme of Amalgamation with Dr. Agarwal's Eye Hospital Limited. The meeting, chaired by Shri L N Gupta, had 47 shareholders present and achieved the required quorum. The resolution to approve the amalgamation scheme was duly transacted by the equity shareholders.",
+    "saved_at": "2026-07-02T16:20:45.798607"
   }
 ]
