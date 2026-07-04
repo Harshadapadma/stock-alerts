@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106654146",
-    "source": "NSE",
-    "company": "HFCL Limited",
-    "scrip": "HFCL",
-    "headline": "Agreements",
-    "date": "03-Jun-2026 20:54:19",
-    "url": "https://nsearchives.nseindia.com/corporate/AHMED_03062026205319_HFCL_Stock_Exchange_Announcement_03062026.pdf",
-    "summary": "HFCL Limited's board approved a \u20b989.25 crore investment in its wholly-owned subsidiary HFCL Advance Systems Private Limited (HASPL) via a share subscription agreement, alongside executing a shareholders' agreement to govern HASPL's management. The board also approved the sale of up to 80% of Raddef Private Limited to HASPL for \u20b975 crore, the transfer of HFCL's thermal weapon sight business to HASPL for \u20b950 crore on a slump sale basis, and HASPL's acquisition of 100% of HFCL Defence Systems Private Limited for \u20b925 crore.",
-    "saved_at": "2026-06-03T18:59:02.423540"
-  },
-  {
-    "id": "NSE_106654337",
-    "source": "NSE",
-    "company": "Coforge Limited",
-    "scrip": "COFORGE",
-    "headline": "Allotment of Securities",
-    "date": "04-Jun-2026 00:19:11",
-    "url": "https://nsearchives.nseindia.com/corporate/COFORGE_04062026001858_Allotment_Intimation.pdf",
-    "summary": "Coforge Limited has allotted 1,26,71,602 equity shares to eligible shareholders of Cigniti Technologies Limited as part of their amalgamation scheme, using a 1:1 share exchange ratio. This allotment increases Coforge\u2019s total paid-up share capital to over 44.26 crore shares, amounting to \u20b988.53 crore. The company is now completing formalities to list these new shares on stock exchanges.",
-    "saved_at": "2026-06-04T04:59:50.914658"
-  },
-  {
     "id": "NSE_106655228",
     "source": "NSE",
     "company": "ACC Limited",
@@ -1483,5 +1461,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/INDIAGLYCO_03072026194503_SE_Intimation_NCLT_Order.pdf",
     "summary": "India Glycols Limited has informed the exchanges that the National Company Law Tribunal (NCLT), Allahabad Bench, has reserved its order on the company\u2019s proposed demerger scheme involving Ennature Bio pharma Limited and IGL Spirits Limited. The NCLT heard arguments regarding an outstanding income tax demand of \u20b927,890, with the company asserting the amount was already paid in 2023 and providing an undertaking to address any post-sanction demands. The final pronouncement on the scheme is now pending.",
     "saved_at": "2026-07-03T15:30:34.433245"
+  },
+  {
+    "id": "NSE_106686572",
+    "source": "NSE",
+    "company": "Belrise Industries Limited",
+    "scrip": "BELRISE",
+    "headline": "Scheme of Arrangement",
+    "date": "04-Jul-2026 11:36:47",
+    "url": "https://nsearchives.nseindia.com/corporate/BELRISE_04072026113639_BELRISE_Intimation_of_Obervation_Letter_04072026_NEW.pdf",
+    "summary": "Belrise Industries Limited has received \"no adverse observations\" from both NSE and BSE regarding its proposed scheme of amalgamation. The scheme involves the merger by absorption of Badve Autocomps Private Limited and Eximius Infra Tech Solutions Private Limited into Belrise Industries Limited. This clearance, issued under Regulation 37 of the Listing Regulations, marks a key regulatory step in the consolidation process.",
+    "saved_at": "2026-07-04T08:47:11.496699"
   }
 ]
