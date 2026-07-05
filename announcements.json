@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106655965",
-    "source": "NSE",
-    "company": "Radico Khaitan Limited",
-    "scrip": "RADICO",
-    "headline": "Updates",
-    "date": "05-Jun-2026 15:36:23",
-    "url": "https://nsearchives.nseindia.com/corporate/RADICO_05062026153557_IntimationunderReg30.pdf",
-    "summary": "Radico Khaitan Limited announced that the NCLT, Allahabad Bench, has dispensed with the meetings of equity shareholders of the transferor companies, as well as the meetings of equity shareholders and creditors of the transferee company, as part of a corporate restructuring process. This order was issued on June 1, 2026, and uploaded on June 5, 2026.",
-    "saved_at": "2026-06-05T10:36:51.670466"
-  },
-  {
     "id": "NSE_106656337",
     "source": "NSE",
     "company": "Hubtown Limited",
@@ -1439,5 +1428,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/Piramalcapital_05072026000032_PFL__Intimation_04072026_sd.pdf",
     "summary": "Piramal Finance Limited has filed a company petition with the NCLT Mumbai Bench on July 4, 2026, seeking approval for a proposed amalgamation/merger scheme. The petition was submitted jointly with the transferor companies involved in the scheme.",
     "saved_at": "2026-07-05T01:17:54.366753"
+  },
+  {
+    "id": "NSE_106686971",
+    "source": "NSE",
+    "company": "Astral Limited",
+    "scrip": "ASTRAL",
+    "headline": "Scheme of Arrangement",
+    "date": "05-Jul-2026 15:01:40",
+    "url": "https://nsearchives.nseindia.com/corporate/ASTRAL_05072026150046_Reg30Astral05072026.pdf",
+    "summary": "Astral Limited\u2019s Board has decided to conduct an independent review of its Composite Scheme of Arrangement following stakeholder feedback. The Board approved appointing a big four firm as an external advisor to evaluate the scheme and provide recommendations within 30 days. A final decision on the scheme\u2019s continuation or modification will be made after considering the advisor\u2019s findings.",
+    "saved_at": "2026-07-05T10:39:57.209392"
+  },
+  {
+    "id": "NSE_106686970",
+    "source": "NSE",
+    "company": "Astral Limited",
+    "scrip": "ASTRAL",
+    "headline": "Outcome of Board Meeting",
+    "date": "05-Jul-2026 14:58:08",
+    "url": "https://nsearchives.nseindia.com/corporate/ASTRAL_05072026145557_Reg30Astral05072026.pdf",
+    "summary": "Astral Limited\u2019s Board has decided to conduct a comprehensive independent review of its Composite Scheme of Arrangement following stakeholder feedback. The Board approved the appointment of a big four or equivalent firm as an external advisor, which will submit recommendations within 30 days. A final decision on the scheme will be made only after considering the advisor\u2019s findings.",
+    "saved_at": "2026-07-05T10:39:59.067606"
   }
 ]
