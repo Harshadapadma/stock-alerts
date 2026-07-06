@@ -1,71 +1,5 @@
 [
   {
-    "id": "NSE_106656337",
-    "source": "NSE",
-    "company": "Hubtown Limited",
-    "scrip": "HUBTOWN",
-    "headline": "Shareholders meeting",
-    "date": "05-Jun-2026 19:10:52",
-    "url": "https://nsearchives.nseindia.com/corporate/HUBTOWN_05062026191014_courtconenevedegms.pdf",
-    "summary": "Hubtown Limited held a shareholders' meeting on June 5, 2026, as directed by the NCLT Mumbai Bench. The meeting addressed the proposed merger of Saicharan Consultancy Private Limited into Hubtown Limited under Sections 230-232 of the Companies Act, 2013. The company has submitted a summary of the meeting's proceedings to the Exchange.",
-    "saved_at": "2026-06-05T13:42:23.629308"
-  },
-  {
-    "id": "NSE_106656165",
-    "source": "NSE",
-    "company": "Orchid Pharma Limited",
-    "scrip": "ORCHPHARMA",
-    "headline": "Updates",
-    "date": "05-Jun-2026 17:30:01",
-    "url": "https://nsearchives.nseindia.com/corporate/ORCHPHARMA_05062026172740_Stx_Ltr.pdf",
-    "summary": "Orchid Pharma Limited announced that the National Company Law Tribunal (NCLT), Chennai, has approved its merger scheme with Dhanuka Laboratories Limited on June 5, 2026. The sanctioned scheme allows for the transfer and vesting of Dhanuka Laboratories into Orchid Pharma on a going concern basis. This approval follows the company's earlier intimation regarding the merger petition.",
-    "saved_at": "2026-06-05T13:42:25.367848"
-  },
-  {
-    "id": "NSE_106656148",
-    "source": "NSE",
-    "company": "Andhra Cements Limited",
-    "scrip": "ACL",
-    "headline": "Outcome of Board Meeting",
-    "date": "05-Jun-2026 17:20:49",
-    "url": "https://nsearchives.nseindia.com/corporate/ANDHRACEMENT_05062026171943_BMoutcome05062026.pdf",
-    "summary": "Andhra Cements Limited announced that its Board of Directors approved a Scheme of Amalgamation for the merger of the company with its holding company, Sagar Cements Limited. The scheme is subject to approvals from shareholders, creditors, stock exchanges, SEBI, and the National Company Law Tribunal. The Board also noted the valuation report and fairness opinion recommending the share swap ratio for the proposed merger.",
-    "saved_at": "2026-06-05T13:42:27.108050"
-  },
-  {
-    "id": "NSE_106656368",
-    "source": "NSE",
-    "company": "Happiest Minds Technologies Limited",
-    "scrip": "HAPPSTMNDS",
-    "headline": "Scheme of Arrangement",
-    "date": "05-Jun-2026 19:42:10",
-    "url": "https://nsearchives.nseindia.com/corporate/suhask_05062026194136_SE_Final_order__Puresoftware.pdf",
-    "summary": "Happiest Minds Technologies Limited announced that the National Company Law Tribunal (NCLT), Bengaluru Bench, has approved its Scheme of Arrangement on May 29, 2026, with an appointed date of April 1, 2026. The company received the certified copy of the order on June 5, 2026.",
-    "saved_at": "2026-06-05T16:21:54.421712"
-  },
-  {
-    "id": "NSE_106656342",
-    "source": "NSE",
-    "company": "Hubtown Limited",
-    "scrip": "HUBTOWN",
-    "headline": "Shareholders meeting",
-    "date": "05-Jun-2026 19:14:49",
-    "url": "https://nsearchives.nseindia.com/corporate/HUBTOWN_05062026191428_courtconvenedunsecured_creditorsfinal.pdf",
-    "summary": "Hubtown Limited held a meeting of its unsecured creditors on June 5, 2026, as directed by the NCLT Mumbai Bench. The meeting discussed a proposed Scheme of Arrangement for the merger of Saicharan Consultancy Private Limited into Hubtown Limited. The proceedings were conducted under Sections 230 to 232 of the Companies Act, 2013.",
-    "saved_at": "2026-06-05T16:21:55.921671"
-  },
-  {
-    "id": "NSE_106656739",
-    "source": "NSE",
-    "company": "NIIT Learning Systems Limited",
-    "scrip": "NIITMTS",
-    "headline": "Other Restructuring",
-    "date": "06-Jun-2026 11:27:46",
-    "url": "https://nsearchives.nseindia.com/corporate/NLSL_06062026112732_SE_intimation_-_NIIT_Canada_capital_restructuring.pdf",
-    "summary": "NIIT Learning Systems Limited announced that its subsidiary, NIIT (Ireland) Limited, approved a capital restructuring of its step-down subsidiary, NIIT Learning Solutions (Canada) Ltd. The restructuring reduces the par value of NIIT Canada\u2019s common shares by CAD 5,058,493 to return excess cash to NIIT Ireland, as the company\u2019s operations have scaled down after completing a large contract. The move has no material financial impact and does not change the ownership structure.",
-    "saved_at": "2026-06-06T08:15:21.046987"
-  },
-  {
     "id": "NSE_106656967",
     "source": "NSE",
     "company": "Meghmani Organics Limited",
@@ -1450,5 +1384,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/ASTRAL_05072026145557_Reg30Astral05072026.pdf",
     "summary": "Astral Limited\u2019s Board has decided to conduct a comprehensive independent review of its Composite Scheme of Arrangement following stakeholder feedback. The Board approved the appointment of a big four or equivalent firm as an external advisor, which will submit recommendations within 30 days. A final decision on the scheme will be made only after considering the advisor\u2019s findings.",
     "saved_at": "2026-07-05T10:39:59.067606"
+  },
+  {
+    "id": "NSE_106687356",
+    "source": "NSE",
+    "company": "Refex Industries Limited",
+    "scrip": "REFEX",
+    "headline": "Copy of Newspaper Publication",
+    "date": "06-Jul-2026 12:52:10",
+    "url": "https://nsearchives.nseindia.com/corporate/REFEX2002_06072026125121_Newspaper_Publication_STX.pdf",
+    "summary": "Refex Industries Limited has published a newspaper notice regarding meetings of its equity shareholders and creditors, as well as creditors of Refex Green Mobility Limited, as directed by the NCLT Chennai Bench. The meetings are being convened under SEBI regulations to consider a proposed scheme involving the transferor and transferee companies.",
+    "saved_at": "2026-07-06T11:41:16.138111"
   }
 ]
