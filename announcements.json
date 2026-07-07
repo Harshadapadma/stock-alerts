@@ -1,60 +1,5 @@
 [
   {
-    "id": "NSE_106656967",
-    "source": "NSE",
-    "company": "Meghmani Organics Limited",
-    "scrip": "MOL",
-    "headline": "Shareholders meeting",
-    "date": "06-Jun-2026 20:06:46",
-    "url": "https://nsearchives.nseindia.com/corporate/MOL_06062026200622_PROCEEDING_UNSECURED.pdf",
-    "summary": "Meghmani Organics Limited held a meeting of its unsecured creditors on June 3-5, 2026, to consider and approve a Scheme of Amalgamation involving Kilburn Chemicals Limited and Meghmani Crop Nutrition Limited. Remote e-voting was conducted during this period, with results to be shared on stock exchanges and the company\u2019s website. The meeting concluded after the business was transacted, as directed by the NCLT Ahmedabad.",
-    "saved_at": "2026-06-06T15:39:00.792867"
-  },
-  {
-    "id": "NSE_106656963",
-    "source": "NSE",
-    "company": "Meghmani Organics Limited",
-    "scrip": "MOL",
-    "headline": "Shareholders meeting",
-    "date": "06-Jun-2026 19:58:18",
-    "url": "https://nsearchives.nseindia.com/corporate/MOL_06062026195808_PROCEEDING_SECURED.pdf",
-    "summary": "Meghmani Organics Limited held a meeting of its secured creditors on June 6, 2026, via video conferencing, as convened by the Hon'ble NCLT. The announcement summarizes the proceedings of this court-ordered meeting. No specific outcomes or resolutions were detailed in the provided summary.",
-    "saved_at": "2026-06-06T15:39:02.455437"
-  },
-  {
-    "id": "NSE_106656962",
-    "source": "NSE",
-    "company": "Meghmani Organics Limited",
-    "scrip": "MOL",
-    "headline": "Shareholders meeting",
-    "date": "06-Jun-2026 19:46:53",
-    "url": "https://nsearchives.nseindia.com/corporate/MOL_06062026194643_PROCEEDING_EQUITY.pdf",
-    "summary": "Meghmani Organics Limited held a shareholders' meeting on June 6, 2026, via video conferencing to consider and approve a Scheme of Amalgamation involving Kilburn Chemicals Limited and Meghmani Crop Nutrition Limited. The meeting, chaired by an NCLT-appointed advocate, concluded at 2:21 PM with the requisite quorum present. The scheme aims to create a more integrated, efficient, and scalable business structure by combining the three entities.",
-    "saved_at": "2026-06-06T15:39:04.532997"
-  },
-  {
-    "id": "NSE_106656960",
-    "source": "NSE",
-    "company": "Archidply Decor Limited",
-    "scrip": "ADL",
-    "headline": "General Updates",
-    "date": "06-Jun-2026 19:37:30",
-    "url": "https://nsearchives.nseindia.com/corporate/ADL_06062026193703_Bse_intimation.pdf",
-    "summary": "Archidply Decor Limited announced that its internal restructuring scheme became effective on June 5, 2026, transferring shares held by Ravi Marketing & Services Private Limited to Assam Timber Products Private Limited, and shares held by Vanraj Suppliers Private Limited to Shree Shyam Tea Private Limited. The transactions are an internal reorganization within the promoter group, resulting in no change to the aggregate promoter shareholding, management, or control of the company. Post-implementation, Assam Timber Products holds 32.51% and Shree Shyam Tea holds 18.96% of the company's shares.",
-    "saved_at": "2026-06-06T15:39:06.859015"
-  },
-  {
-    "id": "NSE_106656959",
-    "source": "NSE",
-    "company": "Archidply Industries Limited",
-    "scrip": "ARCHIDPLY",
-    "headline": "General Updates",
-    "date": "06-Jun-2026 19:34:33",
-    "url": "https://nsearchives.nseindia.com/corporate/ARCHIDPLY_06062026193417_Reg30effectiveofscheme.pdf",
-    "summary": "Archidply Industries Limited announced that its approved restructuring scheme became effective on June 5, 2026, resulting in the transfer of shares held by Ravi Marketing & Services Private Limited to Assam Timber Products Private Limited, and shares held by Vanraj Suppliers Private Limited to Shree Shyam Tea Private Limited. The internal reorganization within the promoter group does not change the aggregate promoter shareholding, management, or control of the company. Post-implementation, Assam Timber Products now holds 25.60% and Shree Shyam Tea holds 21.25% of the company's shares.",
-    "saved_at": "2026-06-06T15:39:08.960621"
-  },
-  {
     "id": "NSE_106657598",
     "source": "NSE",
     "company": "Future Consumer Limited",
@@ -1406,5 +1351,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/GANESHHOUC_06072026181608_SEDISCLOSUREOBSERVATIONLETTERS06072026.pdf",
     "summary": "GANESH HOUSING LIMITED announced it has received observation letters from BSE and NSE regarding its Scheme of Arrangement with Gatil Properties Private Limited. The letters include SEBI comments requiring disclosures on ongoing adjudication, compliance with circulars, and updated financials. The scheme remains subject to further regulatory approvals.",
     "saved_at": "2026-07-06T14:46:54.090062"
+  },
+  {
+    "id": "NSE_106688548",
+    "source": "NSE",
+    "company": "Ceigall India Limited",
+    "scrip": "CEIGALL",
+    "headline": "General Updates",
+    "date": "07-Jul-2026 11:00:18",
+    "url": "https://nsearchives.nseindia.com/corporate/ceigall_07072026110007_Intimation_Appointed_Date_07072026_Ceigall_Indore.pdf",
+    "summary": "Ceigall India Limited announced that July 6, 2026, has been declared the Appointed Date for its subsidiary\u2019s Indore-Ujjain Greenfield Highway project, which has a project cost of Rs. 1,089 crore and will be executed under the Hybrid Annuity Mode (HAM). The 48.10 km, four-lane highway project is being developed by Madhya Pradesh Road Development Corporation Ltd.",
+    "saved_at": "2026-07-07T07:51:15.391033"
   }
 ]
