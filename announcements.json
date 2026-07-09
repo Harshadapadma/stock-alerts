@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106659013",
-    "source": "NSE",
-    "company": "Meghmani Organics Limited",
-    "scrip": "MOL",
-    "headline": "Shareholders meeting",
-    "date": "09-Jun-2026 19:01:49",
-    "url": "https://nsearchives.nseindia.com/corporate/MOL_09062026190138_Voting_Result_Unsecured.pdf",
-    "summary": "Meghmani Organics Limited has submitted the Scrutinizer\u2019s Report for the Unsecured Creditors meeting held on June 6, 2026, which was convened under NCLT directions regarding a Scheme of Amalgamation. The report, prepared by Advocate Pavni Lakhanpal, covers the remote e-voting and in-meeting voting processes. The document has been filed with the stock exchanges and is available on the company\u2019s website.",
-    "saved_at": "2026-06-09T14:10:21.476387"
-  },
-  {
-    "id": "NSE_106659001",
-    "source": "NSE",
-    "company": "Meghmani Organics Limited",
-    "scrip": "MOL",
-    "headline": "Shareholders meeting",
-    "date": "09-Jun-2026 18:55:00",
-    "url": "https://nsearchives.nseindia.com/corporate/MOL_09062026185445_Voting_Result_Secured.pdf",
-    "summary": "Meghmani Organics Limited has submitted the Scrutinizer\u2019s Report for the secured creditors' meeting held on June 6, 2026, regarding a proposed Scheme of Amalgamation involving Kilburn Chemicals and Meghmani Crop Nutrition. The meeting was conducted via video conferencing as directed by the NCLT, with remote and in-meeting e-voting scrutinized by an independent advocate. The report is now available on the company\u2019s website and has been filed with the stock exchanges.",
-    "saved_at": "2026-06-09T14:10:23.410314"
-  },
-  {
     "id": "NSE_106659276",
     "source": "NSE",
     "company": "Gabriel India Limited",
@@ -1450,5 +1428,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/GODREJPROP_09072026164417_SEIntimation09072026.pdf",
     "summary": "The National Company Law Tribunal (NCLT), Mumbai, has approved the Scheme of Amalgamation of Embellish Houses Private Limited (Transferor Company) with Godrej Properties Limited (Transferee Company). The scheme will become effective once the certified NCLT order is filed with the Registrar of Companies, and the company will inform the stock exchanges of the effective date. No objections were raised against the scheme, and the companies have complied with all statutory requirements.",
     "saved_at": "2026-07-09T13:38:47.786441"
+  },
+  {
+    "id": "NSE_106692695",
+    "source": "NSE",
+    "company": "Jubilant Agri and Consumer Products Limited",
+    "scrip": "JUBLCPL",
+    "headline": "Demerger",
+    "date": "09-Jul-2026 21:31:41",
+    "url": "https://nsearchives.nseindia.com/corporate/JACPL_09072026213049_IntimationPronouncementNCLTOrderSign.pdf",
+    "summary": "Jubilant Agri and Consumer Products Limited has filed a first motion application with the NCLT Allahabad Bench regarding its demerger. The application includes audited financials for the demerged company for FY2025 and provisional financials for the applicant companies, along with a share entitlement report dated November 1, 2025.",
+    "saved_at": "2026-07-09T16:16:13.043957"
   }
 ]
