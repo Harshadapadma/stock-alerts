@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106658713",
-    "source": "NSE",
-    "company": "Triveni Engineering & Industries Limited",
-    "scrip": "TRIVENI",
-    "headline": "Scheme of Arrangement",
-    "date": "09-Jun-2026 16:18:25",
-    "url": "https://nsearchives.nseindia.com/corporate/TRIVENI_09062026161816_Allotment_of_Equity_Shares.pdf",
-    "summary": "Triveni Engineering & Industries Limited has allotted 14,65,048 equity shares to eligible shareholders of SSEL as per the sanctioned Scheme of Arrangement, based on the June 3, 2026 record date. This allotment increases the company's paid-up equity capital to \u20b922,03,63,016, and the new shares will rank equally with existing shares and be listed on BSE and NSE.",
-    "saved_at": "2026-06-09T11:41:18.747139"
-  },
-  {
-    "id": "NSE_106658601",
-    "source": "NSE",
-    "company": "Dabur India Limited",
-    "scrip": "DABUR",
-    "headline": "Copy of Newspaper Publication",
-    "date": "09-Jun-2026 14:24:20",
-    "url": "https://nsearchives.nseindia.com/corporate/DABURU_09062026142317_NPD.pdf",
-    "summary": "Dabur India Limited has informed the exchange of a scheduled hearing on August 3, 2026, regarding a Company Petition related to its proposed amalgamation with Sesa Care Private Limited. This hearing follows a directive from the National Company Law Tribunal issued on May 25, 2026. The scheme involves the amalgamation of Sesa Care into Dabur, affecting their respective shareholders and creditors.",
-    "saved_at": "2026-06-09T11:41:20.465634"
-  },
-  {
     "id": "NSE_106659013",
     "source": "NSE",
     "company": "Meghmani Organics Limited",
@@ -1450,5 +1428,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/Kavita_Sundrop_09072026122855_FinalIntimationofMergerofDelmonteentities.pdf",
     "summary": "Sundrop Brands Limited announced that the boards of its material wholly-owned subsidiary, Del Monte Foods Private Limited (DMF), and its step-down subsidiary, Del Monte Foods India (North) Private Limited (DMFN), have approved a Scheme of Amalgamation to merge DMFN into DMF under the fast-track route. The merger aims to streamline business operations, and since both entities are wholly-owned subsidiaries, the transaction does not fall under related party provisions. The scheme is subject to necessary regulatory and statutory approvals.",
     "saved_at": "2026-07-09T10:42:06.413159"
+  },
+  {
+    "id": "NSE_106692197",
+    "source": "NSE",
+    "company": "Godrej Properties Limited",
+    "scrip": "GODREJPROP",
+    "headline": "Updates",
+    "date": "09-Jul-2026 16:47:34",
+    "url": "https://nsearchives.nseindia.com/corporate/GODREJPROP_09072026164652_SEIntimation09072026.pdf",
+    "summary": "Godrej Properties Limited announced that the National Company Law Tribunal (NCLT), Mumbai, has sanctioned the Scheme of Amalgamation of Embellish Houses Private Limited with Godrej Properties Limited on July 8, 2026. The scheme will become effective once the certified order is received and filed with the Registrar of Companies, Mumbai. The company will inform the stock exchanges of the effective date once finalized.",
+    "saved_at": "2026-07-09T13:38:46.048386"
+  },
+  {
+    "id": "NSE_106692187",
+    "source": "NSE",
+    "company": "Godrej Properties Limited",
+    "scrip": "GODREJPROP",
+    "headline": "Amalgamation/Merger",
+    "date": "09-Jul-2026 16:44:40",
+    "url": "https://nsearchives.nseindia.com/corporate/GODREJPROP_09072026164417_SEIntimation09072026.pdf",
+    "summary": "The National Company Law Tribunal (NCLT), Mumbai, has approved the Scheme of Amalgamation of Embellish Houses Private Limited (Transferor Company) with Godrej Properties Limited (Transferee Company). The scheme will become effective once the certified NCLT order is filed with the Registrar of Companies, and the company will inform the stock exchanges of the effective date. No objections were raised against the scheme, and the companies have complied with all statutory requirements.",
+    "saved_at": "2026-07-09T13:38:47.786441"
   }
 ]
