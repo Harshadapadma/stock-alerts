@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106659682",
-    "source": "NSE",
-    "company": "Astra Microwave Products Limited",
-    "scrip": "ASTRAMICRO",
-    "headline": "Outcome of Board Meeting",
-    "date": "10-Jun-2026 12:36:13",
-    "url": "https://nsearchives.nseindia.com/corporate/ASTRAMICRO_10062026123601_Letter.pdf",
-    "summary": "Astra Microwave Products Limited's Board has approved a Scheme of Arrangement for the company's demerger. The approval was disclosed in compliance with SEBI Listing Regulations. The announcement outlines the board's decision regarding the corporate restructuring.",
-    "saved_at": "2026-06-10T08:55:26.026132"
-  },
-  {
-    "id": "NSE_106659640",
-    "source": "NSE",
-    "company": "Astra Microwave Products Limited",
-    "scrip": "ASTRAMICRO",
-    "headline": "Demerger",
-    "date": "10-Jun-2026 12:31:06",
-    "url": "https://nsearchives.nseindia.com/corporate/ASTRAMICRO_10062026123059_Letter.pdf",
-    "summary": "Astra Microwave Products Limited's Board has approved a Scheme of Arrangement for a demerger. The move will restructure the company's operations, with the announcement made in compliance with SEBI listing regulations.",
-    "saved_at": "2026-06-10T08:55:27.334903"
-  },
-  {
     "id": "NSE_106660163",
     "source": "NSE",
     "company": "Power Finance Corporation Limited",
@@ -1450,5 +1428,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/FLUOROCHEM_10072026124249_GFCL_Intimation_for_NOC_for_Scheme_of_Arrangement_10July2026.pdf",
     "summary": "Gujarat Fluorochemicals Limited has received no-objection letters from BSE and NSE regarding a composite scheme of arrangement involving Inox Leasing and Finance Limited, Inox Holdings and Investments Limited, and Gujarat Fluorochemicals Limited. The scheme outlines the demerger and transfer of entities among the involved companies and their shareholders.",
     "saved_at": "2026-07-10T08:39:38.800989"
+  },
+  {
+    "id": "NSE_106694063",
+    "source": "NSE",
+    "company": "Ugro Capital Limited",
+    "scrip": "UGROCAP",
+    "headline": "Scheme of Arrangement",
+    "date": "10-Jul-2026 18:59:42",
+    "url": "https://nsearchives.nseindia.com/corporate/UGROCAP_10072026185854_UGROIntimationofreceiptofNOCFinal.pdf",
+    "summary": "Ugro Capital Limited has received observation letters from NSE and BSE regarding its proposed scheme of amalgamation with Profectus Capital Private Limited, following SEBI's comments and no-objection from the RBI. The scheme remains subject to approvals from shareholders, creditors, and the National Company Law Tribunal. The company will continue to update the stock exchanges on further developments.",
+    "saved_at": "2026-07-10T13:34:36.525520"
+  },
+  {
+    "id": "NSE_106694021",
+    "source": "NSE",
+    "company": "Aditya Birla Fashion and Retail Limited",
+    "scrip": "ABFRL",
+    "headline": "General Updates",
+    "date": "10-Jul-2026 18:35:08",
+    "url": "https://nsearchives.nseindia.com/corporate/ABFRL_10072026183449_SE.pdf",
+    "summary": "Aditya Birla Fashion and Retail Limited has informed the exchange that it has received a certified copy of the NCLT order approving the scheme of amalgamation involving Jaypore E-Commerce Private Limited and TG Apparel & Decor Private Limited. The order pertains to the merger of these entities with Aditya Birla Fashion and Retail Limited, along with their respective shareholders and creditors.",
+    "saved_at": "2026-07-10T13:34:38.035118"
   }
 ]
