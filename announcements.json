@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106659276",
-    "source": "NSE",
-    "company": "Gabriel India Limited",
-    "scrip": "GABRIEL",
-    "headline": "General Updates",
-    "date": "09-Jun-2026 23:09:20",
-    "url": "https://nsearchives.nseindia.com/corporate/GABRIEL_09062026230855_SE_Intimation_-_Allotment_of_Shares_signed.pdf",
-    "summary": "Gabriel India Limited has issued a general update in compliance with SEBI Listing Regulations. The announcement, signed by Company Secretary Nilesh Jain, is provided for information and record-keeping purposes. No specific operational or financial details were disclosed.",
-    "saved_at": "2026-06-09T19:08:15.177640"
-  },
-  {
     "id": "NSE_106659682",
     "source": "NSE",
     "company": "Astra Microwave Products Limited",
@@ -1450,5 +1439,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/MMFL_09072026233344_DVS_FinalOrder.pdf",
     "summary": "MM Forgings Limited has received the certified order approving the amalgamation of its wholly owned subsidiary, DVS Industries Private Limited, into itself. The company has also been informed of the effective date of this merger. This consolidation integrates the subsidiary fully into the parent entity.",
     "saved_at": "2026-07-09T18:14:18.848878"
+  },
+  {
+    "id": "NSE_106693309",
+    "source": "NSE",
+    "company": "Gujarat Fluorochemicals Limited",
+    "scrip": "FLUOROCHEM",
+    "headline": "Scheme of Arrangement",
+    "date": "10-Jul-2026 12:44:21",
+    "url": "https://nsearchives.nseindia.com/corporate/FLUOROCHEM_10072026124249_GFCL_Intimation_for_NOC_for_Scheme_of_Arrangement_10July2026.pdf",
+    "summary": "Gujarat Fluorochemicals Limited has received no-objection letters from BSE and NSE regarding a composite scheme of arrangement involving Inox Leasing and Finance Limited, Inox Holdings and Investments Limited, and Gujarat Fluorochemicals Limited. The scheme outlines the demerger and transfer of entities among the involved companies and their shareholders.",
+    "saved_at": "2026-07-10T08:39:38.800989"
   }
 ]
