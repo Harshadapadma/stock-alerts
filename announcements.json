@@ -1,38 +1,5 @@
 [
   {
-    "id": "NSE_106660163",
-    "source": "NSE",
-    "company": "Power Finance Corporation Limited",
-    "scrip": "PFC",
-    "headline": "General Updates",
-    "date": "10-Jun-2026 19:13:14",
-    "url": "https://nsearchives.nseindia.com/corporate/PFC2023_10062026191224_Intimation_10062026signed.pdf",
-    "summary": "Power Finance Corporation Limited (PFC) has received approval from the President of India for the proposed merger of REC Limited into PFC. This approval was conveyed by the Ministry of Power on June 10, 2026, following the Board's earlier decision to reserve the proposal for presidential consent. The update is provided in compliance with SEBI regulations.",
-    "saved_at": "2026-06-10T16:25:19.416691"
-  },
-  {
-    "id": "NSE_106660151",
-    "source": "NSE",
-    "company": "REC Limited",
-    "scrip": "RECLTD",
-    "headline": "General Updates",
-    "date": "10-Jun-2026 19:05:47",
-    "url": "https://nsearchives.nseindia.com/corporate/RECLTD_10062026190415_Signed_Intimation_PresidentialConsent100626.pdf",
-    "summary": "REC Limited announced that the Ministry of Power has conveyed the Competent Authority\u2019s approval for the proposed merger of REC into PFC. This follows the earlier Board decision to reserve the proposal for the President of India\u2019s approval. The update was made in compliance with SEBI listing regulations.",
-    "saved_at": "2026-06-10T16:25:21.017162"
-  },
-  {
-    "id": "NSE_106660129",
-    "source": "NSE",
-    "company": "Health X Platform Limited",
-    "scrip": "HEALTHX",
-    "headline": "Scheme of Arrangement",
-    "date": "10-Jun-2026 18:43:08",
-    "url": "https://nsearchives.nseindia.com/corporate/SASTASUNDR_10062026184227_OutcomeBM10062026PDF_1sign.pdf",
-    "summary": "Health X Platform Limited\u2019s board has approved a composite scheme of arrangement and amalgamation involving itself, Microsec Resources Private Limited, Innogrow Technologies Limited, and Sastasundar Healthbuddy Limited. Under the scheme, shareholders of Health X will receive one share in the resulting company for every three shares held, while specific share exchange ratios have been set for the transferor company. The scheme is subject to approvals from stock exchanges, SEBI, NCLT, RBI, and relevant shareholders and creditors.",
-    "saved_at": "2026-06-10T16:25:23.217005"
-  },
-  {
     "id": "NSE_106660729",
     "source": "NSE",
     "company": "Spandana Sphoorty Financial Limited",
@@ -1494,5 +1461,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/KITEX_10072026191902_Addendum_to_notice_of_meeting_to_shareholders.pdf",
     "summary": "Kitex Garments Limited has issued an addendum to the notice of meeting for equity shareholders regarding the Scheme of Arrangement with Kitex Childrenswear Limited. The update pertains to the proposed restructuring involving the companies, their shareholders, and creditors. The announcement serves to inform the exchange of this procedural development.",
     "saved_at": "2026-07-10T16:05:16.356690"
+  },
+  {
+    "id": "NSE_106694563",
+    "source": "NSE",
+    "company": "Triveni Engineering & Industries Limited",
+    "scrip": "TRIVENI",
+    "headline": "Updates",
+    "date": "11-Jul-2026 10:10:05",
+    "url": "https://nsearchives.nseindia.com/corporate/TRIVENI_11072026100950_TEIL_RECORD_DATE.pdf",
+    "summary": "Triveni Engineering & Industries Limited has fixed Wednesday, July 22, 2026, as the Record Date for the demerger under the approved Scheme. This intimation has been provided to the exchange in compliance with Regulations 30 and 42 of the SEBI LODR Regulations, 2015.",
+    "saved_at": "2026-07-11T06:04:34.513064"
+  },
+  {
+    "id": "NSE_106694562",
+    "source": "NSE",
+    "company": "Triveni Engineering & Industries Limited",
+    "scrip": "TRIVENI",
+    "headline": "Scheme of Arrangement",
+    "date": "11-Jul-2026 10:07:20",
+    "url": "https://nsearchives.nseindia.com/corporate/TRIVENI_11072026100700_TEIL_RECORD_DATE.pdf",
+    "summary": "Triveni Engineering & Industries Limited has fixed Wednesday, July 22, 2026, as the Demerger Record Date under its Scheme of Arrangement. The company informed the stock exchange of this date in compliance with SEBI regulations. This record date will determine shareholder eligibility for the demerger.",
+    "saved_at": "2026-07-11T06:04:36.106504"
   }
 ]
