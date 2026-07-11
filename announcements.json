@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106660729",
-    "source": "NSE",
-    "company": "Spandana Sphoorty Financial Limited",
-    "scrip": "SPANDANA",
-    "headline": "Amalgamation/Merger",
-    "date": "11-Jun-2026 11:55:29",
-    "url": "https://nsearchives.nseindia.com/corporate/SPANDANA_11062026115437_SchemeMerger11062026.pdf",
-    "summary": "Spandana Sphoorty Financial Limited\u2019s board has approved the merger of its subsidiary, Criss Financial Limited, into itself via absorption under a scheme of arrangement. The merger is subject to approvals from the Regional Director/NCLT, shareholders, creditors, and regulators including the RBI and SEBI. The share exchange ratio will be determined on an arm\u2019s length basis based on an independent valuation and fairness opinion.",
-    "saved_at": "2026-06-11T06:29:10.802736"
-  },
-  {
-    "id": "NSE_106661018",
-    "source": "NSE",
-    "company": "Maithan Alloys Limited",
-    "scrip": "MAITHANALL",
-    "headline": "Amalgamation/Merger",
-    "date": "11-Jun-2026 16:16:16",
-    "url": "https://nsearchives.nseindia.com/corporate/MAITHANALL_11062026161503_NCLTMergerOrderImpex.pdf",
-    "summary": "Maithan Alloys Limited announced that the National Company Law Tribunal (NCLT), Kolkata Bench, has approved the merger of its wholly owned subsidiary, Impex Metal & Ferro Alloys Limited, into the company, with an appointed date of March 31, 2024. No shares will be issued under the scheme since the subsidiary is wholly owned, and there will be no change in the promoter's shareholding. The scheme will become effective once the certified NCLT order is filed with the Registrar of Companies.",
-    "saved_at": "2026-06-11T11:13:38.660022"
-  },
-  {
     "id": "NSE_106661344",
     "source": "NSE",
     "company": "Indo Thai Securities Limited",
@@ -1483,5 +1461,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/TRIVENI_11072026100700_TEIL_RECORD_DATE.pdf",
     "summary": "Triveni Engineering & Industries Limited has fixed Wednesday, July 22, 2026, as the Demerger Record Date under its Scheme of Arrangement. The company informed the stock exchange of this date in compliance with SEBI regulations. This record date will determine shareholder eligibility for the demerger.",
     "saved_at": "2026-07-11T06:04:36.106504"
+  },
+  {
+    "id": "NSE_106694941",
+    "source": "NSE",
+    "company": "Somany Ceramics Limited",
+    "scrip": "SOMANYCERA",
+    "headline": "Updates",
+    "date": "11-Jul-2026 19:08:23",
+    "url": "https://nsearchives.nseindia.com/corporate/SOMANYCERAMICS_11072026190810_Chairpersonreport_intimationsd.pdf",
+    "summary": "Somany Ceramics Limited has informed the stock exchange that it submitted the Chairperson's Reports from the NCLT Kolkata Bench-convened meetings of its equity shareholders and unsecured creditors. These reports detail the outcomes of the respective meetings held as part of a corporate process.",
+    "saved_at": "2026-07-11T13:55:09.003348"
   }
 ]
