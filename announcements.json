@@ -1,38 +1,5 @@
 [
   {
-    "id": "NSE_106661344",
-    "source": "NSE",
-    "company": "Indo Thai Securities Limited",
-    "scrip": "INDOTHAI",
-    "headline": "Scheme of Arrangement",
-    "date": "11-Jun-2026 19:52:57",
-    "url": "https://nsearchives.nseindia.com/corporate/INDOTHAI_11062026195240_Disclosure_under_reg30_NCLT_order.pdf",
-    "summary": "Indo Thai Securities Limited has informed the stock exchange of a disclosure under Regulation 30 of the SEBI (LODR) Regulations regarding a Scheme of Arrangement. The announcement confirms the company's compliance with applicable listing obligations and disclosure requirements. Further details of the scheme were not provided in the headline.",
-    "saved_at": "2026-06-11T14:59:20.701134"
-  },
-  {
-    "id": "NSE_106661241",
-    "source": "NSE",
-    "company": "Jaiprakash Associates Limited",
-    "scrip": "JPASSOCIAT",
-    "headline": "Delisting",
-    "date": "11-Jun-2026 18:51:18",
-    "url": "-",
-    "summary": "Jaiprakash Associates Limited\u2019s equity shares will be delisted from the stock exchange effective June 18, 2026. This follows a resolution plan approved by the National Company Law Tribunal under the Insolvency and Bankruptcy Code.",
-    "saved_at": "2026-06-11T14:59:22.259291"
-  },
-  {
-    "id": "NSE_106661091",
-    "source": "NSE",
-    "company": "Centum Electronics Limited",
-    "scrip": "CENTUM",
-    "headline": "Other Restructuring",
-    "date": "11-Jun-2026 17:18:21",
-    "url": "https://nsearchives.nseindia.com/corporate/CENTUME_11062026171735_Intimation.pdf",
-    "summary": "Centum Electronics Limited has provided an update on the court-supervised restructuring proceedings (Redressement Judiciaire) for its French subsidiaries, Centum T&S Group S.A. and Centum T&S (Centum Technologies et Solutions). The announcement, filed under \"Other Restructuring,\" confirms the ongoing legal process for these entities in France.",
-    "saved_at": "2026-06-11T14:59:24.005496"
-  },
-  {
     "id": "NSE_106661431",
     "source": "NSE",
     "company": "Sonata Software Limited",
@@ -1472,5 +1439,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/SOMANYCERAMICS_11072026190810_Chairpersonreport_intimationsd.pdf",
     "summary": "Somany Ceramics Limited has informed the stock exchange that it submitted the Chairperson's Reports from the NCLT Kolkata Bench-convened meetings of its equity shareholders and unsecured creditors. These reports detail the outcomes of the respective meetings held as part of a corporate process.",
     "saved_at": "2026-07-11T13:55:09.003348"
+  },
+  {
+    "id": "NSE_106694969",
+    "source": "NSE",
+    "company": "TVS Supply Chain Solutions Limited",
+    "scrip": "TVSSCS",
+    "headline": "Amalgamation/Merger",
+    "date": "11-Jul-2026 20:55:05",
+    "url": "https://nsearchives.nseindia.com/corporate/CSCOMPLIANCE_11072026205407_TVS_SCS_NCLT_order_Disclsore_SIGNED.pdf",
+    "summary": "TVS Supply Chain Solutions Limited has received approval from the National Company Law Tribunal (NCLT), Chennai Bench, for the amalgamation of five companies\u2014Mahogany Logistics Services, TVS SCS Global Freight Solutions, White Data Systems India, SPC International (India), and FLEXOL Packaging (India)\u2014into itself. The scheme is effective from April 1, 2023, but is still subject to final sanction from the NCLT Bengaluru Bench for SPC International and filing of certified orders with the Registrar of Companies. The company will update stock exchanges once all approvals are secured and the scheme becomes fully effective.",
+    "saved_at": "2026-07-11T16:08:58.784344"
   }
 ]
