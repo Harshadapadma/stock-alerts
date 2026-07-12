@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106661431",
-    "source": "NSE",
-    "company": "Sonata Software Limited",
-    "scrip": "SONATSOFTW",
-    "headline": "Action(s) taken or orders passed",
-    "date": "11-Jun-2026 22:48:29",
-    "url": "https://nsearchives.nseindia.com/corporate/SONATSOFTW_11062026224403_schemeofamalgamationintimation.pdf",
-    "summary": "Sonata Software Limited announced that the National Company Law Tribunal (NCLT), Chennai Bench, has sanctioned the Scheme of Arrangement and Amalgamation between Encore I.T. Services Solutions Private Limited (Transferor Company) and Sonata Software Limited (Transferee Company) on June 5, 2026. The order was made available on the NCLT website on June 11, 2026, and the scheme will become effective once the certified copy is filed with the Registrar of Companies.",
-    "saved_at": "2026-06-11T18:25:33.350717"
-  },
-  {
     "id": "NSE_106662320",
     "source": "NSE",
     "company": "Aurum PropTech Limited",
@@ -1450,5 +1439,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/CSCOMPLIANCE_11072026205407_TVS_SCS_NCLT_order_Disclsore_SIGNED.pdf",
     "summary": "TVS Supply Chain Solutions Limited has received approval from the National Company Law Tribunal (NCLT), Chennai Bench, for the amalgamation of five companies\u2014Mahogany Logistics Services, TVS SCS Global Freight Solutions, White Data Systems India, SPC International (India), and FLEXOL Packaging (India)\u2014into itself. The scheme is effective from April 1, 2023, but is still subject to final sanction from the NCLT Bengaluru Bench for SPC International and filing of certified orders with the Registrar of Companies. The company will update stock exchanges once all approvals are secured and the scheme becomes fully effective.",
     "saved_at": "2026-07-11T16:08:58.784344"
+  },
+  {
+    "id": "NSE_106694997",
+    "source": "NSE",
+    "company": "Authum Investment & Infrastructure Limited",
+    "scrip": "AIIL",
+    "headline": "General Updates",
+    "date": "12-Jul-2026 00:08:38",
+    "url": "https://nsearchives.nseindia.com/corporate/Authum123_12072026000756_Reg30annoucemnetVAZ.pdf",
+    "summary": "Authum Investment & Infrastructure Limited announced that the NCLT has rejected its resolution plan for Vas Infrastructure Limited, for which it had been selected as the successful resolution applicant. The company clarified that this rejection has no impact on its business operations. Further developments will be disclosed as per SEBI regulations.",
+    "saved_at": "2026-07-12T01:12:13.003775"
   }
 ]
