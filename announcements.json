@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106662320",
-    "source": "NSE",
-    "company": "Aurum PropTech Limited",
-    "scrip": "AURUM",
-    "headline": "Amalgamation/Merger",
-    "date": "12-Jun-2026 19:08:48",
-    "url": "https://nsearchives.nseindia.com/corporate/AURUM_12062026190819_Updateonmerger.pdf",
-    "summary": "In continuation of our earlier intimation dated March 02, 2026, we hereby inform you that the Scheme of Merger (\u201cScheme\u201d) of Aurum Softwares and Solutions Private Limited (\u201cTransferor Company\u201d) with Liv Real Solutions Private Limited (\u201cTransferee Company\u201d), both wholly owned subsidiaries of the Company, under Section 233 of the Companies Act, 2013 read with the relevant rules made thereunder, has been approved by the Regional Director, Western Region II, Ministry of Corporate Affairs, vide order",
-    "saved_at": "2026-06-12T16:01:03.841286"
-  },
-  {
-    "id": "NSE_106662760",
-    "source": "NSE",
-    "company": "Sammaan Capital Limited",
-    "scrip": "SAMMAANCAP",
-    "headline": "Updates",
-    "date": "13-Jun-2026 16:01:57",
-    "url": "https://nsearchives.nseindia.com/corporate/IHFL_13062026155450_SCL_Reg_30_51_Disclosure_FMO_Scheme_13June26.pdf",
-    "summary": "Sammaan Capital announced that the NCLT has approved its first motion application regarding a proposed Scheme of Arrangement, dispensing with meetings of the demerged company\u2019s shareholders and all creditors. The tribunal has directed a meeting of the resulting company\u2019s equity shareholders to approve the scheme via video conferencing. The company will seek clarifications or modifications to the order from the NCLT.",
-    "saved_at": "2026-06-13T10:41:05.912768"
-  },
-  {
     "id": "NSE_106663274",
     "source": "NSE",
     "company": "G R Infraprojects Limited",
@@ -1450,5 +1428,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/Authum123_12072026000756_Reg30annoucemnetVAZ.pdf",
     "summary": "Authum Investment & Infrastructure Limited announced that the NCLT has rejected its resolution plan for Vas Infrastructure Limited, for which it had been selected as the successful resolution applicant. The company clarified that this rejection has no impact on its business operations. Further developments will be disclosed as per SEBI regulations.",
     "saved_at": "2026-07-12T01:12:13.003775"
+  },
+  {
+    "id": "NSE_106695681",
+    "source": "NSE",
+    "company": "Aster DM Healthcare Limited",
+    "scrip": "ASTERDM",
+    "headline": "General Updates",
+    "date": "13-Jul-2026 16:25:19",
+    "url": "https://nsearchives.nseindia.com/corporate/ASTERDM2_13072026162505_SEAllotmentJuly2026s.pdf",
+    "summary": "Aster DM Healthcare Limited (now Aster DM Quality Care Limited) has allotted 353,551,410 fully paid-up equity shares to eligible shareholders of the transferor company, based on a share exchange ratio of 977 shares for every 1,000 held. This allotment, approved by the board on July 13, 2026, follows the NCLT\u2019s approval of the scheme and increases the company\u2019s paid-up equity capital to INR 8,716,724,390. The newly issued shares rank equally with existing shares and will be listed on BSE and NSE.",
+    "saved_at": "2026-07-13T11:32:24.718250"
+  },
+  {
+    "id": "NSE_106695556",
+    "source": "NSE",
+    "company": "Somany Ceramics Limited",
+    "scrip": "SOMANYCERA",
+    "headline": "Scheme of Arrangement",
+    "date": "13-Jul-2026 15:05:21",
+    "url": "https://nsearchives.nseindia.com/corporate/SOMANYCERAMICS_13072026150508_OutcomeofBM_13072026_sd.pdf",
+    "summary": "Somany Ceramics Limited's Board approved an additional investment of up to \u20b915 crore in its subsidiary, Sudha Somany Ceramics Private Limited, through equity and/or preference shares. The investment may be made in one or more tranches.",
+    "saved_at": "2026-07-13T11:32:26.373219"
   }
 ]
