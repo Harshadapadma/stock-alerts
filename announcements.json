@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106663736",
-    "source": "NSE",
-    "company": "Sapphire Foods India Limited",
-    "scrip": "SAPPHIRE",
-    "headline": "Scheme of Arrangement",
-    "date": "15-Jun-2026 20:18:44",
-    "url": "https://nsearchives.nseindia.com/corporate/SAPPHIRE_15062026201824_NSE.pdf",
-    "summary": "Sapphire Foods India Limited has received 'no objection' letters from NSE and BSE regarding its proposed Scheme of Arrangement with Devyani International Limited. The stock exchanges have outlined specific compliance conditions, including obtaining Competition Commission of India (CCI) approval and disclosing any ongoing enforcement actions. The scheme remains subject to final statutory, regulatory, and shareholder approvals.",
-    "saved_at": "2026-06-15T18:18:17.258503"
-  },
-  {
-    "id": "NSE_106663674",
-    "source": "NSE",
-    "company": "Asian Energy Services Limited",
-    "scrip": "ASIANENE",
-    "headline": "Shareholders meeting",
-    "date": "15-Jun-2026 19:14:26",
-    "url": "https://nsearchives.nseindia.com/corporate/ASIANENE_15062026190701_AESL_VotingResults_15062026_PDF.pdf",
-    "summary": "Asian Energy Services Limited held a shareholder meeting on June 12, 2026, via video conferencing as directed by the National Company Law Tribunal, to vote on a proposed merger with Oilmax Energy Private Limited. The voting results, scrutinized by a Company Secretary, showed unanimous approval from all shareholder categories, with 100% of votes cast in favor and none against. The detailed voting results and the Scrutinizer\u2019s report have been submitted to the stock exchange and posted on the company\u2019s website.",
-    "saved_at": "2026-06-15T18:18:19.471213"
-  },
-  {
     "id": "NSE_106665471",
     "source": "NSE",
     "company": "NIIT Limited",
@@ -1483,5 +1461,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/SPANDANA_15072026180240_SEIntimationCFLWOS.pdf",
     "summary": "Spandana Sphoorty Financial Limited announced that its subsidiary, Criss Financial Limited (CFL), has become a wholly owned subsidiary after the company acquired the remaining shares from non-promoter shareholders. As a result, the management will re-evaluate and modify the terms of the proposed merger by absorption scheme, which will then be reconsidered by the Board. The final draft scheme and related documents remain subject to further Board approval.",
     "saved_at": "2026-07-15T14:21:41.080933"
+  },
+  {
+    "id": "NSE_106700569",
+    "source": "NSE",
+    "company": "Winsome Yarns Limited",
+    "scrip": "WINSOME",
+    "headline": "Record Date",
+    "date": "16-Jul-2026 19:21:31",
+    "url": "https://nsearchives.nseindia.com/corporate/WINSOMYARN_16072026191448_Record_date_Intimation_Winsome.pdf",
+    "summary": "Winsome Yarns Limited has announced that the record date for the reduction, cancellation, and extinguishment of its existing paid-up share capital, as per the NCLT order, is set for July 31, 2026. This action will adjust the company's share capital structure accordingly.",
+    "saved_at": "2026-07-16T15:07:39.992460"
   }
 ]
