@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106665471",
-    "source": "NSE",
-    "company": "NIIT Limited",
-    "scrip": "NIITLTD",
-    "headline": "Amalgamation/Merger",
-    "date": "17-Jun-2026 12:59:36",
-    "url": "https://nsearchives.nseindia.com/corporate/NIITLTD_17062026125828_SESchemeNCLTOrderCTC.pdf",
-    "summary": "NIIT Limited announced that it has received the certified order from the NCLT approving the scheme of amalgamation, with an appointed date of April 1, 2026. The scheme involves the merger of NIIT Institute of Finance Banking & Insurance Training Limited and RPS Consulting Private Limited into NIIT Limited. The amalgamation will become effective once the order is filed with the Registrar of Companies, Haryana.",
-    "saved_at": "2026-06-17T10:16:18.139095"
-  },
-  {
     "id": "NSE_106665965",
     "source": "NSE",
     "company": "Gujarat Gas Limited",
@@ -1494,5 +1483,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/DIGJAMLMTD_16072026205946_SE_Intimation_NP_Advt.pdf",
     "summary": "Digjam Limited submitted copies of a joint newspaper advertisement to the stock exchange, published as per an order from the Hon'ble NCLT. The advertisement convenes meetings for the equity shareholders of Digjam Limited and the unsecured creditors of Reid & Taylor International Private Limited. This filing fulfills the regulatory disclosure requirement following the tribunal's directive.",
     "saved_at": "2026-07-16T16:40:46.583645"
+  },
+  {
+    "id": "NSE_106701766",
+    "source": "NSE",
+    "company": "Ugro Capital Limited",
+    "scrip": "UGROCAP",
+    "headline": "Scheme of Arrangement",
+    "date": "17-Jul-2026 17:36:36",
+    "url": "https://nsearchives.nseindia.com/corporate/UGROCAP_17072026173509_UGROIntimationofFilingofCompanyApplicationwithNCLT.pdf",
+    "summary": "Ugro Capital Limited and Profectus Capital Private Limited have filed a company application with the National Company Law Tribunal (NCLT) for a Scheme of Arrangement. The scheme is subject to approvals from shareholders, creditors, the NCLT, and other regulatory bodies. The company will update stock exchanges on further developments.",
+    "saved_at": "2026-07-17T12:20:02.545868"
+  },
+  {
+    "id": "NSE_106701659",
+    "source": "NSE",
+    "company": "MPS Limited",
+    "scrip": "MPSLTD",
+    "headline": "Updates",
+    "date": "17-Jul-2026 16:48:58",
+    "url": "https://nsearchives.nseindia.com/corporate/MPSLIMITED_17072026163923_Stx_Intimation_Receipt_of_Order_Sd.pdf",
+    "summary": "MPS Limited has received the First Motion Order from the NCLT Chennai Bench regarding the scheme to amalgamate ADI BPO Services Limited with MPS Limited. This order marks a procedural step in the merger process between the two companies.",
+    "saved_at": "2026-07-17T12:20:03.844214"
   }
 ]
