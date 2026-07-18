@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106665965",
-    "source": "NSE",
-    "company": "Gujarat Gas Limited",
-    "scrip": "GUJGASLTD",
-    "headline": "General Updates",
-    "date": "17-Jun-2026 19:49:50",
-    "url": "https://nsearchives.nseindia.com/corporate/GUJGASLTD_17062026194939_1582Tradingapprovalinti17062026.pdf",
-    "summary": "Gujarat Gas Limited has received final listing and trading approval for 6,22,71,47,19 equity shares. These shares were issued and allotted under a Scheme of Arrangement. The approval was confirmed in a filing with the stock exchange.",
-    "saved_at": "2026-06-17T17:21:49.413851"
-  },
-  {
     "id": "NSE_106666747",
     "source": "NSE",
     "company": "Dhampur Bio Organics Limited",
@@ -1527,5 +1516,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/NLSL_17072026205759_SLI_merger_-_SE_intimation.pdf",
     "summary": "NIIT Learning Systems Limited announced that its subsidiary, NIIT (USA) Inc., received board approval on July 17, 2026, to merge Stackroute Learning Inc. into NIIT USA. The merger was approved by NIIT USA's Board of Directors on the same date.",
     "saved_at": "2026-07-17T15:48:35.395043"
+  },
+  {
+    "id": "NSE_106702456",
+    "source": "NSE",
+    "company": "Asian Energy Services Limited",
+    "scrip": "ASIANENE",
+    "headline": "Copy of Newspaper Publication",
+    "date": "18-Jul-2026 12:52:30",
+    "url": "https://nsearchives.nseindia.com/corporate/ASIANENE_18072026124758_AESL_Merger_Newspaper_18thJuly2026_signed.pdf",
+    "summary": "Asian Energy Services Limited has informed the exchange of a newspaper publication regarding a hearing for its scheme petition on August 7, 2026. The hearing, directed by the NCLT Mumbai Bench, concerns the proposed merger by absorption of Oilmax Energy Private Limited into Asian Energy Services Limited.",
+    "saved_at": "2026-07-18T10:01:00.171659"
   }
 ]
