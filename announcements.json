@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106666747",
-    "source": "NSE",
-    "company": "Dhampur Bio Organics Limited",
-    "scrip": "DBOL",
-    "headline": "General Updates",
-    "date": "18-Jun-2026 15:32:53",
-    "url": "https://nsearchives.nseindia.com/corporate/DBOLTD_18062026152128_Intimation_Completion_of_SlumpSale.pdf",
-    "summary": "Dhampur Bio Organics Limited has issued a general update confirming compliance with SEBI regulations. The company stated that the required disclosure under Regulation 30 was already provided in its earlier intimation dated April 20, 2026. No new information was shared in this announcement.",
-    "saved_at": "2026-06-18T11:01:07.974449"
-  },
-  {
     "id": "NSE_106667252",
     "source": "NSE",
     "company": "JSW Energy Limited",
@@ -1527,5 +1516,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/ASIANENE_18072026124758_AESL_Merger_Newspaper_18thJuly2026_signed.pdf",
     "summary": "Asian Energy Services Limited has informed the exchange of a newspaper publication regarding a hearing for its scheme petition on August 7, 2026. The hearing, directed by the NCLT Mumbai Bench, concerns the proposed merger by absorption of Oilmax Energy Private Limited into Asian Energy Services Limited.",
     "saved_at": "2026-07-18T10:01:00.171659"
+  },
+  {
+    "id": "NSE_106702568",
+    "source": "NSE",
+    "company": "NBCC (India) Limited",
+    "scrip": "NBCC",
+    "headline": "Updates",
+    "date": "18-Jul-2026 15:22:03",
+    "url": "https://nsearchives.nseindia.com/corporate/NBCC_18072026152154_IntimationofSchemeofMergerHSCCwithNBCC.pdf",
+    "summary": "NBCC (India) Limited has informed the stock exchange about a Scheme of Arrangement to merge HSCC (India) Limited with NBCC, involving shareholders and creditors. The disclosure is made under Regulation 37(6) of SEBI's listing regulations.",
+    "saved_at": "2026-07-18T14:45:24.739616"
   }
 ]
