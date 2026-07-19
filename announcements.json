@@ -1,71 +1,5 @@
 [
   {
-    "id": "NSE_106667252",
-    "source": "NSE",
-    "company": "JSW Energy Limited",
-    "scrip": "JSWENERGY",
-    "headline": "General Updates",
-    "date": "18-Jun-2026 22:30:42",
-    "url": "https://nsearchives.nseindia.com/corporate/KRUTIKAJSWEL_18062026223032_LettertoSEnoticetounsecuredcreditors_Final.pdf",
-    "summary": "JSW Energy Limited has informed the exchange that a meeting of its unsecured creditors, convened by the NCLT Mumbai Bench, will be held on 20th July 2026. The meeting is being held as per the directions of the tribunal.",
-    "saved_at": "2026-06-18T17:43:11.481252"
-  },
-  {
-    "id": "NSE_106667241",
-    "source": "NSE",
-    "company": "JSW Energy Limited",
-    "scrip": "JSWENERGY",
-    "headline": "Shareholders meeting",
-    "date": "18-Jun-2026 22:25:28",
-    "url": "https://nsearchives.nseindia.com/corporate/KRUTIKAJSWEL_18062026222502_LettertoSEnoticetounsecuredcreditors_Final.pdf",
-    "summary": "JSW Energy has informed the exchange that a meeting of its Unsecured Creditors, convened by the NCLT Mumbai Bench, will be held on July 20, 2026. The meeting is being held as per the Tribunal's directions.",
-    "saved_at": "2026-06-18T17:43:13.086325"
-  },
-  {
-    "id": "NSE_106667226",
-    "source": "NSE",
-    "company": "JSW Energy Limited",
-    "scrip": "JSWENERGY",
-    "headline": "General Updates",
-    "date": "18-Jun-2026 21:53:52",
-    "url": "https://nsearchives.nseindia.com/corporate/KRUTIKAJSWEL_18062026215338_LettertoSEnoticetoequityshareholdersFinal.pdf",
-    "summary": "JSW Energy Limited has informed the exchange that a meeting of its equity shareholders has been convened by the National Company Law Tribunal (NCLT), Mumbai Bench, and is scheduled for 20th July 2026. The meeting is being held as per the directions of the NCLT.",
-    "saved_at": "2026-06-18T17:43:14.465626"
-  },
-  {
-    "id": "NSE_106667224",
-    "source": "NSE",
-    "company": "JSW Energy Limited",
-    "scrip": "JSWENERGY",
-    "headline": "Shareholders meeting",
-    "date": "18-Jun-2026 21:49:40",
-    "url": "https://nsearchives.nseindia.com/corporate/KRUTIKAJSWEL_18062026214925_LettertoSEnoticetoequityshareholdersFinal.pdf",
-    "summary": "JSW Energy Limited has informed the exchange that a meeting of its equity shareholders, convened by the National Company Law Tribunal (NCLT), Mumbai Bench, will be held on July 20, 2026. The notice for this meeting has been issued following the directions of the NCLT.",
-    "saved_at": "2026-06-18T17:43:16.300961"
-  },
-  {
-    "id": "NSE_106667397",
-    "source": "NSE",
-    "company": "GE Power India Limited",
-    "scrip": "GVPIL",
-    "headline": "General Updates",
-    "date": "19-Jun-2026 00:36:33",
-    "url": "https://nsearchives.nseindia.com/corporate/GEPILDEEP_19062026003618_STX_After_sending_Notice_V1.pdf",
-    "summary": "GE Power India Limited has informed the exchange about a NCLT-convened meeting for its equity shareholders and unsecured creditors, as directed by the Mumbai Bench. The meeting is being held pursuant to the Tribunal's orders. No further details on the agenda were provided in the announcement.",
-    "saved_at": "2026-06-19T00:11:28.016316"
-  },
-  {
-    "id": "NSE_106667597",
-    "source": "NSE",
-    "company": "Apollo Hospitals Enterprise Limited",
-    "scrip": "APOLLOHOSP",
-    "headline": "Scheme of Arrangement",
-    "date": "19-Jun-2026 10:21:29",
-    "url": "https://nsearchives.nseindia.com/corporate/APOLLOHOSP_19062026102054_SE_Communc_19062026.pdf",
-    "summary": "Apollo Hospitals Enterprise Limited has provided additional clarifications regarding its proposed Scheme of Arrangement to separate and independently list Apollo Healthtech Limited. The promoter group has committed to waiving director nomination rights when their aggregate shareholding falls below 10%, with specific caps on nominee directors based on shareholding levels. These governance commitments will be incorporated into Apollo Healthtech\u2019s articles of association after the scheme becomes effective.",
-    "saved_at": "2026-06-19T05:29:19.211855"
-  },
-  {
     "id": "NSE_106668237",
     "source": "NSE",
     "company": "Indo Thai Securities Limited",
@@ -1527,5 +1461,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/NBCC_18072026152154_IntimationofSchemeofMergerHSCCwithNBCC.pdf",
     "summary": "NBCC (India) Limited has informed the stock exchange about a Scheme of Arrangement to merge HSCC (India) Limited with NBCC, involving shareholders and creditors. The disclosure is made under Regulation 37(6) of SEBI's listing regulations.",
     "saved_at": "2026-07-18T14:45:24.739616"
+  },
+  {
+    "id": "NSE_106702853",
+    "source": "NSE",
+    "company": "MPS Limited",
+    "scrip": "MPSLTD",
+    "headline": "Updates",
+    "date": "19-Jul-2026 12:33:09",
+    "url": "https://nsearchives.nseindia.com/corporate/MPSLIMITED_19072026123133_Stx_Intimation_Receipt_of_Order.pdf",
+    "summary": "MPS Limited has received the First Motion Order from the NCLT Chennai Bench regarding the Scheme of Amalgamation of ADI BPO Services Limited into MPS Limited. This order marks a procedural step in the legal process for the merger. The announcement updates the exchange on the progress of the amalgamation.",
+    "saved_at": "2026-07-19T10:40:30.036266"
   }
 ]
