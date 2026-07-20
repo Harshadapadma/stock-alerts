@@ -1,71 +1,5 @@
 [
   {
-    "id": "NSE_106668237",
-    "source": "NSE",
-    "company": "Indo Thai Securities Limited",
-    "scrip": "INDOTHAI",
-    "headline": "Scheme of Arrangement",
-    "date": "19-Jun-2026 18:23:11",
-    "url": "https://nsearchives.nseindia.com/corporate/INDOTHAI_19062026182250_ITSL_USC_Notice_Final_with_attachment.pdf",
-    "summary": "Indo Thai Securities Limited has announced a meeting of its unsecured creditors, scheduled for July 24, 2026, as directed by the National Company Law Tribunal (Indore Bench). The meeting is part of a Scheme of Arrangement involving the company and Indo Thai Financial Services Limited, along with their respective shareholders.",
-    "saved_at": "2026-06-19T13:48:55.443837"
-  },
-  {
-    "id": "NSE_106668216",
-    "source": "NSE",
-    "company": "Gujarat Gas Limited",
-    "scrip": "GUJGASLTD",
-    "headline": "Record Date",
-    "date": "19-Jun-2026 18:14:16",
-    "url": "https://nsearchives.nseindia.com/corporate/GUJGASLTD_19062026181348_1583IntiofRD319062026.pdf",
-    "summary": "Gujarat Gas Limited (now Gujarat Energy Limited) has fixed Thursday, 2nd July 2026, as the record date for determining shareholders eligible to receive equity shares of the resulting company, GSPL Transmission Limited, under a sanctioned scheme of arrangement. Under the share exchange ratio, shareholders will receive one fully paid-up equity share of Rs. 10 each in the resulting company for every three fully paid-up equity shares of Rs. 2 each held in Gujarat Energy Limited. The new shares will be listed on BSE and NSE, subject to regulatory approvals.",
-    "saved_at": "2026-06-19T13:48:57.511599"
-  },
-  {
-    "id": "NSE_106668176",
-    "source": "NSE",
-    "company": "Indo Thai Securities Limited",
-    "scrip": "INDOTHAI",
-    "headline": "Shareholders meeting",
-    "date": "19-Jun-2026 17:53:07",
-    "url": "https://nsearchives.nseindia.com/corporate/INDOTHAI_19062026175217_NoticeofShareholdermeeting_FINAL.pdf",
-    "summary": "Indo Thai Securities Limited has announced a shareholders' meeting scheduled for July 24, 2026, as directed by the National Company Law Tribunal, Indore Bench. The meeting will address a Scheme of Arrangement between Indo Thai Securities Limited and Indo Thai Financial Services Limited, along with their respective shareholders.",
-    "saved_at": "2026-06-19T13:48:58.839750"
-  },
-  {
-    "id": "NSE_106668156",
-    "source": "NSE",
-    "company": "Aster DM Healthcare Limited",
-    "scrip": "ASTERDM",
-    "headline": "General Updates",
-    "date": "19-Jun-2026 17:42:40",
-    "url": "https://nsearchives.nseindia.com/corporate/ASTERDM2_19062026174047_SE_Intimation.pdf",
-    "summary": "The National Company Law Tribunal (NCLT) has approved the Scheme of Amalgamation between Quality Care India Limited and Aster DM Healthcare Limited. The scheme will become effective once the certified NCLT order is filed with the Registrar of Companies, after which QCIL will be dissolved. Aster DM will inform the stock exchanges of the effective date in due course.",
-    "saved_at": "2026-06-19T13:49:00.656007"
-  },
-  {
-    "id": "NSE_106667935",
-    "source": "NSE",
-    "company": "JSW Energy Limited",
-    "scrip": "JSWENERGY",
-    "headline": "General Updates",
-    "date": "19-Jun-2026 15:34:09",
-    "url": "https://nsearchives.nseindia.com/corporate/KRUTIKAJSWEL_19062026153401_LettertoBSENSEnewspaperpublicationClean.pdf",
-    "summary": "JSW Energy has issued a newspaper notice regarding NCLT-convened meetings of its equity shareholders and unsecured creditors. These meetings will seek approval for a proposed scheme of arrangement involving the demerger of GE Power India Limited into JSW Energy. The process is being conducted under Sections 230-232 of the Companies Act, 2013.",
-    "saved_at": "2026-06-19T13:49:02.404937"
-  },
-  {
-    "id": "NSE_106668659",
-    "source": "NSE",
-    "company": "Dollar Industries Limited",
-    "scrip": "DOLLAR",
-    "headline": "Copy of Newspaper Publication",
-    "date": "20-Jun-2026 12:10:11",
-    "url": "https://nsearchives.nseindia.com/corporate/DOLLAR_20062026120952_Newspaper_Publication.pdf",
-    "summary": "Dollar Industries Limited has informed the stock exchange about a newspaper publication regarding meetings of equity shareholders and unsecured creditors. These meetings are being held to consider a Composite Scheme of Arrangement. The notice serves as formal communication of the scheduled meetings.",
-    "saved_at": "2026-06-20T06:41:32.095925"
-  },
-  {
     "id": "NSE_106668742",
     "source": "NSE",
     "company": "JSW Energy Limited",
@@ -1472,5 +1406,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/MPSLIMITED_19072026123133_Stx_Intimation_Receipt_of_Order.pdf",
     "summary": "MPS Limited has received the First Motion Order from the NCLT Chennai Bench regarding the Scheme of Amalgamation of ADI BPO Services Limited into MPS Limited. This order marks a procedural step in the legal process for the merger. The announcement updates the exchange on the progress of the amalgamation.",
     "saved_at": "2026-07-19T10:40:30.036266"
+  },
+  {
+    "id": "NSE_106703247",
+    "source": "NSE",
+    "company": "Torrent Pharmaceuticals Limited",
+    "scrip": "TORNTPHARM",
+    "headline": "General Updates",
+    "date": "20-Jul-2026 12:44:19",
+    "url": "https://nsearchives.nseindia.com/corporate/TORNTPHARM_20072026124412_SE_Intimation_Allotment_of_shares.pdf",
+    "summary": "Torrent Pharmaceuticals has allotted 41,922,416 fully paid-up equity shares to eligible shareholders of J. B. Chemicals & Pharmaceuticals, based on the record date of July 17, 2026. This allotment was made as part of the approved scheme of amalgamation between the two companies.",
+    "saved_at": "2026-07-20T07:36:33.525422"
   }
 ]
