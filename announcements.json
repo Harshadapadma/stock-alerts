@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106669777",
-    "source": "NSE",
-    "company": "Timken India Limited",
-    "scrip": "TIMKEN",
-    "headline": "Action(s) taken or orders passed",
-    "date": "22-Jun-2026 17:46:08",
-    "url": "https://nsearchives.nseindia.com/corporate/TIMKEN_22062026174429_SE_Intimation_Court_Order22062026.pdf",
-    "summary": "Timken India Limited has disclosed that an order was passed by the Gujarat High Court in a case involving Antifriction Bearings Corporation Limited (now merged with Timken) and Anil Ambalal Modi. The disclosure was made under SEBI listing regulations, with further details provided in the attached document.",
-    "saved_at": "2026-06-22T16:12:35.200005"
-  },
-  {
     "id": "NSE_106670838",
     "source": "NSE",
     "company": "Hubtown Limited",
@@ -1648,5 +1637,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/9823522970_22072026195714_RRLSEIntimationKIARubicon_Merger22ndJuly_2026.pdf",
     "summary": "Rubicon Research Limited has filed a scheme of merger with its wholly owned subsidiary, Kia Health Tech Private Limited. The filing is for disclosure purposes only, under an exemption provided by SEBI's Master Circular. This move consolidates the subsidiary into the parent company.",
     "saved_at": "2026-07-22T15:56:33.244561"
+  },
+  {
+    "id": "NSE_106707241",
+    "source": "NSE",
+    "company": "Inox Green Energy Services Limited",
+    "scrip": "INOXGREEN",
+    "headline": "Record Date",
+    "date": "22-Jul-2026 22:28:16",
+    "url": "https://nsearchives.nseindia.com/corporate/IGESL_22072026222526_IGESL_Record_Date_Scheme.pdf",
+    "summary": "Inox Green Energy Services Limited has fixed Saturday, 1st August 2026 as the Record Date to determine shareholders eligible to receive equity shares of Inox Renewable Solutions Limited (IRSL) under a Scheme of Arrangement. Eligible shareholders will receive 122 equity shares of IRSL (face value Rs. 10 each) for every 1,000 equity shares held in Inox Green. The company also confirmed that no outstanding warrants exist, making the warrant-related exchange ratio inapplicable.",
+    "saved_at": "2026-07-22T17:34:00.833834"
   }
 ]
