@@ -1,38 +1,5 @@
 [
   {
-    "id": "NSE_106670838",
-    "source": "NSE",
-    "company": "Hubtown Limited",
-    "scrip": "HUBTOWN",
-    "headline": "Press Release",
-    "date": "23-Jun-2026 14:50:01",
-    "url": "https://nsearchives.nseindia.com/corporate/HUBTOWN_23062026144927_PressReleaseMergerHL23June2026.pdf",
-    "summary": "Hubtown Limited issued a press release on June 23, 2026, regarding a scheme of arrangement to merge Saicharan Consultancy Private Limited and 25 West Realty Private Limited with the company. The announcement was submitted to the stock exchange for public disclosure.",
-    "saved_at": "2026-06-23T10:00:52.185438"
-  },
-  {
-    "id": "NSE_106670664",
-    "source": "NSE",
-    "company": "Kitex Garments Limited",
-    "scrip": "KITEX",
-    "headline": "Scheme of Arrangement",
-    "date": "23-Jun-2026 12:39:15",
-    "url": "https://nsearchives.nseindia.com/corporate/KITEX_23062026123857_KGL_Notice_of_court-convened_meetings_signed.pdf",
-    "summary": "Kitex Garments Limited has issued a notice to convene meetings of shareholders and creditors regarding a Scheme of Arrangement with Kitex Childrenswear Limited. The scheme involves both companies and their respective stakeholders. The announcement serves as an update on the procedural steps for the proposed arrangement.",
-    "saved_at": "2026-06-23T10:00:53.984519"
-  },
-  {
-    "id": "NSESME_106670535",
-    "source": "NSE-SME",
-    "company": "CMM Infraprojects Limited",
-    "scrip": "CMMIPL",
-    "headline": "Updates",
-    "date": "23-Jun-2026 11:36:56",
-    "url": "https://nsearchives.nseindia.com/corporate/CMMIPL_23062026113617_Intimation_NCLTorder_CMM_final.pdf",
-    "summary": "The National Company Law Tribunal (NCLT) Indore Bench has pronounced an order on an application filed by CMM Infraprojects Limited seeking directions to implement its approved resolution plan, specifically regarding the reconstitution of share capital and public shareholding. The resolution plan, submitted by Effulgence Trading and Services Private Limited and Shree Naivedya Fincom Private Limited, was approved by the NCLT on November 11, 2024, following the initiation of Corporate Insolvency Resolution Process (CIRP) against the company in December 2022. The order was delivered on June 18, 2026, by the NCLT bench comprising Member (Judicial) Brajendra Mani Tripathi and Member (Technical) Man Mohan Gupta.",
-    "saved_at": "2026-06-23T10:00:56.568295"
-  },
-  {
     "id": "NSE_106671023",
     "source": "NSE",
     "company": "Concord Enviro Systems Limited",
@@ -1670,5 +1637,38 @@
     "url": "https://nsearchives.nseindia.com/corporate/MPSLIMITED_22072026233301_IntimationWeblinkLetter22072026.pdf",
     "summary": "MPS Limited has informed shareholders without registered email addresses that a weblink to the notice of an equity shareholder meeting has been dispatched. The meeting, scheduled for 22 August 2026 via video conference, is being held per the National Company Law Tribunal's directions to consider the proposed amalgamation of ADI BPO Services Limited with MPS Limited. The notice and related documents are also available on the company's website and stock exchange portals.",
     "saved_at": "2026-07-22T20:02:39.511019"
+  },
+  {
+    "id": "NSE_106708264",
+    "source": "NSE",
+    "company": "Nectar Lifesciences Limited",
+    "scrip": "NECLIFE",
+    "headline": "General Updates",
+    "date": "23-Jul-2026 17:09:32",
+    "url": "https://nsearchives.nseindia.com/corporate/NECLIFE_23072026170858_NECLIFE_Long_stop_date_extention_260723_Signed.pdf",
+    "summary": "Nectar Lifesciences Limited has extended the expected completion date of its slump sale of business to Capnest Health Care Private Limited to on or before December 31, 2026, by mutual agreement. All other relevant disclosures regarding the slump sale remain unchanged. The update follows previous announcements made in December 2025 and April 2026.",
+    "saved_at": "2026-07-23T12:01:24.763639"
+  },
+  {
+    "id": "NSE_106708174",
+    "source": "NSE",
+    "company": "Thyrocare Technologies Limited",
+    "scrip": "THYROCARE",
+    "headline": "General Updates",
+    "date": "23-Jul-2026 16:31:31",
+    "url": "https://nsearchives.nseindia.com/corporate/THYROCARE_23072026163123_NHLDemerger.pdf",
+    "summary": "Thyrocare Technologies announced that its Board has granted in-principle approval to evaluate a proposed restructuring of the radiology business of its wholly owned subsidiary, Nueclear Healthcare Limited. The move is aimed at reorganizing the subsidiary's operations. No further details on the restructuring plan have been disclosed at this stage.",
+    "saved_at": "2026-07-23T12:01:26.444422"
+  },
+  {
+    "id": "NSESME_106708103",
+    "source": "NSE-SME",
+    "company": "Aesthetik Engineers Limited",
+    "scrip": "AESTHETIK",
+    "headline": "Amalgamation/Merger",
+    "date": "23-Jul-2026 16:01:32",
+    "url": "https://nsearchives.nseindia.com/corporate/AESTHETIK_23072026153226_nse__intimation_abt_pronouncement_of_order_signed_copy.pdf",
+    "summary": "Aesthetik Engineers Limited announced that the National Company Law Tribunal, Kolkata Bench, has approved the Scheme of Amalgamation of La Reliant Aluminium Limited with the company. The order sanctions the merger, integrating La Reliant Aluminium into Aesthetik Engineers.",
+    "saved_at": "2026-07-23T12:01:27.877250"
   }
 ]
