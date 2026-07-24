@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106672742",
-    "source": "NSE",
-    "company": "Aster DM Healthcare Limited",
-    "scrip": "ASTERDM",
-    "headline": "General Updates",
-    "date": "24-Jun-2026 16:38:53",
-    "url": "https://nsearchives.nseindia.com/corporate/ASTERDM2_24062026163557_Intimation_CTC.pdf",
-    "summary": "Aster DM Healthcare Limited has received the certified copy of the NCLT order approving the amalgamation of Quality Care India Limited into Aster DM. The scheme will become effective once filed with the Registrar of Companies, after which QCIL will be dissolved. The company will announce the effective date to stock exchanges in due course.",
-    "saved_at": "2026-06-24T12:11:29.423005"
-  },
-  {
-    "id": "NSE_106672731",
-    "source": "NSE",
-    "company": "Kansai Nerolac Paints Limited",
-    "scrip": "KANSAINER",
-    "headline": "Copy of Newspaper Publication",
-    "date": "24-Jun-2026 16:34:43",
-    "url": "https://nsearchives.nseindia.com/corporate/KANSAINER_24062026163400_FinalSEIntimation_-_Newspaper_Publication_-_GTSigned.pdf",
-    "summary": "Kansai Nerolac Paints Limited has published a notice in newspapers regarding a hearing for the scheme of amalgamation with Nerofix Private Limited, scheduled before the NCLT Mumbai Bench on July 29, 2026. The announcement was made in compliance with SEBI regulations and appeared in the Free Press Journal (English) and Navshakti (Marathi) on June 24, 2026.",
-    "saved_at": "2026-06-24T12:11:31.367962"
-  },
-  {
     "id": "NSE_106673279",
     "source": "NSE",
     "company": "Refex Industries Limited",
@@ -1681,5 +1659,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/HEG_24072026160341_Stxintimation24072026R.pdf",
     "summary": "HEG Limited issued a press release on July 24, 2026, announcing its Q1 FY27 financial results. The release also provided an update on the company's Composite Scheme of Arrangement. The information was formally communicated to the stock exchange.",
     "saved_at": "2026-07-24T11:25:48.731817"
+  },
+  {
+    "id": "NSESME_106710279",
+    "source": "NSE-SME",
+    "company": "Kck Industries Limited",
+    "scrip": "KCK",
+    "headline": "Updates",
+    "date": "24-Jul-2026 18:47:41",
+    "url": "https://nsearchives.nseindia.com/corporate/KCK_24072026184718_Demerger_Outcome_Postponement__1_.pdf",
+    "summary": "KCK Industries Limited has announced the postponement of the implementation and filing of its proposed Scheme of Arrangement (Demerger) with KCK Infratech Private Limited. The decision was made to allow the company to conduct a comprehensive review of the restructuring\u2019s commercial, legal, regulatory, and operational aspects. The company will reconsider the proposal after completing its internal review and will keep the stock exchange informed of further developments.",
+    "saved_at": "2026-07-24T15:05:34.954820"
   }
 ]
