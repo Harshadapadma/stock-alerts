@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106671023",
-    "source": "NSE",
-    "company": "Concord Enviro Systems Limited",
-    "scrip": "CEWATER",
-    "headline": "Copy of Newspaper Publication",
-    "date": "23-Jun-2026 16:42:00",
-    "url": "https://nsearchives.nseindia.com/corporate/CONCORDENVIRO_23062026164146_Concord_Intimation_Final_dated_23rd_June_2026.pdf",
-    "summary": "Concord Enviro Systems Limited has published newspaper advertisements in Business Standard and Navshakti regarding a Scheme of Arrangement with its shareholders. The petition for the scheme has been admitted by the National Company Law Tribunal, Mumbai Bench, and is scheduled for a hearing on 23rd July 2026. The company has informed stakeholders and made the publication copies available on its website.",
-    "saved_at": "2026-06-23T12:46:24.237346"
-  },
-  {
-    "id": "NSE_106671415",
-    "source": "NSE",
-    "company": "Kitex Garments Limited",
-    "scrip": "KITEX",
-    "headline": "Copy of Newspaper Publication",
-    "date": "23-Jun-2026 18:58:14",
-    "url": "https://nsearchives.nseindia.com/corporate/KITEX_23062026185752_KGL_Newspaper_publications.pdf",
-    "summary": "Kitex Garments Limited has informed the exchange of a newspaper publication regarding notices for meetings of equity shareholders and unsecured creditors. These meetings are being convened to consider a Scheme of Arrangement between Kitex Childrenswear Ltd and Kitex Garments Ltd, along with their respective shareholders and creditors.",
-    "saved_at": "2026-06-23T15:41:27.251971"
-  },
-  {
     "id": "NSE_106672742",
     "source": "NSE",
     "company": "Aster DM Healthcare Limited",
@@ -1670,5 +1648,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/AESTHETIK_23072026153226_nse__intimation_abt_pronouncement_of_order_signed_copy.pdf",
     "summary": "Aesthetik Engineers Limited announced that the National Company Law Tribunal, Kolkata Bench, has approved the Scheme of Amalgamation of La Reliant Aluminium Limited with the company. The order sanctions the merger, integrating La Reliant Aluminium into Aesthetik Engineers.",
     "saved_at": "2026-07-23T12:01:27.877250"
+  },
+  {
+    "id": "NSE_106709305",
+    "source": "NSE",
+    "company": "Fractal Analytics Limited",
+    "scrip": "FRACTAL",
+    "headline": "Other Restructuring",
+    "date": "24-Jul-2026 11:41:03",
+    "url": "https://nsearchives.nseindia.com/corporate/FRACTAL_24072026114036_NSEBSEDissolution.pdf",
+    "summary": "Fractal Analytics Limited announced that it received an intimation from Senseforth AI Research Private Limited on July 23, 2026, confirming the dissolution of Fractal Frontiers Inc. effective July 21, 2026. The disclosure is part of a restructuring update and has been made available on the company\u2019s investor relations website.",
+    "saved_at": "2026-07-24T07:15:47.425767"
   }
 ]
