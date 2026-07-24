@@ -1,60 +1,5 @@
 [
   {
-    "id": "NSE_106673279",
-    "source": "NSE",
-    "company": "Refex Industries Limited",
-    "scrip": "REFEX",
-    "headline": "General Updates",
-    "date": "24-Jun-2026 19:36:14",
-    "url": "https://nsearchives.nseindia.com/corporate/REFEX2002_24062026193439_RIL_NCLT_order.pdf",
-    "summary": "Refex Industries Limited has disclosed, under SEBI Listing Regulations, that the Hon'ble NCLT has passed an order regarding the Composite Scheme of Amalgamation and Arrangement. The order pertains to the convening of a meeting to consider the scheme. This update follows regulatory requirements for material corporate actions.",
-    "saved_at": "2026-06-24T15:12:21.467209"
-  },
-  {
-    "id": "NSE_106673222",
-    "source": "NSE",
-    "company": "Larsen & Toubro Limited",
-    "scrip": "LT",
-    "headline": "Scheme of Arrangement",
-    "date": "24-Jun-2026 19:00:58",
-    "url": "https://nsearchives.nseindia.com/corporate/PAM_24062026190028_Reg3024062026signed1.pdf",
-    "summary": "Larsen & Toubro Limited announced that its Transferor Company has received an order from the NCLT, Mumbai Bench, directing it to convene a shareholder meeting within 60 days to seek approval for a proposed Scheme of Arrangement. The company will finalize the meeting date and dispatch notices accordingly. A minor typographical error in the order's date has been noted and is being rectified, without affecting the order's substance.",
-    "saved_at": "2026-06-24T15:12:23.700366"
-  },
-  {
-    "id": "NSE_106673194",
-    "source": "NSE",
-    "company": "BASF India Limited",
-    "scrip": "BASF",
-    "headline": "Shareholders meeting",
-    "date": "24-Jun-2026 18:47:29",
-    "url": "https://nsearchives.nseindia.com/corporate/BASFIL_24062026184215_Proceeding_Signed.pdf",
-    "summary": "BASF India Limited held a virtual shareholders' meeting on June 24, 2026, as ordered by the National Company Law Tribunal, to vote on a Scheme of Arrangement with BASF Agricultural Solutions India Limited. The resolution approving the scheme was passed by the required majority of equity shareholders.",
-    "saved_at": "2026-06-24T15:12:25.579170"
-  },
-  {
-    "id": "NSE_106673037",
-    "source": "NSE",
-    "company": "BASF India Limited",
-    "scrip": "BASF",
-    "headline": "Shareholders meeting",
-    "date": "24-Jun-2026 18:04:15",
-    "url": "https://nsearchives.nseindia.com/corporate/BASFIL_24062026175949_Presentation.pdf",
-    "summary": "BASF India Limited held an NCLT-convened equity shareholders meeting on June 24, 2026, to consider and approve a Scheme of Arrangement to demerge its Agricultural Solutions business into a separate listed entity. The demerger, which has already received no-objection letters from SEBI and stock exchanges, will see shareholders receive one share in the new company for every one share held, with completion targeted by March 2027.",
-    "saved_at": "2026-06-24T15:12:27.927265"
-  },
-  {
-    "id": "NSE_106673349",
-    "source": "NSE",
-    "company": "Apollo Hospitals Enterprise Limited",
-    "scrip": "APOLLOHOSP",
-    "headline": "Scheme of Arrangement",
-    "date": "24-Jun-2026 20:58:05",
-    "url": "https://nsearchives.nseindia.com/corporate/APOLLOHOSP_24062026205745_se_nclt_proceedings_1.pdf",
-    "summary": "Apollo Hospitals Enterprise Limited held meetings of its secured creditors, unsecured creditors, and equity shareholders on June 24, 2026, via video conferencing to consider a composite scheme of arrangement involving Apollo Healthco Limited, Keimed Private Limited, and Apollo Healthtech Limited. The meetings, conducted under the direction of the NCLT, were chaired by Dr. K.S. Ravichandran and have concluded, with summaries of proceedings submitted for record. Voting results will be provided separately as per SEBI regulations.",
-    "saved_at": "2026-06-24T17:22:37.062474"
-  },
-  {
     "id": "NSE_106674642",
     "source": "NSE",
     "company": "Aster DM Healthcare Limited",
@@ -1670,5 +1615,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/KCK_24072026184718_Demerger_Outcome_Postponement__1_.pdf",
     "summary": "KCK Industries Limited has announced the postponement of the implementation and filing of its proposed Scheme of Arrangement (Demerger) with KCK Infratech Private Limited. The decision was made to allow the company to conduct a comprehensive review of the restructuring\u2019s commercial, legal, regulatory, and operational aspects. The company will reconsider the proposal after completing its internal review and will keep the stock exchange informed of further developments.",
     "saved_at": "2026-07-24T15:05:34.954820"
+  },
+  {
+    "id": "NSE_106710743",
+    "source": "NSE",
+    "company": "Kitex Garments Limited",
+    "scrip": "KITEX",
+    "headline": "Scheme of Arrangement",
+    "date": "24-Jul-2026 23:55:43",
+    "url": "https://nsearchives.nseindia.com/corporate/KITEX_24072026235531_KGL_Proceedings_of_meetings_240726s.pdf",
+    "summary": "Kitex Garments Limited has informed the Exchange about Update on Scheme of Arrangement being the proceedings of meetings convened on July 24, 2026 pursuant to the order of Hon''ble NCLT, Kochi Bench for considering the Scheme of Arrangement between Kitex Childrenswear Ltd and Kitex Garments Ltd and their respective shareholders and creditors",
+    "saved_at": "2026-07-24T19:56:44.024062"
   }
 ]
