@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106674642",
-    "source": "NSE",
-    "company": "Aster DM Healthcare Limited",
-    "scrip": "ASTERDM",
-    "headline": "Outcome of Board Meeting",
-    "date": "25-Jun-2026 15:25:13",
-    "url": "https://nsearchives.nseindia.com/corporate/ASTERDM2_25062026152347_SE_Outcomesigned.pdf",
-    "summary": "Aster DM Healthcare Limited's Board has taken on record the NCLT's approval of its amalgamation with Quality Care India Limited. The Board has fixed July 9, 2026, as the record date to determine shareholder entitlements for share allotment. Under the scheme, QCIL shareholders will receive 977 Aster DM shares for every 1,000 shares held.",
-    "saved_at": "2026-06-25T09:57:22.782055"
-  },
-  {
     "id": "NSE_106675349",
     "source": "NSE",
     "company": "Neueon Corporation Limited",
@@ -1626,5 +1615,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/KITEX_24072026235531_KGL_Proceedings_of_meetings_240726s.pdf",
     "summary": "Kitex Garments Limited has informed the Exchange about Update on Scheme of Arrangement being the proceedings of meetings convened on July 24, 2026 pursuant to the order of Hon''ble NCLT, Kochi Bench for considering the Scheme of Arrangement between Kitex Childrenswear Ltd and Kitex Garments Ltd and their respective shareholders and creditors",
     "saved_at": "2026-07-24T19:56:44.024062"
+  },
+  {
+    "id": "NSE_106711080",
+    "source": "NSE",
+    "company": "Laurus Labs Limited",
+    "scrip": "LAURUSLABS",
+    "headline": "General Updates",
+    "date": "25-Jul-2026 17:09:56",
+    "url": "https://nsearchives.nseindia.com/corporate/LAURUSLABS_25072026170941_NCLTOrder25072026.pdf",
+    "summary": "we are pleased to inform that the Hon\u2019ble National Company Law Tribunal, Amravati Special Branch (\u201cNCLT\u201d), vide its order pronounced on July 24, 2026, as uploaded on the official website of the NCLT today (https://nclt.gov.in) (the \u201cOrder\u201d) has, amongst other things, directed the Petitioner Companies to serve the notice of the hearing of the Petition in Form No. Further, Hon\u2019ble NCLT has directed that the next date of hearing of the petition is September 10, 2026 for consideration of the Scheme.",
+    "saved_at": "2026-07-25T11:54:59.725939"
   }
 ]
