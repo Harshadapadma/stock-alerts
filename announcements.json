@@ -1637,5 +1637,27 @@
     "url": "-",
     "summary": "Trading in equity shares of Winsome Yarns Limited will be suspended from July 31, 2026, following a reduction of share capital ordered by the NCLT. The suspension is effective from the specified date.",
     "saved_at": "2026-07-29T14:53:12.948146"
+  },
+  {
+    "id": "NSE_106716200",
+    "source": "NSE",
+    "company": "UPL Limited",
+    "scrip": "UPL",
+    "headline": "Scheme of Arrangement",
+    "date": "29-Jul-2026 20:54:06",
+    "url": "https://nsearchives.nseindia.com/corporate/UPL_29072026205347_Reg_30_Scheme_of_Arrangement.pdf",
+    "summary": "UPL Limited has received observation letters from BSE and NSE regarding its Composite Scheme of Arrangement involving UPL, UPL SAS, UPL 2, and UPL Cayman 1. The scheme outlines a restructuring among these entities. This update confirms regulatory acknowledgment of the proposed arrangement.",
+    "saved_at": "2026-07-29T16:25:56.921410"
+  },
+  {
+    "id": "NSE_106716160",
+    "source": "NSE",
+    "company": "Zensar Technologies Limited",
+    "scrip": "ZENSARTECH",
+    "headline": "General Updates",
+    "date": "29-Jul-2026 20:28:37",
+    "url": "https://nsearchives.nseindia.com/corporate/ZENSARTECH_29072026202807_SE_Intimation_Merger.pdf",
+    "summary": "Zensar Technologies' Board has approved the merger of its US-based step-down subsidiaries, Bridgeview Life Sciences LLC and M3BI LLC, into its material wholly-owned subsidiary, Zensar Technologies Inc. The merger aims to achieve greater business synergies and operational efficiencies, and will result in the merging entities ceasing to exist as separate subsidiaries. No change in Zensar Technologies' shareholding pattern is expected from this transaction.",
+    "saved_at": "2026-07-29T16:25:58.504037"
   }
 ]
