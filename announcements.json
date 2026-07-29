@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106678772",
-    "source": "NSE",
-    "company": "Power Finance Corporation Limited",
-    "scrip": "PFC",
-    "headline": "Amalgamation/Merger",
-    "date": "28-Jun-2026 23:17:24",
-    "url": "https://nsearchives.nseindia.com/corporate/PFC2023_28062026231625_INTIMATION28062026SIGNEDPFC.pdf",
-    "summary": "Power Finance Corporation Limited (PFC) has approved a scheme to merge REC Limited into itself, with REC shareholders receiving 88 PFC shares for every 100 REC shares. The merger will dissolve REC without winding up, subject to necessary regulatory approvals.",
-    "saved_at": "2026-06-28T18:55:44.664371"
-  },
-  {
-    "id": "NSE_106679223",
-    "source": "NSE",
-    "company": "Marico Limited",
-    "scrip": "MARICO",
-    "headline": "General Updates",
-    "date": "29-Jun-2026 13:22:18",
-    "url": "https://nsearchives.nseindia.com/corporate/marico_29062026132050_SE_intimation_-_Distribution.pdf",
-    "summary": "Marico Limited has completed the integration of its wholly owned subsidiary, Zed Lifestyle Private Limited, by distributing Zed's business undertaking to Marico on a going concern basis, effective June 29, 2026. The liquidator will now seek NCLT approval for Zed's dissolution. This follows prior disclosures about the intra-group restructuring.",
-    "saved_at": "2026-06-29T09:19:33.804117"
-  },
-  {
     "id": "NSE_106679905",
     "source": "NSE",
     "company": "Arihant Capital Markets Limited",
@@ -1505,5 +1483,49 @@
     "url": "https://nsearchives.nseindia.com/corporate/IGESL_28072026203453_IGESL_Reg30_WWILf.pdf",
     "summary": "Inox Green Energy Services Limited announced that the NCLT Ahmedabad Bench has orally approved the resolution plan submitted by a consortium (including Inox Neo Energies and Authum) for Wind World (India) Limited. Under the plan, INOXGFL Group companies will acquire WWIL\u2019s IPP, power sale, and O&M businesses, while Authum will acquire certain real estate and other assets. A detailed disclosure will follow once the written certified order is available.",
     "saved_at": "2026-07-28T16:25:47.285635"
+  },
+  {
+    "id": "NSE_106715247",
+    "source": "NSE",
+    "company": "Go Digit General Insurance Limited",
+    "scrip": "GODIGIT",
+    "headline": "News Verification",
+    "date": "29-Jul-2026 15:03:25",
+    "url": "https://nsearchives.nseindia.com/corporate/GODIGITGI_29072026150100_NSE_Response.pdf",
+    "summary": "Go Digit General Insurance Limited confirmed that the stock exchange sought clarification regarding a news report on CCI clearing its merger with Go Digit Infoworks and Fairfax holding a 57.28% stake. The company provided its official response, which is attached to the announcement.",
+    "saved_at": "2026-07-29T10:11:12.765988"
+  },
+  {
+    "id": "NSE_106715173",
+    "source": "NSE",
+    "company": "SML Mahindra Limited",
+    "scrip": "SMLMAH",
+    "headline": "General Updates",
+    "date": "29-Jul-2026 14:10:47",
+    "url": "https://nsearchives.nseindia.com/corporate/SMLISUZU_29072026141035_SMlSEIntimation29072026.pdf",
+    "summary": "SML Mahindra Limited's Board has approved the acquisition of Mahindra & Mahindra's Truck and Bus Division as a going concern on a slump sale basis for Rs. 525 crore. The deal, which includes all employees, assets, and liabilities of the division, is subject to shareholder approval and is expected to be finalized by August 7th, 2026.",
+    "saved_at": "2026-07-29T10:11:14.364292"
+  },
+  {
+    "id": "NSE_106715158",
+    "source": "NSE",
+    "company": "Mahindra & Mahindra Limited",
+    "scrip": "M&M",
+    "headline": "Sale or disposal",
+    "date": "29-Jul-2026 14:01:00",
+    "url": "https://nsearchives.nseindia.com/corporate/AmitDodani_29072026140051_SEIntimationSlumpSaleMTBD.pdf",
+    "summary": "Mahindra & Mahindra's Board has approved the sale of its Truck & Bus Division to its subsidiary, SML Mahindra Limited, for Rs. 525 crore via a slump sale. The division, which generated Rs. 2,989 crore in revenue last year, will be transferred as a going concern under a Business Transfer Agreement expected by August 7, 2026, with completion targeted by January 31, 2027.",
+    "saved_at": "2026-07-29T10:11:15.998401"
+  },
+  {
+    "id": "NSE_106715065",
+    "source": "NSE",
+    "company": "Go Digit General Insurance Limited",
+    "scrip": "GODIGIT",
+    "headline": "News Verification",
+    "date": "29-Jul-2026 12:54:05",
+    "url": "-",
+    "summary": "Go Digit General Insurance Limited has received a clarification request from the stock exchange regarding a news report that the Competition Commission of India (CCI) has cleared its merger with Go Digit Infoworks, with a Fairfax entity set to hold a 57.28% stake. The company has not yet provided its response to the exchange.",
+    "saved_at": "2026-07-29T10:11:17.349938"
   }
 ]
