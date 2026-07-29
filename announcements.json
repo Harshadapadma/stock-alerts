@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106679905",
-    "source": "NSE",
-    "company": "Arihant Capital Markets Limited",
-    "scrip": "ARIHANTCAP",
-    "headline": "Scheme of Arrangement",
-    "date": "29-Jun-2026 18:19:17",
-    "url": "https://nsearchives.nseindia.com/corporate/ARIHANTCAP_29062026181851_disclosureobservationletter.pdf",
-    "summary": "Arihant Capital Markets Limited (ACML) has received \"no adverse observations\" from BSE and \"no objection\" from NSE regarding its composite Scheme of Arrangement involving multiple group entities. The scheme remains subject to other regulatory approvals, and the observation letters have been uploaded to the company's website.",
-    "saved_at": "2026-06-29T13:49:18.318755"
-  },
-  {
-    "id": "NSESME_106679947",
-    "source": "NSE-SME",
-    "company": "Master Components Limited",
-    "scrip": "MASTER",
-    "headline": "Updates",
-    "date": "29-Jun-2026 18:34:37",
-    "url": "https://nsearchives.nseindia.com/corporate/MCL2023_29062026183409_Intimation_of_UC_meeting_Sd.pdf",
-    "summary": "Following the NCLT's June 12, 2026 order, Master Components Limited has scheduled a meeting of its Unsecured Creditors for August 3, 2026, at 4:00 PM via video conferencing to consider and vote on a proposed Scheme. The company has issued a formal notice for the meeting, with remote e-voting available from July 31 to August 3, 2026, and has made the relevant documents accessible on its website and through NSDL.",
-    "saved_at": "2026-06-29T13:49:20.480591"
-  },
-  {
     "id": "NSE_106681288",
     "source": "NSE",
     "company": "Autoline Industries Limited",
@@ -1549,5 +1527,115 @@
     "url": "https://nsearchives.nseindia.com/corporate/TRANSINDIA_29072026162555_TRELSchemeIntimation29072026signed.pdf",
     "summary": "Transindia Real Estate Limited has issued a notice to its equity shareholders following an NCLT Mumbai order regarding the amalgamation of its wholly owned subsidiary, Madanahatti Logistics and Industrial Parks Private Limited, into itself. The scheme involves merging the subsidiary with the holding company. This intimation was formally communicated to the stock exchange.",
     "saved_at": "2026-07-29T12:24:53.102942"
+  },
+  {
+    "id": "NSE_106716104",
+    "source": "NSE",
+    "company": "ACC Limited",
+    "scrip": "ACC",
+    "headline": "General Updates",
+    "date": "29-Jul-2026 20:01:29",
+    "url": "https://nsearchives.nseindia.com/corporate/ACC_1_29072026200048_NCLT_Merger_Disclosure.pdf",
+    "summary": "ACC Limited has received an order from the National Company Law Tribunal (NCLT) directing it to convene a meeting of equity shareholders on September 29, 2026, to consider and vote on the proposed Scheme of Amalgamation with Ambuja Cements Limited. This order follows previous disclosures made in December 2025 and June 2026 regarding the merger scheme. The shareholder meeting will be conducted via video conference or other audio-visual means.",
+    "saved_at": "2026-07-29T14:52:58.469491"
+  },
+  {
+    "id": "NSE_106716071",
+    "source": "NSE",
+    "company": "Ambuja Cements Limited",
+    "scrip": "AMBUJACEM",
+    "headline": "General Updates",
+    "date": "29-Jul-2026 19:45:03",
+    "url": "https://nsearchives.nseindia.com/corporate/AMBUJACEM_29072026194426_ACL_NCLT_order_SE_intimation_29072026.pdf",
+    "summary": "Ambuja Cements has received an order from the NCLT, Ahmedabad Bench, directing it to convene a meeting of equity shareholders to consider and approve the proposed Scheme of Amalgamation of ACC Limited with Ambuja Cements. The meeting will be held via video conference on September 29, 2026, at 12:30 p.m. IST. This follows prior disclosures made on December 22, 2025, and June 4, 2026, regarding the amalgamation scheme.",
+    "saved_at": "2026-07-29T14:53:00.182083"
+  },
+  {
+    "id": "NSE_106716038",
+    "source": "NSE",
+    "company": "EFC (I) Limited",
+    "scrip": "EFCIL",
+    "headline": "Demerger",
+    "date": "29-Jul-2026 19:25:24",
+    "url": "https://nsearchives.nseindia.com/corporate/EFCILTD_29072026192506_EFCIL_-_Intimation_About_Demerger.pdf",
+    "summary": "EFC (I) Limited's Board has approved a Scheme of Arrangement to demerge the asset-light managed office solutions business of its wholly owned subsidiary, EFC Limited, into EFC (I) Limited. This demerger will separate the leased commercial premises operations from the asset-intensive owned real estate business, with the demerged division accounting for 34.92% of EFC (I)'s consolidated turnover. The scheme is subject to regulatory approvals, including from the National Company Law Tribunal.",
+    "saved_at": "2026-07-29T14:53:01.911775"
+  },
+  {
+    "id": "NSE_106716031",
+    "source": "NSE",
+    "company": "EFC (I) Limited",
+    "scrip": "EFCIL",
+    "headline": "Demerger",
+    "date": "29-Jul-2026 19:23:27",
+    "url": "https://nsearchives.nseindia.com/corporate/EFCILTD_29072026192307_EFCIL_-_Intimation_About_Withdrawal_of_Demerger.pdf",
+    "summary": "EFC (I) Limited announced that its wholly owned subsidiary and related companies have approved the withdrawal of a proposed demerger scheme, originally intended to be executed via the fast-track merger route. The decision was made due to legal, regulatory, and operational considerations. An application to withdraw the scheme will be filed with the Regional Director in Mumbai.",
+    "saved_at": "2026-07-29T14:53:03.672509"
+  },
+  {
+    "id": "NSE_106716010",
+    "source": "NSE",
+    "company": "Siyaram Silk Mills Limited",
+    "scrip": "SIYSIL",
+    "headline": "Scheme of Arrangement",
+    "date": "29-Jul-2026 19:16:39",
+    "url": "https://nsearchives.nseindia.com/corporate/SIYSIL_29072026191629_SEIntimation_CertifiedTrueCopyNCLTOrder.pdf",
+    "summary": "Siyaram Silk Mills Limited has disclosed, under SEBI regulations, the approval of a Scheme of Arrangement between the company and its shareholders. The announcement confirms that a certified copy of the relevant National Company Law Tribunal (NCLT) order has been received and enclosed. This marks a key regulatory step in implementing the approved restructuring plan.",
+    "saved_at": "2026-07-29T14:53:05.150345"
+  },
+  {
+    "id": "NSE_106715969",
+    "source": "NSE",
+    "company": "Astral Limited",
+    "scrip": "ASTRAL",
+    "headline": "Scheme of Arrangement",
+    "date": "29-Jul-2026 19:03:35",
+    "url": "https://nsearchives.nseindia.com/corporate/ASTRAL_29072026190321_Reg_30_of_BM_Astral.pdf",
+    "summary": "Astral Limited has decided to withdraw its proposed Composite Scheme of Arrangement following a recommendation from an independent consultant, who advised against proceeding due to the current scale of the Chemical Business. The Board concluded that the demerger is not in the best interests of the company or its shareholders at this stage, and may be reconsidered once the Chemical Business achieves sufficient scale and financial strength. The company will continue to evaluate other strategic initiatives to enhance shareholder value.",
+    "saved_at": "2026-07-29T14:53:06.759406"
+  },
+  {
+    "id": "NSE_106715962",
+    "source": "NSE",
+    "company": "Astral Limited",
+    "scrip": "ASTRAL",
+    "headline": "Outcome of Board Meeting",
+    "date": "29-Jul-2026 19:01:40",
+    "url": "https://nsearchives.nseindia.com/corporate/ASTRAL_29072026190057_Reg_30_of_BM_Astral.pdf",
+    "summary": "Astral Limited\u2019s Board has decided to withdraw its proposed Composite Scheme of Arrangement following a recommendation from an Independent Consultant, who advised against proceeding due to the current scale of the Chemical Business. After reviewing feedback from stakeholders and market conditions, the Board concluded the demerger is not in the best interest of the company or shareholders at this stage. The company will reconsider the demerger once the Chemical Business achieves sufficient scale and financial strength.",
+    "saved_at": "2026-07-29T14:53:08.449306"
+  },
+  {
+    "id": "NSE_106715886",
+    "source": "NSE",
+    "company": "HEG Limited",
+    "scrip": "HEG",
+    "headline": "General Updates",
+    "date": "29-Jul-2026 18:42:28",
+    "url": "https://nsearchives.nseindia.com/corporate/HEG_29072026184211_StxintimationSpecimenLetterSS.pdf",
+    "summary": "HEG Limited has notified shareholders holding physical shares to update their KYC details and dematerialize their holdings before the record date for the allotment of equity shares in HEG Graphite Limited. This action is required under the Composite Scheme of Arrangement. The company has issued this reminder to ensure smooth processing of the share allotment.",
+    "saved_at": "2026-07-29T14:53:09.844662"
+  },
+  {
+    "id": "NSE_106715859",
+    "source": "NSE",
+    "company": "Go Digit General Insurance Limited",
+    "scrip": "GODIGIT",
+    "headline": "Scheme of Arrangement",
+    "date": "29-Jul-2026 18:35:29",
+    "url": "https://nsearchives.nseindia.com/corporate/GODIGITGI_29072026183522_GDGIL_Reg_30_SE_Disclosure_CCI.pdf",
+    "summary": "Go Digit General Insurance Limited announced that the Competition Commission of India (CCI) has approved its proposed amalgamation with Go Digit Infoworks Services Private Limited. This approval follows earlier \"no adverse observations\" from the stock exchanges. The scheme still requires further approvals from the NCLT, IRDAI, and shareholders.",
+    "saved_at": "2026-07-29T14:53:11.439862"
+  },
+  {
+    "id": "NSE_106715853",
+    "source": "NSE",
+    "company": "Winsome Yarns Limited",
+    "scrip": "WINSOME",
+    "headline": "Suspension of Trading",
+    "date": "29-Jul-2026 18:35:09",
+    "url": "-",
+    "summary": "Trading in equity shares of Winsome Yarns Limited will be suspended from July 31, 2026, following a reduction of share capital ordered by the NCLT. The suspension is effective from the specified date.",
+    "saved_at": "2026-07-29T14:53:12.948146"
   }
 ]
