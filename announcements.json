@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106681288",
-    "source": "NSE",
-    "company": "Autoline Industries Limited",
-    "scrip": "AUTOIND",
-    "headline": "Amalgamation/Merger",
-    "date": "30-Jun-2026 15:10:24",
-    "url": "https://nsearchives.nseindia.com/corporate/AUTOIND_30062026151001_AIL_ADSL_Merger.pdf",
-    "summary": "Autoline Industries Limited has approved a scheme to amalgamate its subsidiary, Autoline Design Software Limited, into itself. Following feedback from statutory auditors, the company amended Clause 7 of the scheme to align accounting treatment with Ind AS 103 for common control business combinations. The amendments are purely accounting-related and do not alter the commercial terms, valuation, or structure of the merger.",
-    "saved_at": "2026-06-30T09:55:40.315706"
-  },
-  {
-    "id": "NSE_106681079",
-    "source": "NSE",
-    "company": "MM Forgings Limited",
-    "scrip": "MMFL",
-    "headline": "Amalgamation/Merger",
-    "date": "30-Jun-2026 13:12:16",
-    "url": "https://nsearchives.nseindia.com/corporate/MMFL_30062026131156_MMFL_Order_Pronouncement.pdf",
-    "summary": "MM Forgings Limited announced that the National Company Law Tribunal (NCLT), Chennai Bench, has approved the scheme of amalgamation of its wholly owned subsidiary, DVS Industries Private Limited, with the company. The order was pronounced on June 19, 2026, and uploaded on the NCLT website on June 29, 2026. The scheme will take effect once certified copies are filed with the Registrar of Companies, after which the subsidiary will be dissolved.",
-    "saved_at": "2026-06-30T09:55:42.302473"
-  },
-  {
     "id": "NSE_106682173",
     "source": "NSE",
     "company": "Rane (Madras) Limited",
@@ -1681,5 +1659,71 @@
     "url": "https://nsearchives.nseindia.com/corporate/AmitDodani_30072026130044_SEIntimationMICMLMerger.pdf",
     "summary": "Mahindra & Mahindra Limited announced the merger of its wholly owned subsidiary, Mahindra Investment Company (Mauritius) Limited, into itself. The merger aims to streamline the group structure by reducing complexity, and is exempt from related party transaction regulations as it involves a holding company and its wholly owned subsidiary. The transferor company holds investments, while Mahindra & Mahindra focuses on mobility products and farm solutions.",
     "saved_at": "2026-07-30T09:22:53.956199"
+  },
+  {
+    "id": "NSE_106717314",
+    "source": "NSE",
+    "company": "Thermax Limited",
+    "scrip": "THERMAX",
+    "headline": "Scheme of Arrangement",
+    "date": "30-Jul-2026 16:30:33",
+    "url": "https://nsearchives.nseindia.com/corporate/THERMAXNSE_30072026163005_SEIntimationOutcomesigned.pdf",
+    "summary": "Thermax Limited announced a Scheme of Arrangement to merge its wholly-owned subsidiary, Thermax Cooling Solutions Limited, into itself to simplify the group structure and reduce administrative overheads. The merger is expected to improve key financial ratios, generate annual cost savings, and enhance long-term shareholder value, with no change in Thermax's shareholding pattern. Additionally, the scheme includes the demerger of the EPC business of another wholly-owned subsidiary, Thermax Bioenergy Solutions Private Limited, which had a turnover of \u20b9239.35 crore in the last financial year.",
+    "saved_at": "2026-07-30T11:30:33.330749"
+  },
+  {
+    "id": "NSE_106717292",
+    "source": "NSE",
+    "company": "Thermax Limited",
+    "scrip": "THERMAX",
+    "headline": "Demerger",
+    "date": "30-Jul-2026 16:20:25",
+    "url": "https://nsearchives.nseindia.com/corporate/THERMAXNSE_30072026162015_SEIntimationOutcomesigned.pdf",
+    "summary": "Thermax Limited announced a demerger scheme to simplify its group structure by consolidating its wholly-owned subsidiary, Thermax Cooling Solutions Limited, and demerging the EPC business of another subsidiary, Thermax Bioenergy Solutions Private Limited. The consolidation aims to reduce administrative overheads, improve key financial ratios, and generate annual cost savings, with no change in Thermax Limited's shareholding pattern. The demerged EPC business had a turnover of \u20b9239.35 crore, representing 3.67% of Thermax's total turnover.",
+    "saved_at": "2026-07-30T11:30:35.267742"
+  },
+  {
+    "id": "NSE_106717266",
+    "source": "NSE",
+    "company": "Thermax Limited",
+    "scrip": "THERMAX",
+    "headline": "Amalgamation/Merger",
+    "date": "30-Jul-2026 16:10:40",
+    "url": "https://nsearchives.nseindia.com/corporate/THERMAXNSE_30072026161015_SEIntimationOutcomesigned.pdf",
+    "summary": "Thermax Limited has announced a scheme to merge its wholly-owned subsidiary, Thermax Cooling Solutions Limited, into itself to simplify the group structure, reduce administrative costs, and improve key financial ratios. Additionally, the company will demerge the EPC business of another wholly-owned subsidiary, Thermax Bioenergy Solutions Private Limited, which focuses on Bio-CNG projects. No new shares will be issued, and the shareholding pattern of Thermax Limited will remain unchanged.",
+    "saved_at": "2026-07-30T11:30:37.040856"
+  },
+  {
+    "id": "NSE_106717161",
+    "source": "NSE",
+    "company": "Vedanta Limited",
+    "scrip": "VEDL",
+    "headline": "Updates",
+    "date": "30-Jul-2026 15:25:19",
+    "url": "https://nsearchives.nseindia.com/corporate/VEDL_30072026152434_VEDLSEIntimationDemergerofSurplusAssetsfinalsigned.pdf",
+    "summary": "Vedanta Limited has informed the stock exchange about its plan to demerge its real estate business, as per SEBI listing regulations. The announcement serves as an intimation under Regulations 30 and 51 of the Listing Obligations and Disclosure Requirements. This move separates the real estate operations from Vedanta's core business structure.",
+    "saved_at": "2026-07-30T11:30:38.563718"
+  },
+  {
+    "id": "NSE_106717158",
+    "source": "NSE",
+    "company": "Vedanta Limited",
+    "scrip": "VEDL",
+    "headline": "Scheme of Arrangement",
+    "date": "30-Jul-2026 15:25:19",
+    "url": "https://nsearchives.nseindia.com/corporate/VEDL_30072026152112_VEDLSEIntimationDemergerofSurplusAssetsfinalsigned.pdf",
+    "summary": "Vedanta Limited's board has approved a scheme to demerge its real estate business into a separate entity, Vedanta Property Platforms Limited, to unlock value. The demerged business, which includes land, built-up assets, and related investments, generated a turnover of just INR 1.26 crore (0.001% of Vedanta's total turnover) in the last fiscal year. The move aims to enable focused management and improve transparency for the real estate portfolio, which has historically been underutilized within the larger metals and mining conglomerate.",
+    "saved_at": "2026-07-30T11:30:40.511619"
+  },
+  {
+    "id": "NSE_106717160",
+    "source": "NSE",
+    "company": "Vedanta Limited",
+    "scrip": "VEDL",
+    "headline": "Press Release",
+    "date": "30-Jul-2026 15:25:19",
+    "url": "https://nsearchives.nseindia.com/corporate/VEDL_30072026152326_VEDLSEIntimationDemergerofSurplusAssetsfinalsigned.pdf",
+    "summary": "Vedanta Limited's Board has approved the demerger of its Real Estate Business into Vedanta Property Platforms Limited to unlock value. The real estate division, which generated a turnover of just INR 1.26 crore (0.001% of Vedanta's total) in the last fiscal year, will be transferred on a going concern basis. The move aims to enable focused management and better value realization from Vedanta's non-core property portfolio, subject to regulatory approvals.",
+    "saved_at": "2026-07-30T11:30:42.149417"
   }
 ]
