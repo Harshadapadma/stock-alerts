@@ -1,38 +1,5 @@
 [
   {
-    "id": "NSE_106683694",
-    "source": "NSE",
-    "company": "Arihant Capital Markets Limited",
-    "scrip": "ARIHANTCAP",
-    "headline": "Scheme of Arrangement",
-    "date": "01-Jul-2026 19:03:36",
-    "url": "https://nsearchives.nseindia.com/corporate/ARIHANTCAP_01072026190324_disclosureJuly.pdf",
-    "summary": "Arihant Capital Markets Limited (ACML) announced that it has received \"no adverse observations\" from BSE and \"no objection\" from NSE regarding its Composite Scheme of Arrangement. The scheme involves multiple entities and remains subject to other regulatory approvals. The observation letters have been uploaded on the company's website for stakeholder reference.",
-    "saved_at": "2026-07-01T13:57:12.401630"
-  },
-  {
-    "id": "NSE_106683545",
-    "source": "NSE",
-    "company": "Aster DM Healthcare Limited",
-    "scrip": "ASTERDM",
-    "headline": "General Updates",
-    "date": "01-Jul-2026 17:51:27",
-    "url": "https://nsearchives.nseindia.com/corporate/ASTERDM2_01072026175016_Effective_Date_sign.pdf",
-    "summary": "Aster DM Healthcare Limited has announced the effective date of its Scheme of Amalgamation, along with a change in promoter category. The company has also amended its Memorandum and Articles of Association (MoA & AOA) in accordance with the scheme. These updates have been formally communicated to the stock exchange.",
-    "saved_at": "2026-07-01T13:57:13.952394"
-  },
-  {
-    "id": "NSESME_106683655",
-    "source": "NSE-SME",
-    "company": "Beacon Trusteeship Limited",
-    "scrip": "BEACON",
-    "headline": "Amalgamation/Merger",
-    "date": "01-Jul-2026 18:41:06",
-    "url": "https://nsearchives.nseindia.com/corporate/BEACON_01072026184047_NSE_Disclosure_final_signed.pdf",
-    "summary": "Beacon Trusteeship Limited has filed a petition with the NCLT Mumbai for a scheme of amalgamation involving itself and three transferor companies: Beacon Payroll & Benefits, Codium Techlabs, and Kratos Capital Advisors. The tribunal heard the matter on June 22, 2026, and has scheduled the next hearing for August 12, 2026.",
-    "saved_at": "2026-07-01T13:57:15.441426"
-  },
-  {
     "id": "NSE_106683832",
     "source": "NSE",
     "company": "Utkarsh Small Finance Bank Limited",
@@ -1714,5 +1681,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/PPAP_31072026164635_Merger.pdf",
     "summary": "PPAP Automotive Limited has received an order from the NCLT regarding the amalgamation of Avinya Batteries Limited with the company. The tribunal has dispensed with the need for a shareholders' meeting of Avinya Batteries but has directed meetings for its secured and unsecured creditors, as well as for the shareholders and creditors of PPAP Automotive. The company will now proceed to convene these meetings as per the tribunal's directives.",
     "saved_at": "2026-07-31T12:48:35.405771"
+  },
+  {
+    "id": "NSE_106720049",
+    "source": "NSE",
+    "company": "Clean Max Enviro Energy Solutions Limited",
+    "scrip": "CLEANMAX",
+    "headline": "Amalgamation/Merger",
+    "date": "31-Jul-2026 19:48:56",
+    "url": "https://nsearchives.nseindia.com/corporate/CLEANMAX_31072026194841_Reg_30_Merger.pdf",
+    "summary": "Clean Max Enviro Energy Solutions Limited's Board approved a scheme to amalgamate its four wholly-owned subsidiaries into itself, dissolving them without winding up. Since the subsidiaries are wholly owned, no new shares or cash consideration will be issued under the scheme. The merger is subject to regulatory approvals, including sanction from the National Company Law Tribunal.",
+    "saved_at": "2026-07-31T15:11:32.549280"
+  },
+  {
+    "id": "NSE_106719943",
+    "source": "NSE",
+    "company": "TCC Concept Limited",
+    "scrip": "TCC",
+    "headline": "Amalgamation/Merger",
+    "date": "31-Jul-2026 19:15:42",
+    "url": "https://nsearchives.nseindia.com/corporate/TCCLTD_31072026191434_Merger_TCC.pdf",
+    "summary": "TCC Concept Limited's Board approved a Scheme of Amalgamation to merge its wholly-owned subsidiary, ALTRR Software Services Limited, into itself by absorption. The merger is subject to regulatory approvals, including from the National Company Law Tribunal, and is classified as a related party transaction, though it is exempt from certain provisions. ALTRR, which focuses on AI-backed real estate solutions, will be absorbed into TCC, a diversified technology enterprise.",
+    "saved_at": "2026-07-31T15:11:34.607975"
   }
 ]
