@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106683832",
-    "source": "NSE",
-    "company": "Utkarsh Small Finance Bank Limited",
-    "scrip": "UTKARSHBNK",
-    "headline": "General Updates",
-    "date": "01-Jul-2026 22:02:05",
-    "url": "https://nsearchives.nseindia.com/corporate/UTKARSHBANK_01072026220043_NewspaperIntimationwithpaper__1_.pdf",
-    "summary": "Utkarsh Small Finance Bank Limited has published a newspaper notice regarding the hearing of a petition related to its proposed merger with Utkarsh CoreInvest Limited. The announcement informs the exchange of this regulatory update.",
-    "saved_at": "2026-07-01T16:33:54.362108"
-  },
-  {
     "id": "NSE_106684404",
     "source": "NSE",
     "company": "Aster DM Healthcare Limited",
@@ -1703,5 +1692,49 @@
     "url": "https://nsearchives.nseindia.com/corporate/TCCLTD_31072026191434_Merger_TCC.pdf",
     "summary": "TCC Concept Limited's Board approved a Scheme of Amalgamation to merge its wholly-owned subsidiary, ALTRR Software Services Limited, into itself by absorption. The merger is subject to regulatory approvals, including from the National Company Law Tribunal, and is classified as a related party transaction, though it is exempt from certain provisions. ALTRR, which focuses on AI-backed real estate solutions, will be absorbed into TCC, a diversified technology enterprise.",
     "saved_at": "2026-07-31T15:11:34.607975"
+  },
+  {
+    "id": "NSE_106720696",
+    "source": "NSE",
+    "company": "JSW Steel Limited",
+    "scrip": "JSWSTEEL",
+    "headline": "General Updates",
+    "date": "01-Aug-2026 14:15:50",
+    "url": "https://nsearchives.nseindia.com/corporate/jessydenny_01082026141540_SE_Intimation_merger.pdf",
+    "summary": "JSW Steel Limited announced that its Scheme of Amalgamation with three transferor companies\u2014Amba River Coke Limited, Monnet Cement Limited, and JSW Retail and Distribution Limited\u2014has become effective as of August 1, 2026. The scheme's appointed date is April 1, 2026, following the filing of the final and rectified orders from the National Company Law Tribunal with the Registrar of Companies in Mumbai.",
+    "saved_at": "2026-08-01T09:30:07.232567"
+  },
+  {
+    "id": "NSE_106720668",
+    "source": "NSE",
+    "company": "Orchid Pharma Limited",
+    "scrip": "ORCHPHARMA",
+    "headline": "Allotment of Securities",
+    "date": "01-Aug-2026 13:50:57",
+    "url": "https://nsearchives.nseindia.com/corporate/ORCHPHARMA_01082026135041_Stx_Ltr.pdf",
+    "summary": "Orchid Pharma Limited has allotted 4,45,86,052 fully paid-up equity shares to the eligible shareholders of Dhanuka Laboratories Limited, pursuant to the scheme of amalgamation. Following this allotment and the cancellation of cross-holdings, the company's paid-up share capital now stands at Rs. 59,88,52,000, comprising 5,98,85,200 equity shares. The newly issued shares will be listed on BSE and NSE and rank pari-passu with existing shares.",
+    "saved_at": "2026-08-01T09:30:09.129365"
+  },
+  {
+    "id": "NSE_106720508",
+    "source": "NSE",
+    "company": "UPL Limited",
+    "scrip": "UPL",
+    "headline": "Other Restructuring",
+    "date": "01-Aug-2026 11:14:44",
+    "url": "https://nsearchives.nseindia.com/corporate/UPL_01082026111409_Reg30_Completion_of_Swap_transaction_Final.pdf",
+    "summary": "UPL Limited has completed the Swap Transaction and ESOP Swap Transaction, which were part of a larger restructuring scheme, following receipt of CCI approval. As a result, employee stock options in UPL Cayman 2 were exchanged for new options in UPL Cayman 1, and the shareholding structure of UPL Cayman 1 has been diversified to include the Upswing Trust and other holders. The scheme's effectiveness remains pending the fulfilment of other conditions precedent.",
+    "saved_at": "2026-08-01T09:30:11.026281"
+  },
+  {
+    "id": "NSE_106720496",
+    "source": "NSE",
+    "company": "MPS Limited",
+    "scrip": "MPSLTD",
+    "headline": "Amalgamation/Merger",
+    "date": "01-Aug-2026 11:05:40",
+    "url": "https://nsearchives.nseindia.com/corporate/MPSLIMITED_01082026110440_StxIntimationMergerwithMPSNA01082026.pdf",
+    "summary": "MPS Limited announced a two-step merger to consolidate its subsidiaries, American Journal Experts (AJE-NC and AJE-DE), into its wholly-owned subsidiary, MPS North America LLC. The first step, merging AJE-NC into AJE-DE, became effective on 01 August 2026, with the second step merging AJE-DE into MPS North America LLC to follow, making MPS North America LLC the final surviving entity. This internal restructuring will consolidate all assets, rights, and liabilities of the AJE entities into MPS North America LLC.",
+    "saved_at": "2026-08-01T09:30:13.264940"
   }
 ]
