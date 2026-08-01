@@ -1,49 +1,5 @@
 [
   {
-    "id": "NSE_106684404",
-    "source": "NSE",
-    "company": "Aster DM Healthcare Limited",
-    "scrip": "ASTERDM",
-    "headline": "Press Release",
-    "date": "02-Jul-2026 13:37:53",
-    "url": "https://nsearchives.nseindia.com/corporate/ASTERDM2_02072026133737_SE.pdf",
-    "summary": "Aster DM Healthcare Limited announced the successful completion of its merger with Quality Care India Limited. The update was communicated to the exchange via a press release dated July 2, 2026.",
-    "saved_at": "2026-07-02T09:30:23.289134"
-  },
-  {
-    "id": "NSE_106684597",
-    "source": "NSE",
-    "company": "Lenskart Solutions Limited",
-    "scrip": "LENSKART",
-    "headline": "Amalgamation/Merger",
-    "date": "02-Jul-2026 16:34:14",
-    "url": "https://nsearchives.nseindia.com/corporate/LENSKART_02072026163151_Outcome_Intimation_-_BM_dated_02072026_signed.pdf",
-    "summary": "Lenskart Solutions Limited announced the approval of a scheme to amalgamate its two wholly-owned subsidiaries, Dealskart Online Services Private Limited and Lenskart Eyetech Private Limited, into itself. The merger involves the consolidation of the subsidiaries' shareholders and creditors into the parent company.",
-    "saved_at": "2026-07-02T11:55:25.174431"
-  },
-  {
-    "id": "NSE_106684488",
-    "source": "NSE",
-    "company": "HEG Limited",
-    "scrip": "HEG",
-    "headline": "General Updates",
-    "date": "02-Jul-2026 15:28:34",
-    "url": "https://nsearchives.nseindia.com/corporate/HEG_02072026152733_Stxintimation_02072026S.pdf",
-    "summary": "HEG Limited announced that the Hon'ble NCLT, Indore Bench, has reserved its order on the company's scheme petition during a hearing on July 2, 2026. The company will inform the stock exchanges once the order is pronounced and uploaded on the NCLT website.",
-    "saved_at": "2026-07-02T11:55:26.471947"
-  },
-  {
-    "id": "NSE_106684465",
-    "source": "NSE",
-    "company": "BASF India Limited",
-    "scrip": "BASF",
-    "headline": "Shareholders meeting",
-    "date": "02-Jul-2026 15:06:34",
-    "url": "https://nsearchives.nseindia.com/corporate/BASFIL_02072026150459_TranscriptSEletter.pdf",
-    "summary": "BASF India Limited held a shareholders meeting to discuss a demerger scheme, where Managing Director Alexander Gerding highlighted the company's commitment to sustainable agriculture and farmer safety. The company reported strong business performance with agricultural solutions sales of INR 1,944 crores and a profit before tax of INR 254 crores in 2025-2026, driven by 12 new product launches since 2022. Shareholders were informed that inspection documents are available electronically upon request to the Company Secretary.",
-    "saved_at": "2026-07-02T11:55:28.187978"
-  },
-  {
     "id": "NSE_106684787",
     "source": "NSE",
     "company": "Aditya Birla Fashion and Retail Limited",
@@ -1736,5 +1692,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/MPSLIMITED_01082026110440_StxIntimationMergerwithMPSNA01082026.pdf",
     "summary": "MPS Limited announced a two-step merger to consolidate its subsidiaries, American Journal Experts (AJE-NC and AJE-DE), into its wholly-owned subsidiary, MPS North America LLC. The first step, merging AJE-NC into AJE-DE, became effective on 01 August 2026, with the second step merging AJE-DE into MPS North America LLC to follow, making MPS North America LLC the final surviving entity. This internal restructuring will consolidate all assets, rights, and liabilities of the AJE entities into MPS North America LLC.",
     "saved_at": "2026-08-01T09:30:13.264940"
+  },
+  {
+    "id": "NSE_106720933",
+    "source": "NSE",
+    "company": "Jubilant Agri and Consumer Products Limited",
+    "scrip": "JUBLCPL",
+    "headline": "General Updates",
+    "date": "01-Aug-2026 17:11:41",
+    "url": "https://nsearchives.nseindia.com/corporate/JACPL_01082026171126_Intimation_Notice_Unsecured_Creditors_Signed.pdf",
+    "summary": "Jubilant Agri and Consumer Products Limited has scheduled a meeting of its Unsecured Creditors for September 05, 2026, to seek approval for its proposed Scheme of Arrangement for Demerger, as directed by the NCLT, Allahabad Bench. The company has dispatched the meeting notice and explanatory statement to creditors with outstanding debts exceeding Rs. 1,00,000 as of March 31, 2026. The notice and related documents are also available on the company's website.",
+    "saved_at": "2026-08-01T12:11:46.337693"
+  },
+  {
+    "id": "NSE_106720923",
+    "source": "NSE",
+    "company": "Jubilant Agri and Consumer Products Limited",
+    "scrip": "JUBLCPL",
+    "headline": "Shareholders meeting",
+    "date": "01-Aug-2026 17:05:53",
+    "url": "https://nsearchives.nseindia.com/corporate/JACPL_01082026165940_Intimation_Notice_Equity_Shareholders_Signed.pdf",
+    "summary": "Jubilant Agri and Consumer Products Limited has convened a meeting of its equity shareholders on September 5, 2026, to seek approval for a proposed Scheme of Arrangement for demerger, as directed by the NCLT, Allahabad Bench. The meeting will be held at the company's registered office in Gajraula, Uttar Pradesh, with remote e-voting available from September 2 to September 4, 2026. Notices and related documents have been dispatched to shareholders as of August 1, 2026, and are also available on the company's website.",
+    "saved_at": "2026-08-01T12:11:48.403585"
   }
 ]
