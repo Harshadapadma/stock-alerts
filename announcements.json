@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106686788",
-    "source": "NSE",
-    "company": "Salasar Techno Engineering Limited",
-    "scrip": "SALASAR",
-    "headline": "Copy of Newspaper Publication",
-    "date": "04-Jul-2026 16:51:42",
-    "url": "https://nsearchives.nseindia.com/corporate/SALASAR_04072026165131_Copy_of_Newspaper_Publication_04072026.pdf",
-    "summary": "Salasar Techno Engineering Limited has informed the exchange of a newspaper publication announcing a fresh (de novo) meeting of equity shareholders, to be held under NCLT supervision. The notice details the convening of this shareholder meeting as directed by the tribunal.",
-    "saved_at": "2026-07-04T11:58:03.707041"
-  },
-  {
-    "id": "NSE_106686767",
-    "source": "NSE",
-    "company": "Salasar Techno Engineering Limited",
-    "scrip": "SALASAR",
-    "headline": "Shareholders meeting",
-    "date": "04-Jul-2026 16:21:53",
-    "url": "https://nsearchives.nseindia.com/corporate/SALASAR_04072026162143_Intimation_Notice_NCLT_convened_meeting.pdf",
-    "summary": "Salasar Techno Engineering Limited has been directed by the NCLT, Allahabad Bench, to hold a fresh (de novo) meeting of its equity shareholders on August 8, 2026, to consider and approve a Scheme of Amalgamation with Hill View Infrabuild Limited. This meeting supersedes the earlier one held on June 5, 2026, and will be conducted via video conferencing. Remote e-voting will be open from August 4 to August 7, 2026, with voting eligibility based on the shareholding record as of August 1, 2026.",
-    "saved_at": "2026-07-04T11:58:05.868134"
-  },
-  {
     "id": "NSE_106686950",
     "source": "NSE",
     "company": "Piramal Finance Limited",
@@ -1593,5 +1571,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/TRIVENI_03082026144221_COST_OF_ACQUISITION_TPTL.pdf",
     "summary": "Triveni Engineering & Industries Limited has announced the allocation of the cost of acquisition of its equity shares and those of Triveni Power Transmission Limited (TPTL) following a Scheme of Arrangement. Under the scheme, 86.60% of the cost is allocated to Triveni Engineering shares, while 13.40% is allocated to TPTL shares. This allocation is made in accordance with the Income-Tax Act, 2025, and has been published on the company\u2019s website.",
     "saved_at": "2026-08-03T11:41:44.290740"
+  },
+  {
+    "id": "NSE_106722824",
+    "source": "NSE",
+    "company": "Sab Events & Governance Now Media Limited",
+    "scrip": "SABEVENTS",
+    "headline": "Suspension of Trading",
+    "date": "03-Aug-2026 20:08:46",
+    "url": "-",
+    "summary": "Trading in equity shares of Sab Events & Governance Now Media Limited will be suspended starting August 05, 2026. This suspension is due to a reduction in share capital ordered by the NCLT. The announcement serves as formal notice to exchange members.",
+    "saved_at": "2026-08-03T16:39:46.687733"
+  },
+  {
+    "id": "NSE_106722773",
+    "source": "NSE",
+    "company": "Allied Blenders and Distillers Limited",
+    "scrip": "ABDL",
+    "headline": "Amalgamation/Merger",
+    "date": "03-Aug-2026 19:43:06",
+    "url": "https://nsearchives.nseindia.com/corporate/ABDINDIA_03082026194252_SE_Intimation_-_WOS_sd.pdf",
+    "summary": "Allied Blenders and Distillers Limited has provided an update on its scheme of amalgamation, which involves merging two entities\u2014Deccan Star Distilleries India Private Limited and Sarthak Blenders & Bottlers Private Limited\u2014into itself. The merger is structured as an absorption, where the two transferor companies will be dissolved without liquidation, with their shareholders becoming shareholders of Allied Blenders. This consolidation aims to streamline operations and integrate the businesses under a single corporate entity.",
+    "saved_at": "2026-08-03T16:39:48.812708"
   }
 ]
