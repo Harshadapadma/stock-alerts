@@ -1,49 +1,5 @@
 [
   {
-    "id": "NSE_106685359",
-    "source": "NSE",
-    "company": "JSW Steel Limited",
-    "scrip": "JSWSTEEL",
-    "headline": "Amalgamation/Merger",
-    "date": "03-Jul-2026 10:47:49",
-    "url": "https://nsearchives.nseindia.com/corporate/jessydenny_03072026104440_Merger_approval.pdf",
-    "summary": "The National Company Law Tribunal (NCLT) Mumbai has approved a scheme of amalgamation on July 2, 2026, merging three entities\u2014Amba River Coke Limited, Monnet Cement Limited, and JSW Retail and Distribution Limited\u2014into JSW Steel Limited. The scheme will become effective once the certified NCLT order is filed with the Registrar of Companies, and JSW Steel will inform stock exchanges of the effective date.",
-    "saved_at": "2026-07-03T05:31:20.447463"
-  },
-  {
-    "id": "NSE_106685341",
-    "source": "NSE",
-    "company": "Allcargo Global Limited",
-    "scrip": "AGL",
-    "headline": "Press Release",
-    "date": "03-Jul-2026 10:37:31",
-    "url": "https://nsearchives.nseindia.com/corporate/AGL_03072026103623_Press_Release__Listing02072026.pdf",
-    "summary": "Allcargo Global Limited announced that it has commenced trading on the NSE and BSE following its demerger from Allcargo Logistics Limited. The company submitted a press release dated July 3, 2026, to the stock exchange regarding this development.",
-    "saved_at": "2026-07-03T05:31:22.144641"
-  },
-  {
-    "id": "NSE_106686271",
-    "source": "NSE",
-    "company": "India Glycols Limited",
-    "scrip": "INDIAGLYCO",
-    "headline": "General Updates",
-    "date": "03-Jul-2026 19:45:30",
-    "url": "https://nsearchives.nseindia.com/corporate/INDIAGLYCO_03072026194503_SE_Intimation_NCLT_Order.pdf",
-    "summary": "India Glycols Limited has informed the exchanges that the National Company Law Tribunal (NCLT), Allahabad Bench, has reserved its order on the company\u2019s proposed demerger scheme involving Ennature Bio pharma Limited and IGL Spirits Limited. The NCLT heard arguments regarding an outstanding income tax demand of \u20b927,890, with the company asserting the amount was already paid in 2023 and providing an undertaking to address any post-sanction demands. The final pronouncement on the scheme is now pending.",
-    "saved_at": "2026-07-03T15:30:34.433245"
-  },
-  {
-    "id": "NSE_106686572",
-    "source": "NSE",
-    "company": "Belrise Industries Limited",
-    "scrip": "BELRISE",
-    "headline": "Scheme of Arrangement",
-    "date": "04-Jul-2026 11:36:47",
-    "url": "https://nsearchives.nseindia.com/corporate/BELRISE_04072026113639_BELRISE_Intimation_of_Obervation_Letter_04072026_NEW.pdf",
-    "summary": "Belrise Industries Limited has received \"no adverse observations\" from both NSE and BSE regarding its proposed scheme of amalgamation. The scheme involves the merger by absorption of Badve Autocomps Private Limited and Eximius Infra Tech Solutions Private Limited into Belrise Industries Limited. This clearance, issued under Regulation 37 of the Listing Regulations, marks a key regulatory step in the consolidation process.",
-    "saved_at": "2026-07-04T08:47:11.496699"
-  },
-  {
     "id": "NSE_106686788",
     "source": "NSE",
     "company": "Salasar Techno Engineering Limited",
@@ -1626,5 +1582,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/kavinavora_01082026230836_SE_01082026.pdf",
     "summary": "Reliance Industries announced that its step-down subsidiary, Radisys Cayman Limited, has been merged into its holding company, Radisys International LLC, effective July 31, 2026. The merger, involving entities incorporated in the Cayman Islands and Delaware respectively, is part of an internal restructuring. No other operational or financial details were disclosed.",
     "saved_at": "2026-08-01T18:38:26.596554"
+  },
+  {
+    "id": "NSE_106721855",
+    "source": "NSE",
+    "company": "Triveni Engineering & Industries Limited",
+    "scrip": "TRIVENI",
+    "headline": "Scheme of Arrangement",
+    "date": "03-Aug-2026 14:42:31",
+    "url": "https://nsearchives.nseindia.com/corporate/TRIVENI_03082026144221_COST_OF_ACQUISITION_TPTL.pdf",
+    "summary": "Triveni Engineering & Industries Limited has announced the allocation of the cost of acquisition of its equity shares and those of Triveni Power Transmission Limited (TPTL) following a Scheme of Arrangement. Under the scheme, 86.60% of the cost is allocated to Triveni Engineering shares, while 13.40% is allocated to TPTL shares. This allocation is made in accordance with the Income-Tax Act, 2025, and has been published on the company\u2019s website.",
+    "saved_at": "2026-08-03T11:41:44.290740"
   }
 ]
