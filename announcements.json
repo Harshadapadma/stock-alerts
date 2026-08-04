@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106686950",
-    "source": "NSE",
-    "company": "Piramal Finance Limited",
-    "scrip": "PIRAMALFIN",
-    "headline": "Amalgamation/Merger",
-    "date": "05-Jul-2026 00:02:41",
-    "url": "https://nsearchives.nseindia.com/corporate/Piramalcapital_05072026000032_PFL__Intimation_04072026_sd.pdf",
-    "summary": "Piramal Finance Limited has filed a company petition with the NCLT Mumbai Bench on July 4, 2026, seeking approval for a proposed amalgamation/merger scheme. The petition was submitted jointly with the transferor companies involved in the scheme.",
-    "saved_at": "2026-07-05T01:17:54.366753"
-  },
-  {
     "id": "NSE_106686971",
     "source": "NSE",
     "company": "Astral Limited",
@@ -1593,5 +1582,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/ABDINDIA_03082026194252_SE_Intimation_-_WOS_sd.pdf",
     "summary": "Allied Blenders and Distillers Limited has provided an update on its scheme of amalgamation, which involves merging two entities\u2014Deccan Star Distilleries India Private Limited and Sarthak Blenders & Bottlers Private Limited\u2014into itself. The merger is structured as an absorption, where the two transferor companies will be dissolved without liquidation, with their shareholders becoming shareholders of Allied Blenders. This consolidation aims to streamline operations and integrate the businesses under a single corporate entity.",
     "saved_at": "2026-08-03T16:39:48.812708"
+  },
+  {
+    "id": "NSE_106723389",
+    "source": "NSE",
+    "company": "Godrej Properties Limited",
+    "scrip": "GODREJPROP",
+    "headline": "Amalgamation/Merger",
+    "date": "04-Aug-2026 11:43:32",
+    "url": "https://nsearchives.nseindia.com/corporate/GODREJPROP_04082026114320_SEIntimationMergerGHPPL04082026.pdf",
+    "summary": "Godrej Properties Limited's Board approved a Scheme of Amalgamation to merge its indirect wholly-owned subsidiary, Godrej Housing Projects Private Limited, into the company. The merger is subject to necessary approvals from the NCLT and other regulatory authorities. Godrej Properties currently holds 95% of the subsidiary's equity, with the remaining 5% held by another wholly-owned subsidiary.",
+    "saved_at": "2026-08-04T07:21:38.706110"
   }
 ]
