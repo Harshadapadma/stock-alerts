@@ -1692,5 +1692,38 @@
     "url": "https://nsearchives.nseindia.com/corporate/ADANIPOWER_05082026130712_APLNCLTorderAhmedabad05082026.pdf",
     "summary": "Adani Power Limited has received approval from the NCLT Ahmedabad for the amalgamation of its nine wholly-owned subsidiaries, with the scheme's appointed date set as April 1, 2025. The order was issued on August 4, 2026, though the process for one subsidiary, VIPL, remains pending before the NCLT Mumbai. The scheme will become effective once all required steps are completed, and the company will update the exchanges accordingly.",
     "saved_at": "2026-08-05T08:50:15.567658"
+  },
+  {
+    "id": "NSE_106726513",
+    "source": "NSE",
+    "company": "Crisil Limited",
+    "scrip": "CRISIL",
+    "headline": "Amalgamation/Merger",
+    "date": "05-Aug-2026 16:26:44",
+    "url": "https://nsearchives.nseindia.com/corporate/CRISIL_05082026162628_SignedBSENSE.pdf",
+    "summary": "Crisil Limited has completed the amalgamation of its wholly owned step-down subsidiaries, Crisil Canada Inc. and Crisil PriceMetrix Inc., into a single entity, Crisil PriceMetrix Inc., effective August 1, 2026. The Certificate of Amalgamation was received on August 5, 2026, marking the completion of all related formalities.",
+    "saved_at": "2026-08-05T11:13:35.231819"
+  },
+  {
+    "id": "NSE_106726321",
+    "source": "NSE",
+    "company": "TVS Motor Company Limited",
+    "scrip": "TVSMOTOR",
+    "headline": "Amalgamation/Merger",
+    "date": "05-Aug-2026 15:21:35",
+    "url": "https://nsearchives.nseindia.com/corporate/TVSMOTOR_05082026151929_Reg30TVSCSMERGER_sd.pdf",
+    "summary": "TVS Motor Company has announced a composite scheme of amalgamation involving Home Credit India Finance, STPL Trading and Services, TVS Housing Finance, and TVS Credit Services, along with their shareholders. The merger aims to consolidate these entities under a unified structure. The proposal has been communicated to the stock exchange.",
+    "saved_at": "2026-08-05T11:13:36.586014"
+  },
+  {
+    "id": "NSE_106726319",
+    "source": "NSE",
+    "company": "TVS Holdings Limited",
+    "scrip": "TVSHLTD",
+    "headline": "Amalgamation/Merger",
+    "date": "05-Aug-2026 15:21:14",
+    "url": "https://nsearchives.nseindia.com/corporate/SUNCLAYLTD_05082026150929_TVSH_HCIFTVSCSMergersd.pdf",
+    "summary": "TVS Holdings has announced that its subsidiary, Home Credit India Finance, along with other group entities, has approved a composite scheme of amalgamation. The scheme involves merging STPL Trading and Services and TVS Housing Finance into Home Credit India, which will then merge into TVS Credit Services. The merger is subject to regulatory approvals from the RBI, CCI, stock exchanges, and the NCLT.",
+    "saved_at": "2026-08-05T11:13:38.271742"
   }
 ]
