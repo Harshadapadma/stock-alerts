@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106687356",
-    "source": "NSE",
-    "company": "Refex Industries Limited",
-    "scrip": "REFEX",
-    "headline": "Copy of Newspaper Publication",
-    "date": "06-Jul-2026 12:52:10",
-    "url": "https://nsearchives.nseindia.com/corporate/REFEX2002_06072026125121_Newspaper_Publication_STX.pdf",
-    "summary": "Refex Industries Limited has published a newspaper notice regarding meetings of its equity shareholders and creditors, as well as creditors of Refex Green Mobility Limited, as directed by the NCLT Chennai Bench. The meetings are being convened under SEBI regulations to consider a proposed scheme involving the transferor and transferee companies.",
-    "saved_at": "2026-07-06T11:41:16.138111"
-  },
-  {
-    "id": "NSE_106687872",
-    "source": "NSE",
-    "company": "GANESH HOUSING LIMITED",
-    "scrip": "GANESHHOU",
-    "headline": "Scheme of Arrangement",
-    "date": "06-Jul-2026 18:16:26",
-    "url": "https://nsearchives.nseindia.com/corporate/GANESHHOUC_06072026181608_SEDISCLOSUREOBSERVATIONLETTERS06072026.pdf",
-    "summary": "GANESH HOUSING LIMITED announced it has received observation letters from BSE and NSE regarding its Scheme of Arrangement with Gatil Properties Private Limited. The letters include SEBI comments requiring disclosures on ongoing adjudication, compliance with circulars, and updated financials. The scheme remains subject to further regulatory approvals.",
-    "saved_at": "2026-07-06T14:46:54.090062"
-  },
-  {
     "id": "NSE_106688548",
     "source": "NSE",
     "company": "Ceigall India Limited",
@@ -1725,5 +1703,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/SUNCLAYLTD_05082026150929_TVSH_HCIFTVSCSMergersd.pdf",
     "summary": "TVS Holdings has announced that its subsidiary, Home Credit India Finance, along with other group entities, has approved a composite scheme of amalgamation. The scheme involves merging STPL Trading and Services and TVS Housing Finance into Home Credit India, which will then merge into TVS Credit Services. The merger is subject to regulatory approvals from the RBI, CCI, stock exchanges, and the NCLT.",
     "saved_at": "2026-08-05T11:13:38.271742"
+  },
+  {
+    "id": "NSE_106727400",
+    "source": "NSE",
+    "company": "Aurobindo Pharma Limited",
+    "scrip": "AUROPHARMA",
+    "headline": "Amalgamation/Merger",
+    "date": "05-Aug-2026 20:12:18",
+    "url": "https://nsearchives.nseindia.com/corporate/AUROPHARMA_05082026201159_LtrToSEsEugiaMerger05082026.pdf",
+    "summary": "Aurobindo Pharma announced that its Board approved a proposal to file a Scheme of Amalgamation with the NCLT, merging two step-down subsidiaries, Eugia Steriles and Eugia SEZ, into its wholly-owned subsidiary, Eugia Pharma Specialities. The consolidation aims to simplify the group structure, reduce overheads, and achieve synergy benefits by merging three companies engaged in manufacturing injectable pharmaceuticals. As the merger involves only wholly-owned subsidiaries, no consideration is involved, and the company's shareholding pattern remains unchanged.",
+    "saved_at": "2026-08-05T15:25:34.066587"
+  },
+  {
+    "id": "NSE_106727260",
+    "source": "NSE",
+    "company": "The Sandesh Limited",
+    "scrip": "SANDESH",
+    "headline": "Amalgamation/Merger",
+    "date": "05-Aug-2026 19:14:43",
+    "url": "https://nsearchives.nseindia.com/corporate/SANDESH_1_05082026191432_Outcome_of_BM__05-08-2026.pdf",
+    "summary": "The Sandesh Limited's Board approved the Scheme of Amalgamation to merge its subsidiary, Sandesh Digital Private Limited, into the company, subject to regulatory approvals. Additionally, the Board approved the unaudited financial results for the quarter ended June 30, 2026, and fixed August 14, 2026, as the record date for the final dividend of Rs. 5 per share. The Board also approved the continued appointment of Non-Executive Director Smt. Pannaben F. Patel beyond the age of 75, pending shareholder approval.",
+    "saved_at": "2026-08-05T15:25:35.963825"
   }
 ]
