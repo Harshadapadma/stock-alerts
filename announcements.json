@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106689465",
-    "source": "NSE",
-    "company": "Religare Enterprises Limited",
-    "scrip": "RELIGARE",
-    "headline": "Demerger",
-    "date": "07-Jul-2026 18:17:16",
-    "url": "https://nsearchives.nseindia.com/corporate/RELIGARE_07072026181514_RELUPDATE07072026.pdf",
-    "summary": "Religare Enterprises Limited (REL) has received a no-objection observation letter from the NSE and no adverse observations from the BSE regarding its proposed demerger scheme. The scheme involves the demerger of REL into Religare Finvest Limited (RFL), covering the arrangement between the companies, their shareholders, and creditors. This clearance marks a key regulatory step toward the completion of the corporate restructuring.",
-    "saved_at": "2026-07-07T13:29:11.939122"
-  },
-  {
-    "id": "NSE_106689426",
-    "source": "NSE",
-    "company": "Ola Electric Mobility Limited",
-    "scrip": "OLAELEC",
-    "headline": "News Verification",
-    "date": "07-Jul-2026 18:03:30",
-    "url": "-",
-    "summary": "Ola Electric Mobility Limited has been asked by the stock exchange to clarify a news report about two suppliers moving the NCLT over unpaid dues, which caused a 5% drop in its share price. The company has not yet responded to the exchange's request for clarification.",
-    "saved_at": "2026-07-07T13:29:13.386661"
-  },
-  {
     "id": "NSE_106689669",
     "source": "NSE",
     "company": "Ceigall India Limited",
@@ -1758,5 +1736,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/VAML_06082026164157_VAMLRumourVerification06Aug2026signed.pdf",
     "summary": "Vedanta Aluminium Metal Limited clarified to the exchange regarding a news report claiming it would raise Rs 13,500 crore from Axis, HDFC, and ICICI Bank post-demerger. The company\u2019s official response to the exchange\u2019s query is attached in the announcement. No further details on the clarification\u2019s content were provided in the summary.",
     "saved_at": "2026-08-06T12:22:25.028235"
+  },
+  {
+    "id": "NSE_106729665",
+    "source": "NSE",
+    "company": "Swan Defence and Heavy Industries Limited",
+    "scrip": "SWANDEF",
+    "headline": "General Updates",
+    "date": "06-Aug-2026 19:36:43",
+    "url": "https://nsearchives.nseindia.com/corporate/SWANRNEL_06082026193629_Merger_Order.pdf",
+    "summary": "Swan Defence and Heavy Industries Limited has announced that the National Company Law Tribunal (Ahmedabad Bench) has sanctioned the Scheme of Arrangement and Amalgamation involving Triumph Offshore Private Limited and the company. The approval covers the merger and its effects on the respective shareholders and creditors of both entities.",
+    "saved_at": "2026-08-06T14:55:42.846615"
+  },
+  {
+    "id": "NSESME_106729330",
+    "source": "NSE-SME",
+    "company": "Cellecor Gadgets Limited",
+    "scrip": "CELLECOR",
+    "headline": "Disclosure of material issue",
+    "date": "06-Aug-2026 18:24:54",
+    "url": "https://nsearchives.nseindia.com/corporate/CELLECOR_06082026182440_Outcome_Final.pdf",
+    "summary": "Cellecor Gadgets Limited announced that its Board of Directors approved the migration of its equity shares from the NSE Emerge platform to the main boards of both NSE and BSE, subject to regulatory and shareholder approvals. The Board also approved the introduction of an Employee Stock Option Plan (ESOP 2026) for the grant of 50 lakh options to eligible employees. Additionally, the company approved a leadership restructuring, including the transition of Mr. Nikhil Aggarwal from Whole Time Director to National Sales Head.",
+    "saved_at": "2026-08-06T14:55:44.748455"
   }
 ]
