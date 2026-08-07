@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106691045",
-    "source": "NSE",
-    "company": "Reliance Industries Limited",
-    "scrip": "RELIANCE",
-    "headline": "Other Restructuring",
-    "date": "08-Jul-2026 19:08:15",
-    "url": "https://nsearchives.nseindia.com/corporate/kavinavora_08072026190741_SE_08072026.pdf",
-    "summary": "Reliance Industries announced that its step-down subsidiary, REC US Holdings, Inc., has been dissolved effective July 6, 2026, and is no longer a subsidiary. The company was non-operating with nil turnover in 2025 and had a negligible net worth of Rs. 0.0009 crore, representing 0.0000001% of Reliance\u2019s consolidated net worth.",
-    "saved_at": "2026-07-08T15:29:37.321496"
-  },
-  {
     "id": "NSE_106691277",
     "source": "NSE",
     "company": "Kalpataru Limited",
@@ -1780,5 +1769,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/RJL1_07082026192923_Intimation_for_Restructuring.pdf",
     "summary": "Renaissance Global Limited has announced an internal corporate restructuring approved by its Board on August 7, 2026, aimed at simplifying its global footprint and optimizing its cross-border holding structure. The plan involves transferring stakes in Renaissance FMI Inc (USA) and Renaissance Global Brands Inc (USA) through share swap and purchase agreements, ultimately making RFMI a wholly-owned subsidiary of RGBI, and RGBI a wholly-owned subsidiary of Renaissance Retail Limited (India). No benefits to promoters or promoter group companies were reported from this restructuring.",
     "saved_at": "2026-08-07T14:39:07.025494"
+  },
+  {
+    "id": "NSE_106732500",
+    "source": "NSE",
+    "company": "MPS Limited",
+    "scrip": "MPSLTD",
+    "headline": "Amalgamation/Merger",
+    "date": "07-Aug-2026 21:47:18",
+    "url": "https://nsearchives.nseindia.com/corporate/MPSLIMITED_07082026214629_Stx_Intimation_MergerwithMPSNA_03082026.pdf",
+    "summary": "MPS Limited announced that the second step of its two-step merger became effective on 03 August 2026, with American Journal Experts, LLC, Delaware merging into MPS North America LLC. As a result, MPS North America LLC is now the surviving entity, having succeeded to all assets, rights, liabilities, and obligations of the merged company. The transaction is an intra-group restructuring involving wholly-owned subsidiaries and is exempt under Regulation 23 of the SEBI Listing Regulations.",
+    "saved_at": "2026-08-07T16:33:34.467288"
   }
 ]
