@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106694969",
-    "source": "NSE",
-    "company": "TVS Supply Chain Solutions Limited",
-    "scrip": "TVSSCS",
-    "headline": "Amalgamation/Merger",
-    "date": "11-Jul-2026 20:55:05",
-    "url": "https://nsearchives.nseindia.com/corporate/CSCOMPLIANCE_11072026205407_TVS_SCS_NCLT_order_Disclsore_SIGNED.pdf",
-    "summary": "TVS Supply Chain Solutions Limited has received approval from the National Company Law Tribunal (NCLT), Chennai Bench, for the amalgamation of five companies\u2014Mahogany Logistics Services, TVS SCS Global Freight Solutions, White Data Systems India, SPC International (India), and FLEXOL Packaging (India)\u2014into itself. The scheme is effective from April 1, 2023, but is still subject to final sanction from the NCLT Bengaluru Bench for SPC International and filing of certified orders with the Registrar of Companies. The company will update stock exchanges once all approvals are secured and the scheme becomes fully effective.",
-    "saved_at": "2026-07-11T16:08:58.784344"
-  },
-  {
     "id": "NSE_106694997",
     "source": "NSE",
     "company": "Authum Investment & Infrastructure Limited",
@@ -1604,5 +1593,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/GODREJPROP_10082026184729_SEIntimationMerger10082026.pdf",
     "summary": "Godrej Properties Limited has received and recorded the certified order from the NCLT, Mumbai, sanctioning the Scheme of Amalgamation of Embellish Houses Private Limited with the company. The scheme was officially filed with the Registrar of Companies on August 10, 2026, making it effective, with the appointed date set as November 01, 2025.",
     "saved_at": "2026-08-10T14:04:50.628660"
+  },
+  {
+    "id": "NSE_106735703",
+    "source": "NSE",
+    "company": "IRM Energy Limited",
+    "scrip": "IRMENERGY",
+    "headline": "Shareholders meeting",
+    "date": "10-Aug-2026 22:48:47",
+    "url": "https://nsearchives.nseindia.com/corporate/IRMENERGY_10082026224834_Niticeofunsecuredcreditors.pdf",
+    "summary": "IRM Energy Limited has convened a meeting of its Unsecured Creditors on September 12, 2026, via video conferencing, to consider a Scheme of Amalgamation with Enertech Distribution Management Private Limited. The meeting is being held pursuant to orders from the National Company Law Tribunal, Ahmedabad Bench, and remote e-voting will be open from September 9 to September 11, 2026. The notice and related documents have been sent electronically to creditors and are also available on the company's website.",
+    "saved_at": "2026-08-10T18:07:27.792779"
+  },
+  {
+    "id": "NSE_106735702",
+    "source": "NSE",
+    "company": "IRM Energy Limited",
+    "scrip": "IRMENERGY",
+    "headline": "Shareholders meeting",
+    "date": "10-Aug-2026 22:45:11",
+    "url": "https://nsearchives.nseindia.com/corporate/IRMENERGY_10082026224459_IRMequityshareholderssigned.pdf",
+    "summary": "IRM Energy Limited has informed the exchange that a Court Convened General Meeting of equity shareholders will be held on September 12, 2026, at 10:30 a.m., as per the order of the NCLT Ahmedabad. The meeting notice has been issued in accordance with the tribunal's directive.",
+    "saved_at": "2026-08-10T18:07:29.107725"
   }
 ]
