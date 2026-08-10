@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106694941",
-    "source": "NSE",
-    "company": "Somany Ceramics Limited",
-    "scrip": "SOMANYCERA",
-    "headline": "Updates",
-    "date": "11-Jul-2026 19:08:23",
-    "url": "https://nsearchives.nseindia.com/corporate/SOMANYCERAMICS_11072026190810_Chairpersonreport_intimationsd.pdf",
-    "summary": "Somany Ceramics Limited has informed the stock exchange that it submitted the Chairperson's Reports from the NCLT Kolkata Bench-convened meetings of its equity shareholders and unsecured creditors. These reports detail the outcomes of the respective meetings held as part of a corporate process.",
-    "saved_at": "2026-07-11T13:55:09.003348"
-  },
-  {
     "id": "NSE_106694969",
     "source": "NSE",
     "company": "TVS Supply Chain Solutions Limited",
@@ -1604,5 +1593,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/RKSWAMY1973_10082026134410_Intimation_of_Amalgamation.pdf",
     "summary": "Intimation under Regulation 30 read with Schedule III of the SEBI (Listing Obligations and Disclosure Requirements) Regulation, 2015 - Approval of Scheme of Amalgamation of Dsquare Solutions Private Limited (Step down Subsidiary) with Hansa Customer Equity Private Limited (Subsidiary Company)",
     "saved_at": "2026-08-10T09:40:09.212059"
+  },
+  {
+    "id": "NSE_106735181",
+    "source": "NSE",
+    "company": "Godrej Properties Limited",
+    "scrip": "GODREJPROP",
+    "headline": "Amalgamation/Merger",
+    "date": "10-Aug-2026 18:47:56",
+    "url": "https://nsearchives.nseindia.com/corporate/GODREJPROP_10082026184729_SEIntimationMerger10082026.pdf",
+    "summary": "Godrej Properties Limited has received and recorded the certified order from the NCLT, Mumbai, sanctioning the Scheme of Amalgamation of Embellish Houses Private Limited with the company. The scheme was officially filed with the Registrar of Companies on August 10, 2026, making it effective, with the appointed date set as November 01, 2025.",
+    "saved_at": "2026-08-10T14:04:50.628660"
   }
 ]
