@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106694997",
-    "source": "NSE",
-    "company": "Authum Investment & Infrastructure Limited",
-    "scrip": "AIIL",
-    "headline": "General Updates",
-    "date": "12-Jul-2026 00:08:38",
-    "url": "https://nsearchives.nseindia.com/corporate/Authum123_12072026000756_Reg30annoucemnetVAZ.pdf",
-    "summary": "Authum Investment & Infrastructure Limited announced that the NCLT has rejected its resolution plan for Vas Infrastructure Limited, for which it had been selected as the successful resolution applicant. The company clarified that this rejection has no impact on its business operations. Further developments will be disclosed as per SEBI regulations.",
-    "saved_at": "2026-07-12T01:12:13.003775"
-  },
-  {
     "id": "NSE_106695681",
     "source": "NSE",
     "company": "Aster DM Healthcare Limited",
@@ -1615,5 +1604,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/IRMENERGY_10082026224459_IRMequityshareholderssigned.pdf",
     "summary": "IRM Energy Limited has informed the exchange that a Court Convened General Meeting of equity shareholders will be held on September 12, 2026, at 10:30 a.m., as per the order of the NCLT Ahmedabad. The meeting notice has been issued in accordance with the tribunal's directive.",
     "saved_at": "2026-08-10T18:07:29.107725"
+  },
+  {
+    "id": "NSE_106736504",
+    "source": "NSE",
+    "company": "AvenuesAI Limited",
+    "scrip": "CCAVENUE",
+    "headline": "Amalgamation/Merger",
+    "date": "11-Aug-2026 14:27:59",
+    "url": "https://nsearchives.nseindia.com/corporate/INFIBEAM_11082026142750_OutcomeofBM.pdf",
+    "summary": "AvenuesAI Limited has announced the amalgamation of its wholly owned subsidiary, Nueromind Technologies Private Limited, into the parent company. The merger will see the transferor company's operations and assets consolidated under AvenuesAI Limited as the transferee entity.",
+    "saved_at": "2026-08-11T09:44:56.334938"
+  },
+  {
+    "id": "NSE_106736497",
+    "source": "NSE",
+    "company": "AvenuesAI Limited",
+    "scrip": "CCAVENUE",
+    "headline": "Outcome of Board Meeting",
+    "date": "11-Aug-2026 14:24:44",
+    "url": "https://nsearchives.nseindia.com/corporate/INFIBEAM_11082026142405_OutcomeofBMRI110826.pdf",
+    "summary": "AvenuesAI Limited's Board Meeting on August 11, 2026, approved its unaudited standalone and consolidated financial results. The board also sanctioned an increase in the investment limit, a scheme of amalgamation, changes to the Rights Issue objects, and a consolidation of equity shares. Additionally, the meeting set the date for the company's 16th Annual General Meeting.",
+    "saved_at": "2026-08-11T09:44:58.235109"
   }
 ]
