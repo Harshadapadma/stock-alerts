@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106696122",
-    "source": "NSE",
-    "company": "ROUTE MOBILE LIMITED",
-    "scrip": "ROUTE",
-    "headline": "Press Release",
-    "date": "13-Jul-2026 19:45:17",
-    "url": "https://nsearchives.nseindia.com/corporate/ROUTE_13072026194425_Upload.pdf",
-    "summary": "Route Mobile Limited, through its subsidiary Route Connect Private Limited, has signed a Business Transfer Agreement to acquire Heltar Technologies Private Limited's AI-driven omnichannel customer engagement business. The announcement was made via a press release dated July 13, 2026.",
-    "saved_at": "2026-07-13T16:17:11.379195"
-  },
-  {
     "id": "NSE_106696625",
     "source": "NSE",
     "company": "Triveni Engineering & Industries Limited",
@@ -1703,5 +1692,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/SECMARK_12082026201931_20260812_SCL_Board_Meeting_June_Quarter.pdf",
     "summary": "SecMark Consultancy\u2019s Board approved its unaudited standalone and consolidated financial results for the quarter ended June 30, 2026, along with the limited review report. The Board also approved a scheme of amalgamation to merge Codifi Finserv Private Limited and SecMark Holding Private Limited into the company, subject to regulatory and shareholder approvals.",
     "saved_at": "2026-08-12T15:44:30.561919"
+  },
+  {
+    "id": "NSE_106740425",
+    "source": "NSE",
+    "company": "Bluspring Enterprises Limited",
+    "scrip": "BLUSPRING",
+    "headline": "Updates",
+    "date": "12-Aug-2026 22:11:59",
+    "url": "https://nsearchives.nseindia.com/corporate/BLUSPRING_12082026220732_Reg_30_-_Merger.pdf",
+    "summary": "Bluspring Enterprises Limited announced that its wholly-owned subsidiary, Bluspring New Horizon One Private Limited, will be amalgamated with its step-down subsidiary, STEAG Energy Services (India) Private Limited. The merger aims to simplify the holding structure, streamline decision-making, and reduce regulatory compliances. The transaction is exempt from related party regulations and is subject to regulatory approvals.",
+    "saved_at": "2026-08-12T17:45:16.258104"
   }
 ]
