@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106695985",
-    "source": "NSE",
-    "company": "Sammaan Capital Limited",
-    "scrip": "SAMMAANCAP",
-    "headline": "Updates",
-    "date": "13-Jul-2026 18:35:48",
-    "url": "https://nsearchives.nseindia.com/corporate/IHFL_13072026183537_SCL_Reg_30_51_Disclosure_FMCO_Scheme_13Jul26.pdf",
-    "summary": "Sammaan Capital Limited announced that the NCLT has allowed its clarification application regarding the proposed Scheme of Arrangement, as per the order dated July 10, 2026. This follows the earlier order from June 12, 2026, which had approved the first motion. The clarification order is now available on the company\u2019s website.",
-    "saved_at": "2026-07-13T13:48:06.326780"
-  },
-  {
-    "id": "NSE_106695922",
-    "source": "NSE",
-    "company": "JB Chemicals & Pharmaceuticals Limited",
-    "scrip": "JBCHEPHARM",
-    "headline": "Suspension of Trading",
-    "date": "13-Jul-2026 18:25:30",
-    "url": "-",
-    "summary": "Trading in JB Chemicals & Pharmaceuticals Limited's equity shares will be suspended from July 17, 2026, due to a Scheme of Amalgamation. The suspension will take effect after the close of trading on July 16, 2026.",
-    "saved_at": "2026-07-13T13:48:07.759037"
-  },
-  {
     "id": "NSE_106696122",
     "source": "NSE",
     "company": "ROUTE MOBILE LIMITED",
@@ -1692,5 +1670,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/UGROCAP_12082026182256_orderintimation.pdf",
     "summary": "Ugro Capital Limited has received a certified copy of the NCLT order directing it to convene meetings of its equity shareholders, secured creditors, and unsecured creditors within 90 days to approve a proposed amalgamation scheme with Profectus Capital Private Limited. The meetings will be held via video conferencing or other audio-visual means, and the scheme remains subject to regulatory approvals. The company will keep stock exchanges informed of further developments.",
     "saved_at": "2026-08-12T13:43:12.686914"
+  },
+  {
+    "id": "NSE_106740139",
+    "source": "NSE",
+    "company": "Mallcom (India) Limited",
+    "scrip": "MALLCOM",
+    "headline": "Updates",
+    "date": "12-Aug-2026 19:46:36",
+    "url": "https://nsearchives.nseindia.com/corporate/MALLCOM_12082026194606_REG30intimation.pdf",
+    "summary": "Mallcom (India) Limited has received the certified copy of the NCLT Kolkata Bench order approving the Scheme of Amalgamation with its wholly-owned subsidiary, Mallcom VSFT Gloves Private Limited. The company has informed the exchange of this regulatory update.",
+    "saved_at": "2026-08-12T14:46:59.758365"
   }
 ]
