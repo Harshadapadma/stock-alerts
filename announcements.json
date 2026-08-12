@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106695681",
-    "source": "NSE",
-    "company": "Aster DM Healthcare Limited",
-    "scrip": "ASTERDM",
-    "headline": "General Updates",
-    "date": "13-Jul-2026 16:25:19",
-    "url": "https://nsearchives.nseindia.com/corporate/ASTERDM2_13072026162505_SEAllotmentJuly2026s.pdf",
-    "summary": "Aster DM Healthcare Limited (now Aster DM Quality Care Limited) has allotted 353,551,410 fully paid-up equity shares to eligible shareholders of the transferor company, based on a share exchange ratio of 977 shares for every 1,000 held. This allotment, approved by the board on July 13, 2026, follows the NCLT\u2019s approval of the scheme and increases the company\u2019s paid-up equity capital to INR 8,716,724,390. The newly issued shares rank equally with existing shares and will be listed on BSE and NSE.",
-    "saved_at": "2026-07-13T11:32:24.718250"
-  },
-  {
-    "id": "NSE_106695556",
-    "source": "NSE",
-    "company": "Somany Ceramics Limited",
-    "scrip": "SOMANYCERA",
-    "headline": "Scheme of Arrangement",
-    "date": "13-Jul-2026 15:05:21",
-    "url": "https://nsearchives.nseindia.com/corporate/SOMANYCERAMICS_13072026150508_OutcomeofBM_13072026_sd.pdf",
-    "summary": "Somany Ceramics Limited's Board approved an additional investment of up to \u20b915 crore in its subsidiary, Sudha Somany Ceramics Private Limited, through equity and/or preference shares. The investment may be made in one or more tranches.",
-    "saved_at": "2026-07-13T11:32:26.373219"
-  },
-  {
     "id": "NSE_106695985",
     "source": "NSE",
     "company": "Sammaan Capital Limited",
@@ -1703,5 +1681,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/ELGIRUBCO_12082026160515_ELGIRUBCO_BM_Outcome_12082026.pdf",
     "summary": "Elgi Rubber Company Limited's Board approved the reversal of Rs.16.60 million in interest receivable from two overseas subsidiaries to ease their financial burden. They also approved the unaudited financial results for the quarter ended June 30, 2026, which received an unmodified audit opinion. Additionally, the Board sanctioned the voluntary winding up of two dormant, non-material subsidiaries in Kenya and Australia.",
     "saved_at": "2026-08-12T11:13:23.488738"
+  },
+  {
+    "id": "NSE_106739746",
+    "source": "NSE",
+    "company": "Ugro Capital Limited",
+    "scrip": "UGROCAP",
+    "headline": "Amalgamation/Merger",
+    "date": "12-Aug-2026 18:23:30",
+    "url": "https://nsearchives.nseindia.com/corporate/UGROCAP_12082026182256_orderintimation.pdf",
+    "summary": "Ugro Capital Limited has received a certified copy of the NCLT order directing it to convene meetings of its equity shareholders, secured creditors, and unsecured creditors within 90 days to approve a proposed amalgamation scheme with Profectus Capital Private Limited. The meetings will be held via video conferencing or other audio-visual means, and the scheme remains subject to regulatory approvals. The company will keep stock exchanges informed of further developments.",
+    "saved_at": "2026-08-12T13:43:12.686914"
   }
 ]
