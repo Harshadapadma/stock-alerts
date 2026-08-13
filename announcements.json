@@ -1,38 +1,5 @@
 [
   {
-    "id": "NSE_106696625",
-    "source": "NSE",
-    "company": "Triveni Engineering & Industries Limited",
-    "scrip": "TRIVENI",
-    "headline": "Record Date",
-    "date": "14-Jul-2026 11:01:23",
-    "url": "https://nsearchives.nseindia.com/corporate/TRIVENI_14072026105638_TEIL_RECORD_DATE.pdf",
-    "summary": "Triveni Engineering & Industries Limited has announced that July 22, 2026, is the record date for shareholders to receive equity shares of TPTL as part of the demerger of its power transmission business. Under the scheme, shareholders will receive one TPTL share (face value INR 2) for every three Triveni shares (face value INR 1) they hold.",
-    "saved_at": "2026-07-14T05:59:56.871858"
-  },
-  {
-    "id": "NSE_106696861",
-    "source": "NSE",
-    "company": "KPIT Technologies Limited",
-    "scrip": "KPITTECH",
-    "headline": "Other Restructuring",
-    "date": "14-Jul-2026 13:01:54",
-    "url": "https://nsearchives.nseindia.com/corporate/KPITTECH_14072026130117_Somit_US_Liquidation_Completion.pdf",
-    "summary": "KPIT Technologies has announced the voluntary liquidation and dissolution of Somit Solutions Inc., a wholly owned step-down subsidiary of the company. The process is being carried out through its UK-based subsidiary, KPIT Technologies (UK) Limited. This restructuring move involves the winding up of the step-down entity.",
-    "saved_at": "2026-07-14T08:24:31.839037"
-  },
-  {
-    "id": "NSE_106697091",
-    "source": "NSE",
-    "company": "NBCC (India) Limited",
-    "scrip": "NBCC",
-    "headline": "Outcome of Board Meeting",
-    "date": "14-Jul-2026 15:52:10",
-    "url": "https://nsearchives.nseindia.com/corporate/NBCC_14072026155154_Intimation_outcome_of_Board_Meeting_14072026.pdf",
-    "summary": "NBCC (India) Limited's Board has approved a Scheme of Arrangement to merge its wholly owned subsidiary, HSCC (India) Limited, with itself on a going concern basis. The decision was made during a board meeting on July 14, 2026, under the relevant sections of the Companies Act and SEBI regulations.",
-    "saved_at": "2026-07-14T11:51:00.014365"
-  },
-  {
     "id": "NSE_106697743",
     "source": "NSE",
     "company": "Digjam Limited",
@@ -1703,5 +1670,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/BLUSPRING_12082026220732_Reg_30_-_Merger.pdf",
     "summary": "Bluspring Enterprises Limited announced that its wholly-owned subsidiary, Bluspring New Horizon One Private Limited, will be amalgamated with its step-down subsidiary, STEAG Energy Services (India) Private Limited. The merger aims to simplify the holding structure, streamline decision-making, and reduce regulatory compliances. The transaction is exempt from related party regulations and is subject to regulatory approvals.",
     "saved_at": "2026-08-12T17:45:16.258104"
+  },
+  {
+    "id": "NSE_106742032",
+    "source": "NSE",
+    "company": "The Investment Trust Of India Limited",
+    "scrip": "THEINVEST",
+    "headline": "Updates",
+    "date": "13-Aug-2026 17:14:31",
+    "url": "https://nsearchives.nseindia.com/corporate/THEINVEST_13082026171007_TheITIOutcomeofMeeting_June26.pdf",
+    "summary": "The Board of The Investment Trust of India approved its unaudited financial results for the quarter ended June 30, 2026, and scheduled its 35th Annual General Meeting for September 28, 2026. The company also withdrew its proposal to transfer its fund and asset management business to its subsidiary, ITI Asset Management Limited, and will continue as the Sponsor and Investment Manager for ITI Long Short Fund.",
+    "saved_at": "2026-08-13T12:31:26.063068"
   }
 ]
