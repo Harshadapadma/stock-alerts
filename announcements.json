@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106697743",
-    "source": "NSE",
-    "company": "Digjam Limited",
-    "scrip": "DIGJAMLMTD",
-    "headline": "Shareholders meeting",
-    "date": "14-Jul-2026 20:59:47",
-    "url": "https://nsearchives.nseindia.com/corporate/DIGJAMLMTD_14072026205936_Stock_Exchange_Intimation.pdf",
-    "summary": "Digjam Limited has called a meeting of its equity shareholders on August 16, 2026, as directed by the National Company Law Tribunal (NCLT), Chennai Bench. The notice for the meeting has been issued in compliance with the Tribunal's orders.",
-    "saved_at": "2026-07-14T15:42:58.625744"
-  },
-  {
     "id": "NSE_106699077",
     "source": "NSE",
     "company": "Amber Enterprises India Limited",
@@ -1681,5 +1670,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/THEINVEST_13082026171007_TheITIOutcomeofMeeting_June26.pdf",
     "summary": "The Board of The Investment Trust of India approved its unaudited financial results for the quarter ended June 30, 2026, and scheduled its 35th Annual General Meeting for September 28, 2026. The company also withdrew its proposal to transfer its fund and asset management business to its subsidiary, ITI Asset Management Limited, and will continue as the Sponsor and Investment Manager for ITI Long Short Fund.",
     "saved_at": "2026-08-13T12:31:26.063068"
+  },
+  {
+    "id": "NSE_106743876",
+    "source": "NSE",
+    "company": "DiGiSPICE Technologies Limited",
+    "scrip": "DIGISPICE",
+    "headline": "Copy of Newspaper Publication",
+    "date": "14-Aug-2026 12:48:27",
+    "url": "https://nsearchives.nseindia.com/corporate/DIGISPICE_14082026124722_STXsIntimationNewspaperpublication.pdf",
+    "summary": "DiGiSPICE Technologies Limited has informed the stock exchanges of newspaper publications regarding a hearing notice for its proposed scheme of amalgamation, involving the merger of Spice Money Limited and two other entities into DiGiSPICE. The notice was published in Business Standard and Dainik Jagran on August 14, 2026, following the directions of the National Company Law Tribunal. The company has also uploaded this intimation to its website.",
+    "saved_at": "2026-08-14T07:44:57.660773"
+  },
+  {
+    "id": "NSE_106743788",
+    "source": "NSE",
+    "company": "Banaras Beads Limited",
+    "scrip": "BANARBEADS",
+    "headline": "General Updates",
+    "date": "14-Aug-2026 12:20:21",
+    "url": "https://nsearchives.nseindia.com/corporate/BANARBEADS_14082026122006_OrderNCLT.pdf",
+    "summary": "Banaras Beads Limited has informed the exchange that the National Company Law Tribunal (NCLT) at Allahabad issued an order on 06.08.2026 regarding pending Executive Petition EP No.424/ALD/2018 and Contempt Application No.10/2023 in CP No.14/199. The announcement provides no further details on the order's content or its impact on the company.",
+    "saved_at": "2026-08-14T07:44:59.232899"
   }
 ]
