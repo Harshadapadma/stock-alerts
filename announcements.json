@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106699077",
-    "source": "NSE",
-    "company": "Amber Enterprises India Limited",
-    "scrip": "AMBER",
-    "headline": "Amalgamation/Merger",
-    "date": "15-Jul-2026 18:36:13",
-    "url": "https://nsearchives.nseindia.com/corporate/AMBER_15072026183458_SEIntimationDisclosureRegulation30AmberSMPOrder.pdf",
-    "summary": "Amber Enterprises India Limited has received an order from the NCLT Chandigarh Bench approving a scheme of amalgamation/merger. The order was issued on July 3, 2026, and received by the company on July 15, 2026. The details of the scheme are attached to the disclosure.",
-    "saved_at": "2026-07-15T14:21:39.261594"
-  },
-  {
-    "id": "NSE_106698982",
-    "source": "NSE",
-    "company": "Spandana Sphoorty Financial Limited",
-    "scrip": "SPANDANA",
-    "headline": "Amalgamation/Merger",
-    "date": "15-Jul-2026 18:02:48",
-    "url": "https://nsearchives.nseindia.com/corporate/SPANDANA_15072026180240_SEIntimationCFLWOS.pdf",
-    "summary": "Spandana Sphoorty Financial Limited announced that its subsidiary, Criss Financial Limited (CFL), has become a wholly owned subsidiary after the company acquired the remaining shares from non-promoter shareholders. As a result, the management will re-evaluate and modify the terms of the proposed merger by absorption scheme, which will then be reconsidered by the Board. The final draft scheme and related documents remain subject to further Board approval.",
-    "saved_at": "2026-07-15T14:21:41.080933"
-  },
-  {
     "id": "NSE_106700569",
     "source": "NSE",
     "company": "Winsome Yarns Limited",
@@ -1769,5 +1747,38 @@
     "url": "https://nsearchives.nseindia.com/corporate/ASTERDM2_14082026183405_SEIntsign.pdf",
     "summary": "Aster DM Quality Care Limited has received trading approval from NSE and BSE for 353,551,410 equity shares allotted to shareholders of the transferor company under a Scheme of Arrangement. These shares will be listed and available for trading starting Monday, 17 August 2026.",
     "saved_at": "2026-08-14T13:38:58.390539"
+  },
+  {
+    "id": "NSE_106745647",
+    "source": "NSE",
+    "company": "Blue Star Limited",
+    "scrip": "BLUESTARCO",
+    "headline": "Sale or disposal",
+    "date": "14-Aug-2026 21:01:44",
+    "url": "https://nsearchives.nseindia.com/corporate/BLUESTARCO_14082026210130_Stock_Exchange-Project_Bombay.pdf",
+    "summary": "Blue Star Limited's wholly-owned subsidiary, Blue Star Engineering & Electronics, has signed a Business Transfer Agreement to sell its MedTech division to Cyrix Healthcare Private Limited. The sale will be executed on a slump sale basis as a going concern for a consideration of up to Rs 40 crores, with the transaction expected to be completed by March 31, 2027. The MedTech division contributed approximately 0.33% of the company's consolidated income in the last financial year.",
+    "saved_at": "2026-08-14T15:34:09.244422"
+  },
+  {
+    "id": "NSE_106745642",
+    "source": "NSE",
+    "company": "Birla Cable Limited",
+    "scrip": "BIRLACABLE",
+    "headline": "Amalgamation/Merger",
+    "date": "14-Aug-2026 20:59:08",
+    "url": "https://nsearchives.nseindia.com/corporate/BIRLACABLE_14082026205835_SEsubmissionofNOCBCL.pdf",
+    "summary": "Birla Cable Limited has received no-objection letters from NSE and BSE regarding its proposed merger with Vindhya Telelinks Limited. The stock exchanges raised no adverse observations on the amalgamation scheme. This clears a key regulatory hurdle for the merger under the Companies Act, 2013.",
+    "saved_at": "2026-08-14T15:34:10.795563"
+  },
+  {
+    "id": "NSE_106745629",
+    "source": "NSE",
+    "company": "Vindhya Telelinks Limited",
+    "scrip": "VINDHYATEL",
+    "headline": "Amalgamation/Merger",
+    "date": "14-Aug-2026 20:54:24",
+    "url": "https://nsearchives.nseindia.com/corporate/VINDHYATEL_14082026205402_SEsubmissionofNOCVTL.pdf",
+    "summary": "Vindhya Telelinks Limited has received no-objection letters from NSE and no adverse observations from BSE regarding its proposed amalgamation with Birla Cable Limited. The approvals pertain to the Scheme of Amalgamation under the Companies Act, 2013, involving the transfer of Birla Cable into Vindhya Telelinks. This marks a key regulatory step forward for the merger.",
+    "saved_at": "2026-08-14T15:34:12.605015"
   }
 ]
