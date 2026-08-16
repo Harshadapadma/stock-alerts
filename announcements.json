@@ -1,71 +1,5 @@
 [
   {
-    "id": "NSE_106700569",
-    "source": "NSE",
-    "company": "Winsome Yarns Limited",
-    "scrip": "WINSOME",
-    "headline": "Record Date",
-    "date": "16-Jul-2026 19:21:31",
-    "url": "https://nsearchives.nseindia.com/corporate/WINSOMYARN_16072026191448_Record_date_Intimation_Winsome.pdf",
-    "summary": "Winsome Yarns Limited has announced that the record date for the reduction, cancellation, and extinguishment of its existing paid-up share capital, as per the NCLT order, is set for July 31, 2026. This action will adjust the company's share capital structure accordingly.",
-    "saved_at": "2026-07-16T15:07:39.992460"
-  },
-  {
-    "id": "NSE_106700705",
-    "source": "NSE",
-    "company": "WeWork India Management Limited",
-    "scrip": "WEWORK",
-    "headline": "Other Restructuring",
-    "date": "16-Jul-2026 21:07:26",
-    "url": "https://nsearchives.nseindia.com/corporate/WEWORK_16072026210710_WeWork_BM_Outcome_-_Q1.pdf",
-    "summary": "WeWork India's Board approved its Q2 FY26 financial results and proposed several restructuring measures, including altering its Memorandum of Association to explicitly allow e-commerce and digital commerce activities. The Board also approved reclassifying its authorized share capital to eliminate preference shares and proposed reducing its Securities Premium Account to offset accumulated losses. These changes are subject to shareholder and regulatory approvals.",
-    "saved_at": "2026-07-16T16:40:44.932392"
-  },
-  {
-    "id": "NSE_106700696",
-    "source": "NSE",
-    "company": "Digjam Limited",
-    "scrip": "DIGJAMLMTD",
-    "headline": "Copy of Newspaper Publication",
-    "date": "16-Jul-2026 20:59:57",
-    "url": "https://nsearchives.nseindia.com/corporate/DIGJAMLMTD_16072026205946_SE_Intimation_NP_Advt.pdf",
-    "summary": "Digjam Limited submitted copies of a joint newspaper advertisement to the stock exchange, published as per an order from the Hon'ble NCLT. The advertisement convenes meetings for the equity shareholders of Digjam Limited and the unsecured creditors of Reid & Taylor International Private Limited. This filing fulfills the regulatory disclosure requirement following the tribunal's directive.",
-    "saved_at": "2026-07-16T16:40:46.583645"
-  },
-  {
-    "id": "NSE_106701766",
-    "source": "NSE",
-    "company": "Ugro Capital Limited",
-    "scrip": "UGROCAP",
-    "headline": "Scheme of Arrangement",
-    "date": "17-Jul-2026 17:36:36",
-    "url": "https://nsearchives.nseindia.com/corporate/UGROCAP_17072026173509_UGROIntimationofFilingofCompanyApplicationwithNCLT.pdf",
-    "summary": "Ugro Capital Limited and Profectus Capital Private Limited have filed a company application with the National Company Law Tribunal (NCLT) for a Scheme of Arrangement. The scheme is subject to approvals from shareholders, creditors, the NCLT, and other regulatory bodies. The company will update stock exchanges on further developments.",
-    "saved_at": "2026-07-17T12:20:02.545868"
-  },
-  {
-    "id": "NSE_106701659",
-    "source": "NSE",
-    "company": "MPS Limited",
-    "scrip": "MPSLTD",
-    "headline": "Updates",
-    "date": "17-Jul-2026 16:48:58",
-    "url": "https://nsearchives.nseindia.com/corporate/MPSLIMITED_17072026163923_Stx_Intimation_Receipt_of_Order_Sd.pdf",
-    "summary": "MPS Limited has received the First Motion Order from the NCLT Chennai Bench regarding the scheme to amalgamate ADI BPO Services Limited with MPS Limited. This order marks a procedural step in the merger process between the two companies.",
-    "saved_at": "2026-07-17T12:20:03.844214"
-  },
-  {
-    "id": "NSE_106701894",
-    "source": "NSE",
-    "company": "India Glycols Limited",
-    "scrip": "INDIAGLYCO",
-    "headline": "Updates",
-    "date": "17-Jul-2026 18:25:06",
-    "url": "https://nsearchives.nseindia.com/corporate/INDIAGLYCO_17072026182456_SE_Intimation_NCLT.pdf",
-    "summary": "India Glycols Limited has announced that the National Company Law Tribunal (NCLT), Allahabad Bench, has sanctioned its Scheme of Arrangement on July 17, 2026. The scheme involves the demerger of the Bio Pharma Undertaking into Ennature Bio Pharma Limited and the Spirits and Biofuel Undertaking into IGL Spirits Limited. A copy of the NCLT order will be submitted once it is uploaded on the tribunal\u2019s website.",
-    "saved_at": "2026-07-17T14:10:55.588333"
-  },
-  {
     "id": "NSE_106702129",
     "source": "NSE",
     "company": "NIIT Learning Systems Limited",
@@ -1802,5 +1736,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/RPGLIFE_15082026005010_Intimation_BTA.pdf",
     "summary": "RPG Life Sciences Limited has completed the transfer of its Active Pharmaceuticals Ingredients (API) business to its wholly owned subsidiary, RPG Active Pharma Limited, under a slump sale basis. The transaction, which follows a previously signed Business Transfer Agreement, will take effect from August 15, 2026. This update confirms the finalization of the deal as per the agreed terms.",
     "saved_at": "2026-08-15T01:44:30.936064"
+  },
+  {
+    "id": "NSE_106746350",
+    "source": "NSE",
+    "company": "Digjam Limited",
+    "scrip": "DIGJAMLMTD",
+    "headline": "Shareholders meeting",
+    "date": "16-Aug-2026 20:01:29",
+    "url": "https://nsearchives.nseindia.com/corporate/DIGJAMLMTD_16082026200115_Proceedings_of_the_Shareholders_Meeting.pdf",
+    "summary": "Digjam Limited held an NCLT-convened equity shareholders meeting on August 16, 2026, via video conference to seek approval for a proposed Scheme of Arrangement with Reid & Taylor International Private Limited. The meeting was chaired by an NCLT-appointed advocate, with the agenda focused on the demerger scheme under the Companies Act. The company has shared the proceedings summary on its website as per SEBI regulations.",
+    "saved_at": "2026-08-16T14:32:22.140539"
   }
 ]
