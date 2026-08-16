@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106702129",
-    "source": "NSE",
-    "company": "NIIT Learning Systems Limited",
-    "scrip": "NIITMTS",
-    "headline": "Amalgamation/Merger",
-    "date": "17-Jul-2026 20:58:10",
-    "url": "https://nsearchives.nseindia.com/corporate/NLSL_17072026205759_SLI_merger_-_SE_intimation.pdf",
-    "summary": "NIIT Learning Systems Limited announced that its subsidiary, NIIT (USA) Inc., received board approval on July 17, 2026, to merge Stackroute Learning Inc. into NIIT USA. The merger was approved by NIIT USA's Board of Directors on the same date.",
-    "saved_at": "2026-07-17T15:48:35.395043"
-  },
-  {
     "id": "NSE_106702456",
     "source": "NSE",
     "company": "Asian Energy Services Limited",
@@ -1747,5 +1736,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/DIGJAMLMTD_16082026200115_Proceedings_of_the_Shareholders_Meeting.pdf",
     "summary": "Digjam Limited held an NCLT-convened equity shareholders meeting on August 16, 2026, via video conference to seek approval for a proposed Scheme of Arrangement with Reid & Taylor International Private Limited. The meeting was chaired by an NCLT-appointed advocate, with the agenda focused on the demerger scheme under the Companies Act. The company has shared the proceedings summary on its website as per SEBI regulations.",
     "saved_at": "2026-08-16T14:32:22.140539"
+  },
+  {
+    "id": "NSE_106746362",
+    "source": "NSE",
+    "company": "Digjam Limited",
+    "scrip": "DIGJAMLMTD",
+    "headline": "Shareholders meeting",
+    "date": "16-Aug-2026 22:43:28",
+    "url": "https://nsearchives.nseindia.com/corporate/DIGJAMLMTD_16082026224245_VR_SR_Final_Submission.pdf",
+    "summary": "Digjam Limited has submitted the Scrutinizer\u2019s report and voting results from its NCLT-convened General Meeting held on August 16, 2026. The submission covers both the meeting\u2019s outcome and the detailed vote tally. This update was provided to the stock exchange as part of regulatory compliance.",
+    "saved_at": "2026-08-16T17:28:29.401801"
   }
 ]
