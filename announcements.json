@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106702568",
-    "source": "NSE",
-    "company": "NBCC (India) Limited",
-    "scrip": "NBCC",
-    "headline": "Updates",
-    "date": "18-Jul-2026 15:22:03",
-    "url": "https://nsearchives.nseindia.com/corporate/NBCC_18072026152154_IntimationofSchemeofMergerHSCCwithNBCC.pdf",
-    "summary": "NBCC (India) Limited has informed the stock exchange about a Scheme of Arrangement to merge HSCC (India) Limited with NBCC, involving shareholders and creditors. The disclosure is made under Regulation 37(6) of SEBI's listing regulations.",
-    "saved_at": "2026-07-18T14:45:24.739616"
-  },
-  {
     "id": "NSE_106702853",
     "source": "NSE",
     "company": "MPS Limited",
@@ -1758,5 +1747,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/Shambhu_17082026172033_Network18_SE_intimation_17082026.pdf",
     "summary": "Network18 Media & Investments has published a newspaper notice regarding the hearing and final disposal of its scheme petition for the amalgamation of its wholly owned subsidiary, News18 Marathi Private Limited, into the parent company. The announcement provides the required public notice of the legal proceedings for the merger.",
     "saved_at": "2026-08-17T12:13:24.001820"
+  },
+  {
+    "id": "NSE_106747478",
+    "source": "NSE",
+    "company": "Varun Beverages Limited",
+    "scrip": "VBL",
+    "headline": "General Updates",
+    "date": "17-Aug-2026 20:28:40",
+    "url": "https://nsearchives.nseindia.com/corporate/VBL_17082026202812_Update_TwizzaMerger.pdf",
+    "summary": "Varun Beverages Limited issued a general update referencing its compliance with SEBI regulations, specifically Regulation 30 and the SEBI Master Circular dated January 30, 2026. The company clarified that the required disclosure had already been provided in its earlier intimation on July 2, 2026. No new information or material event was introduced in this announcement.",
+    "saved_at": "2026-08-17T14:59:28.758768"
   }
 ]
