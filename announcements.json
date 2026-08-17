@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106702456",
-    "source": "NSE",
-    "company": "Asian Energy Services Limited",
-    "scrip": "ASIANENE",
-    "headline": "Copy of Newspaper Publication",
-    "date": "18-Jul-2026 12:52:30",
-    "url": "https://nsearchives.nseindia.com/corporate/ASIANENE_18072026124758_AESL_Merger_Newspaper_18thJuly2026_signed.pdf",
-    "summary": "Asian Energy Services Limited has informed the exchange of a newspaper publication regarding a hearing for its scheme petition on August 7, 2026. The hearing, directed by the NCLT Mumbai Bench, concerns the proposed merger by absorption of Oilmax Energy Private Limited into Asian Energy Services Limited.",
-    "saved_at": "2026-07-18T10:01:00.171659"
-  },
-  {
     "id": "NSE_106702568",
     "source": "NSE",
     "company": "NBCC (India) Limited",
@@ -1747,5 +1736,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/DIGJAMLMTD_16082026224245_VR_SR_Final_Submission.pdf",
     "summary": "Digjam Limited has submitted the Scrutinizer\u2019s report and voting results from its NCLT-convened General Meeting held on August 16, 2026. The submission covers both the meeting\u2019s outcome and the detailed vote tally. This update was provided to the stock exchange as part of regulatory compliance.",
     "saved_at": "2026-08-16T17:28:29.401801"
+  },
+  {
+    "id": "NSE_106747033",
+    "source": "NSE",
+    "company": "Piccadily Agro Industries Limited",
+    "scrip": "PICCADIL",
+    "headline": "Demerger",
+    "date": "17-Aug-2026 16:54:03",
+    "url": "https://nsearchives.nseindia.com/corporate/CSPICCADILY_17082026165215_approval.pdf",
+    "summary": "Piccadily Agro Industries Limited has received no adverse observations from BSE Limited and the National Stock Exchange of India, as per letters dated August 14, 2026. This clearance pertains to the company\u2019s proposed demerger. The announcement confirms regulatory approval for the demerger process.",
+    "saved_at": "2026-08-17T11:44:58.538947"
   }
 ]
