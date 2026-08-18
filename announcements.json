@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106702853",
-    "source": "NSE",
-    "company": "MPS Limited",
-    "scrip": "MPSLTD",
-    "headline": "Updates",
-    "date": "19-Jul-2026 12:33:09",
-    "url": "https://nsearchives.nseindia.com/corporate/MPSLIMITED_19072026123133_Stx_Intimation_Receipt_of_Order.pdf",
-    "summary": "MPS Limited has received the First Motion Order from the NCLT Chennai Bench regarding the Scheme of Amalgamation of ADI BPO Services Limited into MPS Limited. This order marks a procedural step in the legal process for the merger. The announcement updates the exchange on the progress of the amalgamation.",
-    "saved_at": "2026-07-19T10:40:30.036266"
-  },
-  {
     "id": "NSE_106703247",
     "source": "NSE",
     "company": "Torrent Pharmaceuticals Limited",
@@ -1780,5 +1769,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/MPTL2002_18082026150653_Announcementto_Reg30_MPTL180826.pdf",
     "summary": "Markolines Pavement Technologies Limited has received \"No Objection\" letters from both BSE and NSE regarding its proposed merger with Markolines Infra Limited. The stock exchanges have cleared the scheme for filing with the National Company Law Tribunal (NCLT), subject to certain conditions. The company will comply with all regulatory requirements and observations while proceeding with the amalgamation.",
     "saved_at": "2026-08-18T09:53:56.156556"
+  },
+  {
+    "id": "NSE_106748403",
+    "source": "NSE",
+    "company": "RHI MAGNESITA INDIA LIMITED",
+    "scrip": "RHIM",
+    "headline": "General Updates",
+    "date": "18-Aug-2026 16:40:59",
+    "url": "https://nsearchives.nseindia.com/corporate/RHIM_18082026163936_IntimationofcompletionofmergerF.pdf",
+    "summary": "RHI Magnesita India Limited announced that its wholly-owned subsidiary, Intermetal Engineers (India) Private Limited, has received regulatory approval for its merger into Ashwath Technologies Private Limited, effective 18 August 2026. As a result, Ashwath Technologies has become a direct wholly-owned subsidiary of RHI Magnesita India Limited, with new directors appointed and existing ones resigned. The merger aims to achieve operational efficiencies and rationalise the corporate structure.",
+    "saved_at": "2026-08-18T11:37:54.194970"
   }
 ]
