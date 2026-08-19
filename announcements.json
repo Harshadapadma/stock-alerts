@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106703247",
-    "source": "NSE",
-    "company": "Torrent Pharmaceuticals Limited",
-    "scrip": "TORNTPHARM",
-    "headline": "General Updates",
-    "date": "20-Jul-2026 12:44:19",
-    "url": "https://nsearchives.nseindia.com/corporate/TORNTPHARM_20072026124412_SE_Intimation_Allotment_of_shares.pdf",
-    "summary": "Torrent Pharmaceuticals has allotted 41,922,416 fully paid-up equity shares to eligible shareholders of J. B. Chemicals & Pharmaceuticals, based on the record date of July 17, 2026. This allotment was made as part of the approved scheme of amalgamation between the two companies.",
-    "saved_at": "2026-07-20T07:36:33.525422"
-  },
-  {
     "id": "NSE_106703875",
     "source": "NSE",
     "company": "India Glycols Limited",
@@ -1846,5 +1835,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/suhask_18082026204306_Reg30AureusFinalOrder18082026.pdf",
     "summary": "Happiest Minds Technologies Limited announced that the National Company Law Tribunal (NCLT), Bengaluru Bench, approved its Scheme of Arrangement on August 10, 2026. The appointed date for the merger is April 1, 2026, and the company received the certified order on August 18, 2026. This disclosure was made under SEBI Listing Regulations.",
     "saved_at": "2026-08-18T15:51:17.930520"
+  },
+  {
+    "id": "NSE_106749787",
+    "source": "NSE",
+    "company": "Cipla Limited",
+    "scrip": "CIPLA",
+    "headline": "Amalgamation/Merger",
+    "date": "19-Aug-2026 17:01:46",
+    "url": "https://nsearchives.nseindia.com/corporate/CIPLA_19082026170119_NCLTorderintimationsigned.pdf",
+    "summary": "Cipla Limited announced that the National Company Law Tribunal (NCLT), Mumbai Bench, has approved the Scheme of Amalgamation of its wholly-owned subsidiary, Inzpera Healthsciences Limited, with Cipla Limited. The NCLT order, issued on 18th August 2026, allows the merger with an appointed date of 1st April 2026. The amalgamation aims to consolidate operations, improve efficiency, and enhance shareholder value.",
+    "saved_at": "2026-08-19T11:36:36.260287"
   }
 ]
