@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106705687",
-    "source": "NSE",
-    "company": "Vintage Coffee And Beverages Limited",
-    "scrip": "VINCOFE",
-    "headline": "General Updates",
-    "date": "21-Jul-2026 20:54:28",
-    "url": "https://nsearchives.nseindia.com/corporate/VINTAGE_21072026205328_Intimaion.pdf",
-    "summary": "Vintage Coffee and Beverages Limited announced that the National Company Law Tribunal (NCLT), Hyderabad, has sanctioned the merger of its wholly-owned subsidiaries, Vintage Coffee Private Limited and Delecto Foods Private Limited, into the parent company. The order was received on July 21, 2026, and a certified copy will be submitted to stock exchanges in due course. This amalgamation consolidates the subsidiaries into the holding company under the approved scheme.",
-    "saved_at": "2026-07-21T15:53:07.305115"
-  },
-  {
-    "id": "NSE_106705641",
-    "source": "NSE",
-    "company": "Centum Electronics Limited",
-    "scrip": "CENTUM",
-    "headline": "General Updates",
-    "date": "21-Jul-2026 20:04:52",
-    "url": "https://nsearchives.nseindia.com/corporate/CENTUME_21072026200306_Intimation.pdf",
-    "summary": "Centum Electronics Limited provided an update on the court-supervised restructuring proceedings (Redressement Judiciaire) involving its French subsidiaries, Centum T&S Group S.A. and Centum T&S (Centum Technologies et Solutions). The announcement was made to inform the stock exchange of the ongoing legal process in France.",
-    "saved_at": "2026-07-21T15:53:08.586183"
-  },
-  {
     "id": "NSE_106705788",
     "source": "NSE",
     "company": "Crisil Limited",
@@ -1791,5 +1769,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/INDIAGLYCO_20082026201232_Final_UPLOAD_SIGNED.pdf",
     "summary": "India Glycols Limited has received the certified copy of the NCLT Allahabad Bench order dated 17th July 2026, which approves the Scheme of Arrangement demerging the company into Ennature Bio Pharma Limited and IGL Spirits Limited. The appointed date for the scheme is 1st April 2026, with the effective and record dates to be determined by the boards of the companies.",
     "saved_at": "2026-08-20T14:46:32.184484"
+  },
+  {
+    "id": "NSE_106751599",
+    "source": "NSE",
+    "company": "Hindustan Composites Limited",
+    "scrip": "HINDCOMPOS",
+    "headline": "Disclosure of material issue",
+    "date": "20-Aug-2026 21:50:51",
+    "url": "https://nsearchives.nseindia.com/corporate/HINDCOMPOS_20082026214935_HCLSEIntimationRegulation30Slimpsale20082026.pdf",
+    "summary": "Hindustan Composites Limited has completed the slump sale of its Friction Business Undertaking to Rane (Madras) Limited, effective 20th August 2026. As part of the transfer, four Senior Management Personnel and the Managing Director, Mr. Pawan Kumar Choudhary, have been transferred to RML, with Mr. Choudhary resigning from his executive role while remaining a Non-Executive Director. The company has disclosed these changes to the stock exchanges in compliance with SEBI Listing Regulations.",
+    "saved_at": "2026-08-20T16:43:12.496421"
+  },
+  {
+    "id": "NSE_106751596",
+    "source": "NSE",
+    "company": "Rane (Madras) Limited",
+    "scrip": "RML",
+    "headline": "Acquisition",
+    "date": "20-Aug-2026 21:48:27",
+    "url": "https://nsearchives.nseindia.com/corporate/RMLCS_20082026214453_RML_SE_HCL_Closing_20082026_SD.pdf",
+    "summary": "Rane (Madras) Limited has completed the acquisition of Hindustan Composites Limited\u2019s friction business, effective August 20, 2026. The deal was finalized after meeting all conditions precedent and customary closing terms under the Business Transfer Agreement.",
+    "saved_at": "2026-08-20T16:43:13.870845"
   }
 ]
