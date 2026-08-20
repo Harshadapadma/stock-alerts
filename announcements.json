@@ -1,49 +1,5 @@
 [
   {
-    "id": "NSE_106704759",
-    "source": "NSE",
-    "company": "Indo Borax & Chemicals Limited",
-    "scrip": "INDOBORAX",
-    "headline": "Amalgamation/Merger",
-    "date": "21-Jul-2026 12:58:47",
-    "url": "https://nsearchives.nseindia.com/corporate/INDOBORAX_21072026125823_Outcome_of_BM.pdf",
-    "summary": "Indo Borax & Chemicals Limited has announced a Board-approved scheme to amalgamate its wholly-owned subsidiary, Indoborax Infrastructure Private Limited, with itself. The company also approved shifting its registered office to a new address in Mumbai. The amalgamation is subject to approval from the National Company Law Tribunal and other regulatory authorities.",
-    "saved_at": "2026-07-21T09:57:57.834729"
-  },
-  {
-    "id": "NSE_106705151",
-    "source": "NSE",
-    "company": "GE Power India Limited",
-    "scrip": "GVPIL",
-    "headline": "General Updates",
-    "date": "21-Jul-2026 17:01:36",
-    "url": "https://nsearchives.nseindia.com/corporate/GEPILDEEP_21072026170105_E-votingResults_upload.pdf",
-    "summary": "GE Power India Limited has submitted the Consolidated Scrutinizer\u2019s Report regarding the e-voting results from the NCLT-convened meeting of Unsecured Creditors, held on July 20, 2026. The report covers both remote e-voting and in-meeting voting conducted during the session. This filing serves as a general update to the Exchange on the outcome of the creditor voting process.",
-    "saved_at": "2026-07-21T11:54:57.536149"
-  },
-  {
-    "id": "NSE_106705511",
-    "source": "NSE",
-    "company": "Anant Raj Limited",
-    "scrip": "ANANTRAJ",
-    "headline": "Press Release",
-    "date": "21-Jul-2026 19:00:43",
-    "url": "https://nsearchives.nseindia.com/corporate/ANANTRAJ_21072026190031_Intimation_Press_Release_21072026.pdf",
-    "summary": "Anant Raj Limited's board has approved a strategic demerger to create two independent listed companies: one focused on real estate and infrastructure, and another dedicated to data centre and cloud services. The restructuring will consolidate the group's digital operations under Ashok Cloud Pvt Limited, which will be listed separately to pursue focused growth strategies. The move aims to improve operational efficiency and unlock long-term shareholder value.",
-    "saved_at": "2026-07-21T14:08:49.159542"
-  },
-  {
-    "id": "NSE_106705469",
-    "source": "NSE",
-    "company": "Anant Raj Limited",
-    "scrip": "ANANTRAJ",
-    "headline": "Scheme of Arrangement",
-    "date": "21-Jul-2026 18:46:26",
-    "url": "https://nsearchives.nseindia.com/corporate/ANANTRAJ_21072026184608_Outcome_21072026.pdf",
-    "summary": "Anant Raj Limited's board has approved a composite scheme of arrangement involving the merger of its wholly owned subsidiary, Anant Raj Cloud Private Limited, into itself, followed by the demerger of a defined undertaking to another wholly owned subsidiary, Ashok Cloud Private Limited. The scheme is subject to approvals from shareholders, creditors, stock exchanges, SEBI, and the National Company Law Tribunal. Both subsidiaries involved are wholly owned by Anant Raj Limited.",
-    "saved_at": "2026-07-21T14:08:50.900701"
-  },
-  {
     "id": "NSE_106705687",
     "source": "NSE",
     "company": "Vintage Coffee And Beverages Limited",
@@ -1824,5 +1780,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/KMSUGAR_20082026144124_REG30.pdf",
     "summary": "The National Company Law Tribunal (Allahabad Bench) has sanctioned the Scheme of Arrangement for the demerger of K.M. Sugar Mills Limited\u2019s Distillery Division into KM Spirits and Allied Industries Limited. The order was pronounced on August 19, 2026, and the official copy is awaited for submission. This approval follows the company\u2019s earlier intimation dated July 07, 2026, regarding the demerger under Sections 230-232 of the Companies Act, 2013.",
     "saved_at": "2026-08-20T09:41:06.262409"
+  },
+  {
+    "id": "NSE_106751553",
+    "source": "NSE",
+    "company": "India Glycols Limited",
+    "scrip": "INDIAGLYCO",
+    "headline": "Updates",
+    "date": "20-Aug-2026 20:12:41",
+    "url": "https://nsearchives.nseindia.com/corporate/INDIAGLYCO_20082026201232_Final_UPLOAD_SIGNED.pdf",
+    "summary": "India Glycols Limited has received the certified copy of the NCLT Allahabad Bench order dated 17th July 2026, which approves the Scheme of Arrangement demerging the company into Ennature Bio Pharma Limited and IGL Spirits Limited. The appointed date for the scheme is 1st April 2026, with the effective and record dates to be determined by the boards of the companies.",
+    "saved_at": "2026-08-20T14:46:32.184484"
   }
 ]
