@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106705788",
-    "source": "NSE",
-    "company": "Crisil Limited",
-    "scrip": "CRISIL",
-    "headline": "Amalgamation/Merger",
-    "date": "21-Jul-2026 22:54:00",
-    "url": "https://nsearchives.nseindia.com/corporate/CRISIL_21072026225243_SignedBSENSE.pdf",
-    "summary": "Crisil Limited's board has approved the amalgamation of its two wholly owned step-down subsidiaries, Crisil Canada Inc. and Crisil PriceMetrix Inc., into a single entity named Crisil PriceMetrix Inc. The merger aims to consolidate Crisil\u2019s global entity structure and is subject to regulatory approvals under Ontario law. As both entities are wholly owned, the transaction does not involve related parties and will not impact Crisil\u2019s shareholding pattern.",
-    "saved_at": "2026-07-21T17:36:12.428380"
-  },
-  {
     "id": "NSE_106706283",
     "source": "NSE",
     "company": "JSW Energy Limited",
@@ -1791,5 +1780,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/RMLCS_20082026214453_RML_SE_HCL_Closing_20082026_SD.pdf",
     "summary": "Rane (Madras) Limited has completed the acquisition of Hindustan Composites Limited\u2019s friction business, effective August 20, 2026. The deal was finalized after meeting all conditions precedent and customary closing terms under the Business Transfer Agreement.",
     "saved_at": "2026-08-20T16:43:13.870845"
+  },
+  {
+    "id": "NSE_106752187",
+    "source": "NSE",
+    "company": "Global Education Limited",
+    "scrip": "GLOBAL",
+    "headline": "Updates",
+    "date": "21-Aug-2026 12:16:52",
+    "url": "https://nsearchives.nseindia.com/corporate/GLOBAL_21082026121640_GELupdate21082026.pdf",
+    "summary": "Global Education Limited has disclosed that the Hon\u2019ble NCLT has sanctioned the Scheme of Demerger between Yola Stays Limited and Rishiraj Infravision Private Limited. This disclosure is made under Regulation 30 of the SEBI Listing Regulations. The announcement confirms the regulatory approval of the demerger scheme.",
+    "saved_at": "2026-08-21T07:05:04.337167"
   }
 ]
