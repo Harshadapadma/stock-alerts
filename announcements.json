@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106706928",
-    "source": "NSE",
-    "company": "Dollar Industries Limited",
-    "scrip": "DOLLAR",
-    "headline": "Shareholders meeting",
-    "date": "22-Jul-2026 18:26:34",
-    "url": "https://nsearchives.nseindia.com/corporate/DOLLAR_22072026182607_DILNCLT_OUTCOMEPROCEEDING.pdf",
-    "summary": "Dollar Industries Limited informed the exchange of the outcome of a Court-convened general meeting held on July 22, 2026. The meeting, which included both equity shareholders and unsecured creditors, was conducted following an NCLT order from May 11, 2026. The company has shared the proceedings and results of the meeting.",
-    "saved_at": "2026-07-22T14:19:43.885880"
-  },
-  {
     "id": "NSE_106707139",
     "source": "NSE",
     "company": "Crest Ventures Limited",
@@ -1813,5 +1802,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/INDIAGLYCO_21082026193154_SE_EBL_Annexures_fINAL_upload.pdf",
     "summary": "India Glycols Limited has provided a material update to the stock exchanges regarding its subsidiary, Ennature Bio Pharma Limited, in response to observation letters from NSE and BSE. These letters, dated November 17 and 19, 2025, relate to the Scheme of Arrangement. The update addresses the exchanges' observations on this corporate restructuring.",
     "saved_at": "2026-08-21T14:07:28.355713"
+  },
+  {
+    "id": "NSE_106752963",
+    "source": "NSE",
+    "company": "Veranda Learning Solutions Limited",
+    "scrip": "VERANDA",
+    "headline": "General Updates",
+    "date": "21-Aug-2026 19:45:26",
+    "url": "https://nsearchives.nseindia.com/corporate/Verandaipo_21082026194511_REG30sd.pdf",
+    "summary": "Veranda Learning Solutions Limited announced that the National Company Law Tribunal (NCLT), Chennai Bench, has sanctioned the Composite Scheme of Arrangement involving Veranda Learning Solutions, Veranda XL Learning Solutions, and J.K. Shah Commerce Education. The NCLT order was issued on August 20, 2026, and uploaded to the tribunal's website on August 21, 2026. The company will now take necessary steps to implement the scheme upon receiving the certified copy of the order.",
+    "saved_at": "2026-08-21T14:52:56.922621"
   }
 ]
