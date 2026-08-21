@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106706685",
-    "source": "NSE",
-    "company": "Siyaram Silk Mills Limited",
-    "scrip": "SIYSIL",
-    "headline": "Scheme of Arrangement",
-    "date": "22-Jul-2026 17:08:50",
-    "url": "https://nsearchives.nseindia.com/corporate/SIYSIL_22072026170618_SEIntimation_NCLTOrderPronouncement.pdf",
-    "summary": "Siyaram Silk Mills Limited has received approval from the NCLT Mumbai for a Scheme of Arrangement involving the issuance of Preference Shares as a bonus to its shareholders. The scheme is between the company and its shareholders.",
-    "saved_at": "2026-07-22T12:01:55.452193"
-  },
-  {
-    "id": "NSE_106706558",
-    "source": "NSE",
-    "company": "Electrotherm (India) Limited",
-    "scrip": "ELECTHERM",
-    "headline": "Updates",
-    "date": "22-Jul-2026 16:06:55",
-    "url": "https://nsearchives.nseindia.com/corporate/ELECTHERM_22072026160639_SE_Letter.pdf",
-    "summary": "Electrotherm (India) Limited has received approval from the NCLT, Ahmedabad Bench, to issue and allot 1,09,50,000 new 6% Non-Cumulative Redeemable Preference Shares to five existing preference shareholders, with the corresponding unredeemed shares deemed redeemed. Additionally, the company must immediately redeem 10,50,000 preference shares held by the non-consenting shareholder, Ahmedabad Aviation and Aeronautics Limited, at par. This issuance does not constitute an increase or reduction of the company's share capital.",
-    "saved_at": "2026-07-22T12:01:57.275733"
-  },
-  {
     "id": "NSE_106706928",
     "source": "NSE",
     "company": "Dollar Industries Limited",
@@ -1780,5 +1758,38 @@
     "url": "https://nsearchives.nseindia.com/corporate/SISL_21082026150332_Reg30NCLTOrderFinalSigned.pdf",
     "summary": "Share India Securities Limited has received approval from the NCLT, Ahmedabad Bench-I for the amalgamation of Silverleaf Capital Services Private Limited into the company, as per the order dated August 20, 2026. This approval marks a key regulatory step in the merger process.",
     "saved_at": "2026-08-21T10:02:25.764318"
+  },
+  {
+    "id": "NSE_106752852",
+    "source": "NSE",
+    "company": "India Glycols Limited",
+    "scrip": "INDIAGLYCO",
+    "headline": "Record Date",
+    "date": "21-Aug-2026 18:43:05",
+    "url": "https://nsearchives.nseindia.com/corporate/INDIAGLYCO_21082026184049_SE_RECORD_DATE.pdf",
+    "summary": "India Glycols Limited has fixed Tuesday, 1st September 2026, as the Effective Date and Wednesday, 2nd September 2026, as the Record Date for its demerger scheme. Under the scheme, shareholders will receive one equity share in Ennature Bio Pharma Limited for every three shares held, and one equity share in IGL Spirits Limited for every one share held. The new shares will be listed on NSE and BSE, subject to regulatory approvals.",
+    "saved_at": "2026-08-21T13:22:09.820051"
+  },
+  {
+    "id": "NSE_106752826",
+    "source": "NSE",
+    "company": "NHPC Limited",
+    "scrip": "NHPC",
+    "headline": "Updates",
+    "date": "21-Aug-2026 18:35:10",
+    "url": "https://nsearchives.nseindia.com/corporate/NHPC_21082026183450_STX_Postponement_Hearingdate_merger_JPCL.pdf",
+    "summary": "NHPC Limited announced the postponement of the final hearing for the scheme of amalgamation between its wholly-owned subsidiary, Jalpower Corporation Limited, and itself. The hearing, originally scheduled for 25.08.2026, was delayed by the Ministry of Corporate Affairs due to administrative exigencies. A new date for the final hearing will be communicated in due course.",
+    "saved_at": "2026-08-21T13:22:11.605284"
+  },
+  {
+    "id": "NSE_106752717",
+    "source": "NSE",
+    "company": "Premier Explosives Limited",
+    "scrip": "PREMEXPLN",
+    "headline": "General Updates",
+    "date": "21-Aug-2026 17:51:25",
+    "url": "https://nsearchives.nseindia.com/corporate/PREMEXPLN_21082026175102_BSENSESEBIExtension21082026.pdf",
+    "summary": "Apollo Micro Systems Limited has received SEBI approval to proceed with its open offer to acquire up to 26% of Premier Explosives Limited's equity shares at INR 698 per share. The tendering period will commence within twelve working days of receiving approval from the Competition Commission of India, with payments to successful shareholders due within ten working days after the tendering period ends. Premier Explosives Limited is disseminating this information to the public as required by SEBI regulations.",
+    "saved_at": "2026-08-21T13:22:13.389480"
   }
 ]
