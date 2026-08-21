@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106706283",
-    "source": "NSE",
-    "company": "JSW Energy Limited",
-    "scrip": "JSWENERGY",
-    "headline": "Shareholders meeting",
-    "date": "22-Jul-2026 12:45:49",
-    "url": "https://nsearchives.nseindia.com/corporate/KRUTIKAJSWEL_22072026123650_Final__1_.pdf",
-    "summary": "JSW Energy Limited has submitted the voting results and scrutinizer's reports from its Equity Shareholders and Unsecured Creditors meetings, which were held as per the NCLT Mumbai Bench's order dated June 2, 2026. The meetings were convened to seek approval on a scheme or resolution, as directed by the tribunal. The filings confirm the outcome of the votes cast by both groups.",
-    "saved_at": "2026-07-22T07:22:59.586766"
-  },
-  {
-    "id": "NSE_106706473",
-    "source": "NSE",
-    "company": "ETERNAL LIMITED",
-    "scrip": "ETERNAL",
-    "headline": "Sale or disposal",
-    "date": "22-Jul-2026 15:11:34",
-    "url": "https://nsearchives.nseindia.com/corporate/ZOMATO_22072026151124_Eternalouctomesigned.pdf",
-    "summary": "Based on the announcement, Eternal Limited's board approved the transfer of its 'Nugget by Zomato' business to its wholly-owned subsidiary, Carthero Technologies Private Limited, for a cash consideration of INR 35 crore as part of an internal restructuring. The board also approved the unaudited financial results for the quarter ended June 30, 2026, and the notice for the 16th Annual General Meeting. The transaction is a related party deal conducted at arm's length.",
-    "saved_at": "2026-07-22T10:02:05.605379"
-  },
-  {
     "id": "NSE_106706685",
     "source": "NSE",
     "company": "Siyaram Silk Mills Limited",
@@ -1791,5 +1769,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/GLOBAL_21082026121640_GELupdate21082026.pdf",
     "summary": "Global Education Limited has disclosed that the Hon\u2019ble NCLT has sanctioned the Scheme of Demerger between Yola Stays Limited and Rishiraj Infravision Private Limited. This disclosure is made under Regulation 30 of the SEBI Listing Regulations. The announcement confirms the regulatory approval of the demerger scheme.",
     "saved_at": "2026-08-21T07:05:04.337167"
+  },
+  {
+    "id": "NSE_106752378",
+    "source": "NSE",
+    "company": "Share India Securities Limited",
+    "scrip": "SHAREINDIA",
+    "headline": "General Updates",
+    "date": "21-Aug-2026 15:04:01",
+    "url": "https://nsearchives.nseindia.com/corporate/SISL_21082026150332_Reg30NCLTOrderFinalSigned.pdf",
+    "summary": "Share India Securities Limited has received approval from the NCLT, Ahmedabad Bench-I for the amalgamation of Silverleaf Capital Services Private Limited into the company, as per the order dated August 20, 2026. This approval marks a key regulatory step in the merger process.",
+    "saved_at": "2026-08-21T10:02:25.764318"
   }
 ]
