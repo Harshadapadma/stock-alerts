@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106711080",
-    "source": "NSE",
-    "company": "Laurus Labs Limited",
-    "scrip": "LAURUSLABS",
-    "headline": "General Updates",
-    "date": "25-Jul-2026 17:09:56",
-    "url": "https://nsearchives.nseindia.com/corporate/LAURUSLABS_25072026170941_NCLTOrder25072026.pdf",
-    "summary": "we are pleased to inform that the Hon\u2019ble National Company Law Tribunal, Amravati Special Branch (\u201cNCLT\u201d), vide its order pronounced on July 24, 2026, as uploaded on the official website of the NCLT today (https://nclt.gov.in) (the \u201cOrder\u201d) has, amongst other things, directed the Petitioner Companies to serve the notice of the hearing of the Petition in Form No. Further, Hon\u2019ble NCLT has directed that the next date of hearing of the petition is September 10, 2026 for consideration of the Scheme.",
-    "saved_at": "2026-07-25T11:54:59.725939"
-  },
-  {
     "id": "NSE_106712557",
     "source": "NSE",
     "company": "Somany Ceramics Limited",
@@ -1802,5 +1791,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/ALMONDZ_24082026163057_outcome.pdf",
     "summary": "Almondz Global Securities Limited's Board approved a Scheme of Arrangement to demerge its Infrastructure Advisory Business into Almondz Global Infra \u2013 Consultant Limited, subject to regulatory and shareholder approvals. The Board also approved the notice and directors' report for FY 2025-26 and scheduled the Annual General Meeting for September 30, 2026. The demerged division's turnover for the last fiscal year was INR 292.01 Lakhs, representing 4.58% of the company's standalone total.",
     "saved_at": "2026-08-24T11:35:05.537391"
+  },
+  {
+    "id": "NSE_106754610",
+    "source": "NSE",
+    "company": "HEG Limited",
+    "scrip": "HEG",
+    "headline": "Outcome of Board Meeting",
+    "date": "24-Aug-2026 18:33:24",
+    "url": "https://nsearchives.nseindia.com/corporate/HEG_24082026182755_FinalOutcome24082026.pdf",
+    "summary": "HEG Limited announced the outcomes of its Board Meeting held on August 24, 2026, covering the effective date and record date for its composite scheme of arrangement. The board also noted the certified copy of the Hon'ble NCLT order approving the scheme and reconstituted various board committees accordingly.",
+    "saved_at": "2026-08-24T13:08:10.304910"
+  },
+  {
+    "id": "NSE_106754468",
+    "source": "NSE",
+    "company": "Smartworks Coworking Spaces Limited",
+    "scrip": "SMARTWORKS",
+    "headline": "Other Restructuring",
+    "date": "24-Aug-2026 17:50:26",
+    "url": "https://nsearchives.nseindia.com/corporate/SMARTWORKS_24082026174817_Intimation_Outcome_of_Board_Meeting.pdf",
+    "summary": "Smartworks Coworking Spaces Limited's Board has approved the appointment of two new Non-Executive Independent Directors, Mr. Dilip Deshmukh and Mr. Rajeev Krishnamuralilal Agarwal, for five-year terms, subject to member approval. The Board also approved a scheme to reduce share capital by utilizing the Securities Premium Account to fully offset accumulated losses, which will not alter the company's issued share capital or shareholder holdings. The proposal is subject to shareholder and regulatory approvals.",
+    "saved_at": "2026-08-24T13:08:11.799481"
   }
 ]
