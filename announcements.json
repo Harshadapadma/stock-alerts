@@ -1,60 +1,5 @@
 [
   {
-    "id": "NSE_106709305",
-    "source": "NSE",
-    "company": "Fractal Analytics Limited",
-    "scrip": "FRACTAL",
-    "headline": "Other Restructuring",
-    "date": "24-Jul-2026 11:41:03",
-    "url": "https://nsearchives.nseindia.com/corporate/FRACTAL_24072026114036_NSEBSEDissolution.pdf",
-    "summary": "Fractal Analytics Limited announced that it received an intimation from Senseforth AI Research Private Limited on July 23, 2026, confirming the dissolution of Fractal Frontiers Inc. effective July 21, 2026. The disclosure is part of a restructuring update and has been made available on the company\u2019s investor relations website.",
-    "saved_at": "2026-07-24T07:15:47.425767"
-  },
-  {
-    "id": "NSE_106709889",
-    "source": "NSE",
-    "company": "Timken India Limited",
-    "scrip": "TIMKEN",
-    "headline": "Updates",
-    "date": "24-Jul-2026 16:53:39",
-    "url": "https://nsearchives.nseindia.com/corporate/TIMKEN_24072026165125_SE_Intimation24072026.pdf",
-    "summary": "Timken India Limited has received NCLT approval for the first motion application regarding the amalgamation of its wholly owned subsidiary, Timken GGB Technology Private Limited, into the company. The company is now proceeding to submit the second motion application to the NCLT. The relevant NCLT order is available on the company\u2019s website.",
-    "saved_at": "2026-07-24T11:25:47.422087"
-  },
-  {
-    "id": "NSE_106709782",
-    "source": "NSE",
-    "company": "HEG Limited",
-    "scrip": "HEG",
-    "headline": "Press Release",
-    "date": "24-Jul-2026 16:05:30",
-    "url": "https://nsearchives.nseindia.com/corporate/HEG_24072026160341_Stxintimation24072026R.pdf",
-    "summary": "HEG Limited issued a press release on July 24, 2026, announcing its Q1 FY27 financial results. The release also provided an update on the company's Composite Scheme of Arrangement. The information was formally communicated to the stock exchange.",
-    "saved_at": "2026-07-24T11:25:48.731817"
-  },
-  {
-    "id": "NSESME_106710279",
-    "source": "NSE-SME",
-    "company": "Kck Industries Limited",
-    "scrip": "KCK",
-    "headline": "Updates",
-    "date": "24-Jul-2026 18:47:41",
-    "url": "https://nsearchives.nseindia.com/corporate/KCK_24072026184718_Demerger_Outcome_Postponement__1_.pdf",
-    "summary": "KCK Industries Limited has announced the postponement of the implementation and filing of its proposed Scheme of Arrangement (Demerger) with KCK Infratech Private Limited. The decision was made to allow the company to conduct a comprehensive review of the restructuring\u2019s commercial, legal, regulatory, and operational aspects. The company will reconsider the proposal after completing its internal review and will keep the stock exchange informed of further developments.",
-    "saved_at": "2026-07-24T15:05:34.954820"
-  },
-  {
-    "id": "NSE_106710743",
-    "source": "NSE",
-    "company": "Kitex Garments Limited",
-    "scrip": "KITEX",
-    "headline": "Scheme of Arrangement",
-    "date": "24-Jul-2026 23:55:43",
-    "url": "https://nsearchives.nseindia.com/corporate/KITEX_24072026235531_KGL_Proceedings_of_meetings_240726s.pdf",
-    "summary": "Kitex Garments Limited has informed the Exchange about Update on Scheme of Arrangement being the proceedings of meetings convened on July 24, 2026 pursuant to the order of Hon''ble NCLT, Kochi Bench for considering the Scheme of Arrangement between Kitex Childrenswear Ltd and Kitex Garments Ltd and their respective shareholders and creditors",
-    "saved_at": "2026-07-24T19:56:44.024062"
-  },
-  {
     "id": "NSE_106711080",
     "source": "NSE",
     "company": "Laurus Labs Limited",
@@ -1780,5 +1725,60 @@
     "url": "https://nsearchives.nseindia.com/corporate/KMSUGAR_22082026184734_REGULATION30.pdf",
     "summary": "K.M.Sugar Mills Limited has informed the stock exchange regarding a Scheme of Arrangement. The announcement provides no further details on the nature, terms, or effective date of the scheme.",
     "saved_at": "2026-08-22T13:36:24.162160"
+  },
+  {
+    "id": "NSE_106753745",
+    "source": "NSE",
+    "company": "Oriental Hotels Limited",
+    "scrip": "ORIENTHOT",
+    "headline": "Press Release",
+    "date": "24-Aug-2026 09:13:48",
+    "url": "https://nsearchives.nseindia.com/corporate/TAJORIENTAL_24082026091305_SEPressRelease.pdf",
+    "summary": "Oriental Hotels Limited (OHL) announced that it will be merged with The Indian Hotels Company Limited (IHCL) via a Scheme of Arrangement, subject to statutory approvals. The all-stock transaction proposes a share exchange ratio of 25 IHCL shares for every 117 OHL shares, with an appointed date of April 1, 2027, and completion targeted for the second half of FY2028. The merger aims to simplify the group's holding structure, unlock the potential of OHL's portfolio, and drive long-term value creation for shareholders.",
+    "saved_at": "2026-08-24T04:23:54.299653"
+  },
+  {
+    "id": "NSE_106753743",
+    "source": "NSE",
+    "company": "Veranda Learning Solutions Limited",
+    "scrip": "VERANDA",
+    "headline": "Press Release",
+    "date": "24-Aug-2026 09:10:47",
+    "url": "https://nsearchives.nseindia.com/corporate/Verandaipo_24082026091037_REG30PR.pdf",
+    "summary": "Veranda Learning Solutions has received NCLT approval for the demerger of its Commerce vertical into J.K. Shah Commerce Education Limited (JSCEL), which will become an independently listed company. This move is part of the company's Veranda 2.0 strategy to create focused, agile education businesses, with the demerger expected to be completed within statutory timelines. Once effective, JSCEL will house all of Veranda's commerce education brands, positioning it for accelerated growth and enhanced shareholder value.",
+    "saved_at": "2026-08-24T04:23:55.777872"
+  },
+  {
+    "id": "NSE_106753741",
+    "source": "NSE",
+    "company": "The Indian Hotels Company Limited",
+    "scrip": "INDHOTEL",
+    "headline": "Press Release",
+    "date": "24-Aug-2026 09:08:11",
+    "url": "https://nsearchives.nseindia.com/corporate/bakhtawar_irani_tajhotels_com_24082026090803_Press_Release_FINAL.pdf",
+    "summary": "The Indian Hotels Company Limited (IHCL) has announced the merger of its associate company, Oriental Hotels Limited (OHL), into itself via a Scheme of Arrangement, subject to statutory approvals. The all-stock transaction proposes a share exchange ratio of 25 IHCL shares for every 117 OHL shares, with completion targeted for the second half of FY2028. The merger aims to simplify the group's holding structure, unlock the potential of OHL's portfolio, and drive long-term value creation.",
+    "saved_at": "2026-08-24T04:23:57.287812"
+  },
+  {
+    "id": "NSE_106753714",
+    "source": "NSE",
+    "company": "The Indian Hotels Company Limited",
+    "scrip": "INDHOTEL",
+    "headline": "Amalgamation/Merger",
+    "date": "24-Aug-2026 08:59:52",
+    "url": "https://nsearchives.nseindia.com/corporate/bakhtawar_irani_tajhotels_com_24082026085942_Reg_30_IHCL_FINAL.pdf",
+    "summary": "The Indian Hotels Company Limited (IHCL) has approved a Scheme of Arrangement to amalgamate Oriental Hotels Limited (OHL) into itself, subject to regulatory and shareholder approvals. The transaction, involving a share exchange ratio based on an independent valuation, is considered a related party transaction but will be conducted on an arm's length basis. The merger is pending sanction from the National Company Law Tribunal and other statutory bodies.",
+    "saved_at": "2026-08-24T04:23:58.936644"
+  },
+  {
+    "id": "NSE_106753713",
+    "source": "NSE",
+    "company": "Oriental Hotels Limited",
+    "scrip": "ORIENTHOT",
+    "headline": "Amalgamation/Merger",
+    "date": "24-Aug-2026 08:57:56",
+    "url": "https://nsearchives.nseindia.com/corporate/TAJORIENTAL_24082026085709_SEReg30.pdf",
+    "summary": "Oriental Hotels Limited (OHL) has approved a Scheme of Arrangement to amalgamate into The Indian Hotels Company Limited (IHCL), subject to shareholder, creditor, and regulatory approvals including the NCLT. The merger is a related-party transaction, as IHCL holds 37.05% of OHL, with the share exchange ratio determined on an arm's length basis via a joint valuation report. The scheme is pending final sanction and will be submitted to stock exchanges for public record.",
+    "saved_at": "2026-08-24T04:24:00.440066"
   }
 ]
