@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106712557",
-    "source": "NSE",
-    "company": "Somany Ceramics Limited",
-    "scrip": "SOMANYCERA",
-    "headline": "Amalgamation/Merger",
-    "date": "27-Jul-2026 19:50:52",
-    "url": "https://nsearchives.nseindia.com/corporate/SOMANYCERAMICS_27072026195037_Secondmotionpronouncementorder_Finalsd.pdf",
-    "summary": "The National Company Law Tribunal (NCLT), Kolkata Bench, has admitted the second motion petition for the amalgamation of Somany Bathware Limited, Somany Excel Vitrified Private Limited, and SR Continental Limited into Somany Ceramics Limited, with the next hearing scheduled for August 28, 2026. The scheme, effective from April 1, 2025, proposes to transfer the business undertakings of the transferor companies to the transferee company, after which the transferor companies will be dissolved without winding up. The order was received by the company on July 27, 2026.",
-    "saved_at": "2026-07-27T14:55:57.210072"
-  },
-  {
     "id": "NSE_106712636",
     "source": "NSE",
     "company": "Kitex Garments Limited",
@@ -2022,5 +2011,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/DEVYANI_26082026192549_DILReg30DislcosureDSC.pdf",
     "summary": "Devyani International's Board approved an amended Scheme of Arrangement following the termination of a Share Purchase Agreement (SPA), removing the Secondary Sale Transaction as a condition precedent to the merger. The share exchange ratio and other key terms remain unchanged, and the merger will proceed as planned. Due to the SPA termination, the post-scheme shareholding pattern has been revised, with the promoter group's stake in the merged entity decreasing to 41.99%.",
     "saved_at": "2026-08-26T14:02:23.821874"
+  },
+  {
+    "id": "NSE_106757949",
+    "source": "NSE",
+    "company": "Sapphire Foods India Limited",
+    "scrip": "SAPPHIRE",
+    "headline": "Scheme of Arrangement",
+    "date": "26-Aug-2026 19:43:06",
+    "url": "https://nsearchives.nseindia.com/corporate/SAPPHIRE_26082026194258_NSE.pdf",
+    "summary": "Sapphire Foods India Limited has approved a revised Scheme of Arrangement after terminating the Share Purchase Agreement (SPA), removing the Secondary Sale Transaction as a condition for the scheme's effectiveness. The share exchange ratio and other key terms remain unchanged, and the merger will proceed as planned without any impact on shareholders. The termination means the previously disclosed change in shareholding pattern due to the Secondary Sale will no longer occur.",
+    "saved_at": "2026-08-26T15:51:53.348026"
   }
 ]
