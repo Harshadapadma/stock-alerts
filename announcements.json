@@ -1,38 +1,5 @@
 [
   {
-    "id": "NSE_106713891",
-    "source": "NSE",
-    "company": "Larsen & Toubro Limited",
-    "scrip": "LT",
-    "headline": "Amalgamation/Merger",
-    "date": "28-Jul-2026 17:30:18",
-    "url": "https://nsearchives.nseindia.com/corporate/PAM_28072026172853_LTJune2026.pdf",
-    "summary": "Larsen & Toubro's board has approved a scheme to merge its wholly owned subsidiary, L&T Power Development Limited, into the parent company, followed by the subsidiary's dissolution. The board also approved the consolidated and standalone unaudited financial results for the quarter ended June 30, 2026, reporting revenues of \u20b967,942 crore (up 7%) and a PAT of \u20b94,123 crore. The merger is subject to regulatory approvals, including from the National Company Law Tribunal.",
-    "saved_at": "2026-07-28T12:14:56.840744"
-  },
-  {
-    "id": "NSE_106713986",
-    "source": "NSE",
-    "company": "Info Edge (India) Limited",
-    "scrip": "NAUKRI",
-    "headline": "General Updates",
-    "date": "28-Jul-2026 17:56:02",
-    "url": "https://nsearchives.nseindia.com/corporate/NAUKRI2_28072026175553_Stock_Exchange_Intimation_-_Info_Edge_NCLAT_Judgement.pdf",
-    "summary": "Info Edge (India) Limited disclosed that the National Company Law Appellate Tribunal (NCLAT) has passed a judgment regarding its Scheme of Amalgamation. The announcement was made in compliance with SEBI Listing Regulations. Further details are available in the official filing.",
-    "saved_at": "2026-07-28T14:44:58.418719"
-  },
-  {
-    "id": "NSE_106714335",
-    "source": "NSE",
-    "company": "Inox Green Energy Services Limited",
-    "scrip": "INOXGREEN",
-    "headline": "General Updates",
-    "date": "28-Jul-2026 20:35:27",
-    "url": "https://nsearchives.nseindia.com/corporate/IGESL_28072026203453_IGESL_Reg30_WWILf.pdf",
-    "summary": "Inox Green Energy Services Limited announced that the NCLT Ahmedabad Bench has orally approved the resolution plan submitted by a consortium (including Inox Neo Energies and Authum) for Wind World (India) Limited. Under the plan, INOXGFL Group companies will acquire WWIL\u2019s IPP, power sale, and O&M businesses, while Authum will acquire certain real estate and other assets. A detailed disclosure will follow once the written certified order is available.",
-    "saved_at": "2026-07-28T16:25:47.285635"
-  },
-  {
     "id": "NSE_106715247",
     "source": "NSE",
     "company": "Go Digit General Insurance Limited",
@@ -2055,5 +2022,60 @@
     "url": "https://nsearchives.nseindia.com/corporate/AMBUJACEM_27082026141531_ACL_Newspaper_Intimation_SE.pdf",
     "summary": "Ambuja Cements has published the notice for its equity shareholders' meeting, scheduled for September 28, 2026, in the Indian Express and Financial Express newspapers as per a tribunal order. The meeting will be held via video conferencing to consider and approve a proposed scheme of arrangement. The company has also made these documents available on its website.",
     "saved_at": "2026-08-27T10:43:49.614227"
+  },
+  {
+    "id": "NSE_106759658",
+    "source": "NSE",
+    "company": "Cipla Limited",
+    "scrip": "CIPLA",
+    "headline": "Other Restructuring",
+    "date": "27-Aug-2026 20:19:18",
+    "url": "https://nsearchives.nseindia.com/corporate/CIPLA_27082026201905_SEIntimation_Aspergen_27082026_Restructuring_Signed.pdf",
+    "summary": "Cipla announced a restructuring where Aspergen Limited, India, its 60:40 joint venture with Kemwell Biopharma, acquired 100% of Aspergen Inc., USA, from Cipla (EU) Limited and Kemwell Biopharma UK Limited. As a result, Aspergen Inc. is now a wholly owned subsidiary of Aspergen Limited, India. The move aims to rationalise the group structure, with no change to Cipla's economic interest in the US entity.",
+    "saved_at": "2026-08-27T20:48:34.078391"
+  },
+  {
+    "id": "NSE_106759638",
+    "source": "NSE",
+    "company": "GUJARAT ENERGY LIMITED",
+    "scrip": "GUJENERGY",
+    "headline": "General Updates",
+    "date": "27-Aug-2026 20:08:05",
+    "url": "https://nsearchives.nseindia.com/corporate/GUJGASLTD_27082026200750_1614SECIntiFractionalcommu.pdf",
+    "summary": "Gujarat Energy Limited has informed the exchange about an email update sent to eligible shareholders of GSPC and GSPL regarding the distribution of sale proceeds from fractional entitlements. This communication is part of the ongoing implementation of the Scheme of Arrangement. The update pertains specifically to the allocation of funds for these fractional shares.",
+    "saved_at": "2026-08-27T20:48:35.342511"
+  },
+  {
+    "id": "NSE_106759267",
+    "source": "NSE",
+    "company": "ACC Limited",
+    "scrip": "ACC",
+    "headline": "Shareholders meeting",
+    "date": "27-Aug-2026 17:53:35",
+    "url": "https://nsearchives.nseindia.com/corporate/ACC_1_27082026175205_ACC_Shareholder_Meeting_Cover.pdf",
+    "summary": "ACC Limited has informed the stock exchange about a shareholders' meeting convened as per the National Company Law Tribunal (Ahmedabad Bench) order. The meeting pertains to the proposed Scheme of Amalgamation of ACC Limited with Ambuja Cements Limited.",
+    "saved_at": "2026-08-27T20:48:36.462810"
+  },
+  {
+    "id": "NSE_106759231",
+    "source": "NSE",
+    "company": "LIC Housing Finance Limited",
+    "scrip": "LICHSGFIN",
+    "headline": "Disclosure of material issue",
+    "date": "27-Aug-2026 17:46:55",
+    "url": "https://nsearchives.nseindia.com/corporate/LICHSGFIN_27082026174623_Clarification_on_Media_News_27082026.pdf",
+    "summary": "LIC Housing Finance clarified that media reports about an NCLT order in Dr. Subhash Chandra's personal insolvency case do not affect its rights, as it continues to hold and enforce security interests over the secured assets backing its loans. The company confirmed it has an admitted claim of \u20b9322.39 crore in the proceedings, against which the repayment plan offers only \u20b938.09 lakh. LICHFL emphasized that the NCLT order pertains solely to the personal guarantor and does not impact the corporate liabilities of the principal borrower entities.",
+    "saved_at": "2026-08-27T20:48:37.940943"
+  },
+  {
+    "id": "NSESME_106759493",
+    "source": "NSE-SME",
+    "company": "Osel Devices Limited",
+    "scrip": "OSELDEVICE",
+    "headline": "Other Restructuring",
+    "date": "27-Aug-2026 18:59:55",
+    "url": "https://nsearchives.nseindia.com/corporate/OSEL_27082026185942_Outcome.pdf",
+    "summary": "Osel Devices Limited's Board approved the re-appointment of its Managing Director and Whole-time Director for three-year terms, alongside the regularisation of an Independent Director. The Board also sanctioned a merger of its subsidiary with a step-down subsidiary, material related party transactions up to \u20b950 crore, and an increase in authorised share capital. Additionally, the CFO resigned due to maternity, and the company's Annual General Meeting was scheduled for September 25, 2026.",
+    "saved_at": "2026-08-27T20:48:39.640223"
   }
 ]
