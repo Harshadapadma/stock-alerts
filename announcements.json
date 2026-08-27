@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106712636",
-    "source": "NSE",
-    "company": "Kitex Garments Limited",
-    "scrip": "KITEX",
-    "headline": "Scheme of Arrangement",
-    "date": "27-Jul-2026 20:33:11",
-    "url": "https://nsearchives.nseindia.com/corporate/KITEX_27072026203249_KGL_VR_CCMs.pdf",
-    "summary": "Kitex Garments Limited has disclosed the voting results and scrutinizer's report for its Scheme of Arrangement, following meetings of equity shareholders and unsecured creditors held on July 24, 2026. The announcement confirms the outcome of the votes on the proposed scheme.",
-    "saved_at": "2026-07-27T17:04:38.176591"
-  },
-  {
-    "id": "NSE_106713597",
-    "source": "NSE",
-    "company": "Authum Investment & Infrastructure Limited",
-    "scrip": "AIIL",
-    "headline": "General Updates",
-    "date": "28-Jul-2026 15:25:25",
-    "url": "https://nsearchives.nseindia.com/corporate/Authum123_28072026152511_SE_Intimation_Reg30_Windworld_updates_signed.pdf",
-    "summary": "Authum Investment & Infrastructure Limited, as part of a consortium with Inox Neo Energies Limited, has received NCLT approval for a resolution plan to acquire Wind World (India) Limited. Under the plan, Inox will take over the IPP, power sale, and O&M businesses, while Authum will acquire specific real estate assets. Authum's financial commitment in the plan is approximately INR 350 crore.",
-    "saved_at": "2026-07-28T10:09:54.041237"
-  },
-  {
     "id": "NSE_106713891",
     "source": "NSE",
     "company": "Larsen & Toubro Limited",
@@ -2044,5 +2022,38 @@
     "url": "https://nsearchives.nseindia.com/corporate/TIMETECHNO_26082026214027_TTLOutcome26082026.pdf",
     "summary": "Time Technoplast Limited\u2019s board approved the in-principle merger of its subsidiary, TPL Plastech Limited, into the parent company, subject to further approvals. The board also decided to abandon the proposed acquisition of Ebullient Packaging Private Limited. Additionally, it approved an investment in the equity shares of Time Intercontinental Limited.",
     "saved_at": "2026-08-26T16:42:30.796323"
+  },
+  {
+    "id": "NSE_106758855",
+    "source": "NSE",
+    "company": "TVS Holdings Limited",
+    "scrip": "TVSHLTD",
+    "headline": "General Updates",
+    "date": "27-Aug-2026 15:16:28",
+    "url": "https://nsearchives.nseindia.com/corporate/SUNCLAYLTD_27082026151618_SEintimationNCLTOrderCTCSGD.pdf",
+    "summary": "TVS Holdings Limited has received the certified copy of the National Company Law Tribunal (Chennai Bench) order dated 18th August 2026, which sanctions the Scheme. The company has also received the certified copy of the Scheme itself. This update confirms the formal approval of the Scheme by the Tribunal.",
+    "saved_at": "2026-08-27T10:43:45.825920"
+  },
+  {
+    "id": "NSE_106758796",
+    "source": "NSE",
+    "company": "Orient Cement Limited",
+    "scrip": "ORIENTCEM",
+    "headline": "Copy of Newspaper Publication",
+    "date": "27-Aug-2026 14:39:59",
+    "url": "https://nsearchives.nseindia.com/corporate/ORIENTCEM_27082026143739_OCL_Newspaper_Intimation_SE.pdf",
+    "summary": "Orient Cement Limited has informed the stock exchange that, following a tribunal order dated July 20, 2026, the notice for its equity shareholders' meeting (scheduled for September 28, 2026 via video conferencing) has been published in newspapers. The notice, which concerns the approval of a proposed Scheme, appeared in the Indian Express and Financial Express on August 27, 2026. The company has also made the documents available on its website.",
+    "saved_at": "2026-08-27T10:43:47.935766"
+  },
+  {
+    "id": "NSE_106758769",
+    "source": "NSE",
+    "company": "Ambuja Cements Limited",
+    "scrip": "AMBUJACEM",
+    "headline": "Copy of Newspaper Publication",
+    "date": "27-Aug-2026 14:16:23",
+    "url": "https://nsearchives.nseindia.com/corporate/AMBUJACEM_27082026141531_ACL_Newspaper_Intimation_SE.pdf",
+    "summary": "Ambuja Cements has published the notice for its equity shareholders' meeting, scheduled for September 28, 2026, in the Indian Express and Financial Express newspapers as per a tribunal order. The meeting will be held via video conferencing to consider and approve a proposed scheme of arrangement. The company has also made these documents available on its website.",
+    "saved_at": "2026-08-27T10:43:49.614227"
   }
 ]
