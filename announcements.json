@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106721173",
-    "source": "NSE",
-    "company": "Reliance Industries Limited",
-    "scrip": "RELIANCE",
-    "headline": "Other Restructuring",
-    "date": "01-Aug-2026 23:08:49",
-    "url": "https://nsearchives.nseindia.com/corporate/kavinavora_01082026230836_SE_01082026.pdf",
-    "summary": "Reliance Industries announced that its step-down subsidiary, Radisys Cayman Limited, has been merged into its holding company, Radisys International LLC, effective July 31, 2026. The merger, involving entities incorporated in the Cayman Islands and Delaware respectively, is part of an internal restructuring. No other operational or financial details were disclosed.",
-    "saved_at": "2026-08-01T18:38:26.596554"
-  },
-  {
     "id": "NSE_106721855",
     "source": "NSE",
     "company": "Triveni Engineering & Industries Limited",
@@ -1791,5 +1780,49 @@
     "url": "https://nsearchives.nseindia.com/corporate/suhask_31082026194116_Reg30PressRelease31082026.pdf",
     "summary": "Happiest Minds Technologies announced a merger with ITC Infotech, aiming to create a larger, AI-first global technology services company. The combined entity targets US$1 billion in revenue by fiscal year 2028. The announcement was made via a press release dated August 31, 2026.",
     "saved_at": "2026-08-31T18:12:05.734985"
+  },
+  {
+    "id": "NSE_106764536",
+    "source": "NSE",
+    "company": "Thyrocare Technologies Limited",
+    "scrip": "THYROCARE",
+    "headline": "Updates",
+    "date": "01-Sep-2026 17:24:54",
+    "url": "https://nsearchives.nseindia.com/corporate/THYROCARE_01092026172441_SE_Intimation-Reg-30_signed.pdf",
+    "summary": "Thyrocare Technologies has informed the exchange of a communication from API Holdings regarding the approval of a scheme to amalgamate Docon Technologies Private Limited with API Holdings. The announcement provides no further details or impact on Thyrocare itself.",
+    "saved_at": "2026-09-01T12:12:30.214024"
+  },
+  {
+    "id": "NSE_106764408",
+    "source": "NSE",
+    "company": "ITC Limited",
+    "scrip": "ITC",
+    "headline": "General Updates",
+    "date": "01-Sep-2026 16:43:35",
+    "url": "https://nsearchives.nseindia.com/corporate/ITC_01092026164254_SE_NCLT_.pdf",
+    "summary": "ITC Limited announced that the Scheme of Amalgamation of its step-down subsidiaries, Blazeclan Technologies Private Limited and Cloudlytics Technologies Private Limited, with its wholly-owned subsidiary ITC Infotech India Limited has been sanctioned by the National Company Law Tribunal. The scheme became effective on 1st September, 2026, with an appointed date of 1st October, 2024. Consequently, both Blazeclan and Cloudlytics have been dissolved without winding up and have ceased to be subsidiaries of the company.",
+    "saved_at": "2026-09-01T12:12:31.939846"
+  },
+  {
+    "id": "NSE_106764323",
+    "source": "NSE",
+    "company": "India Glycols Limited",
+    "scrip": "INDIAGLYCO",
+    "headline": "Updates",
+    "date": "01-Sep-2026 16:16:00",
+    "url": "https://nsearchives.nseindia.com/corporate/INDIAGLYCO_01092026161552_SE_Intimation_Effective_Date.pdf",
+    "summary": "India Glycols Limited has announced that its demerger into three separate entities\u2014India Glycols Limited, IGL Spirits Limited, and Ennature Bio Pharma Limited\u2014became effective on September 1, 2026, following the filing of the NCLT order with the Registrar of Companies. As a result, the resulting companies have ceased to be subsidiaries of the original entity. Shareholders will receive shares in the new entities based on their holdings as of the record date, with each company focusing on distinct business segments.",
+    "saved_at": "2026-09-01T12:12:33.870384"
+  },
+  {
+    "id": "NSE_106764303",
+    "source": "NSE",
+    "company": "Thomas Cook  (India)  Limited",
+    "scrip": "THOMASCOOK",
+    "headline": "General Updates",
+    "date": "01-Sep-2026 16:08:17",
+    "url": "https://nsearchives.nseindia.com/corporate/THOMASCOOK_01092026160534_Stock_Exchange_Intimation-_SE_Observation_Letter.pdf",
+    "summary": "Thomas Cook (India) Limited has informed the stock exchanges about receiving an observation letter from SEBI regarding its composite scheme, in compliance with Regulation 37 of the SEBI Listing Regulations. The letter is available on the company\u2019s website and has been submitted for the record.",
+    "saved_at": "2026-09-01T12:12:35.239658"
   }
 ]
