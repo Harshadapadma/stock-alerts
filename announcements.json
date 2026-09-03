@@ -1,49 +1,5 @@
 [
   {
-    "id": "NSE_106725069",
-    "source": "NSE",
-    "company": "Larsen & Toubro Limited",
-    "scrip": "LT",
-    "headline": "Scheme of Arrangement",
-    "date": "04-Aug-2026 19:50:21",
-    "url": "https://nsearchives.nseindia.com/corporate/PAM_04082026195008_OutcomeNCLTConvenedMeeting04082026_1.pdf",
-    "summary": "Larsen & Toubro Limited has disclosed the voting results and Scrutinizer\u2019s Report from the NCLT-convened equity shareholders\u2019 meeting held on August 4, 2026, regarding its Scheme of Arrangement. The announcement provides a summary of the proceedings and confirms the outcome of the shareholder vote on the scheme.",
-    "saved_at": "2026-08-04T15:04:07.267081"
-  },
-  {
-    "id": "NSE_106725057",
-    "source": "NSE",
-    "company": "Larsen & Toubro Limited",
-    "scrip": "LT",
-    "headline": "Shareholders meeting",
-    "date": "04-Aug-2026 19:47:27",
-    "url": "https://nsearchives.nseindia.com/corporate/PAM_04082026194655_OutcomeNCLTConvenedMeeting04082026_1.pdf",
-    "summary": "Larsen & Toubro has informed the exchange about the proceedings of its NCLT-convened shareholders' meeting held on August 4, 2026. The company has also submitted the Scrutinizer's report along with the voting results.",
-    "saved_at": "2026-08-04T15:04:08.600984"
-  },
-  {
-    "id": "NSE_106724860",
-    "source": "NSE",
-    "company": "Pondy Oxides & Chemicals Limited",
-    "scrip": "POCL",
-    "headline": "Amalgamation/Merger",
-    "date": "04-Aug-2026 18:59:25",
-    "url": "https://nsearchives.nseindia.com/corporate/POCL_04082026185910_ApprovalofSchemeHEEPLSD.pdf",
-    "summary": "Pondy Oxides & Chemicals Limited (POCL) has approved a scheme to amalgamate its wholly-owned subsidiary, Harsha Exito Engineering Private Limited (HEEPL), with itself. The merger aims to consolidate business operations, assets, and liabilities, and is subject to approval from the National Company Law Tribunal, shareholders, and creditors. The transaction is classified as a related party transaction but does not require compliance with Section 188 of the Companies Act, as no consideration is involved.",
-    "saved_at": "2026-08-04T15:04:10.208209"
-  },
-  {
-    "id": "NSE_106725221",
-    "source": "NSE",
-    "company": "Ventive Hospitality Limited",
-    "scrip": "VENTIVE",
-    "headline": "Amalgamation/Merger",
-    "date": "04-Aug-2026 21:11:11",
-    "url": "https://nsearchives.nseindia.com/corporate/VENTIVE_04082026211039_Reg_30_Merger.pdf",
-    "summary": "Ventive Hospitality Limited has announced the merger of Sun Leisure (India) Private Limited into Soham Leisure Ventures Private Limited, as per SEBI Listing Regulations. The intimation was made under Regulation 30, detailing the amalgamation process. This move consolidates the company's leisure and hospitality assets under a single entity.",
-    "saved_at": "2026-08-04T17:01:40.582890"
-  },
-  {
     "id": "NSE_106725694",
     "source": "NSE",
     "company": "Mahindra & Mahindra Financial Services Limited",
@@ -1857,5 +1813,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/FRACTAL_03092026154656_Fractal_Sweden_Liquidation.pdf",
     "summary": "Fractal Analytics announced the voluntary liquidation of its step-down subsidiary, Fractal Analytics Sweden AB, effective July 15, 2026. The restructuring was carried out to simplify the group's corporate structure, reduce administrative costs, and streamline legal and regulatory compliance. The liquidation does not affect the Company's shareholding pattern, and Fractal Analytics was not a party to the process.",
     "saved_at": "2026-09-03T14:22:37.257955"
+  },
+  {
+    "id": "NSE_106768883",
+    "source": "NSE",
+    "company": "Mawana Sugars Limited",
+    "scrip": "MAWANASUG",
+    "headline": "Updates",
+    "date": "03-Sep-2026 21:04:46",
+    "url": "https://nsearchives.nseindia.com/corporate/MAWANASUG_03092026210334_DisclosureNCLT.pdf",
+    "summary": "Mawana Sugars Limited has informed the stock exchange that the National Company Law Tribunal (NCLT) has approved its Scheme of Amalgamation. The intimation was provided under Regulation 30 of the SEBI Listing Regulations. This marks a key regulatory milestone for the company's restructuring plan.",
+    "saved_at": "2026-09-03T17:58:59.405040"
   }
 ]
