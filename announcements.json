@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106725694",
-    "source": "NSE",
-    "company": "Mahindra & Mahindra Financial Services Limited",
-    "scrip": "M&MFIN",
-    "headline": "Amalgamation/Merger",
-    "date": "05-Aug-2026 10:53:12",
-    "url": "https://nsearchives.nseindia.com/corporate/M_MFIN_05082026105251_SEIntimationMergersigned.pdf",
-    "summary": "Mahindra & Mahindra Financial Services Limited (MMFSL) has approved a scheme to merge its subsidiary, Mahindra Rural Housing Finance Limited (MRHFL), into itself. The merger aims to consolidate their lending operations into a single platform to simplify operations and enhance growth. The scheme is subject to regulatory approvals, with an appointed date of April 1, 2027.",
-    "saved_at": "2026-08-05T06:03:48.292224"
-  },
-  {
-    "id": "NSE_106726020",
-    "source": "NSE",
-    "company": "Adani Power Limited",
-    "scrip": "ADANIPOWER",
-    "headline": "General Updates",
-    "date": "05-Aug-2026 13:07:21",
-    "url": "https://nsearchives.nseindia.com/corporate/ADANIPOWER_05082026130712_APLNCLTorderAhmedabad05082026.pdf",
-    "summary": "Adani Power Limited has received approval from the NCLT Ahmedabad for the amalgamation of its nine wholly-owned subsidiaries, with the scheme's appointed date set as April 1, 2025. The order was issued on August 4, 2026, though the process for one subsidiary, VIPL, remains pending before the NCLT Mumbai. The scheme will become effective once all required steps are completed, and the company will update the exchanges accordingly.",
-    "saved_at": "2026-08-05T08:50:15.567658"
-  },
-  {
     "id": "NSE_106726513",
     "source": "NSE",
     "company": "Crisil Limited",
@@ -1824,5 +1802,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/MAWANASUG_03092026210334_DisclosureNCLT.pdf",
     "summary": "Mawana Sugars Limited has informed the stock exchange that the National Company Law Tribunal (NCLT) has approved its Scheme of Amalgamation. The intimation was provided under Regulation 30 of the SEBI Listing Regulations. This marks a key regulatory milestone for the company's restructuring plan.",
     "saved_at": "2026-09-03T17:58:59.405040"
+  },
+  {
+    "id": "NSE_106769669",
+    "source": "NSE",
+    "company": "Global Education Limited",
+    "scrip": "GLOBAL",
+    "headline": "General Updates",
+    "date": "04-Sep-2026 14:32:27",
+    "url": "https://nsearchives.nseindia.com/corporate/GLOBAL_04092026143159_GeneralUpdate04092026.pdf",
+    "summary": "Global Education Limited has received 24,00,000 fully paid-up equity shares of Rishiraj Infravision Private Limited (RIPL) as part of the NCLT-sanctioned demerger scheme with Yola Stays Limited, allotted on a non-cash basis. Following this allotment, the company's total holding in RIPL increased to 24,28,230 shares, representing approximately 28.24% of the post-allotment equity share capital. This shareholding percentage remains substantially unchanged from its pre-allotment level of 28.23%.",
+    "saved_at": "2026-09-04T11:02:14.620935"
   }
 ]
