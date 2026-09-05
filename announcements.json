@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106728833",
-    "source": "NSE",
-    "company": "Vedanta Aluminium Metal Limited",
-    "scrip": "VAML",
-    "headline": "News Verification",
-    "date": "06-Aug-2026 16:42:41",
-    "url": "https://nsearchives.nseindia.com/corporate/VAML_06082026164157_VAMLRumourVerification06Aug2026signed.pdf",
-    "summary": "Vedanta Aluminium Metal Limited clarified to the exchange regarding a news report claiming it would raise Rs 13,500 crore from Axis, HDFC, and ICICI Bank post-demerger. The company\u2019s official response to the exchange\u2019s query is attached in the announcement. No further details on the clarification\u2019s content were provided in the summary.",
-    "saved_at": "2026-08-06T12:22:25.028235"
-  },
-  {
     "id": "NSE_106729665",
     "source": "NSE",
     "company": "Swan Defence and Heavy Industries Limited",
@@ -1714,5 +1703,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/PHOENIXLTD_05092026105632_bg_-PML_new_MergerAstrea_sd.pdf",
     "summary": "The Phoenix Mills Limited announced that the National Company Law Tribunal, Chennai Bench has sanctioned the scheme of merger and amalgamation involving its subsidiary companies. This approval marks a key regulatory step in the consolidation process.",
     "saved_at": "2026-09-05T09:03:26.956859"
+  },
+  {
+    "id": "NSE_106771467",
+    "source": "NSE",
+    "company": "Reliance Industries Limited",
+    "scrip": "RELIANCE",
+    "headline": "Other Restructuring",
+    "date": "05-Sep-2026 17:35:49",
+    "url": "https://nsearchives.nseindia.com/corporate/kavinavora_05092026173533_SE05092026.pdf",
+    "summary": "Roptonal Limited, a step-down subsidiary of Reliance Industries, has been dissolved effective August 18, 2026, per a certificate from Cyprus's insolvency authority. The dissolution was confirmed on September 4, 2026. This marks the completion of a restructuring process for the subsidiary.",
+    "saved_at": "2026-09-05T12:40:48.117601"
+  },
+  {
+    "id": "NSE_106771300",
+    "source": "NSE",
+    "company": "TITAGARH RAIL SYSTEMS LIMITED",
+    "scrip": "TITAGARH",
+    "headline": "Change in Management",
+    "date": "05-Sep-2026 16:22:58",
+    "url": "https://nsearchives.nseindia.com/corporate/TWL_05092026162249_PRSLeadershipRestructuring.pdf",
+    "summary": "Titagarh Rail Systems announced a management restructuring in its Passenger Rail Systems (PRS) business, appointing Mr. Bhavesh Jethwa as the new Head of Operations (COO). He replaces Mr. Vijay Subramanian, who ceased to hold the position of CEO for the PRS division effective September 2, 2026. Mr. Jethwa brings over 25 years of industry experience to strengthen leadership and drive operational efficiency.",
+    "saved_at": "2026-09-05T12:40:49.434268"
   }
 ]
