@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106730552",
-    "source": "NSE",
-    "company": "Religare Enterprises Limited",
-    "scrip": "RELIGARE",
-    "headline": "General Updates",
-    "date": "07-Aug-2026 11:46:01",
-    "url": "https://nsearchives.nseindia.com/corporate/RELIGARE_07082026114525_RELUPDATE07082026_RBI.pdf",
-    "summary": "Religare Enterprises Limited announced that the Reserve Bank of India (RBI) has declined to grant its no-objection or prior approval for the proposed Scheme of Arrangement to demerge its undertaking into Religare Finvest Limited. This decision was communicated to both companies via letters dated August 6 and 7, 2026. REL and RFL plan to engage with the regulator to provide further clarifications on the matter.",
-    "saved_at": "2026-08-07T06:49:35.894371"
-  },
-  {
-    "id": "NSE_106731162",
-    "source": "NSE",
-    "company": "Ugro Capital Limited",
-    "scrip": "UGROCAP",
-    "headline": "Amalgamation/Merger",
-    "date": "07-Aug-2026 15:38:49",
-    "url": "https://nsearchives.nseindia.com/corporate/UGROCAP_07082026153832_UGROIntimationofReceiptofNCLT.pdf",
-    "summary": "Ugro Capital Limited has informed the stock exchanges that the National Company Law Tribunal (NCLT), via an order dated August 6, 2026, has directed the company to convene meetings of its equity shareholders, secured creditors, and unsecured creditors. These meetings are being held to consider and approve the proposed Scheme of Amalgamation. The disclosure was made under Regulation 30 of the SEBI Listing Regulations.",
-    "saved_at": "2026-08-07T10:15:11.271221"
-  },
-  {
     "id": "NSE_106731464",
     "source": "NSE",
     "company": "NHPC Limited",
@@ -1736,5 +1714,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/JACPL_05092026235956_Summary_Proceeding_USC_JACPL.pdf",
     "summary": "Jubilant Agri and Consumer Products Limited held an NCLT-convened meeting of its Unsecured Creditors on September 5, 2026, to seek approval for a proposed demerger scheme with Jubilant Agri Solutions Limited. The meeting, which took place in Uttar Pradesh, was attended by 24 creditors, and the chairperson addressed their queries before conducting a poll vote on the arrangement. The company has communicated the proceedings and results to the stock exchanges in compliance with SEBI regulations.",
     "saved_at": "2026-09-06T01:16:29.354687"
+  },
+  {
+    "id": "NSE_106772066",
+    "source": "NSE",
+    "company": "Kavveri Defence & Wireless Technologies Limited",
+    "scrip": "KAVDEFENCE",
+    "headline": "Amalgamation/Merger",
+    "date": "06-Sep-2026 15:13:40",
+    "url": "https://nsearchives.nseindia.com/corporate/KAVVERITEL_06092026151254_BMO_SOAs.pdf",
+    "summary": "Kavveri Defence & Wireless Technologies Limited\u2019s Board has approved a Scheme of Amalgamation to merge Samoro Telecoms Private Limited into the company. The merger is subject to approvals from shareholders, creditors, and the National Company Law Tribunal (NCLT). The board meeting concluded on September 6, 2026, with the scheme details submitted under SEBI regulations.",
+    "saved_at": "2026-09-06T10:52:32.057184"
   }
 ]
