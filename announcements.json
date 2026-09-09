@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106734247",
-    "source": "NSE",
-    "company": "R K Swamy Limited",
-    "scrip": "RKSWAMY",
-    "headline": "Amalgamation/Merger",
-    "date": "10-Aug-2026 13:44:21",
-    "url": "https://nsearchives.nseindia.com/corporate/RKSWAMY1973_10082026134410_Intimation_of_Amalgamation.pdf",
-    "summary": "Intimation under Regulation 30 read with Schedule III of the SEBI (Listing Obligations and Disclosure Requirements) Regulation, 2015 - Approval of Scheme of Amalgamation of Dsquare Solutions Private Limited (Step down Subsidiary) with Hansa Customer Equity Private Limited (Subsidiary Company)",
-    "saved_at": "2026-08-10T09:40:09.212059"
-  },
-  {
-    "id": "NSE_106735181",
-    "source": "NSE",
-    "company": "Godrej Properties Limited",
-    "scrip": "GODREJPROP",
-    "headline": "Amalgamation/Merger",
-    "date": "10-Aug-2026 18:47:56",
-    "url": "https://nsearchives.nseindia.com/corporate/GODREJPROP_10082026184729_SEIntimationMerger10082026.pdf",
-    "summary": "Godrej Properties Limited has received and recorded the certified order from the NCLT, Mumbai, sanctioning the Scheme of Amalgamation of Embellish Houses Private Limited with the company. The scheme was officially filed with the Registrar of Companies on August 10, 2026, making it effective, with the appointed date set as November 01, 2025.",
-    "saved_at": "2026-08-10T14:04:50.628660"
-  },
-  {
     "id": "NSE_106735703",
     "source": "NSE",
     "company": "IRM Energy Limited",
@@ -1813,5 +1791,38 @@
     "url": "https://nsearchives.nseindia.com/corporate/SIEMENS_09092026101753_SE_Intimation_-_SRAPL_-_09092026.pdf",
     "summary": "Siemens Limited has received a National Company Law Tribunal (Mumbai Bench) order dated September 7, 2026, related to its amalgamation/merger. The order dispenses with the requirement for meetings of equity shareholders and unsecured creditors of both the transferor and transferee companies. The full order is attached to the announcement.",
     "saved_at": "2026-09-09T06:41:14.545746"
+  },
+  {
+    "id": "NSE_106776951",
+    "source": "NSE",
+    "company": "Digjam Limited",
+    "scrip": "DIGJAMLMTD",
+    "headline": "Updates",
+    "date": "09-Sep-2026 20:50:39",
+    "url": "https://nsearchives.nseindia.com/corporate/DIGJAMLMTD_09092026205029_Petition_Order_SE_Intimation-merged.pdf",
+    "summary": "Digjam Limited has informed the exchange of an order from the National Company Law Tribunal (NCLT), Chennai Bench, regarding its proposed scheme of arrangement. The scheme involves the demerger of Reid & Taylor International Private Limited into Digjam Limited as the resulting company, along with its shareholders. The announcement serves as an update on the tribunal's decision related to this corporate restructuring.",
+    "saved_at": "2026-09-09T16:31:50.653710"
+  },
+  {
+    "id": "NSE_106776949",
+    "source": "NSE",
+    "company": "Digjam Limited",
+    "scrip": "DIGJAMLMTD",
+    "headline": "Amalgamation/Merger",
+    "date": "09-Sep-2026 20:48:23",
+    "url": "https://nsearchives.nseindia.com/corporate/DIGJAMLMTD_09092026204809_Petition_Order_SE_Intimation-merged.pdf",
+    "summary": "Digjam Limited has received an order from the NCLT, Chennai Bench regarding its proposed Scheme of Arrangement with Reid & Taylor International Private Limited. The scheme involves the demerger of Reid & Taylor into Digjam as the resulting company, affecting its shareholders. The announcement confirms the tribunal's ruling on the matter.",
+    "saved_at": "2026-09-09T16:31:51.737518"
+  },
+  {
+    "id": "NSE_106776875",
+    "source": "NSE",
+    "company": "TVS Holdings Limited",
+    "scrip": "TVSHLTD",
+    "headline": "Allotment of Securities",
+    "date": "09-Sep-2026 19:13:55",
+    "url": "https://nsearchives.nseindia.com/corporate/SUNCLAYLTD_09092026191331_SEINTIMATIONALLOTMENTSGD.pdf",
+    "summary": "TVS Holdings Limited has allotted 93,06,76,784 bonus 6% Cumulative Non-Convertible Redeemable Preference Shares (NCRPS) to its equity shareholders, in the ratio of 46 NCRPS for every 1 equity share held, as per the NCLT-approved Scheme of Arrangement. The NCRPS, with a face value of INR 10 each, were allotted on 9th September 2026 and will mature on 9th December 2027, with an option for early redemption after 12 months. The company will now seek depository credit and stock exchange listing for these securities.",
+    "saved_at": "2026-09-09T16:31:53.400317"
   }
 ]
