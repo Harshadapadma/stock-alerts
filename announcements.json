@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106735703",
-    "source": "NSE",
-    "company": "IRM Energy Limited",
-    "scrip": "IRMENERGY",
-    "headline": "Shareholders meeting",
-    "date": "10-Aug-2026 22:48:47",
-    "url": "https://nsearchives.nseindia.com/corporate/IRMENERGY_10082026224834_Niticeofunsecuredcreditors.pdf",
-    "summary": "IRM Energy Limited has convened a meeting of its Unsecured Creditors on September 12, 2026, via video conferencing, to consider a Scheme of Amalgamation with Enertech Distribution Management Private Limited. The meeting is being held pursuant to orders from the National Company Law Tribunal, Ahmedabad Bench, and remote e-voting will be open from September 9 to September 11, 2026. The notice and related documents have been sent electronically to creditors and are also available on the company's website.",
-    "saved_at": "2026-08-10T18:07:27.792779"
-  },
-  {
-    "id": "NSE_106735702",
-    "source": "NSE",
-    "company": "IRM Energy Limited",
-    "scrip": "IRMENERGY",
-    "headline": "Shareholders meeting",
-    "date": "10-Aug-2026 22:45:11",
-    "url": "https://nsearchives.nseindia.com/corporate/IRMENERGY_10082026224459_IRMequityshareholderssigned.pdf",
-    "summary": "IRM Energy Limited has informed the exchange that a Court Convened General Meeting of equity shareholders will be held on September 12, 2026, at 10:30 a.m., as per the order of the NCLT Ahmedabad. The meeting notice has been issued in accordance with the tribunal's directive.",
-    "saved_at": "2026-08-10T18:07:29.107725"
-  },
-  {
     "id": "NSE_106736504",
     "source": "NSE",
     "company": "AvenuesAI Limited",
@@ -1824,5 +1802,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/SUNCLAYLTD_09092026191331_SEINTIMATIONALLOTMENTSGD.pdf",
     "summary": "TVS Holdings Limited has allotted 93,06,76,784 bonus 6% Cumulative Non-Convertible Redeemable Preference Shares (NCRPS) to its equity shareholders, in the ratio of 46 NCRPS for every 1 equity share held, as per the NCLT-approved Scheme of Arrangement. The NCRPS, with a face value of INR 10 each, were allotted on 9th September 2026 and will mature on 9th December 2027, with an option for early redemption after 12 months. The company will now seek depository credit and stock exchange listing for these securities.",
     "saved_at": "2026-09-09T16:31:53.400317"
+  },
+  {
+    "id": "NSE_106777141",
+    "source": "NSE",
+    "company": "Tata Motors Limited",
+    "scrip": "TMCV",
+    "headline": "General Updates",
+    "date": "09-Sep-2026 23:12:30",
+    "url": "https://nsearchives.nseindia.com/corporate/TMLCOMMERCIAL_09092026231222_NSEBSETMF.pdf",
+    "summary": "Tata Motors Limited has issued notices to its shareholders and creditors regarding a Composite Scheme of Amalgamation involving Tata Motors Limited, TMF Holdings Limited, and TMF Business Services Limited. The announcement serves as a general update on this proposed merger process.",
+    "saved_at": "2026-09-09T19:29:13.555714"
   }
 ]
