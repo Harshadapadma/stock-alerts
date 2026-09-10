@@ -1,71 +1,5 @@
 [
   {
-    "id": "NSE_106736504",
-    "source": "NSE",
-    "company": "AvenuesAI Limited",
-    "scrip": "CCAVENUE",
-    "headline": "Amalgamation/Merger",
-    "date": "11-Aug-2026 14:27:59",
-    "url": "https://nsearchives.nseindia.com/corporate/INFIBEAM_11082026142750_OutcomeofBM.pdf",
-    "summary": "AvenuesAI Limited has announced the amalgamation of its wholly owned subsidiary, Nueromind Technologies Private Limited, into the parent company. The merger will see the transferor company's operations and assets consolidated under AvenuesAI Limited as the transferee entity.",
-    "saved_at": "2026-08-11T09:44:56.334938"
-  },
-  {
-    "id": "NSE_106736497",
-    "source": "NSE",
-    "company": "AvenuesAI Limited",
-    "scrip": "CCAVENUE",
-    "headline": "Outcome of Board Meeting",
-    "date": "11-Aug-2026 14:24:44",
-    "url": "https://nsearchives.nseindia.com/corporate/INFIBEAM_11082026142405_OutcomeofBMRI110826.pdf",
-    "summary": "AvenuesAI Limited's Board Meeting on August 11, 2026, approved its unaudited standalone and consolidated financial results. The board also sanctioned an increase in the investment limit, a scheme of amalgamation, changes to the Rights Issue objects, and a consolidation of equity shares. Additionally, the meeting set the date for the company's 16th Annual General Meeting.",
-    "saved_at": "2026-08-11T09:44:58.235109"
-  },
-  {
-    "id": "NSE_106736706",
-    "source": "NSE",
-    "company": "Larsen & Toubro Limited",
-    "scrip": "LT",
-    "headline": "General Updates",
-    "date": "11-Aug-2026 15:58:55",
-    "url": "https://nsearchives.nseindia.com/corporate/PAM_11082026155835_Intimation11082026.pdf",
-    "summary": "Larsen & Toubro Limited has signed a Business Transfer Agreement with its wholly owned subsidiary, Vyoma.AI Limited, along with a Share Purchase Agreement to sell its entire stake in L&T Network Services Private Limited to Vyoma. This move consolidates its network services business under Vyoma. The transaction is part of L&T's internal restructuring efforts.",
-    "saved_at": "2026-08-11T10:37:24.187725"
-  },
-  {
-    "id": "NSE_106736870",
-    "source": "NSE",
-    "company": "Hindustan Composites Limited",
-    "scrip": "HINDCOMPOS",
-    "headline": "General Updates",
-    "date": "11-Aug-2026 16:48:06",
-    "url": "https://nsearchives.nseindia.com/corporate/HINDCOMPOS_11082026164731_HCLReg30PostalBallotUpdate11082026.pdf",
-    "summary": "Hindustan Composites Limited announced that its shareholders have approved, via postal ballot, the slump sale of its Friction Business Undertaking to Rane (Madras) Limited. The transaction, valued at INR 370 crore in cash, involves a business that contributed 84% of the company's turnover in the last financial year. The sale is expected to be completed on or before 30th September, 2026.",
-    "saved_at": "2026-08-11T11:30:24.176057"
-  },
-  {
-    "id": "NSE_106736827",
-    "source": "NSE",
-    "company": "Meghmani Organics Limited",
-    "scrip": "MOL",
-    "headline": "Copy of Newspaper Publication",
-    "date": "11-Aug-2026 16:36:02",
-    "url": "https://nsearchives.nseindia.com/corporate/MOL_11082026162919_SE_LETTER.pdf",
-    "summary": "Meghmani Organics Limited has informed the stock exchange about a newspaper notice regarding the hearing of its petition for a proposed Scheme of Amalgamation. The scheme involves merging Kilburn Chemicals Limited and Meghmani Crop Nutrition Limited into Meghmani Organics Limited. The notice pertains to the interests of the shareholders and creditors of all three companies.",
-    "saved_at": "2026-08-11T11:30:26.039890"
-  },
-  {
-    "id": "NSESME_106736921",
-    "source": "NSE-SME",
-    "company": "Vision Infra Equipment Solutions Limited",
-    "scrip": "VIESL",
-    "headline": "Other Restructuring",
-    "date": "11-Aug-2026 17:07:06",
-    "url": "https://nsearchives.nseindia.com/corporate/VISION_11082026170527_Regulation_30_intimation_11th_August_2026.pdf",
-    "summary": "Vision Infra Equipment Solutions Limited has incorporated a new wholly owned subsidiary, Vision Infra Equipment L.L.C., in Dubai, UAE, with a capital of AED 1,00,000. The subsidiary, registered with Dubai's Department of Economy and Tourism, will operate in the construction equipment and machinery trading and rental sector. The Indian parent company holds 100% of the subsidiary's shares, which were subscribed for in cash.",
-    "saved_at": "2026-08-11T12:27:42.900363"
-  },
-  {
     "id": "NSE_106737401",
     "source": "NSE",
     "company": "Timken India Limited",
@@ -1824,5 +1758,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/MBAPL_10092026132729_MBAPL.pdf",
     "summary": "Madhya Bharat Agro Products Limited announced that due to undersubscription of its preferential equity share issue, its Board approved restructuring the use of proceeds. The capital expenditure allocation was reduced from \u20b950 crore to \u20b933.006 crore, while working capital (\u20b9192.48 crore) and general corporate purposes (\u20b975 crore) remained unchanged, bringing total utilization down from \u20b9317.48 crore to \u20b9300.48 crore.",
     "saved_at": "2026-09-10T09:11:31.723173"
+  },
+  {
+    "id": "NSE_106777786",
+    "source": "NSE",
+    "company": "The Phoenix Mills Limited",
+    "scrip": "PHOENIXLTD",
+    "headline": "Amalgamation/Merger",
+    "date": "10-Sep-2026 16:47:32",
+    "url": "https://nsearchives.nseindia.com/corporate/PHOENIXLTD_10092026164716_PMLEffectivedateintimation_10092026_sd.pdf",
+    "summary": "The Phoenix Mills Limited announced that the NCLT-approved Scheme of Merger and Amalgamation of six transferor companies (step-down subsidiaries) into Astrea Real Estate Developers Private Limited (a subsidiary) became effective on September 10, 2026, following the filing of the certified NCLT order with the Registrar of Companies.",
+    "saved_at": "2026-09-10T13:40:45.743421"
+  },
+  {
+    "id": "NSE_106777703",
+    "source": "NSE",
+    "company": "Sammaan Capital Limited",
+    "scrip": "SAMMAANCAP",
+    "headline": "Shareholders meeting",
+    "date": "10-Sep-2026 15:44:33",
+    "url": "https://nsearchives.nseindia.com/corporate/IHFL_10092026154305_SCL_NCLT_Proceedings_ShareholdersMeeting.pdf",
+    "summary": "Sammaan Capital Limited held a meeting of its equity shareholders on September 10, 2026, as convened under orders from the National Company Law Tribunal, New Delhi Bench. The meeting was held pursuant to the NCLT's original order dated June 12, 2026, along with a subsequent rectification/clarification order dated July 10, 2026. A summary of the meeting's proceedings has been issued.",
+    "saved_at": "2026-09-10T13:40:46.993124"
   }
 ]
