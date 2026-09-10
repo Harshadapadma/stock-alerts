@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106737401",
-    "source": "NSE",
-    "company": "Timken India Limited",
-    "scrip": "TIMKEN",
-    "headline": "Copy of Newspaper Publication",
-    "date": "11-Aug-2026 18:34:10",
-    "url": "https://nsearchives.nseindia.com/corporate/TIMKEN_11082026182924_SE_NewspaperPublication11082026.pdf",
-    "summary": "Timken India Limited has informed the stock exchange of newspaper publications regarding a notice of petition for the amalgamation of its wholly owned subsidiary, Timken GGB Technology Private Limited, with the company. The relevant newspaper copies are available on the company\u2019s website for reference. The announcement serves as a formal record of this regulatory disclosure.",
-    "saved_at": "2026-08-11T14:00:41.060904"
-  },
-  {
-    "id": "NSE_106737369",
-    "source": "NSE",
-    "company": "GUJARAT ENERGY LIMITED",
-    "scrip": "GUJENERGY",
-    "headline": "Updates",
-    "date": "11-Aug-2026 18:29:44",
-    "url": "https://nsearchives.nseindia.com/corporate/GUJGASLTD_11082026182918_1601SECIntFractionalReports.pdf",
-    "summary": "Gujarat Energy Limited has informed the stock exchange about the submission of a report from its Audit Committee and Independent Directors regarding fractional entitlements under a Scheme of Arrangement. The update pertains to the handling of fractional shares arising from the corporate restructuring.",
-    "saved_at": "2026-08-11T14:00:42.884535"
-  },
-  {
     "id": "NSE_106739058",
     "source": "NSE",
     "company": "Elgi Rubber Company Limited",
@@ -1780,5 +1758,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/IHFL_10092026154305_SCL_NCLT_Proceedings_ShareholdersMeeting.pdf",
     "summary": "Sammaan Capital Limited held a meeting of its equity shareholders on September 10, 2026, as convened under orders from the National Company Law Tribunal, New Delhi Bench. The meeting was held pursuant to the NCLT's original order dated June 12, 2026, along with a subsequent rectification/clarification order dated July 10, 2026. A summary of the meeting's proceedings has been issued.",
     "saved_at": "2026-09-10T13:40:46.993124"
+  },
+  {
+    "id": "NSE_106778110",
+    "source": "NSE",
+    "company": "Indegene Limited",
+    "scrip": "INDGN",
+    "headline": "Amalgamation/Merger",
+    "date": "10-Sep-2026 19:55:16",
+    "url": "https://nsearchives.nseindia.com/corporate/INDEGENE_10092026195438_tofilemergergermany.pdf",
+    "summary": "Indegene Limited announced that the merger of its indirect wholly owned subsidiary Indegene Healthcare Germany GmbH into Trilogy Writing & Consulting GmbH was registered and became effective on September 9, 2026. Following the merger, the transferor entity ceased to exist, and the surviving entity was renamed Indegene Healthcare Germany GmbH. The company stated that this internal reorganization has no material impact on its business operations, shareholding pattern, or financial position.",
+    "saved_at": "2026-09-10T17:18:19.882547"
+  },
+  {
+    "id": "NSE_106778095",
+    "source": "NSE",
+    "company": "Bharat Forge Limited",
+    "scrip": "BHARATFORG",
+    "headline": "Amalgamation/Merger",
+    "date": "10-Sep-2026 19:39:54",
+    "url": "https://nsearchives.nseindia.com/corporate/ANILSHINDE_10092026193859_SEIntimation-_Merger.pdf",
+    "summary": "Bharat Forge Limited announced that its wholly-owned step-down subsidiary, Bharat Forge Holding GmbH (BFH), has merged into its immediate holding company, Bharat Forge Global Holding GmbH (BFGH), effective August 25, 2026, under relevant German laws. Consequently, BFH ceases to exist and its subsidiary, Bharat Forge Aluminiumtechnik GmbH, becomes a direct subsidiary of BFGH. The merger, undertaken to simplify the German legal structure, has no financial impact on Bharat Forge's standalone or consolidated financial statements and no change in shareholding.",
+    "saved_at": "2026-09-10T17:18:21.462711"
   }
 ]
