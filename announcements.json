@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106739058",
-    "source": "NSE",
-    "company": "Elgi Rubber Company Limited",
-    "scrip": "ELGIRUBCO",
-    "headline": "Other Restructuring",
-    "date": "12-Aug-2026 16:05:47",
-    "url": "https://nsearchives.nseindia.com/corporate/ELGIRUBCO_12082026160515_ELGIRUBCO_BM_Outcome_12082026.pdf",
-    "summary": "Elgi Rubber Company Limited's Board approved the reversal of Rs.16.60 million in interest receivable from two overseas subsidiaries to ease their financial burden. They also approved the unaudited financial results for the quarter ended June 30, 2026, which received an unmodified audit opinion. Additionally, the Board sanctioned the voluntary winding up of two dormant, non-material subsidiaries in Kenya and Australia.",
-    "saved_at": "2026-08-12T11:13:23.488738"
-  },
-  {
-    "id": "NSE_106739746",
-    "source": "NSE",
-    "company": "Ugro Capital Limited",
-    "scrip": "UGROCAP",
-    "headline": "Amalgamation/Merger",
-    "date": "12-Aug-2026 18:23:30",
-    "url": "https://nsearchives.nseindia.com/corporate/UGROCAP_12082026182256_orderintimation.pdf",
-    "summary": "Ugro Capital Limited has received a certified copy of the NCLT order directing it to convene meetings of its equity shareholders, secured creditors, and unsecured creditors within 90 days to approve a proposed amalgamation scheme with Profectus Capital Private Limited. The meetings will be held via video conferencing or other audio-visual means, and the scheme remains subject to regulatory approvals. The company will keep stock exchanges informed of further developments.",
-    "saved_at": "2026-08-12T13:43:12.686914"
-  },
-  {
     "id": "NSE_106740139",
     "source": "NSE",
     "company": "Mallcom (India) Limited",
@@ -1791,5 +1769,38 @@
     "url": "https://nsearchives.nseindia.com/corporate/DIACABS_11092026104334_Regulation30PressRelease.pdf",
     "summary": "Diamond Power Infrastructure Limited has fully exited the NCLT insolvency resolution framework one year ahead of schedule by prepaying the entire \u20b92,401 crore resolution plan consideration (\u20b9501 crore cash plus \u20b91,900 crore in bonds) to its erstwhile lenders. With all legacy legal matters cleared and no outstanding obligations, the company is now eligible for credit ratings and can use its entire fixed-asset base as security for bank financing.",
     "saved_at": "2026-09-11T09:38:33.182852"
+  },
+  {
+    "id": "NSE_106778977",
+    "source": "NSE",
+    "company": "Greenply Industries Limited",
+    "scrip": "GREENPLY",
+    "headline": "Press Release",
+    "date": "11-Sep-2026 16:48:17",
+    "url": "https://nsearchives.nseindia.com/corporate/GREEN_11092026164749_PRESS_RELEASE.pdf",
+    "summary": "Greenply Industries Limited has informed the Exchange of a press release dated September 11, 2026, regarding a proposed capital restructuring of its joint venture entity. The restructuring aims to sharpen the company's focus on expanding its dominant plywood and MDF businesses.",
+    "saved_at": "2026-09-11T13:50:12.223513"
+  },
+  {
+    "id": "NSE_106778966",
+    "source": "NSE",
+    "company": "Ceigall India Limited",
+    "scrip": "CEIGALL",
+    "headline": "Other Restructuring",
+    "date": "11-Sep-2026 16:42:53",
+    "url": "https://nsearchives.nseindia.com/corporate/ceigall_11092026164243_Outcome_of_BM.pdf",
+    "summary": "Ceigall India Limited's Board approved signing a Share Purchase Agreement to acquire 100% of Jam Khambhaliya Jamnagar Power Transmission Limited (JKJTL) from REC Power Development and Consultancy Limited for Rs. 5,00,000, following its Letter of Intent for a common power transmission system project. The Board also approved a 49% equity investment in a proposed Joint Venture Company.",
+    "saved_at": "2026-09-11T13:50:13.404670"
+  },
+  {
+    "id": "NSESME_106778849",
+    "source": "NSE-SME",
+    "company": "Vilin Bio Med Limited",
+    "scrip": "VILINBIO",
+    "headline": "Amalgamation/Merger",
+    "date": "11-Sep-2026 15:14:09",
+    "url": "https://nsearchives.nseindia.com/corporate/VILIN2005_11092026151355_VILINNCLT.pdf",
+    "summary": "Vilin Bio Med Limited announced that the National Company Law Tribunal (NCLT), Hyderabad Bench, has approved its application regarding the Scheme of Amalgamation with Chemgenix Laboratories Private Limited. The NCLT has directed the convening of meetings for the shareholders of Vilin Bio Med and the creditors of both companies, while dispensing with the meeting of Chemgenix's shareholders since all have given their consent.",
+    "saved_at": "2026-09-11T13:50:14.969451"
   }
 ]
