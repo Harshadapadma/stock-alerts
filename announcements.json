@@ -1,38 +1,5 @@
 [
   {
-    "id": "NSE_106740139",
-    "source": "NSE",
-    "company": "Mallcom (India) Limited",
-    "scrip": "MALLCOM",
-    "headline": "Updates",
-    "date": "12-Aug-2026 19:46:36",
-    "url": "https://nsearchives.nseindia.com/corporate/MALLCOM_12082026194606_REG30intimation.pdf",
-    "summary": "Mallcom (India) Limited has received the certified copy of the NCLT Kolkata Bench order approving the Scheme of Amalgamation with its wholly-owned subsidiary, Mallcom VSFT Gloves Private Limited. The company has informed the exchange of this regulatory update.",
-    "saved_at": "2026-08-12T14:46:59.758365"
-  },
-  {
-    "id": "NSE_106740279",
-    "source": "NSE",
-    "company": "SecMark Consultancy Limited",
-    "scrip": "SECMARK",
-    "headline": "Amalgamation/Merger",
-    "date": "12-Aug-2026 20:34:09",
-    "url": "https://nsearchives.nseindia.com/corporate/SECMARK_12082026203348_20260812_SCL_Reg_30_Merger__1_.pdf",
-    "summary": "SecMark Consultancy Limited\u2019s board approved a merger scheme on 12.08.2026 to amalgamate Codifi Finserv Private Limited and SecMark Holding Private Limited into the company. The move consolidates the three entities under SecMark Consultancy Limited.",
-    "saved_at": "2026-08-12T15:44:29.145526"
-  },
-  {
-    "id": "NSE_106740241",
-    "source": "NSE",
-    "company": "SecMark Consultancy Limited",
-    "scrip": "SECMARK",
-    "headline": "Outcome of Board Meeting",
-    "date": "12-Aug-2026 20:20:45",
-    "url": "https://nsearchives.nseindia.com/corporate/SECMARK_12082026201931_20260812_SCL_Board_Meeting_June_Quarter.pdf",
-    "summary": "SecMark Consultancy\u2019s Board approved its unaudited standalone and consolidated financial results for the quarter ended June 30, 2026, along with the limited review report. The Board also approved a scheme of amalgamation to merge Codifi Finserv Private Limited and SecMark Holding Private Limited into the company, subject to regulatory and shareholder approvals.",
-    "saved_at": "2026-08-12T15:44:30.561919"
-  },
-  {
     "id": "NSE_106740425",
     "source": "NSE",
     "company": "Bluspring Enterprises Limited",
@@ -1802,5 +1769,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/VILIN2005_11092026151355_VILINNCLT.pdf",
     "summary": "Vilin Bio Med Limited announced that the National Company Law Tribunal (NCLT), Hyderabad Bench, has approved its application regarding the Scheme of Amalgamation with Chemgenix Laboratories Private Limited. The NCLT has directed the convening of meetings for the shareholders of Vilin Bio Med and the creditors of both companies, while dispensing with the meeting of Chemgenix's shareholders since all have given their consent.",
     "saved_at": "2026-09-11T13:50:14.969451"
+  },
+  {
+    "id": "NSE_106779420",
+    "source": "NSE",
+    "company": "LLOYDS ENGINEERING WORKS LIMITED",
+    "scrip": "LLOYDSENGG",
+    "headline": "Shareholders meeting",
+    "date": "11-Sep-2026 22:17:54",
+    "url": "https://nsearchives.nseindia.com/corporate/LSIL_11092026221713_Covering_and_Notice_of_unsecured_creditors_signed.pdf",
+    "summary": "Lloyds Engineering Works Limited will hold a meeting of its unsecured creditors on Friday, October 16, 2026 at 2:45 p.m. via video conferencing, as directed by the National Company Law Tribunal, Mumbai Bench. The company has appointed NSDL to provide remote e-voting from October 12\u201315, 2026, as well as e-voting at the meeting.",
+    "saved_at": "2026-09-11T17:26:54.894854"
+  },
+  {
+    "id": "NSE_106779326",
+    "source": "NSE",
+    "company": "Vijaya Diagnostic Centre Limited",
+    "scrip": "VIJAYA",
+    "headline": "Outcome of Board Meeting",
+    "date": "11-Sep-2026 19:59:19",
+    "url": "https://nsearchives.nseindia.com/corporate/VIJAYA_11092026195905_Stx_BM_Outcome_Acquisition_Signed.pdf",
+    "summary": "Vijaya Diagnostic Centre Limited's board approved a Business Transfer Agreement to acquire 100% of Arya Wellness Centre's integrated diagnostic business in Guwahati, Assam, on a slump sale basis. The acquisition is subject to the fulfilment of conditions precedent and other terms set out in the agreement.",
+    "saved_at": "2026-09-11T17:26:56.147890"
   }
 ]
