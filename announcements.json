@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106740425",
-    "source": "NSE",
-    "company": "Bluspring Enterprises Limited",
-    "scrip": "BLUSPRING",
-    "headline": "Updates",
-    "date": "12-Aug-2026 22:11:59",
-    "url": "https://nsearchives.nseindia.com/corporate/BLUSPRING_12082026220732_Reg_30_-_Merger.pdf",
-    "summary": "Bluspring Enterprises Limited announced that its wholly-owned subsidiary, Bluspring New Horizon One Private Limited, will be amalgamated with its step-down subsidiary, STEAG Energy Services (India) Private Limited. The merger aims to simplify the holding structure, streamline decision-making, and reduce regulatory compliances. The transaction is exempt from related party regulations and is subject to regulatory approvals.",
-    "saved_at": "2026-08-12T17:45:16.258104"
-  },
-  {
     "id": "NSE_106742032",
     "source": "NSE",
     "company": "The Investment Trust Of India Limited",
@@ -1791,5 +1780,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/VIJAYA_11092026195905_Stx_BM_Outcome_Acquisition_Signed.pdf",
     "summary": "Vijaya Diagnostic Centre Limited's board approved a Business Transfer Agreement to acquire 100% of Arya Wellness Centre's integrated diagnostic business in Guwahati, Assam, on a slump sale basis. The acquisition is subject to the fulfilment of conditions precedent and other terms set out in the agreement.",
     "saved_at": "2026-09-11T17:26:56.147890"
+  },
+  {
+    "id": "NSE_106779618",
+    "source": "NSE",
+    "company": "WeWork India Management Limited",
+    "scrip": "WEWORK",
+    "headline": "Updates",
+    "date": "12-Sep-2026 10:16:50",
+    "url": "https://nsearchives.nseindia.com/corporate/WEWORK_12092026101618_NCLT_RSC1_Efiling_Intimation.pdf",
+    "summary": "WeWork India Management Limited has notified the Exchange that it has e-filed an application in Form RSC-1 with the National Company Law Tribunal. The application seeks approval for a reduction of the company's share capital, specifically relating to its Securities Premium Account.",
+    "saved_at": "2026-09-12T05:01:55.734526"
   }
 ]
