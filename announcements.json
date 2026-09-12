@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106742032",
-    "source": "NSE",
-    "company": "The Investment Trust Of India Limited",
-    "scrip": "THEINVEST",
-    "headline": "Updates",
-    "date": "13-Aug-2026 17:14:31",
-    "url": "https://nsearchives.nseindia.com/corporate/THEINVEST_13082026171007_TheITIOutcomeofMeeting_June26.pdf",
-    "summary": "The Board of The Investment Trust of India approved its unaudited financial results for the quarter ended June 30, 2026, and scheduled its 35th Annual General Meeting for September 28, 2026. The company also withdrew its proposal to transfer its fund and asset management business to its subsidiary, ITI Asset Management Limited, and will continue as the Sponsor and Investment Manager for ITI Long Short Fund.",
-    "saved_at": "2026-08-13T12:31:26.063068"
-  },
-  {
     "id": "NSE_106743876",
     "source": "NSE",
     "company": "DiGiSPICE Technologies Limited",
@@ -1813,5 +1802,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/SiemensRaj_12092026120046_SEIntimation.pdf",
     "summary": "Siemens Limited announced that its wholly owned subsidiary, Siemens Rail Automation Private Limited, will be amalgamated into the company under Sections 230\u2013232 of the Companies Act, 2013. The NCLT Mumbai Bench has dispensed with the requirement to hold equity shareholder and unsecured creditor meetings, instead directing the company to issue notices inviting representations on the scheme. Equity shareholders may submit any representations to the Tribunal, with a simultaneous copy served on the company.",
     "saved_at": "2026-09-12T09:17:48.703301"
+  },
+  {
+    "id": "NSE_106779723",
+    "source": "NSE",
+    "company": "JSW Steel Limited",
+    "scrip": "JSWSTEEL",
+    "headline": "Copy of Newspaper Publication",
+    "date": "12-Sep-2026 16:20:30",
+    "url": "https://nsearchives.nseindia.com/corporate/jessydenny_12092026162018_newspaper-_merger.pdf",
+    "summary": "JSW Steel Limited has notified the Exchange of a newspaper publication regarding the petition hearing date before the Hon'ble NCLT. The hearing pertains to the proposed amalgamation of Piombino Steel Limited with JSW Steel Ltd.",
+    "saved_at": "2026-09-12T12:56:45.975300"
   }
 ]
