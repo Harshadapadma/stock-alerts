@@ -1,38 +1,5 @@
 [
   {
-    "id": "NSE_106747103",
-    "source": "NSE",
-    "company": "Network18 Media & Investments Limited",
-    "scrip": "NETWORK18",
-    "headline": "Copy of Newspaper Publication",
-    "date": "17-Aug-2026 17:22:11",
-    "url": "https://nsearchives.nseindia.com/corporate/Shambhu_17082026172033_Network18_SE_intimation_17082026.pdf",
-    "summary": "Network18 Media & Investments has published a newspaper notice regarding the hearing and final disposal of its scheme petition for the amalgamation of its wholly owned subsidiary, News18 Marathi Private Limited, into the parent company. The announcement provides the required public notice of the legal proceedings for the merger.",
-    "saved_at": "2026-08-17T12:13:24.001820"
-  },
-  {
-    "id": "NSE_106747478",
-    "source": "NSE",
-    "company": "Varun Beverages Limited",
-    "scrip": "VBL",
-    "headline": "General Updates",
-    "date": "17-Aug-2026 20:28:40",
-    "url": "https://nsearchives.nseindia.com/corporate/VBL_17082026202812_Update_TwizzaMerger.pdf",
-    "summary": "Varun Beverages Limited issued a general update referencing its compliance with SEBI regulations, specifically Regulation 30 and the SEBI Master Circular dated January 30, 2026. The company clarified that the required disclosure had already been provided in its earlier intimation on July 2, 2026. No new information or material event was introduced in this announcement.",
-    "saved_at": "2026-08-17T14:59:28.758768"
-  },
-  {
-    "id": "NSE_106747529",
-    "source": "NSE",
-    "company": "Manipal Health Enterprises Limited",
-    "scrip": "MANIPALHOS",
-    "headline": "Acquisition",
-    "date": "17-Aug-2026 21:45:19",
-    "url": "https://nsearchives.nseindia.com/corporate/9632000477_17082026214510_BTA.pdf",
-    "summary": "Manipal Health Enterprises has signed a Business Transfer Agreement with Kindorama Healthcare to acquire the full operations of the Kinder Women\u2019s Hospital and Fertility Centre in Bengaluru. The transaction, dated August 17, 2026, will transfer the facility\u2019s entire operations to Manipal.",
-    "saved_at": "2026-08-17T16:37:21.026204"
-  },
-  {
     "id": "NSE_106748254",
     "source": "NSE",
     "company": "Markolines Pavement Technologies Limited",
@@ -1648,5 +1615,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/TRIVENI_16092026132125_AC_AND_ID_REPORTS_16_9_2026.pdf",
     "summary": "Triveni Engineering & Industries Limited announced that its Audit Committee and Independent Directors have certified the distribution of proceeds from fractional shares to eligible shareholders under a Composite Scheme of Arrangement involving Sir Shadi Lal Enterprises Limited and Triveni Power Transmission Limited. The Scheme, approved by the NCLT in May 2026, resulted in the merger of Sir Shadi Lal Enterprises with Triveni Engineering, with shares allotted to eligible shareholders on June 9, 2026. The certification reports, dated September 16, 2026, were issued in compliance with SEBI's Master Circular on Schemes of Arrangement.",
     "saved_at": "2026-09-16T12:02:33.002534"
+  },
+  {
+    "id": "NSE_106782290",
+    "source": "NSE",
+    "company": "GPT Infraprojects Limited",
+    "scrip": "GPTINFRA",
+    "headline": "General Updates",
+    "date": "16-Sep-2026 18:58:37",
+    "url": "https://nsearchives.nseindia.com/corporate/GPTINFRA_16092026185738_BSE_and_NSE_Intimation_SGD.pdf",
+    "summary": "GPT Infraprojects announced that the NCLT Kolkata Bench issued an order on September 15, 2026, directing meetings of equity shareholders of the Transferee Company and secured/unsecured creditors of Transferor Company No. 1 and the Transferee Company to be convened within 90 days to approve a Scheme of Amalgamation. Meetings for equity shareholders of both Transferor Companies, preference shareholders and unsecured creditors of Transferor Company No. 2, and secured creditors of Transferor Company No. 2 have been dispensed with.",
+    "saved_at": "2026-09-16T16:51:02.252936"
+  },
+  {
+    "id": "NSE_106782189",
+    "source": "NSE",
+    "company": "Aditya Birla Real Estate Limited",
+    "scrip": "ABREL",
+    "headline": "Cessation",
+    "date": "16-Sep-2026 18:16:17",
+    "url": "https://nsearchives.nseindia.com/corporate/CENTURYTEX_16092026181557_FinalAKGCessationIntimation.pdf",
+    "summary": "Aditya Birla Real Estate Limited announced that Mr. Ajay Kumar Gupta has ceased to be CEO of its erstwhile Century Pulp and Paper (CPP) business division and Senior Management Personnel, effective 16th September, 2026. This follows the sale of the CPP business division to ITC Limited as a going concern on a slump sale basis.",
+    "saved_at": "2026-09-16T16:51:03.244139"
   }
 ]
