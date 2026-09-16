@@ -1,38 +1,5 @@
 [
   {
-    "id": "NSE_106746350",
-    "source": "NSE",
-    "company": "Digjam Limited",
-    "scrip": "DIGJAMLMTD",
-    "headline": "Shareholders meeting",
-    "date": "16-Aug-2026 20:01:29",
-    "url": "https://nsearchives.nseindia.com/corporate/DIGJAMLMTD_16082026200115_Proceedings_of_the_Shareholders_Meeting.pdf",
-    "summary": "Digjam Limited held an NCLT-convened equity shareholders meeting on August 16, 2026, via video conference to seek approval for a proposed Scheme of Arrangement with Reid & Taylor International Private Limited. The meeting was chaired by an NCLT-appointed advocate, with the agenda focused on the demerger scheme under the Companies Act. The company has shared the proceedings summary on its website as per SEBI regulations.",
-    "saved_at": "2026-08-16T14:32:22.140539"
-  },
-  {
-    "id": "NSE_106746362",
-    "source": "NSE",
-    "company": "Digjam Limited",
-    "scrip": "DIGJAMLMTD",
-    "headline": "Shareholders meeting",
-    "date": "16-Aug-2026 22:43:28",
-    "url": "https://nsearchives.nseindia.com/corporate/DIGJAMLMTD_16082026224245_VR_SR_Final_Submission.pdf",
-    "summary": "Digjam Limited has submitted the Scrutinizer\u2019s report and voting results from its NCLT-convened General Meeting held on August 16, 2026. The submission covers both the meeting\u2019s outcome and the detailed vote tally. This update was provided to the stock exchange as part of regulatory compliance.",
-    "saved_at": "2026-08-16T17:28:29.401801"
-  },
-  {
-    "id": "NSE_106747033",
-    "source": "NSE",
-    "company": "Piccadily Agro Industries Limited",
-    "scrip": "PICCADIL",
-    "headline": "Demerger",
-    "date": "17-Aug-2026 16:54:03",
-    "url": "https://nsearchives.nseindia.com/corporate/CSPICCADILY_17082026165215_approval.pdf",
-    "summary": "Piccadily Agro Industries Limited has received no adverse observations from BSE Limited and the National Stock Exchange of India, as per letters dated August 14, 2026. This clearance pertains to the company\u2019s proposed demerger. The announcement confirms regulatory approval for the demerger process.",
-    "saved_at": "2026-08-17T11:44:58.538947"
-  },
-  {
     "id": "NSE_106747103",
     "source": "NSE",
     "company": "Network18 Media & Investments Limited",
@@ -1670,5 +1637,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/KMSUGAR_15092026175436_REG30_DEMERGERUPDATE.pdf",
     "summary": "K.M. Sugar Mills Limited announced that the National Company Law Tribunal (NCLT) has sanctioned the Scheme of Arrangement for the demerger of its Distillery Division into KM Spirits and Allied Industries Limited. The certified copy of the NCLT order dated August 19, 2026, was received by the Company on September 14, 2026, with an Appointed Date of April 1, 2026. The Effective Date and Record Date will be determined by the Boards of both companies and communicated in due course.",
     "saved_at": "2026-09-15T12:53:19.062681"
+  },
+  {
+    "id": "NSE_106781704",
+    "source": "NSE",
+    "company": "Triveni Engineering & Industries Limited",
+    "scrip": "TRIVENI",
+    "headline": "Scheme of Arrangement",
+    "date": "16-Sep-2026 13:21:35",
+    "url": "https://nsearchives.nseindia.com/corporate/TRIVENI_16092026132125_AC_AND_ID_REPORTS_16_9_2026.pdf",
+    "summary": "Triveni Engineering & Industries Limited announced that its Audit Committee and Independent Directors have certified the distribution of proceeds from fractional shares to eligible shareholders under a Composite Scheme of Arrangement involving Sir Shadi Lal Enterprises Limited and Triveni Power Transmission Limited. The Scheme, approved by the NCLT in May 2026, resulted in the merger of Sir Shadi Lal Enterprises with Triveni Engineering, with shares allotted to eligible shareholders on June 9, 2026. The certification reports, dated September 16, 2026, were issued in compliance with SEBI's Master Circular on Schemes of Arrangement.",
+    "saved_at": "2026-09-16T12:02:33.002534"
   }
 ]
