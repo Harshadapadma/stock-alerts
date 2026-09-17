@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106748254",
-    "source": "NSE",
-    "company": "Markolines Pavement Technologies Limited",
-    "scrip": "MARKOLINES",
-    "headline": "Amalgamation/Merger",
-    "date": "18-Aug-2026 15:07:42",
-    "url": "https://nsearchives.nseindia.com/corporate/MPTL2002_18082026150653_Announcementto_Reg30_MPTL180826.pdf",
-    "summary": "Markolines Pavement Technologies Limited has received \"No Objection\" letters from both BSE and NSE regarding its proposed merger with Markolines Infra Limited. The stock exchanges have cleared the scheme for filing with the National Company Law Tribunal (NCLT), subject to certain conditions. The company will comply with all regulatory requirements and observations while proceeding with the amalgamation.",
-    "saved_at": "2026-08-18T09:53:56.156556"
-  },
-  {
-    "id": "NSE_106748403",
-    "source": "NSE",
-    "company": "RHI MAGNESITA INDIA LIMITED",
-    "scrip": "RHIM",
-    "headline": "General Updates",
-    "date": "18-Aug-2026 16:40:59",
-    "url": "https://nsearchives.nseindia.com/corporate/RHIM_18082026163936_IntimationofcompletionofmergerF.pdf",
-    "summary": "RHI Magnesita India Limited announced that its wholly-owned subsidiary, Intermetal Engineers (India) Private Limited, has received regulatory approval for its merger into Ashwath Technologies Private Limited, effective 18 August 2026. As a result, Ashwath Technologies has become a direct wholly-owned subsidiary of RHI Magnesita India Limited, with new directors appointed and existing ones resigned. The merger aims to achieve operational efficiencies and rationalise the corporate structure.",
-    "saved_at": "2026-08-18T11:37:54.194970"
-  },
-  {
     "id": "NSE_106748475",
     "source": "NSE",
     "company": "One Mobikwik Systems Limited",
@@ -1637,5 +1615,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/CENTURYTEX_16092026181557_FinalAKGCessationIntimation.pdf",
     "summary": "Aditya Birla Real Estate Limited announced that Mr. Ajay Kumar Gupta has ceased to be CEO of its erstwhile Century Pulp and Paper (CPP) business division and Senior Management Personnel, effective 16th September, 2026. This follows the sale of the CPP business division to ITC Limited as a going concern on a slump sale basis.",
     "saved_at": "2026-09-16T16:51:03.244139"
+  },
+  {
+    "id": "NSE_106783344",
+    "source": "NSE",
+    "company": "Kitex Garments Limited",
+    "scrip": "KITEX",
+    "headline": "Copy of Newspaper Publication",
+    "date": "17-Sep-2026 17:16:02",
+    "url": "https://nsearchives.nseindia.com/corporate/KITEX_17092026171549_KGL_Newspaper_publication_of_notice_of_hearings.pdf",
+    "summary": "Kitex Garments Limited has notified the Exchange of a newspaper publication regarding a notice of hearing, issued per the directions of the Honorable NCLT, Kochi Bench. The notice pertains to a Scheme of Arrangement between Kitex Childrenswear Ltd, Kitex Garments Ltd, and their respective shareholders and creditors.",
+    "saved_at": "2026-09-17T11:52:14.322324"
   }
 ]
