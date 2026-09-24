@@ -1,49 +1,5 @@
 [
   {
-    "id": "NSE_106755526",
-    "source": "NSE",
-    "company": "Jana Small Finance Bank Limited",
-    "scrip": "JSFB",
-    "headline": "News Verification",
-    "date": "25-Aug-2026 13:27:34",
-    "url": "-",
-    "summary": "The stock exchange has requested clarification from Jana Small Finance Bank regarding a news report about its shares falling up to 4% amid merger speculation with Federal Bank. The company has not yet responded to the exchange's query.",
-    "saved_at": "2026-08-25T08:09:54.441948"
-  },
-  {
-    "id": "NSE_106755530",
-    "source": "NSE",
-    "company": "Sonata Software Limited",
-    "scrip": "SONATSOFTW",
-    "headline": "Updates",
-    "date": "25-Aug-2026 13:23:29",
-    "url": "https://nsearchives.nseindia.com/corporate/SONATSOFTW_25082026131832_intimationoneffectivedateofmerger.pdf",
-    "summary": "Sonata Software Limited announced that its Scheme of Arrangement and Amalgamation with its wholly-owned subsidiary, Encore I.T. Services Solutions Private Limited, has been approved by the Registrar of Companies and became effective on 14th August, 2026. The appointed date for the scheme is 1st April, 2024. As no fresh equity shares are being issued, the company\u2019s issued, subscribed, and paid-up capital remains unchanged.",
-    "saved_at": "2026-08-25T08:09:55.831669"
-  },
-  {
-    "id": "NSE_106755626",
-    "source": "NSE",
-    "company": "Jana Small Finance Bank Limited",
-    "scrip": "JSFB",
-    "headline": "News Verification",
-    "date": "25-Aug-2026 15:12:36",
-    "url": "https://nsearchives.nseindia.com/corporate/sanath_rao_janabank_com_25082026151220_Clarification.pdf",
-    "summary": "Jana Small Finance Bank Limited responded to a stock exchange query regarding a news report about its shares falling up to 4% amid merger speculation with Federal Bank. The company\u2019s official reply to the exchange\u2019s clarification request is attached to the announcement. No further details from the response are provided in the summary.",
-    "saved_at": "2026-08-25T09:49:27.241593"
-  },
-  {
-    "id": "NSE_106755876",
-    "source": "NSE",
-    "company": "HEG Limited",
-    "scrip": "HEG",
-    "headline": "Press Release",
-    "date": "25-Aug-2026 17:06:15",
-    "url": "https://nsearchives.nseindia.com/corporate/HEG_25082026170347_HEG_Final_Press_Realease_Intimation.pdf",
-    "summary": "HEG Limited announced that its demerger will take effect on September 1, 2026, with a record date fixed for September 7, 2026. The company also disclosed leadership changes that will occur as the scheme becomes effective on that date. The details were shared via a press release dated August 25, 2026.",
-    "saved_at": "2026-08-25T11:40:44.210587"
-  },
-  {
     "id": "NSE_106755920",
     "source": "NSE",
     "company": "Siyaram Silk Mills Limited",
@@ -1461,5 +1417,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/Verandaipo_24092026095926_REG30PR.pdf",
     "summary": "Veranda Learning Solutions Limited has fixed October 6, 2026 as the record date for the demerger of its Commerce vertical. The company disclosed this via a press release dated September 24, 2026, filed with the stock exchange.",
     "saved_at": "2026-09-24T06:38:16.221064"
+  },
+  {
+    "id": "NSE_106791288",
+    "source": "NSE",
+    "company": "Waaree Energies Limited",
+    "scrip": "WAAREEENER",
+    "headline": "Outcome of Board Meeting",
+    "date": "24-Sep-2026 15:49:13",
+    "url": "https://nsearchives.nseindia.com/corporate/WAAREE_24092026154903_OutcomeofBoardMeeting_WEL_signed.pdf",
+    "summary": "Waaree Energies Limited announced a Scheme of Amalgamation under which Indosolar Limited will merge into Waaree Energies Limited. The scheme will also bind their respective shareholders and is being pursued under Sections 230 to 232 of the Companies Act, 2013.",
+    "saved_at": "2026-09-24T12:13:36.241208"
   }
 ]
