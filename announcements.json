@@ -1,49 +1,5 @@
 [
   {
-    "id": "NSE_106757198",
-    "source": "NSE",
-    "company": "BASF India Limited",
-    "scrip": "BASF",
-    "headline": "Copy of Newspaper Publication",
-    "date": "26-Aug-2026 13:35:23",
-    "url": "https://nsearchives.nseindia.com/corporate/BASFIL_26082026133505_SELetter.pdf",
-    "summary": "BASF India Limited has announced a newspaper publication regarding the final hearing of its scheme petition for the demerger of its Agricultural Solutions Business into BASF Agricultural Solutions India Ltd. The notice serves to inform stakeholders of the upcoming legal proceedings. This step is part of the company's ongoing restructuring process.",
-    "saved_at": "2026-08-26T08:19:44.045007"
-  },
-  {
-    "id": "NSE_106757464",
-    "source": "NSE",
-    "company": "Swan Defence and Heavy Industries Limited",
-    "scrip": "SWANDEF",
-    "headline": "Amalgamation/Merger",
-    "date": "26-Aug-2026 16:20:24",
-    "url": "https://nsearchives.nseindia.com/corporate/SWANRNEL_26082026162000_NCLT_Order_Reg_30_26082026.pdf",
-    "summary": "Swan Defence and Heavy Industries Limited has received the certified order from the NCLT, Ahmedabad Bench regarding the Scheme of Arrangement and Amalgamation with Triumph Offshore Private Limited. The order covers the merger of the transferor company into the transferee company, along with their respective shareholders and creditors. This marks a key regulatory approval in the amalgamation process.",
-    "saved_at": "2026-08-26T11:15:26.134638"
-  },
-  {
-    "id": "NSE_106757509",
-    "source": "NSE",
-    "company": "Mankind Pharma Limited",
-    "scrip": "MANKIND",
-    "headline": "Other Restructuring",
-    "date": "26-Aug-2026 16:44:45",
-    "url": "https://nsearchives.nseindia.com/corporate/MANKIND1_26082026164439_Outcome_26082026_sd.pdf",
-    "summary": "Mankind Pharma\u2019s Board has approved the voluntary liquidation of its wholly owned subsidiary, Bharat Serums and Vaccines Limited, as part of a restructuring move. The decision, made at today\u2019s Board meeting, will integrate the subsidiary\u2019s operations into the parent company. This consolidation aims to streamline corporate structure and operations.",
-    "saved_at": "2026-08-26T11:50:34.508963"
-  },
-  {
-    "id": "NSE_106757508",
-    "source": "NSE",
-    "company": "IRB Infrastructure Developers Limited",
-    "scrip": "IRB",
-    "headline": "Scheme of Arrangement",
-    "date": "26-Aug-2026 16:44:37",
-    "url": "https://nsearchives.nseindia.com/corporate/IRB_26082026164245_IRBIDL_Outcome_Scheme_of_Amalgamation.pdf",
-    "summary": "IRB Infrastructure Developers Limited's Board approved a Scheme of Amalgamation to merge nine of its wholly-owned subsidiaries into the parent company. The merger aims to simplify the group structure and improve operational efficiency, with no consideration payable or shares issued since the subsidiaries are wholly-owned. The scheme is subject to regulatory approvals, including from the National Company Law Tribunal.",
-    "saved_at": "2026-08-26T11:50:36.086344"
-  },
-  {
     "id": "NSE_106757915",
     "source": "NSE",
     "company": "Devyani International Limited",
@@ -1461,5 +1417,82 @@
     "url": "https://nsearchives.nseindia.com/corporate/JALAN_25092026125159_stx_intimation_order.pdf",
     "summary": "Jalan Transolutions (India) Limited has received an NCLT order dated 21 September 2026 in the insolvency petition filed by Capital Trade Links Limited under Section 7 of the IBC, 2016, concerning default in loan repayment. The company must file its reply within one week of receiving the notice, with the next hearing scheduled for 28 October 2026. The impact is stated as financial/non-quantifiable.",
     "saved_at": "2026-09-25T07:32:10.066764"
+  },
+  {
+    "id": "NSE_106794562",
+    "source": "NSE",
+    "company": "Kansai Nerolac Paints Limited",
+    "scrip": "KANSAINER",
+    "headline": "General Updates",
+    "date": "25-Sep-2026 18:21:35",
+    "url": "https://nsearchives.nseindia.com/corporate/KANSAINER_25092026182039_s_SEintimationmergerorder.pdf",
+    "summary": "The National Company Law Tribunal (NCLT), Mumbai Bench has approved the Scheme of Amalgamation of Nerofix Private Limited with Kansai Nerolac Paints Limited by order dated 24th September 2026. The Scheme has an appointed date of 1st April 2025 and will become effective upon filing the certified copy of the order with the Registrar of Companies, Mumbai. The Company noted certain clerical errors in the NCLT order, which it will take steps to rectify, and the certified copy is still awaited.",
+    "saved_at": "2026-09-25T12:58:07.530125"
+  },
+  {
+    "id": "NSE_106794107",
+    "source": "NSE",
+    "company": "R R Kabel Limited",
+    "scrip": "RRKABEL",
+    "headline": "Acquisition",
+    "date": "25-Sep-2026 16:54:54",
+    "url": "https://nsearchives.nseindia.com/corporate/RRKL1995_25092026165354_Intimation_Reg_30_BTA.pdf",
+    "summary": "R R Kabel Limited has executed a Business Transfer Agreement to acquire the business undertaking of U M Cables Limited. The company disclosed the agreement to the stock exchange.",
+    "saved_at": "2026-09-25T12:58:08.427229"
+  },
+  {
+    "id": "NSE_106793719",
+    "source": "NSE",
+    "company": "Bhagyanagar India Limited",
+    "scrip": "BHAGYANGR",
+    "headline": "Record Date",
+    "date": "25-Sep-2026 15:40:26",
+    "url": "https://nsearchives.nseindia.com/corporate/BHAGYANGR_25092026153938_Intimation_of_Record_Date-BIl.pdf",
+    "summary": "Bhagyanagar India Limited has fixed Thursday, October 8, 2026 as the Record Date for determining shareholders entitled to receive one equity share of the Resulting Company (Tieramet Limited) for every one equity share held, following NCLT approval of the Scheme. Shareholders holding shares in physical form must submit their demat account details and self-attested PAN to the Registrar before the Record Date, as new shares will be issued only in dematerialized form. If no details are received, the new shares will be held in trust by a nominee until shareholders provide their demat information.",
+    "saved_at": "2026-09-25T12:58:10.069930"
+  },
+  {
+    "id": "NSE_106793631",
+    "source": "NSE",
+    "company": "Primo Chemicals Limited",
+    "scrip": "PRIMO",
+    "headline": "Amalgamation/Merger",
+    "date": "25-Sep-2026 15:22:50",
+    "url": "https://nsearchives.nseindia.com/corporate/PRIMO607_25092026152240_Outcome_341.pdf",
+    "summary": "Primo Chemicals Limited has announced a scheme of amalgamation whereby Flow Tech Chemicals Private Limited (a wholly owned subsidiary) will merge into Primo Chemicals Limited. The appointed date for the merger is Friday, 25th September, 2026, subject to requisite approvals from shareholders, creditors, and regulatory authorities.",
+    "saved_at": "2026-09-25T12:58:11.154938"
+  },
+  {
+    "id": "NSE_106793599",
+    "source": "NSE",
+    "company": "Fabtech Technologies Limited",
+    "scrip": "FABTECH",
+    "headline": "Other Restructuring",
+    "date": "25-Sep-2026 15:16:30",
+    "url": "https://nsearchives.nseindia.com/corporate/FABTECH_25092026151617_Intimation_under_Reg_30_Signed.pdf",
+    "summary": "Fabtech Technologies Limited's board has granted in-principle approval to incorporate a wholly owned step-down subsidiary in Egypt through its UAE-based wholly owned subsidiary, Fabtech Technologies LLC. The new entity will operate in the turnkey pharma projects business, with incorporation subject to regulatory approvals from Egyptian authorities and the UAE Embassy.",
+    "saved_at": "2026-09-25T12:58:12.657621"
+  },
+  {
+    "id": "NSE_106793348",
+    "source": "NSE",
+    "company": "Adani Power Limited",
+    "scrip": "ADANIPOWER",
+    "headline": "General Updates",
+    "date": "25-Sep-2026 13:55:20",
+    "url": "https://nsearchives.nseindia.com/corporate/ADANIPOWER_25092026135512_APLNCLTorderMumbai24092026.pdf",
+    "summary": "Adani Power Limited has announced a scheme of amalgamation involving its wholly owned subsidiary, Vidarbha Industries Power Limited (formerly Reliance Natural Resources Limited), which operates a 600 MW thermal power plant in Nagpur, Maharashtra. The merger is intended to achieve greater scale, operational efficiency, financial strength, and a simplified corporate structure, benefiting shareholders and stakeholders. The appointed date for the scheme is March 31, 2026.",
+    "saved_at": "2026-09-25T12:58:14.163487"
+  },
+  {
+    "id": "NSE_106793333",
+    "source": "NSE",
+    "company": "CIE Automotive India Limited",
+    "scrip": "CIEINDIA",
+    "headline": "Amalgamation/Merger",
+    "date": "25-Sep-2026 13:44:30",
+    "url": "https://nsearchives.nseindia.com/corporate/Mahindracie_25092026134416_SEintimation.pdf",
+    "summary": "CIE Automotive India Limited announced that the National Company Law Tribunal (NCLT), Mumbai Bench, has approved its application for the Scheme of Merger by Absorption of CIE Aluminium Casting India Limited (the wholly owned subsidiary/transferor company) into CIE Automotive India Limited (the transferee company). The NCLT order, dated 24 September 2026, has been uploaded on the NCLT website and the company's website, though the certified copy is still awaited.",
+    "saved_at": "2026-09-25T12:58:15.603158"
   }
 ]
