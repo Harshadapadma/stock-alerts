@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106762383",
-    "source": "NSE",
-    "company": "Muthoot Finance Limited",
-    "scrip": "MUTHOOTFIN",
-    "headline": "Amalgamation/Merger",
-    "date": "31-Aug-2026 15:56:32",
-    "url": "https://nsearchives.nseindia.com/corporate/MUTHOOTFIN_31082026155537_OutcomeBM31826sd.pdf",
-    "summary": "Muthoot Finance's Board has approved a scheme to amalgamate its wholly-owned subsidiary, Muthoot Money Limited, into the parent company. The merger is subject to approvals from the NCLT, RBI, and other regulatory bodies. The move consolidates the two gold loan-focused NBFCs, with Muthoot Money having total assets of Rs. 10,344.92 crores as of March 31, 2026.",
-    "saved_at": "2026-08-31T11:40:45.682848"
-  },
-  {
-    "id": "NSE_106762055",
-    "source": "NSE",
-    "company": "Hubtown Limited",
-    "scrip": "HUBTOWN",
-    "headline": "Copy of Newspaper Publication",
-    "date": "31-Aug-2026 12:02:07",
-    "url": "https://nsearchives.nseindia.com/corporate/HUBTOWN_31082026120154_HL_Reg_30_Newspaper_AD_Petition_Hearing_31_Aug_2026ss.pdf",
-    "summary": "Hubtown Limited has announced that its scheme petition for the merger of 25 West Realty Private Limited with the company has been admitted by the relevant authority. The final hearing for the scheme\u2019s sanction is scheduled for September 10, 2026. This information was shared via a newspaper publication.",
-    "saved_at": "2026-08-31T11:40:47.006234"
-  },
-  {
     "id": "NSE_106763366",
     "source": "NSE",
     "company": "NIIT Learning Systems Limited",
@@ -1549,5 +1527,60 @@
     "url": "https://nsearchives.nseindia.com/corporate/ASIANENE_30092026105233_SEIntimationonreceiptofNCLTorder_29092026.pdf",
     "summary": "Asian Energy Services Limited announced that the NCLT Mumbai Bench has pronounced its order approving the Scheme of Merger by Absorption of Oilmax Energy Private Limited into Asian Energy Services Limited. The scheme also covers the respective shareholders of both companies.",
     "saved_at": "2026-09-30T08:43:04.697676"
+  },
+  {
+    "id": "NSE_106803774",
+    "source": "NSE",
+    "company": "PPAP Automotive Limited",
+    "scrip": "PPAP",
+    "headline": "Shareholders meeting",
+    "date": "30-Sep-2026 20:20:51",
+    "url": "https://nsearchives.nseindia.com/corporate/PPAP_30092026201841_Proceedings.pdf",
+    "summary": "PPAP Automotive Limited held separate meetings of its equity shareholders, secured creditors, and unsecured creditors to consider the Scheme of Amalgamation of Avinya Batteries Limited with itself. The meetings were convened pursuant to an NCLT order as part of the approval process for the merger.",
+    "saved_at": "2026-09-30T15:23:41.223051"
+  },
+  {
+    "id": "NSE_106803611",
+    "source": "NSE",
+    "company": "Ambuja Cements Limited",
+    "scrip": "AMBUJACEM",
+    "headline": "Shareholders meeting",
+    "date": "30-Sep-2026 19:33:49",
+    "url": "https://nsearchives.nseindia.com/corporate/AMBUJACEM_30092026193225_ACL_Consol_Upload.pdf",
+    "summary": "Ambuja Cements Limited has submitted the Combined Scrutinizer's Report to the Exchange regarding the NCLT-convened meeting of its equity shareholders. The meeting was held pursuant to an order from the NCLT Ahmedabad Bench concerning the Scheme of Amalgamation of ACC Limited with Ambuja Cements.",
+    "saved_at": "2026-09-30T15:23:42.680601"
+  },
+  {
+    "id": "NSE_106803458",
+    "source": "NSE",
+    "company": "GSPL Transmission Limited",
+    "scrip": "GSPLTRANS",
+    "headline": "Updates",
+    "date": "30-Sep-2026 19:02:35",
+    "url": "https://nsearchives.nseindia.com/corporate/GSPLTRANS_30092026190226_NSEBSEPressRelease.pdf",
+    "summary": "GSPL Transmission Limited announced that its equity shares commenced trading on the BSE and NSE on September 30, 2026, completing the GSPC Group Scheme of Arrangement under which the gas transmission business of erstwhile Gujarat State Petronet Limited was demerged into it. The company operates approximately 2,900 km of natural gas transmission pipelines across 26 districts in Gujarat, making it India's second-largest gas transmission company, with plans to add 711 km of pipelines.",
+    "saved_at": "2026-09-30T15:23:44.018452"
+  },
+  {
+    "id": "NSE_106803448",
+    "source": "NSE",
+    "company": "Sammaan Capital Limited",
+    "scrip": "SAMMAANCAP",
+    "headline": "Copy of Newspaper Publication",
+    "date": "30-Sep-2026 19:00:15",
+    "url": "https://nsearchives.nseindia.com/corporate/IHFL_30092026190006_SCL_Newspaper_Advertisement_30Sep2026.pdf",
+    "summary": "Sammaan Capital Limited has published newspaper advertisements regarding a proposed Scheme of Arrangement between itself (the Resulting Company) and Sammaan Finserve Limited (the Demerged Company). The notices, published on September 30, 2026 in the Financial Express and Jansatta, comply with a National Company Law Tribunal order dated September 21, 2026 concerning the Second Motion Petition for the demerger.",
+    "saved_at": "2026-09-30T15:23:45.492017"
+  },
+  {
+    "id": "NSE_106802173",
+    "source": "NSE",
+    "company": "Sun TV Network Limited",
+    "scrip": "SUNTV",
+    "headline": "News Verification",
+    "date": "30-Sep-2026 14:14:54",
+    "url": "https://nsearchives.nseindia.com/corporate/SUNTV1_30092026141339_SunTVreply30092026.pdf",
+    "summary": "Sun TV Network Limited responded to a stock exchange clarification request regarding a news report about a possible demerger of its sports division. The company's response is attached to the announcement.",
+    "saved_at": "2026-09-30T15:23:46.743562"
   }
 ]
