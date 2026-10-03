@@ -1,38 +1,5 @@
 [
   {
-    "id": "NSE_106765918",
-    "source": "NSE",
-    "company": "Thomas Cook  (India)  Limited",
-    "scrip": "THOMASCOOK",
-    "headline": "General Updates",
-    "date": "02-Sep-2026 13:56:29",
-    "url": "https://nsearchives.nseindia.com/corporate/THOMASCOOK_02092026135158_Stock_Exchange_Intimation-_NSE_Observation_Letter.pdf",
-    "summary": "Thomas Cook (India) Limited has received an observation letter from SEBI regarding its draft composite Scheme of Arrangement involving several group companies. SEBI has provided specific comments and conditions, including compliance with LODR regulations, disclosure of ongoing legal proceedings, and adherence to master circulars. The company has shared this letter with the stock exchange and uploaded it to its website for public record.",
-    "saved_at": "2026-09-02T09:07:48.214444"
-  },
-  {
-    "id": "NSE_106767018",
-    "source": "NSE",
-    "company": "RPG Life Sciences Limited",
-    "scrip": "RPGLIFE",
-    "headline": "General Updates",
-    "date": "02-Sep-2026 22:19:44",
-    "url": "https://nsearchives.nseindia.com/corporate/RPGLIFE_02092026221937_Outcome_of_Board_Meeting.pdf",
-    "summary": "RPG Life Sciences' board approved a Business Transfer Agreement for its wholly-owned subsidiary, RPG Active Pharma Limited, to acquire the API and intermediates business of Raghava Life Sciences Private Limited via a slump sale. The transaction, valued at up to Rs. 135 crores, includes manufacturing and R&D facilities along with a portfolio of 29 API molecules, and is expected to be completed within approximately 30 days. This acquisition aligns with the company's strategy to expand its API business and is not a related party transaction.",
-    "saved_at": "2026-09-02T17:25:36.914096"
-  },
-  {
-    "id": "NSE_106766930",
-    "source": "NSE",
-    "company": "MSP Steel & Power Limited",
-    "scrip": "MSPL",
-    "headline": "Scheme of Arrangement",
-    "date": "02-Sep-2026 20:58:10",
-    "url": "https://nsearchives.nseindia.com/corporate/MSPL_02092026205746_REG30OUTCOMEOFBMsigned1.pdf",
-    "summary": "MSP Steel & Power Limited's Board has approved a draft Scheme of Arrangement for the demerger of MSP Sponge Iron Limited's manufacturing business into MSP Steel, subject to regulatory approvals. The Board also approved the company's annual report, the notice for the AGM scheduled for September 30, 2026, and the appointments of internal and cost auditors for the 2026-2027 fiscal year.",
-    "saved_at": "2026-09-02T17:25:38.063481"
-  },
-  {
     "id": "NSE_106768160",
     "source": "NSE",
     "company": "Mawana Sugars Limited",
@@ -1527,5 +1494,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/KMSUGAR_01102026233221_DEMERGERUPDATE.pdf",
     "summary": "K.M. Sugar Mills Limited announced that its Scheme of Arrangement for the demerger of its Distillery Division into KM Spirits and Allied Industries Limited has become effective as of October 1, 2026. The company confirmed that both entities have filed the certified NCLT order with the Registrar of Companies, Uttar Pradesh.",
     "saved_at": "2026-10-01T22:00:52.982568"
+  },
+  {
+    "id": "NSE_106806255",
+    "source": "NSE",
+    "company": "Wipro Limited",
+    "scrip": "WIPRO",
+    "headline": "Amalgamation/Merger",
+    "date": "03-Oct-2026 15:53:23",
+    "url": "https://nsearchives.nseindia.com/corporate/Wipro_Secretarial_03102026155257_Reg30SEIntimation03102026.pdf",
+    "summary": "Wipro Limited announced the completed merger of its step-down subsidiary Wipro VLSI Design Services, LLC into fellow step-down subsidiary Wipro IT Services, LLC, effective October 1, 2026 (Eastern Time). The company received intimation of the completion on October 3, 2026, in accordance with SEBI listing regulations.",
+    "saved_at": "2026-10-03T13:16:43.509468"
   }
 ]
