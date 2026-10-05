@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106771676",
-    "source": "NSE",
-    "company": "GUJARAT ENERGY LIMITED",
-    "scrip": "GUJENERGY",
-    "headline": "General Updates",
-    "date": "05-Sep-2026 19:33:15",
-    "url": "https://nsearchives.nseindia.com/corporate/GUJGASLTD_05092026193209_1617SECCostApportinti05092026.pdf",
-    "summary": "Gujarat Energy Limited has issued a general update providing shareholders with a guidance note on how to apportion the cost of acquisition of its equity shares and those of the resulting company. This note is intended to assist shareholders in determining the tax basis for their holdings following the corporate restructuring. The announcement serves as informational guidance for investors.",
-    "saved_at": "2026-09-05T15:38:33.220698"
-  },
-  {
-    "id": "NSE_106771912",
-    "source": "NSE",
-    "company": "Jubilant Agri and Consumer Products Limited",
-    "scrip": "JUBLCPL",
-    "headline": "Shareholders meeting",
-    "date": "05-Sep-2026 23:55:07",
-    "url": "https://nsearchives.nseindia.com/corporate/JACPL_05092026235438_Summary_Proceeding_ESH_JACPL.pdf",
-    "summary": "Jubilant Agri and Consumer Products Limited held an NCLT-convened equity shareholders' meeting on September 5, 2026, to seek approval for a proposed demerger scheme with Jubilant Agri Solutions Limited. The meeting, attended by 47 shareholders, took place at the company's registered office in Uttar Pradesh. The proceedings concluded with the agenda of approving the Scheme of Arrangement for the demerger being taken up for consideration.",
-    "saved_at": "2026-09-05T19:35:54.948678"
-  },
-  {
     "id": "NSE_106771914",
     "source": "NSE",
     "company": "Jubilant Agri and Consumer Products Limited",
@@ -1439,5 +1417,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/KOTHARIPET_05102026192310_IntimationofreceiptofNCLTOrder.pdf",
     "summary": "Kothari Petrochemicals Limited announced that the National Company Law Tribunal (NCLT), Chennai Bench, has issued an order regarding its proposed Scheme of Amalgamation. The order directs the companies involved to convene separate meetings of their shareholders and unsecured creditors.",
     "saved_at": "2026-10-05T14:17:48.531122"
+  },
+  {
+    "id": "NSE_106807600",
+    "source": "NSE",
+    "company": "Dr. Agarwal's Health Care Limited",
+    "scrip": "AGARWALEYE",
+    "headline": "Amalgamation/Merger",
+    "date": "05-Oct-2026 22:49:57",
+    "url": "https://nsearchives.nseindia.com/corporate/DRAGARWALS_05102026224943_C45_AHCL_NCLT_Sanction_Order_sd.pdf",
+    "summary": "Dr. Agarwal's Health Care Limited announced it has received sanction from the Hon'ble NCLT, Chennai Bench for the Scheme of Amalgamation between Dr. Agarwal's Eye Hospital Limited and Dr. Agarwal's Health Care Limited. The approval covers the merger and applies to both companies' respective shareholders and creditors.",
+    "saved_at": "2026-10-05T21:31:51.833476"
+  },
+  {
+    "id": "NSE_106807537",
+    "source": "NSE",
+    "company": "Kothari Sugars And Chemicals Limited",
+    "scrip": "KOTARISUG",
+    "headline": "Amalgamation/Merger",
+    "date": "05-Oct-2026 21:04:58",
+    "url": "https://nsearchives.nseindia.com/corporate/KOTARISUG_05102026210359_IntimationofreceiptofNCLTOrder.pdf",
+    "summary": "Kothari Sugars And Chemicals Limited announced that the National Company Law Tribunal, Chennai Bench, has issued an order regarding its proposed Scheme of Amalgamation. The order directs the companies involved to convene separate meetings of their shareholders and unsecured creditors.",
+    "saved_at": "2026-10-05T21:31:52.890759"
   }
 ]
