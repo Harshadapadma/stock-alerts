@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106772066",
-    "source": "NSE",
-    "company": "Kavveri Defence & Wireless Technologies Limited",
-    "scrip": "KAVDEFENCE",
-    "headline": "Amalgamation/Merger",
-    "date": "06-Sep-2026 15:13:40",
-    "url": "https://nsearchives.nseindia.com/corporate/KAVVERITEL_06092026151254_BMO_SOAs.pdf",
-    "summary": "Kavveri Defence & Wireless Technologies Limited\u2019s Board has approved a Scheme of Amalgamation to merge Samoro Telecoms Private Limited into the company. The merger is subject to approvals from shareholders, creditors, and the National Company Law Tribunal (NCLT). The board meeting concluded on September 6, 2026, with the scheme details submitted under SEBI regulations.",
-    "saved_at": "2026-09-06T10:52:32.057184"
-  },
-  {
     "id": "NSE_106772168",
     "source": "NSE",
     "company": "Jubilant Agri and Consumer Products Limited",
@@ -1439,5 +1428,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/FAIRCHEMDP_06102026111909_NoticetoNSE.pdf",
     "summary": "Privi Speciality Chemicals Limited has notified the Exchange of a meeting of its equity shareholders regarding a Scheme of Amalgamation. The meeting is scheduled for Tuesday, October 27, 2026, at 12:30 p.m.",
     "saved_at": "2026-10-06T08:49:54.016325"
+  },
+  {
+    "id": "NSE_106808697",
+    "source": "NSE",
+    "company": "IRM Energy Limited",
+    "scrip": "IRMENERGY",
+    "headline": "Copy of Newspaper Publication",
+    "date": "06-Oct-2026 18:11:34",
+    "url": "https://nsearchives.nseindia.com/corporate/IRMENERGY_06102026181117_intimationtoSE.pdf",
+    "summary": "IRM Energy Limited has notified the Exchange of a newspaper publication regarding the hearing notice for its proposed Scheme of Amalgamation. The scheme involves the merger of Enertech Distribution Management Private Limited with IRM Energy Limited and their respective shareholders.",
+    "saved_at": "2026-10-06T15:36:07.678861"
+  },
+  {
+    "id": "NSE_106808685",
+    "source": "NSE",
+    "company": "India Glycols Limited",
+    "scrip": "INDIAGLYCO",
+    "headline": "Updates",
+    "date": "06-Oct-2026 18:06:39",
+    "url": "https://nsearchives.nseindia.com/corporate/INDIAGLYCO_06102026180443_Apportionment_of_Cost_of_Acquisition.pdf",
+    "summary": "India Glycols Limited announced the apportionment of the cost of acquisition of equity shares across itself (the demerged company) and two resulting companies, Ennature Bio Pharma Limited and IGL Spirits Limited. This follows a Scheme of Arrangement among the three companies and their shareholders.",
+    "saved_at": "2026-10-06T15:36:08.583504"
   }
 ]
