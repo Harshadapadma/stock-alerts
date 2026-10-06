@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106771914",
-    "source": "NSE",
-    "company": "Jubilant Agri and Consumer Products Limited",
-    "scrip": "JUBLCPL",
-    "headline": "General Updates",
-    "date": "06-Sep-2026 00:00:14",
-    "url": "https://nsearchives.nseindia.com/corporate/JACPL_05092026235956_Summary_Proceeding_USC_JACPL.pdf",
-    "summary": "Jubilant Agri and Consumer Products Limited held an NCLT-convened meeting of its Unsecured Creditors on September 5, 2026, to seek approval for a proposed demerger scheme with Jubilant Agri Solutions Limited. The meeting, which took place in Uttar Pradesh, was attended by 24 creditors, and the chairperson addressed their queries before conducting a poll vote on the arrangement. The company has communicated the proceedings and results to the stock exchanges in compliance with SEBI regulations.",
-    "saved_at": "2026-09-06T01:16:29.354687"
-  },
-  {
     "id": "NSE_106772066",
     "source": "NSE",
     "company": "Kavveri Defence & Wireless Technologies Limited",
@@ -1439,5 +1428,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/KOTARISUG_05102026210359_IntimationofreceiptofNCLTOrder.pdf",
     "summary": "Kothari Sugars And Chemicals Limited announced that the National Company Law Tribunal, Chennai Bench, has issued an order regarding its proposed Scheme of Amalgamation. The order directs the companies involved to convene separate meetings of their shareholders and unsecured creditors.",
     "saved_at": "2026-10-05T21:31:52.890759"
+  },
+  {
+    "id": "NSE_106807972",
+    "source": "NSE",
+    "company": "Privi Speciality Chemicals Limited",
+    "scrip": "PRIVISCL",
+    "headline": "General Updates",
+    "date": "06-Oct-2026 11:19:28",
+    "url": "https://nsearchives.nseindia.com/corporate/FAIRCHEMDP_06102026111909_NoticetoNSE.pdf",
+    "summary": "Privi Speciality Chemicals Limited has notified the Exchange of a meeting of its equity shareholders regarding a Scheme of Amalgamation. The meeting is scheduled for Tuesday, October 27, 2026, at 12:30 p.m.",
+    "saved_at": "2026-10-06T08:49:54.016325"
   }
 ]
