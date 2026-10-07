@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106772168",
-    "source": "NSE",
-    "company": "Jubilant Agri and Consumer Products Limited",
-    "scrip": "JUBLCPL",
-    "headline": "General Updates",
-    "date": "07-Sep-2026 00:11:15",
-    "url": "https://nsearchives.nseindia.com/corporate/JACPL_07092026001101_IntimationVotingResultsUSCSigned.pdf",
-    "summary": "Jubilant Agri and Consumer Products Limited has submitted the Scrutinizer\u2019s Report and voting results from the NCLT-convened meeting of Unsecured Creditors, held on September 05, 2026. The submission was made to the Exchange as part of the company\u2019s general update disclosures.",
-    "saved_at": "2026-09-07T00:59:42.488599"
-  },
-  {
-    "id": "NSE_106772166",
-    "source": "NSE",
-    "company": "Jubilant Agri and Consumer Products Limited",
-    "scrip": "JUBLCPL",
-    "headline": "Shareholders meeting",
-    "date": "07-Sep-2026 00:04:16",
-    "url": "https://nsearchives.nseindia.com/corporate/JACPL_07092026000403_IntimationVotingResultsESHSigned.pdf",
-    "summary": "Jubilant Agri and Consumer Products Limited has submitted the Scrutinizer\u2019s Report and voting results to the Exchange regarding the NCLT-convened Equity Shareholders\u2019 Meeting held on September 05, 2026. The announcement confirms the completion of the voting process at this meeting. No further details on the resolutions were provided in the summary.",
-    "saved_at": "2026-09-07T00:59:43.767853"
-  },
-  {
     "id": "NSE_106772680",
     "source": "NSE",
     "company": "Lodha Developers Limited",
@@ -1461,5 +1439,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/sumedha_06102026224510_SEIntimationSchemesanctionbyHyderabadBench06oct2026signed.pdf",
     "summary": "BirlaNu Limited announced that the NCLT Hyderabad Bench has approved the Scheme of Amalgamation of Clean Coats Private Limited (Transferor Company) with BirlaNu Limited (Transferee Company) via order dated October 6, 2026. However, the scheme petition filed by the Transferor Company before the NCLT Mumbai Bench is still pending approval. The scheme will only come into effect upon filing certified copies of the sanctioning orders with the respective Registrar of Companies by both companies.",
     "saved_at": "2026-10-06T20:33:34.390496"
+  },
+  {
+    "id": "NSE_106809137",
+    "source": "NSE",
+    "company": "Inox Green Energy Services Limited",
+    "scrip": "INOXGREEN",
+    "headline": "Press Release",
+    "date": "07-Oct-2026 07:52:27",
+    "url": "https://nsearchives.nseindia.com/corporate/IGESL_07102026074723_IGESL__PR_STXs_dsc.pdf",
+    "summary": "Inox Green Energy Services Limited has completed payment for the transfer of Wind World India's 4.5 GW wind O&M business, in accordance with the Business Transfer Agreement. The company disclosed this via a press release dated October 7, 2026, filed with the stock exchange.",
+    "saved_at": "2026-10-07T06:00:38.882920"
   }
 ]
