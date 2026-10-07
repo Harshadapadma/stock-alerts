@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106772680",
-    "source": "NSE",
-    "company": "Lodha Developers Limited",
-    "scrip": "LODHA",
-    "headline": "Copy of Newspaper Publication",
-    "date": "07-Sep-2026 14:55:48",
-    "url": "https://nsearchives.nseindia.com/corporate/LODHA_07092026145433_Lodha_Newspaper_advt_Cover_Letter.pdf",
-    "summary": "Lodha Developers Limited has informed the stock exchange about a newspaper advertisement regarding a meeting convened by the NCLT. The meeting is for the company's equity shareholders and secured creditors, including secured debenture holders. The announcement serves as formal notice of this scheduled meeting.",
-    "saved_at": "2026-09-07T12:19:16.237372"
-  },
-  {
     "id": "NSE_106773771",
     "source": "NSE",
     "company": "Bhagyanagar India Limited",
@@ -1450,5 +1439,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/IGESL_07102026074723_IGESL__PR_STXs_dsc.pdf",
     "summary": "Inox Green Energy Services Limited has completed payment for the transfer of Wind World India's 4.5 GW wind O&M business, in accordance with the Business Transfer Agreement. The company disclosed this via a press release dated October 7, 2026, filed with the stock exchange.",
     "saved_at": "2026-10-07T06:00:38.882920"
+  },
+  {
+    "id": "NSE_106810015",
+    "source": "NSE",
+    "company": "Maharashtra Seamless Limited",
+    "scrip": "MAHSEAMLES",
+    "headline": "Scheme of Arrangement",
+    "date": "07-Oct-2026 17:26:34",
+    "url": "https://nsearchives.nseindia.com/corporate/MAHSEAMLES_07102026172556_MSLIntimationDemerger.pdf",
+    "summary": "Maharashtra Seamless Limited's Board has approved a composite scheme of arrangement to demerge two of its undertakings into its wholly owned subsidiaries\u2014MSL Seamless Tubes Limited and United Seamless Limited\u2014with an appointed date of October 1, 2026. The scheme, which remains subject to shareholder, creditor, and NCLT approvals, will result in MSTL issuing shares directly to MSL's eligible shareholders as its existing capital is cancelled.",
+    "saved_at": "2026-10-07T13:17:12.777440"
   }
 ]
