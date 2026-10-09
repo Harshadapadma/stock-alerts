@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106775966",
-    "source": "NSE",
-    "company": "Siemens Limited",
-    "scrip": "SIEMENS",
-    "headline": "Amalgamation/Merger",
-    "date": "09-Sep-2026 10:18:00",
-    "url": "https://nsearchives.nseindia.com/corporate/SIEMENS_09092026101753_SE_Intimation_-_SRAPL_-_09092026.pdf",
-    "summary": "Siemens Limited has received a National Company Law Tribunal (Mumbai Bench) order dated September 7, 2026, related to its amalgamation/merger. The order dispenses with the requirement for meetings of equity shareholders and unsecured creditors of both the transferor and transferee companies. The full order is attached to the announcement.",
-    "saved_at": "2026-09-09T06:41:14.545746"
-  },
-  {
     "id": "NSE_106776951",
     "source": "NSE",
     "company": "Digjam Limited",
@@ -1395,5 +1384,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/MOL_08102026183249_Intimation_to_Stock_Exchanges_08102026.pdf",
     "summary": "The National Company Law Tribunal (NCLT), Ahmedabad Bench, has sanctioned the Scheme of Amalgamation involving Kilburn Chemicals Limited and Meghmani Crop Nutrition Limited as transferor companies and Meghmani Organics Limited as the transferee company. The scheme will become effective once the certified NCLT order is received and filed by all companies with the Registrar of Companies, Ahmedabad.",
     "saved_at": "2026-10-08T17:34:52.597136"
+  },
+  {
+    "id": "NSE_106812418",
+    "source": "NSE",
+    "company": "Triveni Engineering & Industries Limited",
+    "scrip": "TRIVENI",
+    "headline": "Scheme of Arrangement",
+    "date": "09-Oct-2026 13:36:43",
+    "url": "https://nsearchives.nseindia.com/corporate/TRIVENI_09102026133634_INTIMATION__TPTL_LISTING.pdf",
+    "summary": "Triveni Power Transmission Ltd (TPTL), a party to the composite scheme of arrangement involving Triveni Engineering & Industries Ltd, has received listing and trading approvals from BSE and NSE for its equity shares effective October 12, 2026. A total of 10,47,54,338 fully paid-up equity shares of Rs. 2/- each will be listed under BSE scrip code 544824 and NSE symbol TRIVENIPT.",
+    "saved_at": "2026-10-09T09:34:43.698939"
   }
 ]
