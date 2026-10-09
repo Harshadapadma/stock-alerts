@@ -1,38 +1,5 @@
 [
   {
-    "id": "NSE_106776951",
-    "source": "NSE",
-    "company": "Digjam Limited",
-    "scrip": "DIGJAMLMTD",
-    "headline": "Updates",
-    "date": "09-Sep-2026 20:50:39",
-    "url": "https://nsearchives.nseindia.com/corporate/DIGJAMLMTD_09092026205029_Petition_Order_SE_Intimation-merged.pdf",
-    "summary": "Digjam Limited has informed the exchange of an order from the National Company Law Tribunal (NCLT), Chennai Bench, regarding its proposed scheme of arrangement. The scheme involves the demerger of Reid & Taylor International Private Limited into Digjam Limited as the resulting company, along with its shareholders. The announcement serves as an update on the tribunal's decision related to this corporate restructuring.",
-    "saved_at": "2026-09-09T16:31:50.653710"
-  },
-  {
-    "id": "NSE_106776949",
-    "source": "NSE",
-    "company": "Digjam Limited",
-    "scrip": "DIGJAMLMTD",
-    "headline": "Amalgamation/Merger",
-    "date": "09-Sep-2026 20:48:23",
-    "url": "https://nsearchives.nseindia.com/corporate/DIGJAMLMTD_09092026204809_Petition_Order_SE_Intimation-merged.pdf",
-    "summary": "Digjam Limited has received an order from the NCLT, Chennai Bench regarding its proposed Scheme of Arrangement with Reid & Taylor International Private Limited. The scheme involves the demerger of Reid & Taylor into Digjam as the resulting company, affecting its shareholders. The announcement confirms the tribunal's ruling on the matter.",
-    "saved_at": "2026-09-09T16:31:51.737518"
-  },
-  {
-    "id": "NSE_106776875",
-    "source": "NSE",
-    "company": "TVS Holdings Limited",
-    "scrip": "TVSHLTD",
-    "headline": "Allotment of Securities",
-    "date": "09-Sep-2026 19:13:55",
-    "url": "https://nsearchives.nseindia.com/corporate/SUNCLAYLTD_09092026191331_SEINTIMATIONALLOTMENTSGD.pdf",
-    "summary": "TVS Holdings Limited has allotted 93,06,76,784 bonus 6% Cumulative Non-Convertible Redeemable Preference Shares (NCRPS) to its equity shareholders, in the ratio of 46 NCRPS for every 1 equity share held, as per the NCLT-approved Scheme of Arrangement. The NCRPS, with a face value of INR 10 each, were allotted on 9th September 2026 and will mature on 9th December 2027, with an option for early redemption after 12 months. The company will now seek depository credit and stock exchange listing for these securities.",
-    "saved_at": "2026-09-09T16:31:53.400317"
-  },
-  {
     "id": "NSE_106777141",
     "source": "NSE",
     "company": "Tata Motors Limited",
@@ -1395,5 +1362,49 @@
     "url": "https://nsearchives.nseindia.com/corporate/TRIVENI_09102026133634_INTIMATION__TPTL_LISTING.pdf",
     "summary": "Triveni Power Transmission Ltd (TPTL), a party to the composite scheme of arrangement involving Triveni Engineering & Industries Ltd, has received listing and trading approvals from BSE and NSE for its equity shares effective October 12, 2026. A total of 10,47,54,338 fully paid-up equity shares of Rs. 2/- each will be listed under BSE scrip code 544824 and NSE symbol TRIVENIPT.",
     "saved_at": "2026-10-09T09:34:43.698939"
+  },
+  {
+    "id": "NSE_106812993",
+    "source": "NSE",
+    "company": "Jubilant Agri and Consumer Products Limited",
+    "scrip": "JUBLCPL",
+    "headline": "Demerger",
+    "date": "09-Oct-2026 18:58:01",
+    "url": "https://nsearchives.nseindia.com/corporate/JACPL_09102026185743_Intimation_2nd_MotionSigned.pdf",
+    "summary": "Jubilant Agri and Consumer Products Limited announced that the NCLT Allahabad Bench has issued an order directing notices to statutory and regulatory authorities for their input on its proposed demerger with Jubilant Agri Solutions Limited. The next hearing in the matter is scheduled for December 03, 2026.",
+    "saved_at": "2026-10-09T16:34:31.909559"
+  },
+  {
+    "id": "NSE_106812967",
+    "source": "NSE",
+    "company": "Bhagyanagar India Limited",
+    "scrip": "BHAGYANGR",
+    "headline": "Updates",
+    "date": "09-Oct-2026 18:48:16",
+    "url": "https://nsearchives.nseindia.com/corporate/BHAGYANGR_09102026184624_Intimation_to_Se.pdf",
+    "summary": "Bhagyanagar India Limited announced that Tieramet Limited, the resulting company from a Composite Scheme of Arrangement, has allotted equity shares to Bhagyanagar India Limited's shareholders. This update was disclosed to the stock exchange as part of the scheme's implementation.",
+    "saved_at": "2026-10-09T16:34:32.839202"
+  },
+  {
+    "id": "NSE_106812892",
+    "source": "NSE",
+    "company": "Meghmani Organics Limited",
+    "scrip": "MOL",
+    "headline": "Amalgamation/Merger",
+    "date": "09-Oct-2026 18:12:58",
+    "url": "https://nsearchives.nseindia.com/corporate/MOL_09102026181245_CERTIFIEDORDER.pdf",
+    "summary": "Meghmani Organics Limited has received the NCLT Ahmedabad Bench's certified order approving the scheme of amalgamation of its two wholly owned subsidiaries, Kilburn Chemicals Limited and Meghmani Crop Nutrition Limited, into itself. The scheme will become effective upon filing of the certified order with the Registrar of Companies, Ahmedabad.",
+    "saved_at": "2026-10-09T16:34:34.249055"
+  },
+  {
+    "id": "NSE_106812648",
+    "source": "NSE",
+    "company": "Saksoft Limited",
+    "scrip": "SAKSOFT",
+    "headline": "Amalgamation/Merger",
+    "date": "09-Oct-2026 16:25:40",
+    "url": "https://nsearchives.nseindia.com/corporate/SAKSOFT_09102026162525_Intimation_to_SE_-_Revised_order_signed.pdf",
+    "summary": "Saksoft Limited announced that the NCLT Chennai Bench has issued a rectified order correcting factual and typographical errors in the original order approving its Scheme of Amalgamation with Augmento Labs Private Limited. The corrections clarify Saksoft's role as Transferee Company, the scheme annexure reference, and certain dates, though the tribunal declined to allow additions regarding STPI and GST notices.",
+    "saved_at": "2026-10-09T16:34:38.066342"
   }
 ]
