@@ -1,38 +1,5 @@
 [
   {
-    "id": "NSE_106779676",
-    "source": "NSE",
-    "company": "LLOYDS ENGINEERING WORKS LIMITED",
-    "scrip": "LLOYDSENGG",
-    "headline": "Copy of Newspaper Publication",
-    "date": "12-Sep-2026 14:26:03",
-    "url": "https://nsearchives.nseindia.com/corporate/LSIL_12092026142531_Newspaper_Advertisement_for_uploading_signed.pdf",
-    "summary": "Lloyds Engineering Works Limited has notified the Exchange of a newspaper publication issued pursuant to an NCLT Mumbai Bench order. The publication relates to the convening of meetings for the company's equity shareholders and unsecured creditors.",
-    "saved_at": "2026-09-12T09:17:46.670829"
-  },
-  {
-    "id": "NSE_106779637",
-    "source": "NSE",
-    "company": "Siemens Limited",
-    "scrip": "SIEMENS",
-    "headline": "Amalgamation/Merger",
-    "date": "12-Sep-2026 12:01:02",
-    "url": "https://nsearchives.nseindia.com/corporate/SiemensRaj_12092026120046_SEIntimation.pdf",
-    "summary": "Siemens Limited announced that its wholly owned subsidiary, Siemens Rail Automation Private Limited, will be amalgamated into the company under Sections 230\u2013232 of the Companies Act, 2013. The NCLT Mumbai Bench has dispensed with the requirement to hold equity shareholder and unsecured creditor meetings, instead directing the company to issue notices inviting representations on the scheme. Equity shareholders may submit any representations to the Tribunal, with a simultaneous copy served on the company.",
-    "saved_at": "2026-09-12T09:17:48.703301"
-  },
-  {
-    "id": "NSE_106779723",
-    "source": "NSE",
-    "company": "JSW Steel Limited",
-    "scrip": "JSWSTEEL",
-    "headline": "Copy of Newspaper Publication",
-    "date": "12-Sep-2026 16:20:30",
-    "url": "https://nsearchives.nseindia.com/corporate/jessydenny_12092026162018_newspaper-_merger.pdf",
-    "summary": "JSW Steel Limited has notified the Exchange of a newspaper publication regarding the petition hearing date before the Hon'ble NCLT. The hearing pertains to the proposed amalgamation of Piombino Steel Limited with JSW Steel Ltd.",
-    "saved_at": "2026-09-12T12:56:45.975300"
-  },
-  {
     "id": "NSE_106780859",
     "source": "NSE",
     "company": "K.M.Sugar Mills Limited",
@@ -1307,5 +1274,104 @@
     "url": "https://nsearchives.nseindia.com/corporate/EMCURE_12102026103306_OutcomeofBM12102026_Final.pdf",
     "summary": "Emcure Pharmaceuticals Limited's Board approved a scheme to amalgamate its wholly owned subsidiaries, Zuventus Healthcare Limited and Emcutix Biopharmaceuticals Limited, into the holding company. The merger is subject to requisite statutory and regulatory approvals.",
     "saved_at": "2026-10-12T08:01:50.857294"
+  },
+  {
+    "id": "NSE_106815050",
+    "source": "NSE",
+    "company": "K.M.Sugar Mills Limited",
+    "scrip": "KMSUGAR",
+    "headline": "Scheme of Arrangement",
+    "date": "12-Oct-2026 21:06:38",
+    "url": "https://nsearchives.nseindia.com/corporate/KMSUGAR_12102026210608_INTIMATION.pdf",
+    "summary": "K.M. Sugar Mills Limited has completed the demerger of its Distillery Division into K.M. Spirits and Allied Industries Limited, with the resulting company allotting 1,84,00,034 fully-paid equity shares of INR 10 each to eligible shareholders of K.M. Sugar Mills as of the October 2, 2026 record date. Concurrently, the shares of the resulting company previously held by K.M. Sugar Mills have been cancelled, meaning K.M. Spirits ceases to be a subsidiary of the company.",
+    "saved_at": "2026-10-12T17:51:30.455910"
+  },
+  {
+    "id": "NSE_106814948",
+    "source": "NSE",
+    "company": "Ventive Hospitality Limited",
+    "scrip": "VENTIVE",
+    "headline": "Amalgamation/Merger",
+    "date": "12-Oct-2026 19:01:22",
+    "url": "https://nsearchives.nseindia.com/corporate/VENTIVE_12102026185715_VHL_-_Appeal.pdf",
+    "summary": "Ventive Hospitality Limited's board has approved filing an appeal against Point No. 22 of the NCLT Mumbai Bench's September 23, 2026 order concerning its proposed amalgamation with three transferor companies. The company will continue to inform stock exchanges of any material developments regarding the scheme.",
+    "saved_at": "2026-10-12T17:51:31.558434"
+  },
+  {
+    "id": "NSE_106814923",
+    "source": "NSE",
+    "company": "Kothari Sugars And Chemicals Limited",
+    "scrip": "KOTARISUG",
+    "headline": "Amalgamation/Merger",
+    "date": "12-Oct-2026 18:47:36",
+    "url": "https://nsearchives.nseindia.com/corporate/KOTARISUG_12102026184634_2_IntimationofNoticeofUnsecuredCreditors.pdf",
+    "summary": "Kothari Sugars and Chemicals Limited announced that, per NCLT Chennai's order dated September 30, 2026, a meeting of its Unsecured Creditors will be held on November 13, 2026 via video conferencing to consider and approve the Scheme of Amalgamation. Unsecured Creditors on record as of the cut-off date of July 31, 2026 are eligible to vote, with remote e-voting open from November 10 to November 12, 2026.",
+    "saved_at": "2026-10-12T17:51:33.006761"
+  },
+  {
+    "id": "NSE_106814903",
+    "source": "NSE",
+    "company": "Kothari Sugars And Chemicals Limited",
+    "scrip": "KOTARISUG",
+    "headline": "Shareholders meeting",
+    "date": "12-Oct-2026 18:39:17",
+    "url": "https://nsearchives.nseindia.com/corporate/KOTARISUG_12102026183738_1_IntimationofNoticeofShareholders.pdf",
+    "summary": "Kothari Sugars and Chemicals Limited has convened a meeting of its Equity Shareholders on November 13, 2026, via video conferencing, as directed by the Hon'ble NCLT, to consider and approve the Scheme of Amalgamation. The remote e-voting period runs from November 10 to November 12, 2026, with the cut-off date for eligibility fixed as November 6, 2026.",
+    "saved_at": "2026-10-12T17:51:34.237716"
+  },
+  {
+    "id": "NSE_106814850",
+    "source": "NSE",
+    "company": "Kothari Petrochemicals Limited",
+    "scrip": "KOTHARIPET",
+    "headline": "Copy of Newspaper Publication",
+    "date": "12-Oct-2026 18:24:18",
+    "url": "https://nsearchives.nseindia.com/corporate/KOTHARIPET_12102026182327_4_IntimationofNewspaperAdvertisement.pdf",
+    "summary": "Kothari Petrochemicals Limited has notified the Exchange of a newspaper publication regarding a Joint Notice of Meetings for its Equity Shareholders and Unsecured Creditors. The notice was issued pursuant to an order from the National Company Law Tribunal, Chennai Bench.",
+    "saved_at": "2026-10-12T17:51:35.392996"
+  },
+  {
+    "id": "NSE_106814824",
+    "source": "NSE",
+    "company": "Kothari Petrochemicals Limited",
+    "scrip": "KOTHARIPET",
+    "headline": "Amalgamation/Merger",
+    "date": "12-Oct-2026 18:17:48",
+    "url": "https://nsearchives.nseindia.com/corporate/KOTHARIPET_12102026181651_2_IntimationofNoticeofUnsecuredCreditors.pdf",
+    "summary": "Kothari Petrochemicals Limited has announced that, per NCLT Chennai's order dated September 30, 2026, a meeting of its Unsecured Creditors will be held on November 13, 2026 via video conferencing to consider and approve the Scheme of Amalgamation. The cut-off date for e-voting eligibility is July 31, 2026, with remote e-voting open from November 10\u201312, 2026. The Notice and Explanatory Statement have been sent to creditors and are also available on the company's website.",
+    "saved_at": "2026-10-12T17:51:36.866806"
+  },
+  {
+    "id": "NSE_106814803",
+    "source": "NSE",
+    "company": "Kothari Petrochemicals Limited",
+    "scrip": "KOTHARIPET",
+    "headline": "Shareholders meeting",
+    "date": "12-Oct-2026 18:10:38",
+    "url": "https://nsearchives.nseindia.com/corporate/KOTHARIPET_12102026180919_1_IntimationofNoticeofShareholders.pdf",
+    "summary": "Kothari Petrochemicals Limited has convened a meeting of its Equity Shareholders on November 13, 2026, via video conferencing to consider and approve a Scheme of Amalgamation, as directed by the Hon'ble NCLT, Chennai Bench. Shareholders on record as of the cut-off date of November 6, 2026, are eligible to vote, with remote e-voting open from November 10 to November 12, 2026. The Notice and Explanatory Statement have been dispatched electronically and are also available on the Company's website.",
+    "saved_at": "2026-10-12T17:51:37.992178"
+  },
+  {
+    "id": "NSE_106814721",
+    "source": "NSE",
+    "company": "Master Trust Limited",
+    "scrip": "MASTERTR",
+    "headline": "General Updates",
+    "date": "12-Oct-2026 17:48:18",
+    "url": "https://nsearchives.nseindia.com/corporate/MASTERTRUSTNSE_12102026174810_Disclosure_Reg_30.pdf",
+    "summary": "Master Trust Limited has acquired 100% equity shares (5,00,000 shares at Rs. 10 each) of Future Colonizers & Construction Limited for Rs. 50,00,000 in cash, pursuant to an NCLT-approved Resolution Plan dated August 13, 2026. Following this allotment, Future Colonizers & Construction Limited has become a wholly owned subsidiary of Master Trust Limited. The acquisition, in the Construction and Real Estate sector, is aimed at implementing the approved Resolution Plan and realizing the target company's assets.",
+    "saved_at": "2026-10-12T17:51:39.358415"
+  },
+  {
+    "id": "NSE_106814623",
+    "source": "NSE",
+    "company": "Master Trust Limited",
+    "scrip": "MASTERTR",
+    "headline": "General Updates",
+    "date": "12-Oct-2026 17:22:52",
+    "url": "https://nsearchives.nseindia.com/corporate/MASTERTRUSTNSE_12102026172241_Disclosure_Reg_30.pdf",
+    "summary": "Master Trust Limited announced that Future Colonizers & Construction Limited has allotted 5,00,000 equity shares to it under an NCLT-approved Resolution Plan, making it a wholly owned subsidiary. The acquisition, valued at Rs. 50,00,000 in cash, was approved by the Board on 12th October, 2026.",
+    "saved_at": "2026-10-12T17:51:40.364107"
   }
 ]
