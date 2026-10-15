@@ -1549,5 +1549,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/MANESHJ_15102026102815_NSE_Clarification_15102026.pdf",
     "summary": "IDBI Bank Limited issued a response to a stock exchange clarification request regarding a news report claiming the Cabinet approved a stake sale to Fairfax for Rs 52,878 crore. The company's reply is attached to the announcement.",
     "saved_at": "2026-10-15T05:12:06.494594"
+  },
+  {
+    "id": "NSE_106818549",
+    "source": "NSE",
+    "company": "CSB Bank Limited",
+    "scrip": "CSBBANK",
+    "headline": "News Verification",
+    "date": "15-Oct-2026 14:37:48",
+    "url": "-",
+    "summary": "The Exchange has asked CSB Bank for clarification regarding a news report suggesting a possible merger with IDBI Bank after a Fairfax deal. CSB Bank's response is still awaited.",
+    "saved_at": "2026-10-15T10:04:41.420608"
+  },
+  {
+    "id": "NSE_106818522",
+    "source": "NSE",
+    "company": "Tata Communications Limited",
+    "scrip": "TATACOMM",
+    "headline": "Other Restructuring",
+    "date": "15-Oct-2026 14:11:08",
+    "url": "https://nsearchives.nseindia.com/corporate/TATACOMM_15102026141057_18526.pdf",
+    "summary": "Tata Communications' Board approved transferring its entire shareholding in Kaleyra, Inc. to wholly-owned subsidiary Tata Communications (Netherlands) B.V., in exchange for newly issued TCNL shares at fair market value, simplifying the group structure without changing ultimate ownership. The Board also approved its unaudited standalone and consolidated results for the quarter and half-year ended September 30, 2026, with an unmodified limited review opinion from its auditors, and appointed Ms. Ridhi Sood as Company Secretary and Compliance Officer effective November 1, 2026.",
+    "saved_at": "2026-10-15T10:04:43.078194"
   }
 ]
