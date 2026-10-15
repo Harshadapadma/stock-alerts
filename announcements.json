@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106780859",
-    "source": "NSE",
-    "company": "K.M.Sugar Mills Limited",
-    "scrip": "KMSUGAR",
-    "headline": "Scheme of Arrangement",
-    "date": "15-Sep-2026 17:55:43",
-    "url": "https://nsearchives.nseindia.com/corporate/KMSUGAR_15092026175436_REG30_DEMERGERUPDATE.pdf",
-    "summary": "K.M. Sugar Mills Limited announced that the National Company Law Tribunal (NCLT) has sanctioned the Scheme of Arrangement for the demerger of its Distillery Division into KM Spirits and Allied Industries Limited. The certified copy of the NCLT order dated August 19, 2026, was received by the Company on September 14, 2026, with an Appointed Date of April 1, 2026. The Effective Date and Record Date will be determined by the Boards of both companies and communicated in due course.",
-    "saved_at": "2026-09-15T12:53:19.062681"
-  },
-  {
     "id": "NSE_106781704",
     "source": "NSE",
     "company": "Triveni Engineering & Industries Limited",
@@ -1571,5 +1560,60 @@
     "url": "https://nsearchives.nseindia.com/corporate/TATACOMM_15102026141057_18526.pdf",
     "summary": "Tata Communications' Board approved transferring its entire shareholding in Kaleyra, Inc. to wholly-owned subsidiary Tata Communications (Netherlands) B.V., in exchange for newly issued TCNL shares at fair market value, simplifying the group structure without changing ultimate ownership. The Board also approved its unaudited standalone and consolidated results for the quarter and half-year ended September 30, 2026, with an unmodified limited review opinion from its auditors, and appointed Ms. Ridhi Sood as Company Secretary and Compliance Officer effective November 1, 2026.",
     "saved_at": "2026-10-15T10:04:43.078194"
+  },
+  {
+    "id": "NSE_106819244",
+    "source": "NSE",
+    "company": "HEG Advanced Materials Limited",
+    "scrip": "HEGAM",
+    "headline": "Updates",
+    "date": "15-Oct-2026 20:08:52",
+    "url": "https://nsearchives.nseindia.com/corporate/HEGAM_15102026200842_StEX_HEGG_GSTProceeding_15102026.pdf",
+    "summary": "HEG Advanced Materials Limited informed the Exchange that the GST Authority has dropped proceedings against it for FY 2020-21. The intimation was made by the Resulting Company under the Composite Scheme of Arrangement.",
+    "saved_at": "2026-10-15T14:59:15.923833"
+  },
+  {
+    "id": "NSE_106819194",
+    "source": "NSE",
+    "company": "Tata Steel Limited",
+    "scrip": "TATASTEEL",
+    "headline": "Amalgamation/Merger",
+    "date": "15-Oct-2026 19:24:44",
+    "url": "https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_15102026192421_BSENSE_Signed.pdf",
+    "summary": "Tata Steel Limited has received the certified true copy of the NCLT Mumbai Bench order approving the Scheme of Amalgamation of Rujuvalika Investments Limited with Tata Steel Limited. The order relates to the merger of the two companies and their respective shareholders.",
+    "saved_at": "2026-10-15T14:59:17.273534"
+  },
+  {
+    "id": "NSE_106819104",
+    "source": "NSE",
+    "company": "Asian Energy Services Limited",
+    "scrip": "ASIANENE",
+    "headline": "Scheme of Arrangement",
+    "date": "15-Oct-2026 18:48:58",
+    "url": "https://nsearchives.nseindia.com/corporate/ASIANENE_15102026184623_SEIntimationofNCLTFinalOrder_signed.pdf",
+    "summary": "Asian Energy Services Limited has received the certified true copy of the final order from the NCLT Mumbai Bench approving the Scheme of Merger by Absorption of Oilmax Energy Private Limited into Asian Energy Services Limited. The scheme also covers the respective shareholders of both companies.",
+    "saved_at": "2026-10-15T14:59:19.185518"
+  },
+  {
+    "id": "NSE_106818808",
+    "source": "NSE",
+    "company": "The Phoenix Mills Limited",
+    "scrip": "PHOENIXLTD",
+    "headline": "Amalgamation/Merger",
+    "date": "15-Oct-2026 17:02:07",
+    "url": "https://nsearchives.nseindia.com/corporate/PHOENIXLTD_15102026170154_PML_intimationofmerger_15102026_sd.pdf",
+    "summary": "The Phoenix Mills Limited announced that its step-down subsidiary, Truevalue Infrabuild Private Limited, will amalgamate into its subsidiary, SGH Realty Private Limited, following board approvals on October 15, 2026. The merger is subject to approvals from the Regional Director/NCLT and other statutory authorities, and aims to create a simplified and unified business structure.",
+    "saved_at": "2026-10-15T14:59:20.809336"
+  },
+  {
+    "id": "NSE_106818745",
+    "source": "NSE",
+    "company": "CSB Bank Limited",
+    "scrip": "CSBBANK",
+    "headline": "News Verification",
+    "date": "15-Oct-2026 16:34:11",
+    "url": "https://nsearchives.nseindia.com/corporate/CSBBANK_15102026163334_NSENewsClarification15102026f.pdf",
+    "summary": "CSB Bank Limited issued a response to a stock exchange clarification regarding a news report suggesting a possible merger with IDBI Bank after a Fairfax deal. The company's reply is attached to the announcement.",
+    "saved_at": "2026-10-15T14:59:22.196353"
   }
 ]
