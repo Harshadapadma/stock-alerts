@@ -1615,5 +1615,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/CSBBANK_15102026163334_NSENewsClarification15102026f.pdf",
     "summary": "CSB Bank Limited issued a response to a stock exchange clarification regarding a news report suggesting a possible merger with IDBI Bank after a Fairfax deal. The company's reply is attached to the announcement.",
     "saved_at": "2026-10-15T14:59:22.196353"
+  },
+  {
+    "id": "NSE_106819383",
+    "source": "NSE",
+    "company": "REC Limited",
+    "scrip": "RECLTD",
+    "headline": "General Updates",
+    "date": "15-Oct-2026 22:36:38",
+    "url": "https://nsearchives.nseindia.com/corporate/RECLTD_15102026223533_Signed_intimation_reciept_NOC.pdf",
+    "summary": "REC Limited has received a No Objection Certificate from the RBI dated October 15, 2026, subject to specified conditions. The scheme remains contingent on further statutory and regulatory approvals, including shareholder and creditor consent.",
+    "saved_at": "2026-10-15T19:03:13.020650"
+  },
+  {
+    "id": "NSE_106819322",
+    "source": "NSE",
+    "company": "Power Finance Corporation Limited",
+    "scrip": "PFC",
+    "headline": "Amalgamation/Merger",
+    "date": "15-Oct-2026 21:39:12",
+    "url": "https://nsearchives.nseindia.com/corporate/PFC2023_15102026213836_INTIMATIONNOC15102026SIGNED.pdf",
+    "summary": "Power Finance Corporation Limited has received a No Objection Certificate from the Reserve Bank of India regarding the proposed merger of REC Limited into PFC. The scheme, which also involves their respective shareholders and creditors, will proceed under sections 230-232 of the Companies Act, 2013.",
+    "saved_at": "2026-10-15T19:03:14.290731"
   }
 ]
