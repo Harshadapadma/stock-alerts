@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106781704",
-    "source": "NSE",
-    "company": "Triveni Engineering & Industries Limited",
-    "scrip": "TRIVENI",
-    "headline": "Scheme of Arrangement",
-    "date": "16-Sep-2026 13:21:35",
-    "url": "https://nsearchives.nseindia.com/corporate/TRIVENI_16092026132125_AC_AND_ID_REPORTS_16_9_2026.pdf",
-    "summary": "Triveni Engineering & Industries Limited announced that its Audit Committee and Independent Directors have certified the distribution of proceeds from fractional shares to eligible shareholders under a Composite Scheme of Arrangement involving Sir Shadi Lal Enterprises Limited and Triveni Power Transmission Limited. The Scheme, approved by the NCLT in May 2026, resulted in the merger of Sir Shadi Lal Enterprises with Triveni Engineering, with shares allotted to eligible shareholders on June 9, 2026. The certification reports, dated September 16, 2026, were issued in compliance with SEBI's Master Circular on Schemes of Arrangement.",
-    "saved_at": "2026-09-16T12:02:33.002534"
-  },
-  {
     "id": "NSE_106782290",
     "source": "NSE",
     "company": "GPT Infraprojects Limited",
@@ -1648,5 +1637,38 @@
     "url": "https://nsearchives.nseindia.com/corporate/BALKRISHNA_16102026133502_IntimationtoNSE.pdf",
     "summary": "Balkrishna Paper Mills Limited announced that the National Company Law Tribunal (NCLT) has admitted its petition for a Scheme of Arrangement involving the reduction of its share capital under Sections 66 and 52 of the Companies Act, 2013. The company has been directed to comply with the necessary directions in the NCLT order dated October 14, 2026. The reduction involves adjusting accumulated losses of approximately Rs. 52.28 crore against the Securities Premium Reserve and reducing the face value of equity shares from Rs. 10 to Re. 1 each.",
     "saved_at": "2026-10-16T09:36:35.251192"
+  },
+  {
+    "id": "NSE_106820393",
+    "source": "NSE",
+    "company": "Affle 3i Limited",
+    "scrip": "AFFLE",
+    "headline": "Updates",
+    "date": "16-Oct-2026 17:51:58",
+    "url": "https://nsearchives.nseindia.com/corporate/AFFLE_16102026174951_Intimation_regarding_Supreme_Court_Order.pdf",
+    "summary": "Affle 3i Limited announced that the Supreme Court of India has granted a stay order on the Corporate Insolvency Resolution Process (CIRP) proceedings of Bobble, which were pending before the NCLT. This stay provides temporary relief by halting the insolvency proceedings against Bobble.",
+    "saved_at": "2026-10-16T14:15:27.389452"
+  },
+  {
+    "id": "NSE_106820307",
+    "source": "NSE",
+    "company": "Hindware Home Innovation Limited",
+    "scrip": "HINDWAREAP",
+    "headline": "Scheme of Arrangement",
+    "date": "16-Oct-2026 17:00:29",
+    "url": "https://nsearchives.nseindia.com/corporate/SHIL_16102026170015_SE_NCLTOrder_HHIL.pdf",
+    "summary": "Hindware Home Innovation Limited has notified the exchange of a Scheme of Arrangement under SEBI Regulation 30. The disclosure follows an NCLT order approving the scheme.",
+    "saved_at": "2026-10-16T14:15:28.439960"
+  },
+  {
+    "id": "NSE_106820277",
+    "source": "NSE",
+    "company": "GFL Limited",
+    "scrip": "GFLLIMITED",
+    "headline": "Scheme of Arrangement",
+    "date": "16-Oct-2026 16:45:50",
+    "url": "https://nsearchives.nseindia.com/corporate/GFLLIMITED_16102026164424_Upload.pdf",
+    "summary": "GFL Limited has received the certified true copy of the NCLT's final order regarding its Scheme of Arrangement, following the tribunal's hearing on September 28, 2026. The Scheme's appointed date is April 1, 2026.",
+    "saved_at": "2026-10-16T14:15:29.365868"
   }
 ]
