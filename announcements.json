@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106782290",
-    "source": "NSE",
-    "company": "GPT Infraprojects Limited",
-    "scrip": "GPTINFRA",
-    "headline": "General Updates",
-    "date": "16-Sep-2026 18:58:37",
-    "url": "https://nsearchives.nseindia.com/corporate/GPTINFRA_16092026185738_BSE_and_NSE_Intimation_SGD.pdf",
-    "summary": "GPT Infraprojects announced that the NCLT Kolkata Bench issued an order on September 15, 2026, directing meetings of equity shareholders of the Transferee Company and secured/unsecured creditors of Transferor Company No. 1 and the Transferee Company to be convened within 90 days to approve a Scheme of Amalgamation. Meetings for equity shareholders of both Transferor Companies, preference shareholders and unsecured creditors of Transferor Company No. 2, and secured creditors of Transferor Company No. 2 have been dispensed with.",
-    "saved_at": "2026-09-16T16:51:02.252936"
-  },
-  {
-    "id": "NSE_106782189",
-    "source": "NSE",
-    "company": "Aditya Birla Real Estate Limited",
-    "scrip": "ABREL",
-    "headline": "Cessation",
-    "date": "16-Sep-2026 18:16:17",
-    "url": "https://nsearchives.nseindia.com/corporate/CENTURYTEX_16092026181557_FinalAKGCessationIntimation.pdf",
-    "summary": "Aditya Birla Real Estate Limited announced that Mr. Ajay Kumar Gupta has ceased to be CEO of its erstwhile Century Pulp and Paper (CPP) business division and Senior Management Personnel, effective 16th September, 2026. This follows the sale of the CPP business division to ITC Limited as a going concern on a slump sale basis.",
-    "saved_at": "2026-09-16T16:51:03.244139"
-  },
-  {
     "id": "NSE_106783344",
     "source": "NSE",
     "company": "Kitex Garments Limited",
@@ -1670,5 +1648,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/GFLLIMITED_16102026164424_Upload.pdf",
     "summary": "GFL Limited has received the certified true copy of the NCLT's final order regarding its Scheme of Arrangement, following the tribunal's hearing on September 28, 2026. The Scheme's appointed date is April 1, 2026.",
     "saved_at": "2026-10-16T14:15:29.365868"
+  },
+  {
+    "id": "NSE_106820722",
+    "source": "NSE",
+    "company": "RBL Bank Limited",
+    "scrip": "RBLBANK",
+    "headline": "General Updates",
+    "date": "16-Oct-2026 21:17:58",
+    "url": "https://nsearchives.nseindia.com/corporate/RBLBANK_16102026211705_SEOct162026DisclosureSigned.pdf",
+    "summary": "RBL Bank has received RBI approval dated October 16, 2026, sanctioning the amalgamation of Emirates NBD Bank P.J.S.C.'s Indian branches into RBL Bank. The amalgamation will take effect on December 1, 2026, when all Indian branches of Emirates NBD Bank will operate as branches of RBL Bank.",
+    "saved_at": "2026-10-16T18:10:22.486162"
   }
 ]
