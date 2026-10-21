@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106785747",
-    "source": "NSE",
-    "company": "Himadri Speciality Chemical Limited",
-    "scrip": "HSCL",
-    "headline": "Demerger",
-    "date": "21-Sep-2026 10:07:37",
-    "url": "https://nsearchives.nseindia.com/corporate/HSCL_21092026100728_Boardoutcome21092026.pdf",
-    "summary": "Himadri Speciality Chemical Limited announced a Scheme of Arrangement involving the demerger of Dalmia Bharat Refractories Limited into Himadri Speciality Chemical Ltd. The scheme, which also covers their respective shareholders and creditors, is being executed under Sections 230-232 of the Companies Act, 2013.",
-    "saved_at": "2026-09-21T07:01:59.327415"
-  },
-  {
-    "id": "NSE_106785732",
-    "source": "NSE",
-    "company": "Himadri Speciality Chemical Limited",
-    "scrip": "HSCL",
-    "headline": "Outcome of Board Meeting",
-    "date": "21-Sep-2026 10:01:47",
-    "url": "https://nsearchives.nseindia.com/corporate/HSCL_21092026100138_Boardoutcome21092026.pdf",
-    "summary": "Himadri Speciality Chemical Limited's Board approved a Scheme of Arrangement with Dalmia Bharat Refractories Limited on September 21, 2026. Under the scheme, Dalmia Bharat Refractories will be demerged, with Himadri Speciality Chemical as the resulting company. The arrangement is being pursued under Sections 230-232 of the Companies Act, 2013, subject to shareholder and creditor approvals.",
-    "saved_at": "2026-09-21T07:02:00.578601"
-  },
-  {
     "id": "NSE_106786627",
     "source": "NSE",
     "company": "Refex Industries Limited",
@@ -1626,5 +1604,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/DRAGARWALS_20102026184801_AHCL_Board_Outcome_20102026_sd.pdf",
     "summary": "Dr. Agarwal's Health Care Limited's Board approved the Scheme of Amalgamation with Dr. Agarwal's Eye Hospital Limited, effective November 1, 2026 (appointed date April 1, 2026), following NCLT sanction and ROC filing. The authorized share capital will increase from \u20b990 crore to \u20b9110 crore through reclassification and merger of the transferor company's capital. A record date of November 18, 2026 has been fixed for allotting consideration shares at a ratio of 23 equity shares of the transferee company for every 2 shares held in the transferor company.",
     "saved_at": "2026-10-20T15:19:12.456241"
+  },
+  {
+    "id": "NSE_106823393",
+    "source": "NSE",
+    "company": "ETERNAL LIMITED",
+    "scrip": "ETERNAL",
+    "headline": "Sale or disposal",
+    "date": "21-Oct-2026 15:33:41",
+    "url": "https://nsearchives.nseindia.com/corporate/ZOMATO_21102026153325_OutcomeSIGNED.pdf",
+    "summary": "Eternal Limited's board approved transferring its Going-out India business to wholly owned subsidiary Zomato Entertainment Private Limited via slump sale as part of an internal restructuring to consolidate the business and achieve operational synergies. The board also approved a share swap with Mygate involving the transfer of its Adonmo shares in exchange for Mygate shares, a step toward the proposed Adonmo-Mygate merger, after which Eternal will hold ~4.4% of the merged entity (valued at INR 156 crore versus its INR 112 crore investment). Additionally, the board approved unaudited financial results for the quarter and half year ended September 30, 2026.",
+    "saved_at": "2026-10-21T11:33:58.719862"
+  },
+  {
+    "id": "NSESME_106823277",
+    "source": "NSE-SME",
+    "company": "P. E. Analytics Limited",
+    "scrip": "PROPEQUITY",
+    "headline": "Disclosure of material issue",
+    "date": "21-Oct-2026 14:23:15",
+    "url": "https://nsearchives.nseindia.com/corporate/PROPEQUITY_21102026142233_SEIntimation_Propedge.pdf",
+    "summary": "P. E. Analytics Limited has filed an application under Section 97(1) of the Companies Act, 2013 before the Hon'ble NCLT concerning the Annual General Meeting of its material subsidiary. The company disclosed this as a material issue in its corporate announcement.",
+    "saved_at": "2026-10-21T11:34:00.054873"
   }
 ]
