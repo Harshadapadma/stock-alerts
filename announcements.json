@@ -1,38 +1,5 @@
 [
   {
-    "id": "NSE_106786627",
-    "source": "NSE",
-    "company": "Refex Industries Limited",
-    "scrip": "REFEX",
-    "headline": "Copy of Newspaper Publication",
-    "date": "21-Sep-2026 19:24:23",
-    "url": "https://nsearchives.nseindia.com/corporate/REFEX2002_21092026192404_Newspaper_Publication_stx.pdf",
-    "summary": "Refex Industries Limited has published a newspaper notice regarding the hearing of a petition seeking approval of a Scheme of Arrangement involving Refex Green Mobility Limited (Transferor), Refex Industries Limited (Transferee/Demerged), and Refex Mobility Limited (Resulting Company). The disclosure was made under Regulation 47 of SEBI (LODR) Regulations, 2015, and pertains to the respective shareholders and creditors of the companies involved.",
-    "saved_at": "2026-09-21T14:05:08.612195"
-  },
-  {
-    "id": "NSE_106786604",
-    "source": "NSE",
-    "company": "Race Eco Chain Limited",
-    "scrip": "RACE",
-    "headline": "Demerger",
-    "date": "21-Sep-2026 19:09:39",
-    "url": "https://nsearchives.nseindia.com/corporate/RACEECOCHAIN_21092026190827_Intimation_for_NOC.pdf",
-    "summary": "Race Eco Chain Limited has received the Observation Letter from the Exchange for its Draft Composite Scheme of Arrangement. The scheme involves the demerger of Race Eco Chain Limited into Geoeco Green Energy Limited and Race Gateway Limited, along with their respective shareholders and creditors, under Sections 230 to 232 of the Companies Act, 2013.",
-    "saved_at": "2026-09-21T14:05:09.792444"
-  },
-  {
-    "id": "NSESME_106786005",
-    "source": "NSE-SME",
-    "company": "CMM Infraprojects Limited",
-    "scrip": "CMMIPL",
-    "headline": "Updates",
-    "date": "21-Sep-2026 13:23:09",
-    "url": "https://nsearchives.nseindia.com/corporate/CMMIPL_21092026132040_Intimation_extensionoftime_21092026.pdf",
-    "summary": "CMM Infraprojects Limited has notified the Exchange about an Interlocutory Application filed before the Hon'ble NCLT, Indore Bench. No further details regarding the nature or purpose of the application were provided in the announcement.",
-    "saved_at": "2026-09-21T14:05:10.958727"
-  },
-  {
     "id": "NSE_106787722",
     "source": "NSE",
     "company": "Digjam Limited",
@@ -1626,5 +1593,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/PROPEQUITY_21102026142233_SEIntimation_Propedge.pdf",
     "summary": "P. E. Analytics Limited has filed an application under Section 97(1) of the Companies Act, 2013 before the Hon'ble NCLT concerning the Annual General Meeting of its material subsidiary. The company disclosed this as a material issue in its corporate announcement.",
     "saved_at": "2026-10-21T11:34:00.054873"
+  },
+  {
+    "id": "NSE_106823583",
+    "source": "NSE",
+    "company": "GOCL Corporation Limited",
+    "scrip": "GOCLCORP",
+    "headline": "Shareholders meeting",
+    "date": "21-Oct-2026 17:14:51",
+    "url": "https://nsearchives.nseindia.com/corporate/GULFCORP_21102026164809_SEIntimationNCLTShareholdersMeetingSigned.pdf",
+    "summary": "GOCL Corporation Limited has scheduled a meeting of its equity shareholders on November 24, 2026, to be held via video conferencing, as directed by the NCLT, to consider approval of a Scheme of Merger by Absorption of Hinduja National Power Corporation Limited into GOCL. The company has appointed KFin Technologies Limited to provide remote e-voting facilities from November 19 to November 23, 2026, with a cut-off date of November 17, 2026. The Notice and Explanatory Statement have been sent electronically to shareholders and are also available on the company's website.",
+    "saved_at": "2026-10-21T16:05:53.724420"
   }
 ]
