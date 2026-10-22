@@ -1,38 +1,5 @@
 [
   {
-    "id": "NSE_106788361",
-    "source": "NSE",
-    "company": "Lemon Tree Hotels Limited",
-    "scrip": "LEMONTREE",
-    "headline": "Scheme of Arrangement",
-    "date": "22-Sep-2026 21:42:36",
-    "url": "https://nsearchives.nseindia.com/corporate/LEMONTREE_22092026213712_Intimation_signed.pdf",
-    "summary": "Lemon Tree Hotels Limited has received 'no objection' from the NSE and 'no adverse observations' from the BSE regarding its proposed Composite Scheme of Arrangement involving Fleur Hotels, Carnation Hotels, and several other entities. The observation letters are valid for six months, within which the Scheme must be submitted to the NCLT. The Scheme remains subject to further statutory and regulatory approvals, including from the NCLT and the respective shareholders and creditors.",
-    "saved_at": "2026-09-22T16:49:50.273230"
-  },
-  {
-    "id": "NSE_106788225",
-    "source": "NSE",
-    "company": "EFC (I) Limited",
-    "scrip": "EFCIL",
-    "headline": "Demerger",
-    "date": "22-Sep-2026 19:10:38",
-    "url": "https://nsearchives.nseindia.com/corporate/EFCILTD_22092026191023_EFC__I__Limited_-_Intimation_of_Order.pdf",
-    "summary": "The NCLT Mumbai Bench has approved EFC (I) Limited's application to dispense with shareholder and creditor meetings required for its demerger scheme with EFC Limited. The company will now proceed with the necessary compliance steps, though the scheme remains subject to regulatory and other approvals.",
-    "saved_at": "2026-09-22T16:49:51.273392"
-  },
-  {
-    "id": "NSE_106788220",
-    "source": "NSE",
-    "company": "NHPC Limited",
-    "scrip": "NHPC",
-    "headline": "General Updates",
-    "date": "22-Sep-2026 19:09:38",
-    "url": "https://nsearchives.nseindia.com/corporate/NHPC_22092026190857_STX_JPCL_NHPC_Merger_hearing_date_.pdf",
-    "summary": "NHPC Limited announced that the Ministry of Corporate Affairs has scheduled a hearing on September 28, 2026, regarding the proposed scheme of amalgamation between JPCL and NHPC Limited. Further details are provided in the attached letter to the Exchange.",
-    "saved_at": "2026-09-22T16:49:52.166483"
-  },
-  {
     "id": "NSE_106789605",
     "source": "NSE",
     "company": "Pitti Engineering Limited",
@@ -1626,5 +1593,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/JSL_22102026153123_JSLRES.pdf",
     "summary": "Jindal Stainless Limited's Board approved its unaudited standalone and consolidated financial results for the quarter and half-year ended September 30, 2026. The Board also approved a draft scheme of amalgamation of the company with its wholly owned subsidiaries\u2014Chromeni Steels Limited, Rabirun Vinimay Private Limited, JSL Super Steel Limited, and Jindal United Steel Limited\u2014with an appointed date of April 1, 2027, subject to shareholder, creditor, regulatory, and NCLT approvals.",
     "saved_at": "2026-10-22T12:26:21.352372"
+  },
+  {
+    "id": "NSE_106825438",
+    "source": "NSE",
+    "company": "Talwalkars Better Value Fitness Limited",
+    "scrip": "TALWALKARS",
+    "headline": "Suspension of Trading",
+    "date": "22-Oct-2026 20:01:07",
+    "url": "-",
+    "summary": "Trading in Talwalkars Better Value Fitness Limited equity shares will remain suspended due to a Reduction of Share Capital ordered by the NCLT. The suspension follows the company's compliance with the tribunal's directive.",
+    "saved_at": "2026-10-22T17:32:18.361753"
+  },
+  {
+    "id": "NSE_106825399",
+    "source": "NSE",
+    "company": "Ashapura Intimates Fashion Limited",
+    "scrip": "AIFL",
+    "headline": "Suspension of Trading",
+    "date": "22-Oct-2026 19:36:52",
+    "url": "-",
+    "summary": "Trading in Ashapura Intimates Fashion Limited's equity shares will remain suspended due to a Reduction of Share Capital ordered by the NCLT. The suspension follows the tribunal's order implementing the capital reduction.",
+    "saved_at": "2026-10-22T17:32:19.554128"
   }
 ]
