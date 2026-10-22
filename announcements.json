@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106787722",
-    "source": "NSE",
-    "company": "Digjam Limited",
-    "scrip": "DIGJAMLMTD",
-    "headline": "Copy of Newspaper Publication",
-    "date": "22-Sep-2026 16:28:58",
-    "url": "https://nsearchives.nseindia.com/corporate/DIGJAMLMTD_22092026162234_Covering_Petition_Admission_Public_Notice_Digjam.pdf",
-    "summary": "Digjam Limited announced that it has published newspaper notices regarding its petition to the NCLT Chennai Bench for approval of a Composite Scheme of Arrangement under Sections 230\u2013232 of the Companies Act, 2013. The petition was admitted on September 2, 2026, with the next hearing scheduled for October 28, 2026, and statutory authorities have been invited to submit representations. Any person wishing to support or oppose the Scheme may do so through the Petitioner Companies' Advocate within the time stipulated in the notice.",
-    "saved_at": "2026-09-22T11:59:21.525774"
-  },
-  {
     "id": "NSE_106788361",
     "source": "NSE",
     "company": "Lemon Tree Hotels Limited",
@@ -1615,5 +1604,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/SHYAMMETL_22102026114107_NCLTorder.pdf",
     "summary": "The NCLT Kolkata has approved the Scheme of Amalgamation of Shree Venkateshwara Electrocast Private Limited with Shyam Sel and Power Limited, a wholly owned subsidiary of Shyam Metalics and Energy Limited. The scheme will become effective upon filing of the certified NCLT order with the Registrar of Companies, West Bengal.",
     "saved_at": "2026-10-22T06:36:15.238157"
+  },
+  {
+    "id": "NSE_106825075",
+    "source": "NSE",
+    "company": "Ugro Capital Limited",
+    "scrip": "UGROCAP",
+    "headline": "Amalgamation/Merger",
+    "date": "22-Oct-2026 17:24:54",
+    "url": "https://nsearchives.nseindia.com/corporate/UGROCAP_22102026172445_UGRONCLTOrder.pdf",
+    "summary": "Ugro Capital Limited announced that, in compliance with a National Company Law Tribunal order regarding its merger scheme, it will issue notices to statutory authorities under Section 230(5) of the Companies Act, 2013, inviting representations within 30 days. The company must also publish hearing notices in Business Standard and Navshakti at least 10 days before the hearing and host the scheme documents on its website. Authorities failing to respond within the stipulated period will be presumed to have no representations to make on the proposed amalgamation.",
+    "saved_at": "2026-10-22T12:26:19.967197"
+  },
+  {
+    "id": "NSE_106824797",
+    "source": "NSE",
+    "company": "Jindal Stainless Limited",
+    "scrip": "JSL",
+    "headline": "Amalgamation/Merger",
+    "date": "22-Oct-2026 15:31:50",
+    "url": "https://nsearchives.nseindia.com/corporate/JSL_22102026153123_JSLRES.pdf",
+    "summary": "Jindal Stainless Limited's Board approved its unaudited standalone and consolidated financial results for the quarter and half-year ended September 30, 2026. The Board also approved a draft scheme of amalgamation of the company with its wholly owned subsidiaries\u2014Chromeni Steels Limited, Rabirun Vinimay Private Limited, JSL Super Steel Limited, and Jindal United Steel Limited\u2014with an appointed date of April 1, 2027, subject to shareholder, creditor, regulatory, and NCLT approvals.",
+    "saved_at": "2026-10-22T12:26:21.352372"
   }
 ]
