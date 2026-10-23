@@ -1,82 +1,5 @@
 [
   {
-    "id": "NSE_106790105",
-    "source": "NSE",
-    "company": "Veranda Learning Solutions Limited",
-    "scrip": "VERANDA",
-    "headline": "Record Date",
-    "date": "23-Sep-2026 21:29:59",
-    "url": "https://nsearchives.nseindia.com/corporate/Verandaipo_23092026212748_VLSCompositeSchemeRecorddate.pdf",
-    "summary": "Veranda Learning Solutions has fixed October 6, 2026 as the Record Date to determine shareholders eligible to receive 1 share of JSCEL for every 1 share held. The JSCEL shares to be allotted will be listed on BSE and NSE, subject to regulatory approvals.",
-    "saved_at": "2026-09-23T17:04:01.009462"
-  },
-  {
-    "id": "NSE_106790064",
-    "source": "NSE",
-    "company": "Indosolar Limited",
-    "scrip": "WAAREEINDO",
-    "headline": "Amalgamation/Merger",
-    "date": "23-Sep-2026 20:16:12",
-    "url": "https://nsearchives.nseindia.com/corporate/INDOSOLAR20_23092026201455_Disclosure_Regulation_30.pdf",
-    "summary": "Indosolar Limited's Board has approved a draft scheme of amalgamation merging the company into Waaree Energies Limited, subject to approvals from stock exchanges, the NCLT, and shareholders/creditors. The merger aims to simplify the group structure by consolidating the two related solar photovoltaic module manufacturers, with consideration discharged on an arm's length basis.",
-    "saved_at": "2026-09-23T17:04:02.074277"
-  },
-  {
-    "id": "NSE_106790062",
-    "source": "NSE",
-    "company": "Waaree Energies Limited",
-    "scrip": "WAAREEENER",
-    "headline": "Amalgamation/Merger",
-    "date": "23-Sep-2026 20:15:15",
-    "url": "https://nsearchives.nseindia.com/corporate/WAAREE_23092026201432_OutcomeofWEL_signed1.pdf",
-    "summary": "Waaree Energies Limited has announced a scheme of amalgamation under which Indosolar Limited will merge into Waaree Energies Limited. The scheme is being carried out pursuant to Sections 230 to 232 of the Companies Act, 2013, with the respective shareholders involved in the process.",
-    "saved_at": "2026-09-23T17:04:03.307045"
-  },
-  {
-    "id": "NSE_106790052",
-    "source": "NSE",
-    "company": "Orchid Pharma Limited",
-    "scrip": "ORCHPHARMA",
-    "headline": "Updates",
-    "date": "23-Sep-2026 20:01:17",
-    "url": "https://nsearchives.nseindia.com/corporate/ORCHPHARMA_23092026200048_Stx_Ltr_sd.pdf",
-    "summary": "Orchid Pharma Limited announced that 4,45,86,052 equity shares allotted under a scheme of amalgamation sanctioned by the NCLT Chennai Bench have been listed and admitted for trading on the NSE and BSE effective September 23, 2026. This follows the company's earlier intimation dated August 1, 2026.",
-    "saved_at": "2026-09-23T17:04:04.578605"
-  },
-  {
-    "id": "NSE_106790002",
-    "source": "NSE",
-    "company": "Go Digit General Insurance Limited",
-    "scrip": "GODIGIT",
-    "headline": "Scheme of Arrangement",
-    "date": "23-Sep-2026 19:30:41",
-    "url": "https://nsearchives.nseindia.com/corporate/GODIGITGI_23092026193034_GDGIL_-_Intimation_to_Exchanges_final_signed.pdf",
-    "summary": "Go Digit General Insurance Limited announced that, following IRDAI's advisory, its draft Scheme of Amalgamation with Go Digit Infoworks Services Private Limited has been updated to include a reference to Section 35 of the Insurance Act, 1938. The company confirmed that no other changes were made and that the modification does not alter the substance of the Scheme. The Scheme remains subject to approvals from the NCLT Mumbai Bench, IRDAI, and shareholders.",
-    "saved_at": "2026-09-23T17:04:05.932755"
-  },
-  {
-    "id": "NSE_106789996",
-    "source": "NSE",
-    "company": "Ravindra Energy Limited",
-    "scrip": "RELTD",
-    "headline": "Press Release",
-    "date": "23-Sep-2026 19:27:37",
-    "url": "https://nsearchives.nseindia.com/corporate/RAVINDRA_23092026192630_Draft_-_REL_merger_press_release.pdf",
-    "summary": "Ravindra Energy Limited announced a press release dated September 23, 2026, regarding the merger of Energy In Motion Limited (the transferor company) into Ravindra Energy Limited (the transferee company). The disclosure was made to the stock exchange.",
-    "saved_at": "2026-09-23T17:04:06.995555"
-  },
-  {
-    "id": "NSESME_106789795",
-    "source": "NSE-SME",
-    "company": "EMA Partners India Limited",
-    "scrip": "EMAPARTNER",
-    "headline": "Amalgamation/Merger",
-    "date": "23-Sep-2026 18:31:17",
-    "url": "https://nsearchives.nseindia.com/corporate/EMAIN_23092026183056_Submission_of_Scheme_of_Amalgamation_Signed.pdf",
-    "summary": "EMA Partners India Limited announced a fast-track scheme of arrangement to merge three wholly owned subsidiaries\u2014EMA Partners Executive Search Private Limited, Emagine People Technologies Private Limited, and EMA Decision Dynamics Private Limited\u2014into itself. The merger will proceed under Section 233 of the Companies Act, 2013, read with the Companies (CAA) Rules, 2016, as a wholly owned subsidiary merging with its holding company.",
-    "saved_at": "2026-09-23T17:04:08.287110"
-  },
-  {
     "id": "NSE_106790476",
     "source": "NSE",
     "company": "Veranda Learning Solutions Limited",
@@ -1637,5 +1560,38 @@
     "url": "https://nsearchives.nseindia.com/corporate/NEWGEN2_23102026134931_FinancialResult_23102026.pdf",
     "summary": "Newgen Software Technologies Limited announced Exchange approval of a Scheme of Arrangement for the amalgamation of Newgen Computers Technologies Limited (the Transferor Company) into Newgen Software Technologies Limited (the Transferee Company). The scheme covers the respective shareholders and creditors of both entities.",
     "saved_at": "2026-10-23T12:48:52.855490"
+  },
+  {
+    "id": "NSE_106827118",
+    "source": "NSE",
+    "company": "Network18 Media & Investments Limited",
+    "scrip": "NETWORK18",
+    "headline": "Amalgamation/Merger",
+    "date": "23-Oct-2026 21:57:38",
+    "url": "https://nsearchives.nseindia.com/corporate/Shambhu_23102026215356_NW18_Sanction_of_Scheme_SE_Intimation.pdf",
+    "summary": "Network18 Media & Investments Limited announced an update regarding the Scheme of Amalgamation of its wholly-owned subsidiary, News18 Marathi Private Limited, with the Company. The disclosure was made under Regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015.",
+    "saved_at": "2026-10-23T17:34:24.849920"
+  },
+  {
+    "id": "NSE_106826901",
+    "source": "NSE",
+    "company": "Arisinfra Solutions Limited",
+    "scrip": "ARIS",
+    "headline": "General Updates",
+    "date": "23-Oct-2026 18:49:38",
+    "url": "https://nsearchives.nseindia.com/corporate/ARISINFRA2024_23102026184904_Crs_meeting_sd.pdf",
+    "summary": "Arisinfra Solutions Limited has notified the Exchange of an NCLT-convened meeting of its Secured Creditors scheduled for November 25, 2026. The announcement was filed as a general update regarding the meeting notice.",
+    "saved_at": "2026-10-23T17:34:25.970050"
+  },
+  {
+    "id": "NSE_106826867",
+    "source": "NSE",
+    "company": "Arisinfra Solutions Limited",
+    "scrip": "ARIS",
+    "headline": "Shareholders meeting",
+    "date": "23-Oct-2026 18:36:58",
+    "url": "https://nsearchives.nseindia.com/corporate/ARISINFRA2024_23102026183527_Notice_Shareholders_sd.pdf",
+    "summary": "Arisinfra Solutions Limited has notified the Exchange of an NCLT-convened meeting of its equity shareholders scheduled for November 25, 2026. The meeting notice has been issued to shareholders in accordance with the tribunal's directions.",
+    "saved_at": "2026-10-23T17:34:27.091023"
   }
 ]
