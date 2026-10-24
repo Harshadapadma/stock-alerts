@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106790476",
-    "source": "NSE",
-    "company": "Veranda Learning Solutions Limited",
-    "scrip": "VERANDA",
-    "headline": "Press Release",
-    "date": "24-Sep-2026 10:00:03",
-    "url": "https://nsearchives.nseindia.com/corporate/Verandaipo_24092026095926_REG30PR.pdf",
-    "summary": "Veranda Learning Solutions Limited has fixed October 6, 2026 as the record date for the demerger of its Commerce vertical. The company disclosed this via a press release dated September 24, 2026, filed with the stock exchange.",
-    "saved_at": "2026-09-24T06:38:16.221064"
-  },
-  {
     "id": "NSE_106791288",
     "source": "NSE",
     "company": "Waaree Energies Limited",
@@ -1593,5 +1582,38 @@
     "url": "https://nsearchives.nseindia.com/corporate/ARISINFRA2024_23102026183527_Notice_Shareholders_sd.pdf",
     "summary": "Arisinfra Solutions Limited has notified the Exchange of an NCLT-convened meeting of its equity shareholders scheduled for November 25, 2026. The meeting notice has been issued to shareholders in accordance with the tribunal's directions.",
     "saved_at": "2026-10-23T17:34:27.091023"
+  },
+  {
+    "id": "NSE_106827634",
+    "source": "NSE",
+    "company": "Arisinfra Solutions Limited",
+    "scrip": "ARIS",
+    "headline": "Copy of Newspaper Publication",
+    "date": "24-Oct-2026 16:59:32",
+    "url": "https://nsearchives.nseindia.com/corporate/ARISINFRA2024_24102026165908_Advertisment_SE_NCLT_sd.pdf",
+    "summary": "Arisinfra Solutions Limited has published newspaper advertisements regarding Meetings of its Equity Shareholders and Secured Creditors scheduled for November 25, 2026, to be held via video conferencing, in compliance with SEBI regulations. The advertisements appeared in Financial Express (English) and Loksatta (Marathi) on October 24, 2026, with notices dispatched to shareholders and creditors on October 23, 2026. Copies of the advertisements are also available on the Company's website.",
+    "saved_at": "2026-10-24T12:05:20.715508"
+  },
+  {
+    "id": "NSE_106827458",
+    "source": "NSE",
+    "company": "Ugro Capital Limited",
+    "scrip": "UGROCAP",
+    "headline": "Amalgamation/Merger",
+    "date": "24-Oct-2026 13:41:15",
+    "url": "https://nsearchives.nseindia.com/corporate/UGROCAP_24102026134033_UGRONewspaperAdvertisement.pdf",
+    "summary": "Ugro Capital Limited has published newspaper advertisements in Business Standard (English) and Navshakti (Marathi) on 24th October 2026 regarding a notice of hearing for its amalgamation/merger petition, scheduled for 20th November 2026. The announcement was made pursuant to SEBI Listing Regulations and informs shareholders and the public about the upcoming court hearing in connection with the Scheme.",
+    "saved_at": "2026-10-24T12:05:22.467985"
+  },
+  {
+    "id": "NSESME_106827564",
+    "source": "NSE-SME",
+    "company": "Arihant Academy Limited",
+    "scrip": "ARIHANTACA",
+    "headline": "Updates",
+    "date": "24-Oct-2026 15:46:57",
+    "url": "https://nsearchives.nseindia.com/corporate/ARIHANTACADEMY_24102026154628_Reg30disclosureArihantsigned.pdf",
+    "summary": "Arihant Academy Limited has approved the acquisition of the entire businesses of M/s Arihant Tutorials and M/s Rajguru Academy on a going concern basis through slump sale. The company disclosed this investment approval to the Exchange.",
+    "saved_at": "2026-10-24T12:05:23.748503"
   }
 ]
