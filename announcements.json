@@ -1,38 +1,5 @@
 [
   {
-    "id": "NSE_106799053",
-    "source": "NSE",
-    "company": "Ambuja Cements Limited",
-    "scrip": "AMBUJACEM",
-    "headline": "Shareholders meeting",
-    "date": "28-Sep-2026 21:09:08",
-    "url": "https://nsearchives.nseindia.com/corporate/AMBUJACEM_28092026210644_ACL__NCLT_OUTCOME_28092026.pdf",
-    "summary": "Ambuja Cements Limited announced the outcome and proceedings of its NCLT-convened General Meeting held on September 28, 2026. The company also submitted the Scrutinizer's report and voting results to the Exchange.",
-    "saved_at": "2026-09-28T16:05:34.889861"
-  },
-  {
-    "id": "NSE_106799024",
-    "source": "NSE",
-    "company": "GFL Limited",
-    "scrip": "GFLLIMITED",
-    "headline": "General Updates",
-    "date": "28-Sep-2026 20:50:43",
-    "url": "https://nsearchives.nseindia.com/corporate/GFLLIMITED_28092026205031_Upload.pdf",
-    "summary": "GFL Limited announced that the National Company Law Tribunal has issued its order regarding the scheme of merger by absorption of INOX Infrastructure Limited into GFL Limited.",
-    "saved_at": "2026-09-28T16:05:35.787787"
-  },
-  {
-    "id": "NSE_106798995",
-    "source": "NSE",
-    "company": "Orient Cement Limited",
-    "scrip": "ORIENTCEM",
-    "headline": "Shareholders meeting",
-    "date": "28-Sep-2026 20:29:35",
-    "url": "https://nsearchives.nseindia.com/corporate/ORIENTCEM_28092026202922_OCL_Outcome_28092026.pdf",
-    "summary": "Orient Cement Limited announced the outcome and proceedings of its NCLT-convened General Meeting held on September 28, 2026. The company also submitted the Scrutinizer's report and voting results to the Exchange.",
-    "saved_at": "2026-09-28T16:05:36.577348"
-  },
-  {
     "id": "NSE_106799233",
     "source": "NSE",
     "company": "Go Digit General Insurance Limited",
@@ -1461,5 +1428,93 @@
     "url": "https://nsearchives.nseindia.com/corporate/TVSMOTOR_28102026151355_TVSM_SchemeSD.pdf",
     "summary": "TVS Motor Company's Board approved a composite scheme to acquire full ownership of Harita ARC Limited and restructure its consumer finance business. The scheme involves amalgamating wholly owned subsidiary TVS Motor Services Limited into TVS Motor, followed by demerging the company's consumer finance undertaking into Harita ARC on a going-concern basis, with Harita ARC issuing shares to TVS Motor shareholders proportionately. The transaction remains subject to approvals from stock exchanges, SEBI, the NCLT, and shareholders and creditors.",
     "saved_at": "2026-10-28T11:38:24.256728"
+  },
+  {
+    "id": "NSE_106833301",
+    "source": "NSE",
+    "company": "Zensar Technologies Limited",
+    "scrip": "ZENSARTECH",
+    "headline": "Amalgamation/Merger",
+    "date": "28-Oct-2026 22:27:39",
+    "url": "https://nsearchives.nseindia.com/corporate/ZENSARTECH_28102026222208_SEIntimationMergersigned.pdf",
+    "summary": "Zensar Technologies' Board has approved a scheme to amalgamate its wholly owned subsidiary, M3BI India Private Limited, into the company, with M3BI dissolving without winding up. The scheme is subject to NCLT and regulatory approvals, and since M3BI is a wholly owned subsidiary, no shares will be issued and stock exchange clearance is not required.",
+    "saved_at": "2026-10-28T17:24:34.104072"
+  },
+  {
+    "id": "NSE_106833117",
+    "source": "NSE",
+    "company": "Emkay Global Financial Services Limited",
+    "scrip": "EMKAY",
+    "headline": "Sale or disposal",
+    "date": "28-Oct-2026 20:01:44",
+    "url": "https://nsearchives.nseindia.com/corporate/jpshah_28102026200126_Restructuring_Intimation.pdf",
+    "summary": "Emkay Global Financial Services Limited's Board has approved entering into a Business Transfer Agreement with Emkay Wealth Advisory Limited for the carve-out and transfer of its Wealth Management Business. The transfer, which includes the distribution and referral businesses, will be conducted on a going concern basis through a slump sale.",
+    "saved_at": "2026-10-28T17:24:35.442119"
+  },
+  {
+    "id": "NSE_106833093",
+    "source": "NSE",
+    "company": "eClerx Services Limited",
+    "scrip": "ECLERX",
+    "headline": "Scheme of Arrangement",
+    "date": "28-Oct-2026 19:46:25",
+    "url": "https://nsearchives.nseindia.com/corporate/ECLERX_28102026194530_BSENSEacquisition28102026.pdf",
+    "summary": "eClerx Services Limited's Board has approved the acquisition of approximately 2% equity in Personiv Eclipse Inc., USA, from its wholly owned subsidiary eClerx LLC, making the Company a direct holder of ~2% and indirect holder of ~98%, with no change in aggregate ownership. The intra-group, arm's-length transaction is intended to provide eClerx LLC with funds for working capital requirements and is exempt from related-party transaction requirements under SEBI regulations.",
+    "saved_at": "2026-10-28T17:24:36.819604"
+  },
+  {
+    "id": "NSE_106833087",
+    "source": "NSE",
+    "company": "TVS Motor Company Limited",
+    "scrip": "TVSMOTOR",
+    "headline": "Press Release",
+    "date": "28-Oct-2026 19:44:15",
+    "url": "https://nsearchives.nseindia.com/corporate/TVSMOTOR_28102026194328_TVSM_PRESSRELEASESD.pdf",
+    "summary": "TVS Motor Company's Board has approved a Composite Scheme of Arrangement to demerge its consumer finance and related business undertaking into a separate holding company, with shareholders receiving an equal number of shares in the resulting entity as they hold in TVS Motor. The demerger aims to unlock shareholder value through greater strategic focus, sharper capital allocation, and flexibility to pursue opportunities in India's financial services sector, while allowing TVS Motor to concentrate on its automotive and mobility businesses. This follows the August 2026 consolidation of the Group's NBFC businesses into a single operating platform and reflects the Group's long-term conviction in India's financial services sector.",
+    "saved_at": "2026-10-28T17:24:38.511777"
+  },
+  {
+    "id": "NSE_106832797",
+    "source": "NSE",
+    "company": "Honasa Consumer Limited",
+    "scrip": "HONASA",
+    "headline": "Updates",
+    "date": "28-Oct-2026 18:22:05",
+    "url": "https://nsearchives.nseindia.com/corporate/HONASA16_28102026181943_UpdateonMergerofBBluntandSpratts.pdf",
+    "summary": "Honasa Consumer Limited announced that its wholly-owned subsidiary BBlunt and step-down subsidiary B:Blunt-Spratt have approved a scheme to amalgamate B:Blunt-Spratt into BBlunt under Section 233 of the Companies Act, 2013. The merger aims to simplify the group structure, improve operational efficiencies, and reduce compliance costs, with no shares being issued and no change to Honasa's shareholding pattern. The scheme remains subject to requisite statutory and regulatory approvals, including confirmation from the Regional Director.",
+    "saved_at": "2026-10-28T17:24:39.970543"
+  },
+  {
+    "id": "NSE_106832787",
+    "source": "NSE",
+    "company": "Aeroflex Industries Limited",
+    "scrip": "AEROFLEX",
+    "headline": "General Updates",
+    "date": "28-Oct-2026 18:20:57",
+    "url": "https://nsearchives.nseindia.com/corporate/AEROFLEXINDIA_28102026181947_BMOutcomesigned.pdf",
+    "summary": "Aeroflex Industries' Board approved its unaudited standalone and consolidated financial results for the quarter and half year ended September 30, 2026, along with the statutory auditors' limited review reports. The Board also in-principally approved the amalgamation of its wholly owned subsidiary, Hyd-Air Engineering Private Limited, into the Company under Section 233 of the Companies Act, 2013, with an appointed date of April 1, 2026. Additionally, the Board noted Mustafa Abid Kachwala's completion of tenure as CFO effective November 27, 2026 (he will continue as Whole-time Director and KMP), and approved Drashti Bhil's re-designation as CFO and KMP for a three-year term beginning November 28, 2026.",
+    "saved_at": "2026-10-28T17:24:41.593890"
+  },
+  {
+    "id": "NSE_106832664",
+    "source": "NSE",
+    "company": "Aeroflex Industries Limited",
+    "scrip": "AEROFLEX",
+    "headline": "Outcome of Board Meeting",
+    "date": "28-Oct-2026 17:55:53",
+    "url": "https://nsearchives.nseindia.com/corporate/AEROFLEXINDIA_28102026175516_BMOutcomesigned.pdf",
+    "summary": "Aeroflex Industries' board approved its unaudited standalone and consolidated financial results for the quarter and half year ended September 30, 2026. It also in-principally approved the amalgamation of wholly owned subsidiary Hyd-Air Engineering Private Limited into the company. Additionally, the board noted CFO Mustafa Abid Kachwala's tenure ending November 27, 2026, and approved Drashti Bhil's re-designation as CFO and KMP for three years effective November 28, 2026.",
+    "saved_at": "2026-10-28T17:24:42.697032"
+  },
+  {
+    "id": "NSE_106832513",
+    "source": "NSE",
+    "company": "The Phoenix Mills Limited",
+    "scrip": "PHOENIXLTD",
+    "headline": "Acquisition",
+    "date": "28-Oct-2026 17:20:54",
+    "url": "https://nsearchives.nseindia.com/corporate/PHOENIXLTD_28102026172042_ISML_capital_reduction_disclosure_sd.pdf",
+    "summary": "The Phoenix Mills Limited announced that the NCLT Mumbai Bench has approved the selective reduction of equity share capital of its material subsidiary, Island Star Mall Developers Private Limited (ISMDPL), by cancelling 3,25,69,360 equity shares held by Canada Pension Plan Investment Board (CPP Investments) for an aggregate consideration of Rs. 1,350 crore. Following this approval, Phoenix Mills' shareholding in ISMDPL has increased from 58.33% to 68.10%, while CPP Investments' stake has decreased from 41.67% to 31.90%. ISMDPL will now take necessary steps to give effect to the NCLT order, including filing it with the Registrar of Companies within the prescribed timelines.",
+    "saved_at": "2026-10-28T17:24:44.162731"
   }
 ]
