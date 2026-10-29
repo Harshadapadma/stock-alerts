@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106799233",
-    "source": "NSE",
-    "company": "Go Digit General Insurance Limited",
-    "scrip": "GODIGIT",
-    "headline": "General Updates",
-    "date": "28-Sep-2026 23:31:10",
-    "url": "https://nsearchives.nseindia.com/corporate/GODIGITGI_28092026233103_GDGIL_Reg_30_SE_Intimation_for_Notice_of_NCLT_convened_meeting.pdf",
-    "summary": "Go Digit General Insurance Limited has scheduled a meeting of its Equity Shareholders for Thursday, 5th November 2026, at 11:00 A.M. (IST) via video conferencing/audio-visual means. Remote e-voting will be available from 1st November 2026 to 4th November 2026, with the cut-off date for determining voting eligibility set as 29th October 2026. The meeting notice and related documents are accessible on the Company's website and stock exchange platforms.",
-    "saved_at": "2026-09-28T21:58:15.837679"
-  },
-  {
-    "id": "NSE_106799229",
-    "source": "NSE",
-    "company": "Go Digit General Insurance Limited",
-    "scrip": "GODIGIT",
-    "headline": "Shareholders meeting",
-    "date": "28-Sep-2026 23:29:29",
-    "url": "https://nsearchives.nseindia.com/corporate/GODIGITGI_28092026232919_GDGIL_Reg_30_SE_Intimation_for_Notice_of_NCLT_convened_meeting.pdf",
-    "summary": "Go Digit General Insurance Limited has scheduled a meeting of its Equity Shareholders for Thursday, 5th November 2026, at 11:00 A.M. IST, to be held via video conferencing/audio-visual means. Remote e-voting will be available from 1st November 2026 to 4th November 2026, with the cut-off date for determining eligible shareholders being 29th October 2026.",
-    "saved_at": "2026-09-28T21:58:16.949821"
-  },
-  {
     "id": "NSE_106801054",
     "source": "NSE",
     "company": "JSW Cement Limited",
@@ -1516,5 +1494,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/PHOENIXLTD_28102026172042_ISML_capital_reduction_disclosure_sd.pdf",
     "summary": "The Phoenix Mills Limited announced that the NCLT Mumbai Bench has approved the selective reduction of equity share capital of its material subsidiary, Island Star Mall Developers Private Limited (ISMDPL), by cancelling 3,25,69,360 equity shares held by Canada Pension Plan Investment Board (CPP Investments) for an aggregate consideration of Rs. 1,350 crore. Following this approval, Phoenix Mills' shareholding in ISMDPL has increased from 58.33% to 68.10%, while CPP Investments' stake has decreased from 41.67% to 31.90%. ISMDPL will now take necessary steps to give effect to the NCLT order, including filing it with the Registrar of Companies within the prescribed timelines.",
     "saved_at": "2026-10-28T17:24:44.162731"
+  },
+  {
+    "id": "NSE_106833561",
+    "source": "NSE",
+    "company": "Reliance Industries Limited",
+    "scrip": "RELIANCE",
+    "headline": "Other Restructuring",
+    "date": "29-Oct-2026 08:55:40",
+    "url": "https://nsearchives.nseindia.com/corporate/kavinavora_29102026084603_SE_29102026.pdf",
+    "summary": "Reliance Industries Limited announced the voluntary strike-off of Hamleys (Franchising) Limited, disclosed under SEBI Regulation 30. The announcement was made as part of regulatory compliance requirements for listed companies.",
+    "saved_at": "2026-10-29T07:41:13.263681"
   }
 ]
