@@ -1,82 +1,5 @@
 [
   {
-    "id": "NSE_106801256",
-    "source": "NSE",
-    "company": "JSW Cement Limited",
-    "scrip": "JSWCEMENT",
-    "headline": "Press Release",
-    "date": "29-Sep-2026 21:03:28",
-    "url": "https://nsearchives.nseindia.com/corporate/JSWCL_29092026210016_Press_Release_Upload.pdf",
-    "summary": "JSW Cement's board approved a Scheme of Arrangement at its September 29, 2026 meeting, continuing from its earlier disclosure of the same date. The company issued a press release detailing the outcome of that board meeting.",
-    "saved_at": "2026-09-29T19:34:54.573024"
-  },
-  {
-    "id": "NSE_106801242",
-    "source": "NSE",
-    "company": "Time Technoplast Limited",
-    "scrip": "TIMETECHNO",
-    "headline": "Scheme of Arrangement",
-    "date": "29-Sep-2026 20:48:35",
-    "url": "https://nsearchives.nseindia.com/corporate/TIMETECHNO_29092026204808_Outcome29092026_signed.pdf",
-    "summary": "Time Technoplast Limited announced that its scheme of amalgamation, involving the merger by absorption of TPL Plastech Limited into Time Technoplast Limited, has been approved. The scheme also covers the respective shareholders and creditors of both companies.",
-    "saved_at": "2026-09-29T19:34:55.493616"
-  },
-  {
-    "id": "NSE_106801238",
-    "source": "NSE",
-    "company": "Ambuja Cements Limited",
-    "scrip": "AMBUJACEM",
-    "headline": "Shareholders meeting",
-    "date": "29-Sep-2026 20:41:18",
-    "url": "https://nsearchives.nseindia.com/corporate/AMBUJACEM_29092026204018_Outcome_NCLT_Meeting_ACL1.pdf",
-    "summary": "Ambuja Cements Limited announced the outcome of its NCLT-convened general meeting held on September 29, 2026, regarding the Scheme of Amalgamation of ACC Limited with the company. The company also submitted the Scrutinizer's report and voting results to the Exchange.",
-    "saved_at": "2026-09-29T19:34:56.219968"
-  },
-  {
-    "id": "NSE_106801219",
-    "source": "NSE",
-    "company": "Go Digit General Insurance Limited",
-    "scrip": "GODIGIT",
-    "headline": "Copy of Newspaper Publication",
-    "date": "29-Sep-2026 20:30:24",
-    "url": "https://nsearchives.nseindia.com/corporate/GODIGITGI_29092026203012_Draft_Reg_30_SE_Intimation_for_Newspaper_Publication_Final.pdf",
-    "summary": "Go Digit General Insurance Limited has notified the Exchange of a newspaper publication regarding a notice convening a meeting of its equity shareholders. The meeting is being held pursuant to an order from the Hon'ble NCLT.",
-    "saved_at": "2026-09-29T19:34:57.315564"
-  },
-  {
-    "id": "NSE_106801194",
-    "source": "NSE",
-    "company": "ACC Limited",
-    "scrip": "ACC",
-    "headline": "Shareholders meeting",
-    "date": "29-Sep-2026 20:07:11",
-    "url": "https://nsearchives.nseindia.com/corporate/ACC_1_29092026200638_ACC_Outcome_Cover_Final.pdf",
-    "summary": "ACC Limited held an NCLT-convened general meeting on September 29, 2026, and has informed the Exchange of its outcome and proceedings. The company also submitted the Scrutinizer's report along with the voting results to the Exchange.",
-    "saved_at": "2026-09-29T19:34:58.516812"
-  },
-  {
-    "id": "NSE_106801924",
-    "source": "NSE",
-    "company": "Sun TV Network Limited",
-    "scrip": "SUNTV",
-    "headline": "News Verification",
-    "date": "30-Sep-2026 12:31:27",
-    "url": "-",
-    "summary": "Sun TV Network Limited has not yet responded to a stock exchange query regarding a news report about a possible demerger of its sports division. The clarification was sought following the recent news item, and the company's response is still awaited.",
-    "saved_at": "2026-09-30T08:43:03.750327"
-  },
-  {
-    "id": "NSE_106801727",
-    "source": "NSE",
-    "company": "Asian Energy Services Limited",
-    "scrip": "ASIANENE",
-    "headline": "Scheme of Arrangement",
-    "date": "30-Sep-2026 10:58:00",
-    "url": "https://nsearchives.nseindia.com/corporate/ASIANENE_30092026105233_SEIntimationonreceiptofNCLTorder_29092026.pdf",
-    "summary": "Asian Energy Services Limited announced that the NCLT Mumbai Bench has pronounced its order approving the Scheme of Merger by Absorption of Oilmax Energy Private Limited into Asian Energy Services Limited. The scheme also covers the respective shareholders of both companies.",
-    "saved_at": "2026-09-30T08:43:04.697676"
-  },
-  {
     "id": "NSE_106803774",
     "source": "NSE",
     "company": "PPAP Automotive Limited",
@@ -1472,5 +1395,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/ASTRAMICRO_29102026164303_NOCLetter.pdf",
     "summary": "Astra Microwave Products Limited has received a \"no adverse observations\" letter from BSE and a \"no objection\" letter from NSE, both dated 29 October 2026, regarding its Scheme of Arrangement for the demerger of its space, meteorology, and hydrology business into Astra Space Technologies Private Limited. The observation letters are available on the company's website, and the Scheme remains subject to applicable regulatory and other approvals.",
     "saved_at": "2026-10-29T14:40:59.093397"
+  },
+  {
+    "id": "NSE_106836409",
+    "source": "NSE",
+    "company": "SJVN Limited",
+    "scrip": "SJVN",
+    "headline": "Amalgamation/Merger",
+    "date": "30-Oct-2026 15:21:06",
+    "url": "https://nsearchives.nseindia.com/corporate/SJVN_30102026152058_stock_exchange_intimation_-_merger.pdf",
+    "summary": "SJVN Limited's Board has approved initiating the merger of its wholly owned subsidiary, SJVN Thermal Private Limited (which operates the 1320 MW Buxar Thermal Power Plant in Bihar), into SJVN Limited, subject to Government of India approval. The merger is intended to eliminate duplication of administrative and operational functions since STPL's separate existence offers no significant incremental benefit as a 100% subsidiary.",
+    "saved_at": "2026-10-30T11:33:02.942725"
   }
 ]
