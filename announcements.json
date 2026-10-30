@@ -1,60 +1,5 @@
 [
   {
-    "id": "NSE_106803774",
-    "source": "NSE",
-    "company": "PPAP Automotive Limited",
-    "scrip": "PPAP",
-    "headline": "Shareholders meeting",
-    "date": "30-Sep-2026 20:20:51",
-    "url": "https://nsearchives.nseindia.com/corporate/PPAP_30092026201841_Proceedings.pdf",
-    "summary": "PPAP Automotive Limited held separate meetings of its equity shareholders, secured creditors, and unsecured creditors to consider the Scheme of Amalgamation of Avinya Batteries Limited with itself. The meetings were convened pursuant to an NCLT order as part of the approval process for the merger.",
-    "saved_at": "2026-09-30T15:23:41.223051"
-  },
-  {
-    "id": "NSE_106803611",
-    "source": "NSE",
-    "company": "Ambuja Cements Limited",
-    "scrip": "AMBUJACEM",
-    "headline": "Shareholders meeting",
-    "date": "30-Sep-2026 19:33:49",
-    "url": "https://nsearchives.nseindia.com/corporate/AMBUJACEM_30092026193225_ACL_Consol_Upload.pdf",
-    "summary": "Ambuja Cements Limited has submitted the Combined Scrutinizer's Report to the Exchange regarding the NCLT-convened meeting of its equity shareholders. The meeting was held pursuant to an order from the NCLT Ahmedabad Bench concerning the Scheme of Amalgamation of ACC Limited with Ambuja Cements.",
-    "saved_at": "2026-09-30T15:23:42.680601"
-  },
-  {
-    "id": "NSE_106803458",
-    "source": "NSE",
-    "company": "GSPL Transmission Limited",
-    "scrip": "GSPLTRANS",
-    "headline": "Updates",
-    "date": "30-Sep-2026 19:02:35",
-    "url": "https://nsearchives.nseindia.com/corporate/GSPLTRANS_30092026190226_NSEBSEPressRelease.pdf",
-    "summary": "GSPL Transmission Limited announced that its equity shares commenced trading on the BSE and NSE on September 30, 2026, completing the GSPC Group Scheme of Arrangement under which the gas transmission business of erstwhile Gujarat State Petronet Limited was demerged into it. The company operates approximately 2,900 km of natural gas transmission pipelines across 26 districts in Gujarat, making it India's second-largest gas transmission company, with plans to add 711 km of pipelines.",
-    "saved_at": "2026-09-30T15:23:44.018452"
-  },
-  {
-    "id": "NSE_106803448",
-    "source": "NSE",
-    "company": "Sammaan Capital Limited",
-    "scrip": "SAMMAANCAP",
-    "headline": "Copy of Newspaper Publication",
-    "date": "30-Sep-2026 19:00:15",
-    "url": "https://nsearchives.nseindia.com/corporate/IHFL_30092026190006_SCL_Newspaper_Advertisement_30Sep2026.pdf",
-    "summary": "Sammaan Capital Limited has published newspaper advertisements regarding a proposed Scheme of Arrangement between itself (the Resulting Company) and Sammaan Finserve Limited (the Demerged Company). The notices, published on September 30, 2026 in the Financial Express and Jansatta, comply with a National Company Law Tribunal order dated September 21, 2026 concerning the Second Motion Petition for the demerger.",
-    "saved_at": "2026-09-30T15:23:45.492017"
-  },
-  {
-    "id": "NSE_106802173",
-    "source": "NSE",
-    "company": "Sun TV Network Limited",
-    "scrip": "SUNTV",
-    "headline": "News Verification",
-    "date": "30-Sep-2026 14:14:54",
-    "url": "https://nsearchives.nseindia.com/corporate/SUNTV1_30092026141339_SunTVreply30092026.pdf",
-    "summary": "Sun TV Network Limited responded to a stock exchange clarification request regarding a news report about a possible demerger of its sports division. The company's response is attached to the announcement.",
-    "saved_at": "2026-09-30T15:23:46.743562"
-  },
-  {
     "id": "NSE_106805027",
     "source": "NSE",
     "company": "TVS Supply Chain Solutions Limited",
@@ -1406,5 +1351,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/SJVN_30102026152058_stock_exchange_intimation_-_merger.pdf",
     "summary": "SJVN Limited's Board has approved initiating the merger of its wholly owned subsidiary, SJVN Thermal Private Limited (which operates the 1320 MW Buxar Thermal Power Plant in Bihar), into SJVN Limited, subject to Government of India approval. The merger is intended to eliminate duplication of administrative and operational functions since STPL's separate existence offers no significant incremental benefit as a 100% subsidiary.",
     "saved_at": "2026-10-30T11:33:02.942725"
+  },
+  {
+    "id": "NSE_106837190",
+    "source": "NSE",
+    "company": "HEG Advanced Materials Limited",
+    "scrip": "HEGAM",
+    "headline": "Updates",
+    "date": "30-Oct-2026 18:47:23",
+    "url": "https://nsearchives.nseindia.com/corporate/HEGAM_30102026184640_StEX_HEGFinancials.pdf",
+    "summary": "HEG Advanced Materials Limited informed the Exchange that HEG Graphite Limited (renamed HEG Limited), the Resulting Company under the Composite Scheme of Arrangement, has communicated its unaudited financial results for the quarter and half year ended September 30, 2026.",
+    "saved_at": "2026-10-30T17:10:19.512597"
   }
 ]
