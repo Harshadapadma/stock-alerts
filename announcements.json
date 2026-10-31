@@ -1,38 +1,5 @@
 [
   {
-    "id": "NSE_106805027",
-    "source": "NSE",
-    "company": "TVS Supply Chain Solutions Limited",
-    "scrip": "TVSSCS",
-    "headline": "Amalgamation/Merger",
-    "date": "01-Oct-2026 17:08:38",
-    "url": "https://nsearchives.nseindia.com/corporate/CSCOMPLIANCE_01102026165404_SE_Disclosure_-_SPC-_NCLT_ORDER_signed.pdf",
-    "summary": "TVS Supply Chain Solutions Limited announced that the NCLT Bengaluru Bench has sanctioned the Scheme of Amalgamation concerning SPC International (India) Private Limited, the Fourth Transferor Company, by order dated September 30, 2026. This follows the earlier sanction by the NCLT Chennai Bench, completing all required judicial approvals for the merger of five transferor companies into TVS Supply Chain Solutions. The Scheme will become effective upon filing of certified copies of both orders with the jurisdictional Registrar of Companies, with effect from the Appointed Date.",
-    "saved_at": "2026-10-01T11:49:01.013950"
-  },
-  {
-    "id": "NSE_106804950",
-    "source": "NSE",
-    "company": "Shree Pushkar Chemicals & Fertilisers Limited",
-    "scrip": "SHREEPUSHK",
-    "headline": "Amalgamation/Merger",
-    "date": "01-Oct-2026 16:30:57",
-    "url": "https://nsearchives.nseindia.com/corporate/SHREEPUSHK_01102026163023_SEIntimation01102026.pdf",
-    "summary": "The National Company Law Tribunal (NCLT) Mumbai Bench has dismissed the proposed amalgamation between Madhya Bharat Phosphate Private Limited and Kisan Phosphates Private Limited, both wholly-owned subsidiaries of Shree Pushkar Chemicals & Fertilisers Limited, after the applicant withdrew the scheme for commercial reasons. The withdrawal order, dated September 21, 2026, was made available on the NCLT website on September 30, 2026.",
-    "saved_at": "2026-10-01T11:49:01.973784"
-  },
-  {
-    "id": "NSE_106804725",
-    "source": "NSE",
-    "company": "BCPL Railway Infrastructure Limited",
-    "scrip": "BCPL",
-    "headline": "Other Restructuring",
-    "date": "01-Oct-2026 14:52:10",
-    "url": "https://nsearchives.nseindia.com/corporate/BCPL_01102026145144_WOS30092026.pdf",
-    "summary": "BCPL Railway Infrastructure Limited has incorporated a wholly owned subsidiary named AJU Real Estate Private Limited, with the certificate of incorporation issued by the Ministry of Corporate Affairs on September 30, 2026. The company disclosed this development to the Exchange under \"Other Restructuring.\"",
-    "saved_at": "2026-10-01T11:49:03.190246"
-  },
-  {
     "id": "NSE_106805675",
     "source": "NSE",
     "company": "GE Power India Limited",
@@ -1362,5 +1329,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/HEGAM_30102026184640_StEX_HEGFinancials.pdf",
     "summary": "HEG Advanced Materials Limited informed the Exchange that HEG Graphite Limited (renamed HEG Limited), the Resulting Company under the Composite Scheme of Arrangement, has communicated its unaudited financial results for the quarter and half year ended September 30, 2026.",
     "saved_at": "2026-10-30T17:10:19.512597"
+  },
+  {
+    "id": "NSE_106838427",
+    "source": "NSE",
+    "company": "Tata Communications Limited",
+    "scrip": "TATACOMM",
+    "headline": "Other Restructuring",
+    "date": "31-Oct-2026 18:19:36",
+    "url": "https://nsearchives.nseindia.com/corporate/TATACOMM_31102026181925_18544_Kaleyra.pdf",
+    "summary": "Tata Communications has completed the transfer of its 100% stake in Kaleyra, Inc. to Tata Communications (Netherlands) B.V., followed by Kaleyra, Inc.'s merger into its wholly owned subsidiary Kaleyra US Inc., effective October 31, 2026. The intra-group restructuring aims to simplify and consolidate the group's ownership structure, with no change to the Company's ultimate beneficial ownership or economic interest in Kaleyra entities. The transaction is not expected to have any material impact on the Company's consolidated financial position.",
+    "saved_at": "2026-10-31T13:33:38.352571"
+  },
+  {
+    "id": "NSE_106837941",
+    "source": "NSE",
+    "company": "Larsen & Toubro Limited",
+    "scrip": "LT",
+    "headline": "General Updates",
+    "date": "31-Oct-2026 13:00:35",
+    "url": "https://nsearchives.nseindia.com/corporate/AB_31102026130022_SEIntimation_ExtensionofBTAVyoma_31102026.pdf",
+    "summary": "Larsen & Toubro Limited announced an extension of the timeline for completing the Business Transfer Agreement with Vyoma.AI Limited, its wholly owned subsidiary, and the Share Purchase Agreement for the sale of its entire stake in L&T Network Services Private Limited to Vyoma. The completion timeline has been extended, though no revised date was specified in the announcement.",
+    "saved_at": "2026-10-31T13:33:39.377429"
   }
 ]
