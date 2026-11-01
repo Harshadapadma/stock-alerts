@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106805844",
-    "source": "NSE",
-    "company": "K.M.Sugar Mills Limited",
-    "scrip": "KMSUGAR",
-    "headline": "Scheme of Arrangement",
-    "date": "01-Oct-2026 23:47:33",
-    "url": "https://nsearchives.nseindia.com/corporate/KMSUGAR_01102026233221_DEMERGERUPDATE.pdf",
-    "summary": "K.M. Sugar Mills Limited announced that its Scheme of Arrangement for the demerger of its Distillery Division into KM Spirits and Allied Industries Limited has become effective as of October 1, 2026. The company confirmed that both entities have filed the certified NCLT order with the Registrar of Companies, Uttar Pradesh.",
-    "saved_at": "2026-10-01T22:00:52.982568"
-  },
-  {
     "id": "NSE_106806255",
     "source": "NSE",
     "company": "Wipro Limited",
@@ -1285,5 +1274,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/AURIONPRO_31102026201253_ASL_Outcome_of_Board_Meeting_Merger_sd.pdf",
     "summary": "Aurionpro Solutions Limited has notified the Exchange of a Scheme of Amalgamation involving the merger of three wholly owned subsidiaries into the company. The amalgamation will consolidate these subsidiaries into Aurionpro Solutions Limited.",
     "saved_at": "2026-10-31T17:56:17.018229"
+  },
+  {
+    "id": "NSE_106838739",
+    "source": "NSE",
+    "company": "JSW Steel Limited",
+    "scrip": "JSWSTEEL",
+    "headline": "Amalgamation/Merger",
+    "date": "01-Nov-2026 02:05:35",
+    "url": "https://nsearchives.nseindia.com/corporate/Supriya_01112026020456_SE_Intimation_PSL_Scheme.pdf",
+    "summary": "JSW Steel Limited announced that its Scheme of Amalgamation with Piombino Steel Limited became effective on October 31, 2026, following the filing of the NCLT Mumbai Bench's final order with the Registrar of Companies. The scheme is effective retrospectively from the appointed date of January 1, 2026, and Piombino Steel now stands amalgamated into JSW Steel. Consequently, Piombino's authorised share capital has been consolidated into JSW Steel's, with Clause V of the company's MOA substituted to reflect an authorised share capital of Rs. 27,980 crore.",
+    "saved_at": "2026-11-01T00:15:00.786515"
   }
 ]
