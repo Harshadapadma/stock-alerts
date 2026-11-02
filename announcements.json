@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106806255",
-    "source": "NSE",
-    "company": "Wipro Limited",
-    "scrip": "WIPRO",
-    "headline": "Amalgamation/Merger",
-    "date": "03-Oct-2026 15:53:23",
-    "url": "https://nsearchives.nseindia.com/corporate/Wipro_Secretarial_03102026155257_Reg30SEIntimation03102026.pdf",
-    "summary": "Wipro Limited announced the completed merger of its step-down subsidiary Wipro VLSI Design Services, LLC into fellow step-down subsidiary Wipro IT Services, LLC, effective October 1, 2026 (Eastern Time). The company received intimation of the completion on October 3, 2026, in accordance with SEBI listing regulations.",
-    "saved_at": "2026-10-03T13:16:43.509468"
-  },
-  {
     "id": "NSE_106807447",
     "source": "NSE",
     "company": "BGR Energy Systems Limited",
@@ -1307,5 +1296,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/AFFLE_01112026174902_Acquisition_announcement1.pdf",
     "summary": "Affle 3i Limited announced that its wholly owned step-down subsidiary, Affle 3iL Ltd., has entered into a definitive merger agreement to acquire Perion Network Ltd., an Israeli company. The announcement was made as a general update to the Exchange.",
     "saved_at": "2026-11-01T13:42:47.928208"
+  },
+  {
+    "id": "NSE_106840382",
+    "source": "NSE",
+    "company": "ITC Limited",
+    "scrip": "ITC",
+    "headline": "Amalgamation/Merger",
+    "date": "02-Nov-2026 18:45:24",
+    "url": "https://nsearchives.nseindia.com/corporate/ITC_02112026184512_SE_Sproutlife_.pdf",
+    "summary": "ITC Limited has approved the amalgamation of its wholly owned subsidiary Sproutlife Foods Private Limited (owner of the 'Yoga Bar' brand) into ITC, with all assets, liabilities, and employees transferring at arm's length. The merger aims to integrate operations, realize synergies, optimize resource deployment, and simplify the corporate holding structure. As Sproutlife is a wholly owned subsidiary, no new shares will be issued and ITC's shareholding pattern will remain unchanged.",
+    "saved_at": "2026-11-02T18:44:51.013830"
+  },
+  {
+    "id": "NSE_106839748",
+    "source": "NSE",
+    "company": "Delta Corp Limited",
+    "scrip": "DELTACORP",
+    "headline": "Copy of Newspaper Publication",
+    "date": "02-Nov-2026 16:20:26",
+    "url": "https://nsearchives.nseindia.com/corporate/DELTACORP_02112026161952_DCL.pdf",
+    "summary": "Delta Corp Limited has notified the Exchange of a newspaper notice regarding the hearing of its Company Scheme Petition. The hearing is scheduled for December 7, 2026, or soon thereafter, as directed by the National Company Law Tribunal, Mumbai Bench.",
+    "saved_at": "2026-11-02T18:44:51.974344"
   }
 ]
