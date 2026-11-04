@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106807600",
-    "source": "NSE",
-    "company": "Dr. Agarwal's Health Care Limited",
-    "scrip": "AGARWALEYE",
-    "headline": "Amalgamation/Merger",
-    "date": "05-Oct-2026 22:49:57",
-    "url": "https://nsearchives.nseindia.com/corporate/DRAGARWALS_05102026224943_C45_AHCL_NCLT_Sanction_Order_sd.pdf",
-    "summary": "Dr. Agarwal's Health Care Limited announced it has received sanction from the Hon'ble NCLT, Chennai Bench for the Scheme of Amalgamation between Dr. Agarwal's Eye Hospital Limited and Dr. Agarwal's Health Care Limited. The approval covers the merger and applies to both companies' respective shareholders and creditors.",
-    "saved_at": "2026-10-05T21:31:51.833476"
-  },
-  {
-    "id": "NSE_106807537",
-    "source": "NSE",
-    "company": "Kothari Sugars And Chemicals Limited",
-    "scrip": "KOTARISUG",
-    "headline": "Amalgamation/Merger",
-    "date": "05-Oct-2026 21:04:58",
-    "url": "https://nsearchives.nseindia.com/corporate/KOTARISUG_05102026210359_IntimationofreceiptofNCLTOrder.pdf",
-    "summary": "Kothari Sugars And Chemicals Limited announced that the National Company Law Tribunal, Chennai Bench, has issued an order regarding its proposed Scheme of Amalgamation. The order directs the companies involved to convene separate meetings of their shareholders and unsecured creditors.",
-    "saved_at": "2026-10-05T21:31:52.890759"
-  },
-  {
     "id": "NSE_106807972",
     "source": "NSE",
     "company": "Privi Speciality Chemicals Limited",
@@ -1516,5 +1494,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/SATECH_04112026160733_SA_NSE_Announcement_NCLT_ordersign.pdf",
     "summary": "The National Company Law Tribunal (Mumbai Bench) has directed S A Tech Software India Limited to convene a meeting of its equity shareholders within 90 days to consider and approve the Scheme of Amalgamation of Mindpool Technologies Limited into the company. Meetings of secured and unsecured creditors have been dispensed with, as creditors representing 96.53% in value have given their consent. The date and details of the shareholder meeting will be communicated to the stock exchange separately.",
     "saved_at": "2026-11-04T17:12:28.303276"
+  },
+  {
+    "id": "NSESME_106846022",
+    "source": "NSE-SME",
+    "company": "Mindpool Technologies Limited",
+    "scrip": "MINDPOOL",
+    "headline": "Amalgamation/Merger",
+    "date": "04-Nov-2026 23:18:35",
+    "url": "https://nsearchives.nseindia.com/corporate/MINDPOOL_04112026231818_MP_NSE_Announcement_NCLT_order.pdf",
+    "summary": "The National Company Law Tribunal (Mumbai Bench) has issued directions regarding the Scheme of Amalgamation of Mindpool Technologies Limited with S A Tech Software India Limited, including convening a meeting of Mindpool's equity shareholders within 90 days. Meetings of secured and unsecured creditors have been dispensed with, as creditors representing 92.40% in value have provided consent affidavits. The date and details of the shareholder meeting will be communicated to the Exchange separately.",
+    "saved_at": "2026-11-04T22:41:27.671022"
   }
 ]
