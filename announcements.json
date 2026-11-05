@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106807972",
-    "source": "NSE",
-    "company": "Privi Speciality Chemicals Limited",
-    "scrip": "PRIVISCL",
-    "headline": "General Updates",
-    "date": "06-Oct-2026 11:19:28",
-    "url": "https://nsearchives.nseindia.com/corporate/FAIRCHEMDP_06102026111909_NoticetoNSE.pdf",
-    "summary": "Privi Speciality Chemicals Limited has notified the Exchange of a meeting of its equity shareholders regarding a Scheme of Amalgamation. The meeting is scheduled for Tuesday, October 27, 2026, at 12:30 p.m.",
-    "saved_at": "2026-10-06T08:49:54.016325"
-  },
-  {
     "id": "NSE_106808697",
     "source": "NSE",
     "company": "IRM Energy Limited",
@@ -1505,5 +1494,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/MINDPOOL_04112026231818_MP_NSE_Announcement_NCLT_order.pdf",
     "summary": "The National Company Law Tribunal (Mumbai Bench) has issued directions regarding the Scheme of Amalgamation of Mindpool Technologies Limited with S A Tech Software India Limited, including convening a meeting of Mindpool's equity shareholders within 90 days. Meetings of secured and unsecured creditors have been dispensed with, as creditors representing 92.40% in value have provided consent affidavits. The date and details of the shareholder meeting will be communicated to the Exchange separately.",
     "saved_at": "2026-11-04T22:41:27.671022"
+  },
+  {
+    "id": "NSE_106847113",
+    "source": "NSE",
+    "company": "Triveni Power Transmission Limited",
+    "scrip": "TRIVENIPT",
+    "headline": "Scheme of Arrangement",
+    "date": "05-Nov-2026 15:10:06",
+    "url": "https://nsearchives.nseindia.com/corporate/TRIVENIPT_05112026150954_Report_on_fractional_payment.pdf",
+    "summary": "Triveni Power Transmission Limited has submitted Audit Committee and Independent Directors' reports dated November 5, 2026, certifying the distribution of proceeds from fractional shares to eligible shareholders under its Scheme of Arrangement, in compliance with SEBI's Master Circular. The Scheme, approved by NCLT Allahabad, involved the demerger of Triveni Engineering & Industries Limited's Power Transmission Business into the Resulting Company, with shares allotted on July 28, 2026 in a 1:3 ratio. The certification confirms that proceeds from fractional entitlements arising from the allotment process have been distributed to eligible shareholders.",
+    "saved_at": "2026-11-05T10:39:32.684722"
+  },
+  {
+    "id": "NSE_106846545",
+    "source": "NSE",
+    "company": "Thomas Cook  (India)  Limited",
+    "scrip": "THOMASCOOK",
+    "headline": "General Updates",
+    "date": "05-Nov-2026 12:17:23",
+    "url": "https://nsearchives.nseindia.com/corporate/THOMASCOOK_05112026121223_Stock_Exchange_Intimation-_NCLT_order.pdf",
+    "summary": "The NCLT Mumbai Bench has admitted Thomas Cook (India) Limited's application for a Composite Scheme of Arrangement involving TCIL, Sterling Holiday Resorts Limited, TC Visa Services (India) Limited, Jardin Travel Solutions Limited, and Borderless Travel Services Limited. The order, dated November 4, 2026, is procedural in nature and provides necessary directions for completing statutory formalities related to the Scheme. The Scheme remains subject to shareholder approval and other applicable approvals, including final sanction from the NCLT.",
+    "saved_at": "2026-11-05T10:39:34.311085"
   }
 ]
