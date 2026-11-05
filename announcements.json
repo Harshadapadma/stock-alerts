@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106808697",
-    "source": "NSE",
-    "company": "IRM Energy Limited",
-    "scrip": "IRMENERGY",
-    "headline": "Copy of Newspaper Publication",
-    "date": "06-Oct-2026 18:11:34",
-    "url": "https://nsearchives.nseindia.com/corporate/IRMENERGY_06102026181117_intimationtoSE.pdf",
-    "summary": "IRM Energy Limited has notified the Exchange of a newspaper publication regarding the hearing notice for its proposed Scheme of Amalgamation. The scheme involves the merger of Enertech Distribution Management Private Limited with IRM Energy Limited and their respective shareholders.",
-    "saved_at": "2026-10-06T15:36:07.678861"
-  },
-  {
-    "id": "NSE_106808685",
-    "source": "NSE",
-    "company": "India Glycols Limited",
-    "scrip": "INDIAGLYCO",
-    "headline": "Updates",
-    "date": "06-Oct-2026 18:06:39",
-    "url": "https://nsearchives.nseindia.com/corporate/INDIAGLYCO_06102026180443_Apportionment_of_Cost_of_Acquisition.pdf",
-    "summary": "India Glycols Limited announced the apportionment of the cost of acquisition of equity shares across itself (the demerged company) and two resulting companies, Ennature Bio Pharma Limited and IGL Spirits Limited. This follows a Scheme of Arrangement among the three companies and their shareholders.",
-    "saved_at": "2026-10-06T15:36:08.583504"
-  },
-  {
     "id": "NSE_106808971",
     "source": "NSE",
     "company": "BirlaNu Limited",
@@ -1516,5 +1494,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/THOMASCOOK_05112026121223_Stock_Exchange_Intimation-_NCLT_order.pdf",
     "summary": "The NCLT Mumbai Bench has admitted Thomas Cook (India) Limited's application for a Composite Scheme of Arrangement involving TCIL, Sterling Holiday Resorts Limited, TC Visa Services (India) Limited, Jardin Travel Solutions Limited, and Borderless Travel Services Limited. The order, dated November 4, 2026, is procedural in nature and provides necessary directions for completing statutory formalities related to the Scheme. The Scheme remains subject to shareholder approval and other applicable approvals, including final sanction from the NCLT.",
     "saved_at": "2026-11-05T10:39:34.311085"
+  },
+  {
+    "id": "NSE_106848106",
+    "source": "NSE",
+    "company": "Ashok Leyland Limited",
+    "scrip": "ASHOKLEY",
+    "headline": "Acquisition",
+    "date": "05-Nov-2026 18:09:40",
+    "url": "https://nsearchives.nseindia.com/corporate/ASHOKLEYLAND_05112026180822_44ALupdatesonHLFL.pdf",
+    "summary": "The National Company Law Tribunal (Mumbai Bench) has sanctioned a Scheme of Arrangement under which Hinduja Leyland Finance Limited (HLFL), a material subsidiary of Ashok Leyland, will be absorbed into NDL Ventures Limited. Upon effectiveness, HLFL will dissolve without winding up, ceasing to be a material subsidiary of Ashok Leyland, while NDL will become the company's material listed subsidiary. The acquisition is being implemented via a share swap (25 NDL shares for every 10 HLFL shares), creating a stronger listed financial services platform with operational synergies.",
+    "saved_at": "2026-11-05T18:16:53.680953"
+  },
+  {
+    "id": "NSE_106848107",
+    "source": "NSE",
+    "company": "Ashok Leyland Limited",
+    "scrip": "ASHOKLEY",
+    "headline": "Other Restructuring",
+    "date": "05-Nov-2026 18:09:40",
+    "url": "https://nsearchives.nseindia.com/corporate/ASHOKLEYLAND_05112026180926_44ALupdatesonHLFL.pdf",
+    "summary": "The National Company Law Tribunal (Mumbai Bench) has sanctioned a Scheme of Arrangement under which Hinduja Leyland Finance Limited (HLFL), a material subsidiary of Ashok Leyland, will be absorbed into NDL Ventures Limited. Upon effectiveness, HLFL will dissolve without winding up and cease to be a material subsidiary, while NDL will become Ashok Leyland's material listed subsidiary, with NDL issuing 25 equity shares for every 10 HLFL shares held. The scheme aims to create a stronger listed financial services platform with operational synergies and enhanced stakeholder value.",
+    "saved_at": "2026-11-05T18:16:55.374648"
   }
 ]
