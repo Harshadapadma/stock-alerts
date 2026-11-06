@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106810015",
-    "source": "NSE",
-    "company": "Maharashtra Seamless Limited",
-    "scrip": "MAHSEAMLES",
-    "headline": "Scheme of Arrangement",
-    "date": "07-Oct-2026 17:26:34",
-    "url": "https://nsearchives.nseindia.com/corporate/MAHSEAMLES_07102026172556_MSLIntimationDemerger.pdf",
-    "summary": "Maharashtra Seamless Limited's Board has approved a composite scheme of arrangement to demerge two of its undertakings into its wholly owned subsidiaries\u2014MSL Seamless Tubes Limited and United Seamless Limited\u2014with an appointed date of October 1, 2026. The scheme, which remains subject to shareholder, creditor, and NCLT approvals, will result in MSTL issuing shares directly to MSL's eligible shareholders as its existing capital is cancelled.",
-    "saved_at": "2026-10-07T13:17:12.777440"
-  },
-  {
     "id": "NSE_106811804",
     "source": "NSE",
     "company": "Arisinfra Solutions Limited",
@@ -1527,5 +1516,82 @@
     "url": "https://nsearchives.nseindia.com/corporate/SEJALLTD_06112026141017_Outcome.pdf",
     "summary": "Sejal Glass Limited has notified the Exchange of its proposed execution of a Business Transfer Agreement with M/s. Magnumtuff India Private Limited. The announcement was made as part of the outcome of a Board Meeting.",
     "saved_at": "2026-11-06T11:37:29.857603"
+  },
+  {
+    "id": "NSE_106851829",
+    "source": "NSE",
+    "company": "PAKKA LIMITED",
+    "scrip": "PAKKA",
+    "headline": "Disclosure of material issue",
+    "date": "06-Nov-2026 22:58:46",
+    "url": "https://nsearchives.nseindia.com/corporate/yashpakka_06112026225835_Disclosure_under_Regulation_30_SEBI_LODR.pdf",
+    "summary": "The National Company Law Tribunal, Allahabad Bench, has sanctioned the scheme of amalgamation of Pakka Impact Limited (a wholly owned subsidiary) with Pakka Limited, with an appointed date of 1 April 2026. As Pakka Impact is a wholly owned subsidiary, no new shares will be issued and Pakka Limited's share capital and shareholding pattern will remain unchanged, with Pakka Impact dissolving without winding up upon effectiveness. The scheme becomes operative upon filing of the certified order with the Registrar of Companies, which the company will complete within the prescribed 30-day period.",
+    "saved_at": "2026-11-06T18:28:55.685951"
+  },
+  {
+    "id": "NSE_106851385",
+    "source": "NSE",
+    "company": "Aequs Limited",
+    "scrip": "AEQUS",
+    "headline": "Amalgamation/Merger",
+    "date": "06-Nov-2026 18:41:06",
+    "url": "https://nsearchives.nseindia.com/corporate/AEQUSLIMITED_06112026184033_SE_Intimation_Sanction_of_Order.pdf",
+    "summary": "Aequs Limited announced that the Exchange has sanctioned a Scheme of Amalgamation under Section 233 of the Companies Act, 2013, involving itself as the Transferee Company. The scheme covers the merger of three transferor companies\u2014AeroStructures Manufacturing India Private Limited, Aequs Engineered Plastics Private Limited, and Aequs Force Consumer Products Private Limited\u2014along with their respective members and creditors.",
+    "saved_at": "2026-11-06T18:28:57.169255"
+  },
+  {
+    "id": "NSE_106851265",
+    "source": "NSE",
+    "company": "Hindware Home Innovation Limited",
+    "scrip": "HINDWAREAP",
+    "headline": "Scheme of Arrangement",
+    "date": "06-Nov-2026 18:18:01",
+    "url": "https://nsearchives.nseindia.com/corporate/SHIL_06112026181745_IntimationuponreceiptofcertifiedcopyofNCLT.pdf",
+    "summary": "Hindware Home Innovation Limited has received the certified true copy of the NCLT Kolkata order sanctioning its Scheme of Arrangement. The company disclosed this via a regulatory filing under SEBI LODR Regulation 30.",
+    "saved_at": "2026-11-06T18:28:58.238541"
+  },
+  {
+    "id": "NSE_106851263",
+    "source": "NSE",
+    "company": "Share India Securities Limited",
+    "scrip": "SHAREINDIA",
+    "headline": "Amalgamation/Merger",
+    "date": "06-Nov-2026 18:17:45",
+    "url": "https://nsearchives.nseindia.com/corporate/SISL_06112026181732_Reg30_merger_ace_alphasislsigned.pdf",
+    "summary": "Share India Securities Limited's Board approved a Scheme of Amalgamation on November 06, 2026, under which Ace Alpha Tech Limited will merge into Share India Securities Limited. The scheme is subject to approval by their respective shareholders and creditors.",
+    "saved_at": "2026-11-06T18:28:59.523771"
+  },
+  {
+    "id": "NSE_106851116",
+    "source": "NSE",
+    "company": "Sagar Cements Limited",
+    "scrip": "SAGCEM",
+    "headline": "Amalgamation/Merger",
+    "date": "06-Nov-2026 17:53:37",
+    "url": "https://nsearchives.nseindia.com/corporate/SAGCEM_06112026175331_SCLNSEBSEReg30_06112026.pdf",
+    "summary": "Sagar Cements Limited has received Observation Letters from both BSE and NSE regarding the Scheme of Amalgamation of Andhra Cements Limited into Sagar Cements Limited. The scheme, covering their respective shareholders and creditors, is being pursued under Sections 230 to 232 of the Companies Act, 2013.",
+    "saved_at": "2026-11-06T18:29:00.887479"
+  },
+  {
+    "id": "NSE_106851067",
+    "source": "NSE",
+    "company": "Sagar Cements Limited",
+    "scrip": "SAGCEM",
+    "headline": "Amalgamation/Merger",
+    "date": "06-Nov-2026 17:45:32",
+    "url": "https://nsearchives.nseindia.com/corporate/SAGCEM_06112026174519_SCLNSEBSEReg30_06112026.pdf",
+    "summary": "Sagar Cements Limited has received Observation Letters from BSE and NSE regarding the Scheme of Amalgamation of Andhra Cements Limited into Sagar Cements Limited. The scheme, involving the transferor and transferee companies along with their shareholders and creditors, is being pursued under Sections 230 to 232 of the Companies Act, 2013.",
+    "saved_at": "2026-11-06T18:29:02.102993"
+  },
+  {
+    "id": "NSE_106850941",
+    "source": "NSE",
+    "company": "Andhra Cements Limited",
+    "scrip": "ACL",
+    "headline": "Updates",
+    "date": "06-Nov-2026 17:21:52",
+    "url": "https://nsearchives.nseindia.com/corporate/ANDHRACEMENT_06112026172144_NSEobservationletter06112026.pdf",
+    "summary": "Andhra Cements Limited has received a \"no objection\" Observation Letter from NSE regarding its proposed Scheme of Amalgamation with Sagar Cements Limited. The scheme remains subject to statutory and regulatory approvals, including approval from the NCLT.",
+    "saved_at": "2026-11-06T18:29:03.243195"
   }
 ]
