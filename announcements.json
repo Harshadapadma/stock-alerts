@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106808971",
-    "source": "NSE",
-    "company": "BirlaNu Limited",
-    "scrip": "BIRLANU",
-    "headline": "Scheme of Arrangement",
-    "date": "06-Oct-2026 22:47:34",
-    "url": "https://nsearchives.nseindia.com/corporate/sumedha_06102026224510_SEIntimationSchemesanctionbyHyderabadBench06oct2026signed.pdf",
-    "summary": "BirlaNu Limited announced that the NCLT Hyderabad Bench has approved the Scheme of Amalgamation of Clean Coats Private Limited (Transferor Company) with BirlaNu Limited (Transferee Company) via order dated October 6, 2026. However, the scheme petition filed by the Transferor Company before the NCLT Mumbai Bench is still pending approval. The scheme will only come into effect upon filing certified copies of the sanctioning orders with the respective Registrar of Companies by both companies.",
-    "saved_at": "2026-10-06T20:33:34.390496"
-  },
-  {
-    "id": "NSE_106809137",
-    "source": "NSE",
-    "company": "Inox Green Energy Services Limited",
-    "scrip": "INOXGREEN",
-    "headline": "Press Release",
-    "date": "07-Oct-2026 07:52:27",
-    "url": "https://nsearchives.nseindia.com/corporate/IGESL_07102026074723_IGESL__PR_STXs_dsc.pdf",
-    "summary": "Inox Green Energy Services Limited has completed payment for the transfer of Wind World India's 4.5 GW wind O&M business, in accordance with the Business Transfer Agreement. The company disclosed this via a press release dated October 7, 2026, filed with the stock exchange.",
-    "saved_at": "2026-10-07T06:00:38.882920"
-  },
-  {
     "id": "NSE_106810015",
     "source": "NSE",
     "company": "Maharashtra Seamless Limited",
@@ -1516,5 +1494,38 @@
     "url": "https://nsearchives.nseindia.com/corporate/ASHOKLEYLAND_05112026180926_44ALupdatesonHLFL.pdf",
     "summary": "The National Company Law Tribunal (Mumbai Bench) has sanctioned a Scheme of Arrangement under which Hinduja Leyland Finance Limited (HLFL), a material subsidiary of Ashok Leyland, will be absorbed into NDL Ventures Limited. Upon effectiveness, HLFL will dissolve without winding up and cease to be a material subsidiary, while NDL will become Ashok Leyland's material listed subsidiary, with NDL issuing 25 equity shares for every 10 HLFL shares held. The scheme aims to create a stronger listed financial services platform with operational synergies and enhanced stakeholder value.",
     "saved_at": "2026-11-05T18:16:55.374648"
+  },
+  {
+    "id": "NSE_106850840",
+    "source": "NSE",
+    "company": "Andhra Cements Limited",
+    "scrip": "ACL",
+    "headline": "Updates",
+    "date": "06-Nov-2026 17:02:04",
+    "url": "https://nsearchives.nseindia.com/corporate/ANDHRACEMENT_06112026170154_Mergerletter06112026.pdf",
+    "summary": "Andhra Cements Limited announced that it has received a \"no adverse observations\" letter from BSE regarding its proposed Scheme of Amalgamation with Sagar Cements Limited. The scheme remains subject to statutory and regulatory approvals, including approval from the NCLT.",
+    "saved_at": "2026-11-06T11:37:26.780765"
+  },
+  {
+    "id": "NSE_106850683",
+    "source": "NSE",
+    "company": "GFL Limited",
+    "scrip": "GFLLIMITED",
+    "headline": "General Updates",
+    "date": "06-Nov-2026 16:27:32",
+    "url": "https://nsearchives.nseindia.com/corporate/GFLLIMITED_06112026162718_OutcomeUpload.pdf",
+    "summary": "GFL Limited's Board has taken note of the NCLT Mumbai Bench order sanctioning its Scheme, with an appointed date of April 1, 2026, effective upon filing with the Registrar of Companies. As the transferor company is a wholly owned subsidiary, its shares held by GFL will be cancelled without issuing any consideration shares. The Board has also approved filing the certified order with the RoC in e-Form INC-28 within 30 days.",
+    "saved_at": "2026-11-06T11:37:28.462759"
+  },
+  {
+    "id": "NSE_106850082",
+    "source": "NSE",
+    "company": "Sejal Glass Limited",
+    "scrip": "SEJALLTD",
+    "headline": "Outcome of Board Meeting",
+    "date": "06-Nov-2026 14:11:04",
+    "url": "https://nsearchives.nseindia.com/corporate/SEJALLTD_06112026141017_Outcome.pdf",
+    "summary": "Sejal Glass Limited has notified the Exchange of its proposed execution of a Business Transfer Agreement with M/s. Magnumtuff India Private Limited. The announcement was made as part of the outcome of a Board Meeting.",
+    "saved_at": "2026-11-06T11:37:29.857603"
   }
 ]
