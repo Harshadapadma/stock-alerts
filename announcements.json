@@ -1,71 +1,5 @@
 [
   {
-    "id": "NSE_106816988",
-    "source": "NSE",
-    "company": "JSW Energy Limited",
-    "scrip": "JSWENERGY",
-    "headline": "General Updates",
-    "date": "14-Oct-2026 12:16:36",
-    "url": "https://nsearchives.nseindia.com/corporate/KRUTIKAJSWEL_14102026121618_SEintimationreceiptoforderFinal.pdf",
-    "summary": "JSW Energy Limited has received the certified copy of the order sanctioning the Scheme of Arrangement between GE Power India Limited (demerged company) and itself (resulting company). The scheme was approved under Sections 230 to 232 of the Companies Act, 2013.",
-    "saved_at": "2026-10-14T09:46:49.071590"
-  },
-  {
-    "id": "NSE_106816983",
-    "source": "NSE",
-    "company": "GE Power India Limited",
-    "scrip": "GVPIL",
-    "headline": "General Updates",
-    "date": "14-Oct-2026 12:14:59",
-    "url": "https://nsearchives.nseindia.com/corporate/GEPIL_14102026121445_GEPIL_SE_Disclosure-_Certified_Order_NCLT_signed.pdf",
-    "summary": "GE Power India Limited has received the certified copy of the NCLT order dated October 1, 2026, sanctioning the Scheme of Arrangement for the demerger of its Durgapur facility undertaking into JSW Energy Limited. The company will separately notify the stock exchanges of the Effective Date and Record Date in due course.",
-    "saved_at": "2026-10-14T09:46:50.317679"
-  },
-  {
-    "id": "NSE_106817773",
-    "source": "NSE",
-    "company": "Blue Star Limited",
-    "scrip": "BLUESTARCO",
-    "headline": "Other Restructuring",
-    "date": "14-Oct-2026 19:42:44",
-    "url": "https://nsearchives.nseindia.com/corporate/BLUESTARCO_14102026194211_BSLStockExchangeintimation_Uganda.pdf",
-    "summary": "Blue Star Limited announced that its step-down subsidiary, Blue Star Air Conditioning & Refrigeration (U) Limited in Uganda, will undergo a voluntary strike-off following approval by the board of Blue Star International FZCO. The subsidiary, incorporated in June 2023, has never commenced business and is expected to be struck off by March 31, 2027, after which it will cease to be a subsidiary of the company.",
-    "saved_at": "2026-10-14T14:42:50.598606"
-  },
-  {
-    "id": "NSE_106817661",
-    "source": "NSE",
-    "company": "Brooks Laboratories Limited",
-    "scrip": "BROOKS",
-    "headline": "Demerger",
-    "date": "14-Oct-2026 18:43:49",
-    "url": "https://nsearchives.nseindia.com/corporate/BROOKS_14102026184315_00_Outcome_of_BM.pdf",
-    "summary": "Brooks Laboratories Limited's Board has approved a scheme to demerge its Manufacturing Business into wholly-owned subsidiary Abridge Speciality Limited on a going-concern basis. The demerged undertaking accounted for ~96.66% of the company's FY2026 turnover (Rs. 8,287.26 lakhs), and the scheme requires approvals from stock exchanges, SEBI, NCLT, and shareholders/creditors. Upon effectiveness, the resulting company will be renamed Brooks Laboratories Limited, while the demerged company will become Xuri Lifesciences Limited.",
-    "saved_at": "2026-10-14T14:42:52.373332"
-  },
-  {
-    "id": "NSE_106817473",
-    "source": "NSE",
-    "company": "IDBI Bank Limited",
-    "scrip": "IDBI",
-    "headline": "News Verification",
-    "date": "14-Oct-2026 17:35:46",
-    "url": "-",
-    "summary": "The Exchange has asked IDBI Bank for clarification regarding a news report claiming the Cabinet approved a stake sale to Fairfax for Rs 52,878 crore. IDBI Bank has not yet responded to the query.",
-    "saved_at": "2026-10-14T14:42:53.647863"
-  },
-  {
-    "id": "NSE_106817310",
-    "source": "NSE",
-    "company": "Bajaj Healthcare Limited",
-    "scrip": "BAJAJHCARE",
-    "headline": "General Updates",
-    "date": "14-Oct-2026 16:23:06",
-    "url": "https://nsearchives.nseindia.com/corporate/BAJAJHCARE_14102026161906_Reg_30_Intimation_for_NCLT_Final_Order_Final.pdf",
-    "summary": "Bajaj Healthcare Limited announced that the Hon'ble NCLT, Mumbai Bench, has approved its acquisition of Genrx Pharmaceuticals Private Limited (in Liquidation) on a going concern basis via order dated October 13, 2026. The company's trading window will continue to remain closed for all designated persons and their immediate relatives.",
-    "saved_at": "2026-10-14T14:42:54.727092"
-  },
-  {
     "id": "NSE_106817913",
     "source": "NSE",
     "company": "Smartworks Coworking Spaces Limited",
@@ -1340,5 +1274,60 @@
     "url": "https://nsearchives.nseindia.com/corporate/PRECOT_13112026133206_Demerger.pdf",
     "summary": "Precot Limited's Board has granted in-principle approval for a demerger of its identified non-core assets\u2014including its investment in Suprem Associates, a partnership firm holding immovable property\u2014into a separate resulting company under Sections 230\u2013232 of the Companies Act, 2013. The demerger, which will not involve any listing of the resulting entity, is intended to separate non-core assets from the company's core operations, allowing management and capital to focus on expansion and growth while improving transparency and enabling independent value discovery. The proposal remains subject to approvals from the Board, shareholders, creditors, NCLT, stock exchanges, and other regulatory authorities, with non-promoter shareholders to receive appropriate compensation for shares allotted in the resulting entity at a value determined by an independent valuer.",
     "saved_at": "2026-11-13T08:44:56.692121"
+  },
+  {
+    "id": "NSE_106860021",
+    "source": "NSE",
+    "company": "Kothari Petrochemicals Limited",
+    "scrip": "KOTHARIPET",
+    "headline": "Amalgamation/Merger",
+    "date": "13-Nov-2026 21:59:30",
+    "url": "https://nsearchives.nseindia.com/corporate/KOTHARIPET_13112026215747_ProceedingsofUnsecuredCreditorsMeeting.pdf",
+    "summary": "Kothari Petrochemicals Limited has notified the Exchange regarding the proceedings of the NCLT-convened meeting of its unsecured creditors, held on November 13, 2026. The meeting relates to the company's proposed amalgamation/merger.",
+    "saved_at": "2026-11-13T16:47:42.415305"
+  },
+  {
+    "id": "NSE_106860006",
+    "source": "NSE",
+    "company": "Kothari Petrochemicals Limited",
+    "scrip": "KOTHARIPET",
+    "headline": "Shareholders meeting",
+    "date": "13-Nov-2026 21:55:52",
+    "url": "https://nsearchives.nseindia.com/corporate/KOTHARIPET_13112026215407_ProceedingsofEquityshareholdersMeeting.pdf",
+    "summary": "Kothari Petrochemicals Limited informed the Exchange about the proceedings of its NCLT-convened meeting of Equity Shareholders, held on November 13, 2026. The announcement concerns the outcome of this shareholder meeting convened under NCLT direction.",
+    "saved_at": "2026-11-13T16:47:43.538568"
+  },
+  {
+    "id": "NSE_106859990",
+    "source": "NSE",
+    "company": "Kothari Sugars And Chemicals Limited",
+    "scrip": "KOTARISUG",
+    "headline": "Amalgamation/Merger",
+    "date": "13-Nov-2026 21:45:32",
+    "url": "https://nsearchives.nseindia.com/corporate/KOTARISUG_13112026214400_ProceedingsofUnsecuredcreditorsmeeting.pdf",
+    "summary": "Kothari Sugars And Chemicals Limited informed the Exchange about the proceedings of the NCLT-convened meeting of its unsecured creditors, held on November 13, 2026. The meeting relates to the company's amalgamation/merger process.",
+    "saved_at": "2026-11-13T16:47:44.360144"
+  },
+  {
+    "id": "NSE_106859955",
+    "source": "NSE",
+    "company": "Kothari Sugars And Chemicals Limited",
+    "scrip": "KOTARISUG",
+    "headline": "Shareholders meeting",
+    "date": "13-Nov-2026 21:34:29",
+    "url": "https://nsearchives.nseindia.com/corporate/KOTARISUG_13112026213322_ProceedingsofEquityShareholdersMeeting.pdf",
+    "summary": "Kothari Sugars And Chemicals Limited has notified the Exchange of the proceedings from its NCLT-convened meeting of equity shareholders, held on November 13, 2026. The announcement confirms the meeting took place as scheduled under National Company Law Tribunal direction.",
+    "saved_at": "2026-11-13T16:47:45.492258"
+  },
+  {
+    "id": "NSE_106859665",
+    "source": "NSE",
+    "company": "Belrise Industries Limited",
+    "scrip": "BELRISE",
+    "headline": "Scheme of Arrangement",
+    "date": "13-Nov-2026 19:32:12",
+    "url": "https://nsearchives.nseindia.com/corporate/BELRISE_13112026193157_BELRISE_Approval_of_scheme_of_Amalgamation_13112026.pdf",
+    "summary": "Belrise Industries Limited's Board approved a scheme to amalgamate its wholly owned subsidiary, H-One India Private Limited, into itself, while rescinding the previously approved scheme from November 11, 2025. The merger is intended to leverage synergies between the two entities, which operate in similar automotive component manufacturing businesses.",
+    "saved_at": "2026-11-13T16:47:47.025644"
   }
 ]
