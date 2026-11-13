@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106817913",
-    "source": "NSE",
-    "company": "Smartworks Coworking Spaces Limited",
-    "scrip": "SMARTWORKS",
-    "headline": "General Updates",
-    "date": "14-Oct-2026 22:45:09",
-    "url": "https://nsearchives.nseindia.com/corporate/SMARTWORKS_14102026222701_Intimation__NCLT_filing_14102026.pdf",
-    "summary": "Smartworks Coworking Spaces Limited has notified the Exchange that it has e-filed Form RSC-1 with the Hon'ble National Company Law Tribunal for a reduction of share capital (Securities Premium Account). This filing initiates the regulatory process for the proposed capital reduction.",
-    "saved_at": "2026-10-14T18:59:01.624236"
-  },
-  {
-    "id": "NSE_106817832",
-    "source": "NSE",
-    "company": "IDBI Bank Limited",
-    "scrip": "IDBI",
-    "headline": "General Updates",
-    "date": "14-Oct-2026 20:48:50",
-    "url": "https://nsearchives.nseindia.com/corporate/MANESHJ_14102026204555_SE_PressRelease_14102026.pdf",
-    "summary": "The Government of India has approved the strategic sale of a 60.72% stake in IDBI Bank Ltd. to M/s 10955230 Canada Inc. (parent entity Fairfax Financial Holdings Ltd.) for a consideration of approximately Rs. 52,878 crore. The transaction, comprising GoI's 30.48% and LIC's 30.24% shareholding, was finalized through a two-stage competitive bidding process following CCEA approval on 14/10/2026.",
-    "saved_at": "2026-10-14T18:59:03.069977"
-  },
-  {
     "id": "NSE_106818230",
     "source": "NSE",
     "company": "IDBI Bank Limited",
@@ -1329,5 +1307,27 @@
     "url": "https://nsearchives.nseindia.com/corporate/BELRISE_13112026193157_BELRISE_Approval_of_scheme_of_Amalgamation_13112026.pdf",
     "summary": "Belrise Industries Limited's Board approved a scheme to amalgamate its wholly owned subsidiary, H-One India Private Limited, into itself, while rescinding the previously approved scheme from November 11, 2025. The merger is intended to leverage synergies between the two entities, which operate in similar automotive component manufacturing businesses.",
     "saved_at": "2026-11-13T16:47:47.025644"
+  },
+  {
+    "id": "NSE_106860178",
+    "source": "NSE",
+    "company": "Kothari Sugars And Chemicals Limited",
+    "scrip": "KOTARISUG",
+    "headline": "Amalgamation/Merger",
+    "date": "13-Nov-2026 23:57:47",
+    "url": "https://nsearchives.nseindia.com/corporate/KOTARISUG_13112026235656_UnsecuredCreditorsscrutinizerReport_Intimation.pdf",
+    "summary": "Kothari Sugars And Chemicals Limited has submitted the voting results and Scrutinizer's Report from its NCLT-convened meeting of unsecured creditors, held on November 13, 2026. The meeting relates to the company's proposed amalgamation/merger.",
+    "saved_at": "2026-11-13T22:15:39.401101"
+  },
+  {
+    "id": "NSE_106860177",
+    "source": "NSE",
+    "company": "Kothari Sugars And Chemicals Limited",
+    "scrip": "KOTARISUG",
+    "headline": "Shareholders meeting",
+    "date": "13-Nov-2026 23:54:28",
+    "url": "https://nsearchives.nseindia.com/corporate/KOTARISUG_13112026235400_EquityShareholdersscrutinizerReport_Intimation.pdf",
+    "summary": "Kothari Sugars And Chemicals Limited has submitted to the Exchange the voting results and Scrutinizer's Report from its NCLT-convened meeting of equity shareholders. The meeting was held on November 13, 2026.",
+    "saved_at": "2026-11-13T22:15:40.461368"
   }
 ]
