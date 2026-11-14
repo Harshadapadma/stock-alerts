@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106818230",
-    "source": "NSE",
-    "company": "IDBI Bank Limited",
-    "scrip": "IDBI",
-    "headline": "News Verification",
-    "date": "15-Oct-2026 10:28:49",
-    "url": "https://nsearchives.nseindia.com/corporate/MANESHJ_15102026102815_NSE_Clarification_15102026.pdf",
-    "summary": "IDBI Bank Limited issued a response to a stock exchange clarification request regarding a news report claiming the Cabinet approved a stake sale to Fairfax for Rs 52,878 crore. The company's reply is attached to the announcement.",
-    "saved_at": "2026-10-15T05:12:06.494594"
-  },
-  {
     "id": "NSE_106818549",
     "source": "NSE",
     "company": "CSB Bank Limited",
@@ -1351,5 +1340,16 @@
     "url": "https://nsearchives.nseindia.com/corporate/KOTHARIPET_14112026000640_IntimationofEquityScrutinizerReport.pdf",
     "summary": "Kothari Petrochemicals Limited has submitted the Voting Results and Scrutinizer's Report from its NCLT-convened meeting of Equity Shareholders to the Exchange. The meeting was held on November 13, 2026.",
     "saved_at": "2026-11-14T02:31:04.044773"
+  },
+  {
+    "id": "NSE_106860318",
+    "source": "NSE",
+    "company": "Rubicon Research Limited",
+    "scrip": "RUBICON",
+    "headline": "General Updates",
+    "date": "14-Nov-2026 11:41:50",
+    "url": "https://nsearchives.nseindia.com/corporate/9823522970_14112026114049_RRLSEIntimationRDOrderMerger13Nov2026.pdf",
+    "summary": "Rubicon Research Limited announced that the Regional Director (Western Region), Ministry of Corporate Affairs, returned its fast-track merger application for KIA Health Tech Pvt Ltd due to insufficient shareholder approval (88.65% vs. required 90%) and unsecured creditor approval (71.83% vs. required 90%). The company is evaluating options, including pursuing the merger through the regular NCLT process. The order has no material impact on business operations, as KIA Health Tech currently has no operations.",
+    "saved_at": "2026-11-14T09:24:20.517302"
   }
 ]
