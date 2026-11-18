@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106821906",
-    "source": "NSE",
-    "company": "EPL Limited",
-    "scrip": "EPL",
-    "headline": "Scheme of Arrangement",
-    "date": "19-Oct-2026 15:15:04",
-    "url": "https://nsearchives.nseindia.com/corporate/Sonia_Gupte_19102026151455_SEIntimationNoObjectionLetterSd.pdf",
-    "summary": "EPL Limited has received observation letters from both BSE and NSE regarding the Scheme of Amalgamation of Indovida India Private Limited with the company and their respective shareholders. This marks a regulatory step forward in the amalgamation process.",
-    "saved_at": "2026-10-19T10:56:01.199775"
-  },
-  {
-    "id": "NSE_106821885",
-    "source": "NSE",
-    "company": "CL Educate Limited",
-    "scrip": "CLEDUCATE",
-    "headline": "Amalgamation/Merger",
-    "date": "19-Oct-2026 14:52:50",
-    "url": "https://nsearchives.nseindia.com/corporate/CLEDUCATE_19102026145210_merger_intimation-SD.pdf",
-    "summary": "CL Educate Limited has announced a scheme of amalgamation whereby DEXIT Global Limited, its wholly-owned subsidiary, will merge into the company. The merger is intended to consolidate businesses, streamline operations, achieve economies of scale, and unlock synergies across products, customers, and technology. As DEXIT is wholly owned, no new shares will be issued and the transaction is exempt from related party transaction requirements.",
-    "saved_at": "2026-10-19T10:56:02.434243"
-  },
-  {
     "id": "NSE_106822486",
     "source": "NSE",
     "company": "Power Finance Corporation Limited",
@@ -1263,5 +1241,16 @@
     "url": "https://nsearchives.nseindia.in/corporate/POCL_17112026140935_Amalgamationfinal_SD.pdf",
     "summary": "Pondy Oxides & Chemicals Limited has filed a merger application involving POCL Future Tech Private Limited as the transferor company, submitted under Section 133 of the Companies Act, 2013. The transferor company has 7 equity shareholders and 1 secured creditor, all of whom have given 100% consent by affidavit, and it has sought to dispense with their respective meetings.",
     "saved_at": "2026-11-17T17:03:32.042299"
+  },
+  {
+    "id": "NSE_106864970",
+    "source": "NSE",
+    "company": "AYM Syntex Limited",
+    "scrip": "AYMSYNTEX",
+    "headline": "Amalgamation/Merger",
+    "date": "18-Nov-2026 16:21:05",
+    "url": "https://nsearchives.nseindia.in/corporate/AYMSYNTEX_18112026162041_Intimationonpronouncement181126.pdf",
+    "summary": "AYM Syntex Limited announced that the NCLT Mumbai Bench has sanctioned its Scheme of Amalgamation/Merger under Sections 230-232 of the Companies Act, 2013, making the Scheme effective upon such sanction per Clause 20. The certified order is awaited and will be disclosed to the stock exchanges once received.",
+    "saved_at": "2026-11-18T14:28:34.910252"
   }
 ]
