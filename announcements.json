@@ -1,38 +1,5 @@
 [
   {
-    "id": "NSE_106823393",
-    "source": "NSE",
-    "company": "ETERNAL LIMITED",
-    "scrip": "ETERNAL",
-    "headline": "Sale or disposal",
-    "date": "21-Oct-2026 15:33:41",
-    "url": "https://nsearchives.nseindia.com/corporate/ZOMATO_21102026153325_OutcomeSIGNED.pdf",
-    "summary": "Eternal Limited's board approved transferring its Going-out India business to wholly owned subsidiary Zomato Entertainment Private Limited via slump sale as part of an internal restructuring to consolidate the business and achieve operational synergies. The board also approved a share swap with Mygate involving the transfer of its Adonmo shares in exchange for Mygate shares, a step toward the proposed Adonmo-Mygate merger, after which Eternal will hold ~4.4% of the merged entity (valued at INR 156 crore versus its INR 112 crore investment). Additionally, the board approved unaudited financial results for the quarter and half year ended September 30, 2026.",
-    "saved_at": "2026-10-21T11:33:58.719862"
-  },
-  {
-    "id": "NSESME_106823277",
-    "source": "NSE-SME",
-    "company": "P. E. Analytics Limited",
-    "scrip": "PROPEQUITY",
-    "headline": "Disclosure of material issue",
-    "date": "21-Oct-2026 14:23:15",
-    "url": "https://nsearchives.nseindia.com/corporate/PROPEQUITY_21102026142233_SEIntimation_Propedge.pdf",
-    "summary": "P. E. Analytics Limited has filed an application under Section 97(1) of the Companies Act, 2013 before the Hon'ble NCLT concerning the Annual General Meeting of its material subsidiary. The company disclosed this as a material issue in its corporate announcement.",
-    "saved_at": "2026-10-21T11:34:00.054873"
-  },
-  {
-    "id": "NSE_106823583",
-    "source": "NSE",
-    "company": "GOCL Corporation Limited",
-    "scrip": "GOCLCORP",
-    "headline": "Shareholders meeting",
-    "date": "21-Oct-2026 17:14:51",
-    "url": "https://nsearchives.nseindia.com/corporate/GULFCORP_21102026164809_SEIntimationNCLTShareholdersMeetingSigned.pdf",
-    "summary": "GOCL Corporation Limited has scheduled a meeting of its equity shareholders on November 24, 2026, to be held via video conferencing, as directed by the NCLT, to consider approval of a Scheme of Merger by Absorption of Hinduja National Power Corporation Limited into GOCL. The company has appointed KFin Technologies Limited to provide remote e-voting facilities from November 19 to November 23, 2026, with a cut-off date of November 17, 2026. The Notice and Explanatory Statement have been sent electronically to shareholders and are also available on the company's website.",
-    "saved_at": "2026-10-21T16:05:53.724420"
-  },
-  {
     "id": "NSE_106824477",
     "source": "NSE",
     "company": "Shyam Metalics and Energy Limited",
@@ -1285,5 +1252,49 @@
     "url": "https://nsearchives.nseindia.in/corporate/TTKHCSECL_20112026123645_SEBMOUTCOME_20112026.pdf",
     "summary": "TTK Healthcare's Board approved a Scheme of Arrangement on November 20, 2026, to issue bonus Non-Convertible Redeemable Preference Shares (NCRPS). Under the scheme, shareholders will receive 5 NCRPS of Rs.100 each fully paid up for every 1 equity share of Rs.10 held as of the Record Date.",
     "saved_at": "2026-11-20T09:55:13.134446"
+  },
+  {
+    "id": "NSE_106867852",
+    "source": "NSE",
+    "company": "Magnum Ventures Limited",
+    "scrip": "MAGNUM",
+    "headline": "Updates",
+    "date": "20-Nov-2026 21:28:24",
+    "url": "https://nsearchives.nseindia.in/corporate/MAGNUM_20112026212815_Proceedings.pdf",
+    "summary": "Magnum Ventures Limited has notified the Exchange of the proceedings from meetings convened under the directions of the NCLT Allahabad Bench. These meetings relate to the company's Scheme of Arrangement.",
+    "saved_at": "2026-11-20T18:27:44.617817"
+  },
+  {
+    "id": "NSE_106867759",
+    "source": "NSE",
+    "company": "Raymond Limited",
+    "scrip": "RAYMOND",
+    "headline": "Scheme of Arrangement",
+    "date": "20-Nov-2026 18:47:37",
+    "url": "https://nsearchives.nseindia.in/corporate/RAYMOND_20112026184234_SEintimationEBALsigned.pdf",
+    "summary": "The NCLT Mumbai Bench has approved the Scheme of Amalgamation of Everblue Apparel Limited (a wholly owned subsidiary) with Raymond Limited via an order dated November 20, 2026. The scheme will take effect only upon filing of the certified copy of the order with the Registrar of Companies.",
+    "saved_at": "2026-11-20T18:27:45.505413"
+  },
+  {
+    "id": "NSE_106867716",
+    "source": "NSE",
+    "company": "NHPC Limited",
+    "scrip": "NHPC",
+    "headline": "General Updates",
+    "date": "20-Nov-2026 18:27:18",
+    "url": "https://nsearchives.nseindia.in/corporate/NHPC_20112026182601_Letter_STX_JPCL_Merger.pdf",
+    "summary": "NHPC Limited announced that the Ministry of Corporate Affairs has sanctioned the Scheme of Amalgamation between Jalpower Corporation Limited (transferor) and NHPC Limited (transferee), per a letter dated 17 November 2026 received on 20 November 2026. This follows the company's earlier letter dated 22 September 2026 and complies with Regulation 30 of SEBI LODR. The MCA order and scheme of amalgamation are attached.",
+    "saved_at": "2026-11-20T18:27:46.687503"
+  },
+  {
+    "id": "NSE_106867707",
+    "source": "NSE",
+    "company": "ESAF Small Finance Bank Limited",
+    "scrip": "ESAFSFB",
+    "headline": "General Updates",
+    "date": "20-Nov-2026 18:22:58",
+    "url": "https://nsearchives.nseindia.in/corporate/esfb_20112026182240_SEIntimation_NCLT_approval_for_the_SOA.pdf",
+    "summary": "ESAF Small Finance Bank Limited announced that it has received communication from its promoter, ESAF Financial Holdings Private Limited, regarding NCLT sanction of the Revised Scheme of Arrangement. The disclosure was made to the Exchange as a general update.",
+    "saved_at": "2026-11-20T18:27:47.590045"
   }
 ]
