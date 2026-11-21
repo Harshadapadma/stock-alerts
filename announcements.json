@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106825075",
-    "source": "NSE",
-    "company": "Ugro Capital Limited",
-    "scrip": "UGROCAP",
-    "headline": "Amalgamation/Merger",
-    "date": "22-Oct-2026 17:24:54",
-    "url": "https://nsearchives.nseindia.com/corporate/UGROCAP_22102026172445_UGRONCLTOrder.pdf",
-    "summary": "Ugro Capital Limited announced that, in compliance with a National Company Law Tribunal order regarding its merger scheme, it will issue notices to statutory authorities under Section 230(5) of the Companies Act, 2013, inviting representations within 30 days. The company must also publish hearing notices in Business Standard and Navshakti at least 10 days before the hearing and host the scheme documents on its website. Authorities failing to respond within the stipulated period will be presumed to have no representations to make on the proposed amalgamation.",
-    "saved_at": "2026-10-22T12:26:19.967197"
-  },
-  {
-    "id": "NSE_106824797",
-    "source": "NSE",
-    "company": "Jindal Stainless Limited",
-    "scrip": "JSL",
-    "headline": "Amalgamation/Merger",
-    "date": "22-Oct-2026 15:31:50",
-    "url": "https://nsearchives.nseindia.com/corporate/JSL_22102026153123_JSLRES.pdf",
-    "summary": "Jindal Stainless Limited's Board approved its unaudited standalone and consolidated financial results for the quarter and half-year ended September 30, 2026. The Board also approved a draft scheme of amalgamation of the company with its wholly owned subsidiaries\u2014Chromeni Steels Limited, Rabirun Vinimay Private Limited, JSL Super Steel Limited, and Jindal United Steel Limited\u2014with an appointed date of April 1, 2027, subject to shareholder, creditor, regulatory, and NCLT approvals.",
-    "saved_at": "2026-10-22T12:26:21.352372"
-  },
-  {
     "id": "NSE_106825438",
     "source": "NSE",
     "company": "Talwalkars Better Value Fitness Limited",
@@ -1296,5 +1274,27 @@
     "url": "https://nsearchives.nseindia.in/corporate/AONESTEELS_21112026122938_SE_Intimations_Signed.pdf",
     "summary": "A-One Steels India Limited announced that the NCLT Hyderabad Bench-1 has sanctioned the Scheme of Amalgamation involving its subsidiaries Basai Steels and Power Private Limited and A-One Gold Pipes and Tubes Private Limited, with an appointed date of October 1, 2025. The tribunal also dismissed a shareholder's interlocutory application as not maintainable under Section 230(4) of the Companies Act, 2013.",
     "saved_at": "2026-11-21T07:08:44.649929"
+  },
+  {
+    "id": "NSE_106868310",
+    "source": "NSE",
+    "company": "The Sandesh Limited",
+    "scrip": "SANDESH",
+    "headline": "Amalgamation/Merger",
+    "date": "21-Nov-2026 19:20:42",
+    "url": "https://nsearchives.nseindia.in/corporate/SANDESH_21112026190924_Letter_to_SE_21-11-2026.pdf",
+    "summary": "The Sandesh Limited announced that the National Company Law Tribunal (Ahmedabad Bench) has pronounced its order on the first motion application concerning the proposed amalgamation of Sandesh Digital Private Limited (transferor) into The Sandesh Limited (transferee). The order, delivered on 18/11/2026 under Sections 230\u2013232 of the Companies Act, 2013, follows board approvals and seeks dispensation of shareholder and creditor meetings.",
+    "saved_at": "2026-11-21T15:23:00.877353"
+  },
+  {
+    "id": "NSE_106868183",
+    "source": "NSE",
+    "company": "GLOBE ENTERPRISES (INDIA) LIMITED",
+    "scrip": "GLOBE",
+    "headline": "Demerger",
+    "date": "21-Nov-2026 15:02:13",
+    "url": "https://nsearchives.nseindia.in/corporate/GLOBE_21112026150201_IntimationunderReg30NCLTorderofdemergerSigned.pdf",
+    "summary": "The NCLT Ahmedabad Bench has directed Globe Enterprises (India) Limited to convene meetings of its equity shareholders, secured creditors, and unsecured creditors within 45 days to consider and approve a proposed demerger scheme with Morabia Creations Limited. The tribunal dispensed with the requirement for shareholder and creditor meetings for Morabia Creations Limited, as it has no secured or unsecured creditors. The scheme remains subject to applicable regulatory and other approvals.",
+    "saved_at": "2026-11-21T15:23:02.027792"
   }
 ]
