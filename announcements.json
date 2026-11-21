@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106824477",
-    "source": "NSE",
-    "company": "Shyam Metalics and Energy Limited",
-    "scrip": "SHYAMMETL",
-    "headline": "Amalgamation/Merger",
-    "date": "22-Oct-2026 11:41:16",
-    "url": "https://nsearchives.nseindia.com/corporate/SHYAMMETL_22102026114107_NCLTorder.pdf",
-    "summary": "The NCLT Kolkata has approved the Scheme of Amalgamation of Shree Venkateshwara Electrocast Private Limited with Shyam Sel and Power Limited, a wholly owned subsidiary of Shyam Metalics and Energy Limited. The scheme will become effective upon filing of the certified NCLT order with the Registrar of Companies, West Bengal.",
-    "saved_at": "2026-10-22T06:36:15.238157"
-  },
-  {
     "id": "NSE_106825075",
     "source": "NSE",
     "company": "Ugro Capital Limited",
@@ -1296,5 +1285,16 @@
     "url": "https://nsearchives.nseindia.in/corporate/esfb_20112026182240_SEIntimation_NCLT_approval_for_the_SOA.pdf",
     "summary": "ESAF Small Finance Bank Limited announced that it has received communication from its promoter, ESAF Financial Holdings Private Limited, regarding NCLT sanction of the Revised Scheme of Arrangement. The disclosure was made to the Exchange as a general update.",
     "saved_at": "2026-11-20T18:27:47.590045"
+  },
+  {
+    "id": "NSE_106868111",
+    "source": "NSE",
+    "company": "A-One Steels India Limited",
+    "scrip": "AONESTEELS",
+    "headline": "Amalgamation/Merger",
+    "date": "21-Nov-2026 12:29:50",
+    "url": "https://nsearchives.nseindia.in/corporate/AONESTEELS_21112026122938_SE_Intimations_Signed.pdf",
+    "summary": "A-One Steels India Limited announced that the NCLT Hyderabad Bench-1 has sanctioned the Scheme of Amalgamation involving its subsidiaries Basai Steels and Power Private Limited and A-One Gold Pipes and Tubes Private Limited, with an appointed date of October 1, 2025. The tribunal also dismissed a shareholder's interlocutory application as not maintainable under Section 230(4) of the Companies Act, 2013.",
+    "saved_at": "2026-11-21T07:08:44.649929"
   }
 ]
