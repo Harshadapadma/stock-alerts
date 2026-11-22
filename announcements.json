@@ -1,82 +1,5 @@
 [
   {
-    "id": "NSE_106825438",
-    "source": "NSE",
-    "company": "Talwalkars Better Value Fitness Limited",
-    "scrip": "TALWALKARS",
-    "headline": "Suspension of Trading",
-    "date": "22-Oct-2026 20:01:07",
-    "url": "-",
-    "summary": "Trading in Talwalkars Better Value Fitness Limited equity shares will remain suspended due to a Reduction of Share Capital ordered by the NCLT. The suspension follows the company's compliance with the tribunal's directive.",
-    "saved_at": "2026-10-22T17:32:18.361753"
-  },
-  {
-    "id": "NSE_106825399",
-    "source": "NSE",
-    "company": "Ashapura Intimates Fashion Limited",
-    "scrip": "AIFL",
-    "headline": "Suspension of Trading",
-    "date": "22-Oct-2026 19:36:52",
-    "url": "-",
-    "summary": "Trading in Ashapura Intimates Fashion Limited's equity shares will remain suspended due to a Reduction of Share Capital ordered by the NCLT. The suspension follows the tribunal's order implementing the capital reduction.",
-    "saved_at": "2026-10-22T17:32:19.554128"
-  },
-  {
-    "id": "NSE_106826043",
-    "source": "NSE",
-    "company": "Siemens Limited",
-    "scrip": "SIEMENS",
-    "headline": "Copy of Newspaper Publication",
-    "date": "23-Oct-2026 12:04:22",
-    "url": "https://nsearchives.nseindia.com/corporate/SIEMENS57_23102026120411_SE_Disclosure.pdf",
-    "summary": "Siemens Limited has published a newspaper notice regarding the final hearing of the company scheme petition for the amalgamation of Siemens Rail Automation Private Limited with Siemens Limited and their respective shareholders. The announcement serves as a copy of that newspaper publication.",
-    "saved_at": "2026-10-23T07:27:11.904373"
-  },
-  {
-    "id": "NSE_106825941",
-    "source": "NSE",
-    "company": "Heritage Foods Limited",
-    "scrip": "HERITGFOOD",
-    "headline": "Press Release",
-    "date": "23-Oct-2026 11:03:58",
-    "url": "https://nsearchives.nseindia.com/corporate/HERITGFOOD_23102026110346_Press_Release_23102026.pdf",
-    "summary": "Heritage Foods Limited has notified the Exchange of a press release dated October 23, 2026, regarding the amalgamation of its wholly owned subsidiary, Heritage Novandie Foods Limited, with the parent company. The announcement confirms the merger of the subsidiary into Heritage Foods Limited.",
-    "saved_at": "2026-10-23T07:27:13.100262"
-  },
-  {
-    "id": "NSE_106825938",
-    "source": "NSE",
-    "company": "Heritage Foods Limited",
-    "scrip": "HERITGFOOD",
-    "headline": "Outcome of Board Meeting",
-    "date": "23-Oct-2026 10:57:28",
-    "url": "https://nsearchives.nseindia.com/corporate/HERITGFOOD_23102026105649_BM_Outcome_23102026.pdf",
-    "summary": "Heritage Foods Limited's Board has approved a scheme to amalgamate its wholly-owned subsidiary, Heritage Novandie Foods Limited, into the company under Sections 230-232 of the Companies Act, 2013. The amalgamation is subject to approval from the National Company Law Tribunal, shareholders, and other authorities, with the draft scheme to be filed with stock exchanges in due course. The move is intended to achieve greater integration of businesses and financial resources.",
-    "saved_at": "2026-10-23T07:27:14.459101"
-  },
-  {
-    "id": "NSE_106825772",
-    "source": "NSE",
-    "company": "Shyam Metalics and Energy Limited",
-    "scrip": "SHYAMMETL",
-    "headline": "Press Release",
-    "date": "23-Oct-2026 09:15:45",
-    "url": "https://nsearchives.nseindia.com/corporate/SHYAMMETL_23102026091425_SMELPressRelease23102026.pdf",
-    "summary": "Shyam Metalics and Energy Limited announced that its subsidiary, Shyam Sel and Power Limited, has received NCLT approval for the merger of Shree Venkateshwara Electrocast Private Limited. The merger is effective retroactively from April 1, 2024.",
-    "saved_at": "2026-10-23T07:27:15.576001"
-  },
-  {
-    "id": "NSE_106826200",
-    "source": "NSE",
-    "company": "Newgen Software Technologies Limited",
-    "scrip": "NEWGEN",
-    "headline": "Amalgamation/Merger",
-    "date": "23-Oct-2026 13:49:40",
-    "url": "https://nsearchives.nseindia.com/corporate/NEWGEN2_23102026134931_FinancialResult_23102026.pdf",
-    "summary": "Newgen Software Technologies Limited announced Exchange approval of a Scheme of Arrangement for the amalgamation of Newgen Computers Technologies Limited (the Transferor Company) into Newgen Software Technologies Limited (the Transferee Company). The scheme covers the respective shareholders and creditors of both entities.",
-    "saved_at": "2026-10-23T12:48:52.855490"
-  },
-  {
     "id": "NSE_106827118",
     "source": "NSE",
     "company": "Network18 Media & Investments Limited",
@@ -1296,5 +1219,16 @@
     "url": "https://nsearchives.nseindia.in/corporate/GLOBE_21112026150201_IntimationunderReg30NCLTorderofdemergerSigned.pdf",
     "summary": "The NCLT Ahmedabad Bench has directed Globe Enterprises (India) Limited to convene meetings of its equity shareholders, secured creditors, and unsecured creditors within 45 days to consider and approve a proposed demerger scheme with Morabia Creations Limited. The tribunal dispensed with the requirement for shareholder and creditor meetings for Morabia Creations Limited, as it has no secured or unsecured creditors. The scheme remains subject to applicable regulatory and other approvals.",
     "saved_at": "2026-11-21T15:23:02.027792"
+  },
+  {
+    "id": "NSE_106868387",
+    "source": "NSE",
+    "company": "Tata Steel Limited",
+    "scrip": "TATASTEEL",
+    "headline": "Sale or disposal",
+    "date": "22-Nov-2026 19:11:26",
+    "url": "https://nsearchives.nseindia.in/corporate/NIDHIFADNAVIS_22112026191002_Board_Outcome_signed.pdf",
+    "summary": "Tata Steel Limited has entered into a Business Transfer Agreement (BTA) for the sale of its Tubes Business to APL Apollo Tubes Limited for a cash consideration of up to \u20b911,700 crore. The Tubes Business contributed approximately \u20b911,375 crore in turnover (8.14% of standalone turnover) and \u20b93,274 crore in net worth during FY2026. The transaction, which is not a related party transaction, is expected to be completed on or before March 31, 2028, subject to regulatory approvals and satisfaction of conditions precedent.",
+    "saved_at": "2026-11-22T16:26:29.543769"
   }
 ]
