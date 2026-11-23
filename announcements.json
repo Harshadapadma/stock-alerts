@@ -1,71 +1,5 @@
 [
   {
-    "id": "NSE_106827118",
-    "source": "NSE",
-    "company": "Network18 Media & Investments Limited",
-    "scrip": "NETWORK18",
-    "headline": "Amalgamation/Merger",
-    "date": "23-Oct-2026 21:57:38",
-    "url": "https://nsearchives.nseindia.com/corporate/Shambhu_23102026215356_NW18_Sanction_of_Scheme_SE_Intimation.pdf",
-    "summary": "Network18 Media & Investments Limited announced an update regarding the Scheme of Amalgamation of its wholly-owned subsidiary, News18 Marathi Private Limited, with the Company. The disclosure was made under Regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015.",
-    "saved_at": "2026-10-23T17:34:24.849920"
-  },
-  {
-    "id": "NSE_106826901",
-    "source": "NSE",
-    "company": "Arisinfra Solutions Limited",
-    "scrip": "ARIS",
-    "headline": "General Updates",
-    "date": "23-Oct-2026 18:49:38",
-    "url": "https://nsearchives.nseindia.com/corporate/ARISINFRA2024_23102026184904_Crs_meeting_sd.pdf",
-    "summary": "Arisinfra Solutions Limited has notified the Exchange of an NCLT-convened meeting of its Secured Creditors scheduled for November 25, 2026. The announcement was filed as a general update regarding the meeting notice.",
-    "saved_at": "2026-10-23T17:34:25.970050"
-  },
-  {
-    "id": "NSE_106826867",
-    "source": "NSE",
-    "company": "Arisinfra Solutions Limited",
-    "scrip": "ARIS",
-    "headline": "Shareholders meeting",
-    "date": "23-Oct-2026 18:36:58",
-    "url": "https://nsearchives.nseindia.com/corporate/ARISINFRA2024_23102026183527_Notice_Shareholders_sd.pdf",
-    "summary": "Arisinfra Solutions Limited has notified the Exchange of an NCLT-convened meeting of its equity shareholders scheduled for November 25, 2026. The meeting notice has been issued to shareholders in accordance with the tribunal's directions.",
-    "saved_at": "2026-10-23T17:34:27.091023"
-  },
-  {
-    "id": "NSE_106827634",
-    "source": "NSE",
-    "company": "Arisinfra Solutions Limited",
-    "scrip": "ARIS",
-    "headline": "Copy of Newspaper Publication",
-    "date": "24-Oct-2026 16:59:32",
-    "url": "https://nsearchives.nseindia.com/corporate/ARISINFRA2024_24102026165908_Advertisment_SE_NCLT_sd.pdf",
-    "summary": "Arisinfra Solutions Limited has published newspaper advertisements regarding Meetings of its Equity Shareholders and Secured Creditors scheduled for November 25, 2026, to be held via video conferencing, in compliance with SEBI regulations. The advertisements appeared in Financial Express (English) and Loksatta (Marathi) on October 24, 2026, with notices dispatched to shareholders and creditors on October 23, 2026. Copies of the advertisements are also available on the Company's website.",
-    "saved_at": "2026-10-24T12:05:20.715508"
-  },
-  {
-    "id": "NSE_106827458",
-    "source": "NSE",
-    "company": "Ugro Capital Limited",
-    "scrip": "UGROCAP",
-    "headline": "Amalgamation/Merger",
-    "date": "24-Oct-2026 13:41:15",
-    "url": "https://nsearchives.nseindia.com/corporate/UGROCAP_24102026134033_UGRONewspaperAdvertisement.pdf",
-    "summary": "Ugro Capital Limited has published newspaper advertisements in Business Standard (English) and Navshakti (Marathi) on 24th October 2026 regarding a notice of hearing for its amalgamation/merger petition, scheduled for 20th November 2026. The announcement was made pursuant to SEBI Listing Regulations and informs shareholders and the public about the upcoming court hearing in connection with the Scheme.",
-    "saved_at": "2026-10-24T12:05:22.467985"
-  },
-  {
-    "id": "NSESME_106827564",
-    "source": "NSE-SME",
-    "company": "Arihant Academy Limited",
-    "scrip": "ARIHANTACA",
-    "headline": "Updates",
-    "date": "24-Oct-2026 15:46:57",
-    "url": "https://nsearchives.nseindia.com/corporate/ARIHANTACADEMY_24102026154628_Reg30disclosureArihantsigned.pdf",
-    "summary": "Arihant Academy Limited has approved the acquisition of the entire businesses of M/s Arihant Tutorials and M/s Rajguru Academy on a going concern basis through slump sale. The company disclosed this investment approval to the Exchange.",
-    "saved_at": "2026-10-24T12:05:23.748503"
-  },
-  {
     "id": "NSE_106829111",
     "source": "NSE",
     "company": "Samvardhana Motherson International Limited",
@@ -1230,5 +1164,27 @@
     "url": "https://nsearchives.nseindia.in/corporate/NIDHIFADNAVIS_22112026191002_Board_Outcome_signed.pdf",
     "summary": "Tata Steel Limited has entered into a Business Transfer Agreement (BTA) for the sale of its Tubes Business to APL Apollo Tubes Limited for a cash consideration of up to \u20b911,700 crore. The Tubes Business contributed approximately \u20b911,375 crore in turnover (8.14% of standalone turnover) and \u20b93,274 crore in net worth during FY2026. The transaction, which is not a related party transaction, is expected to be completed on or before March 31, 2028, subject to regulatory approvals and satisfaction of conditions precedent.",
     "saved_at": "2026-11-22T16:26:29.543769"
+  },
+  {
+    "id": "NSE_106869209",
+    "source": "NSE",
+    "company": "CIE Automotive India Limited",
+    "scrip": "CIEINDIA",
+    "headline": "Copy of Newspaper Publication",
+    "date": "23-Nov-2026 19:01:17",
+    "url": "https://nsearchives.nseindia.in/corporate/Mahindracie_23112026190101_SEintimation.pdf",
+    "summary": "CIE Automotive India Limited has notified the Exchange of a newspaper publication regarding a Notice of Joint Petition for a Scheme of Merger by Absorption. Under the scheme, CIE Aluminium Casting India Limited (the Transferor Company) will merge into CIE Automotive India Limited (the Transferee Company).",
+    "saved_at": "2026-11-23T22:45:03.257679"
+  },
+  {
+    "id": "NSE_106869038",
+    "source": "NSE",
+    "company": "63 moons technologies limited",
+    "scrip": "63MOONS",
+    "headline": "Press Release",
+    "date": "23-Nov-2026 17:25:26",
+    "url": "https://nsearchives.nseindia.in/corporate/63MOONS_23112026172140_ExchangeDisclosure23112026.pdf",
+    "summary": "63 moons technologies limited has notified the Exchange of a press release dated November 23, 2026, regarding payouts to specified creditors under the Scheme of Arrangement between National Spot Exchange Limited and its specified creditors. The announcement was filed with the Exchange as a press release disclosure.",
+    "saved_at": "2026-11-23T22:45:04.143562"
   }
 ]
