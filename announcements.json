@@ -1,27 +1,5 @@
 [
   {
-    "id": "NSE_106830765",
-    "source": "NSE",
-    "company": "EFC (I) Limited",
-    "scrip": "EFCIL",
-    "headline": "Demerger",
-    "date": "27-Oct-2026 18:24:31",
-    "url": "https://nsearchives.nseindia.com/corporate/EFCILTD_27102026182305_Intimation.pdf",
-    "summary": "The NCLT Mumbai Bench has scheduled November 27, 2026 as the final hearing date for EFC (I) Limited's demerger petition, per an order dated October 22, 2026. The company will comply with the tribunal's directions, and the Scheme of Arrangement remains subject to applicable regulatory and other approvals.",
-    "saved_at": "2026-10-27T15:51:32.919185"
-  },
-  {
-    "id": "NSE_106830668",
-    "source": "NSE",
-    "company": "Share India Securities Limited",
-    "scrip": "SHAREINDIA",
-    "headline": "General Updates",
-    "date": "27-Oct-2026 18:02:14",
-    "url": "https://nsearchives.nseindia.com/corporate/SISL_27102026175939_Reg30CTCCorrectionOrderMergedSigned.pdf",
-    "summary": "Share India Securities Limited has received certified copies of the NCLT Ahmedabad Bench-I Rectification Order dated 12.10.2026 and the Scheme of Amalgamation of Silverleaf Capital Services Private Limited with the Company. The announcement was made as a general update to inform stakeholders of the regulatory documentation received.",
-    "saved_at": "2026-10-27T15:51:34.039121"
-  },
-  {
     "id": "NSE_106832096",
     "source": "NSE",
     "company": "TVS Motor Company Limited",
@@ -1197,5 +1175,38 @@
     "url": "https://nsearchives.nseindia.in/corporate/ARISINFRA2024_26112026133551_Intimation_VR.pdf",
     "summary": "Arisinfra Solutions Limited held meetings of its secured creditors and equity shareholders on November 25, 2026, via video conferencing, where both groups approved the Scheme of Amalgamation of Arisunitern Re Solutions Private Limited into Arisinfra Solutions Limited with the requisite majority. The company has enclosed the voting results and Scrutinizer's Report as required under SEBI regulations and will now seek final approval from the Hon'ble NCLT, Mumbai Bench.",
     "saved_at": "2026-11-26T12:52:41.639732"
+  },
+  {
+    "id": "NSE_106872135",
+    "source": "NSE",
+    "company": "Thomas Cook  (India)  Limited",
+    "scrip": "THOMASCOOK",
+    "headline": "General Updates",
+    "date": "26-Nov-2026 22:33:52",
+    "url": "https://nsearchives.nseindia.in/corporate/THOMASCOOK_26112026223103_SE_Intimation_-_UC.pdf",
+    "summary": "Thomas Cook (India) Limited has notified the Exchange of an NCLT-convened meeting of its unsecured creditors. The meeting is scheduled for Monday, December 21, 2026, at 3:30 PM IST.",
+    "saved_at": "2026-11-26T22:12:47.925345"
+  },
+  {
+    "id": "NSE_106872104",
+    "source": "NSE",
+    "company": "Thomas Cook  (India)  Limited",
+    "scrip": "THOMASCOOK",
+    "headline": "Shareholders meeting",
+    "date": "26-Nov-2026 22:20:51",
+    "url": "https://nsearchives.nseindia.in/corporate/THOMASCOOK_26112026221630_SE_Intimation_-_Equity_Shareholders.pdf",
+    "summary": "Thomas Cook (India) Limited has scheduled a shareholders' meeting for Monday, December 21, 2026, at 2:00 PM IST to be held via video conferencing/other audio-visual means. The meeting will consider and, if thought fit, approve the proposed Scheme, with the Notice circulated to equity shareholders in compliance with SEBI Listing Regulations.",
+    "saved_at": "2026-11-26T22:12:49.148478"
+  },
+  {
+    "id": "NSE_106871966",
+    "source": "NSE",
+    "company": "Birla Corporation Limited",
+    "scrip": "BIRLACORPN",
+    "headline": "Updates",
+    "date": "26-Nov-2026 18:41:43",
+    "url": "https://nsearchives.nseindia.in/corporate/BIRLACORP1_26112026184125_SEIntimation261126.pdf",
+    "summary": "Birla Corporation Limited has received approval from the Government of Madhya Pradesh's Ministry of Labour to amalgamate its Satna Cement Works and Vindhyachal Steel Foundry units under Section 4 of the Factories Act, 1948. The company stated that the approval is administrative in nature and will have no material impact on its financial or operational activities.",
+    "saved_at": "2026-11-26T22:12:50.155723"
   }
 ]
