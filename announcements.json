@@ -1,16 +1,5 @@
 [
   {
-    "id": "NSE_106832096",
-    "source": "NSE",
-    "company": "TVS Motor Company Limited",
-    "scrip": "TVSMOTOR",
-    "headline": "Scheme of Arrangement",
-    "date": "28-Oct-2026 15:14:08",
-    "url": "https://nsearchives.nseindia.com/corporate/TVSMOTOR_28102026151355_TVSM_SchemeSD.pdf",
-    "summary": "TVS Motor Company's Board approved a composite scheme to acquire full ownership of Harita ARC Limited and restructure its consumer finance business. The scheme involves amalgamating wholly owned subsidiary TVS Motor Services Limited into TVS Motor, followed by demerging the company's consumer finance undertaking into Harita ARC on a going-concern basis, with Harita ARC issuing shares to TVS Motor shareholders proportionately. The transaction remains subject to approvals from stock exchanges, SEBI, the NCLT, and shareholders and creditors.",
-    "saved_at": "2026-10-28T11:38:24.256728"
-  },
-  {
     "id": "NSE_106833301",
     "source": "NSE",
     "company": "Zensar Technologies Limited",
@@ -1208,5 +1197,49 @@
     "url": "https://nsearchives.nseindia.in/corporate/BIRLACORP1_26112026184125_SEIntimation261126.pdf",
     "summary": "Birla Corporation Limited has received approval from the Government of Madhya Pradesh's Ministry of Labour to amalgamate its Satna Cement Works and Vindhyachal Steel Foundry units under Section 4 of the Factories Act, 1948. The company stated that the approval is administrative in nature and will have no material impact on its financial or operational activities.",
     "saved_at": "2026-11-26T22:12:50.155723"
+  },
+  {
+    "id": "NSE_106873045",
+    "source": "NSE",
+    "company": "Amber Enterprises India Limited",
+    "scrip": "AMBER",
+    "headline": "Amalgamation/Merger",
+    "date": "27-Nov-2026 18:23:10",
+    "url": "https://nsearchives.nseindia.in/corporate/AMBER_27112026182228_SE_Disclosure_Regulation_30_Amber_Order_dated_27112026.pdf",
+    "summary": "Amber Enterprises India Limited informed the exchanges that a hearing was held on 27th November 2026 regarding the Scheme of Amalgamation of AmberPR Technoplast India Private Limited into the Company. The matter was heard at length and the order has been reserved.",
+    "saved_at": "2026-11-27T14:04:55.834133"
+  },
+  {
+    "id": "NSE_106873023",
+    "source": "NSE",
+    "company": "GANESH HOUSING LIMITED",
+    "scrip": "GANESHHOU",
+    "headline": "Shareholders meeting",
+    "date": "27-Nov-2026 18:09:57",
+    "url": "https://nsearchives.nseindia.in/corporate/GANESHHOUC_27112026180949_SEDISCLOSUREPROCEEDINGS27112026.pdf",
+    "summary": "Ganesh Housing Limited held a meeting of its equity shareholders, including public shareholders, as directed by the NCLT Ahmedabad Bench. The meeting was convened in connection with a proposed Scheme of Arrangement.",
+    "saved_at": "2026-11-27T14:04:56.791638"
+  },
+  {
+    "id": "NSE_106873002",
+    "source": "NSE",
+    "company": "Zicom Electronic Security Systems Limited",
+    "scrip": "ZICOM",
+    "headline": "Change in Management",
+    "date": "27-Nov-2026 17:57:32",
+    "url": "https://nsearchives.nseindia.in/corporate/ZICOM_27112026175708_Outcome_of_Board_Meeting.pdf",
+    "summary": "Zicom Electronic Security Systems Limited announced a management change following NCLT Mumbai's order dated September 24, 2026, confirming the appointment of four directors\u2014including Shobhit Kumar as Managing Director and CFO\u2014effective November 26, 2026. Concurrently, three directors/KMPs, including former Managing Director Pramoud Vinayak Rao, ceased office as suspended personnel under the same order. The Board also reconstituted its various committees.",
+    "saved_at": "2026-11-27T14:04:58.279833"
+  },
+  {
+    "id": "NSE_106872944",
+    "source": "NSE",
+    "company": "Thomas Cook  (India)  Limited",
+    "scrip": "THOMASCOOK",
+    "headline": "General Updates",
+    "date": "27-Nov-2026 17:17:34",
+    "url": "https://nsearchives.nseindia.in/corporate/THOMASCOOK_27112026171511_Stock_Exchange_Intimation-_Letters_Sent_to_Shareholders.pdf",
+    "summary": "Thomas Cook (India) Limited has sent letters to equity shareholders and unsecured creditors whose email IDs are not registered with the company. The letters concern meetings convened per NCLT Mumbai Bench directions, as well as an Extraordinary General Meeting for equity shareholders.",
+    "saved_at": "2026-11-27T14:04:59.232755"
   }
 ]
